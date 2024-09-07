@@ -1,49 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace CadastroBanco
 {
     public partial class Form1 : Form
     {
+        // Lista para armazenar os dados localmente
+        private List<Conta> contas = new List<Conta>();
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        // Classe para representar uma Conta
+        public class Conta
         {
-            string connectionString = "datasource=localhost;port=3306;username=root;password=;database=banco;";
-
-            string query = "DELETE FROM `tb_conta` WHERE numero = '" + textBox1.Text + "'";
-
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-
-            commandDatabase.CommandTimeout = 60;
-
-            MySqlDataReader reader;
-
-            try
-            {
-                databaseConnection.Open();
-
-                reader = commandDatabase.ExecuteReader();
-
-                databaseConnection.Close();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
+            public string Numero { get; set; }
+            public string Titular { get; set; }
+            public string Saldo { get; set; }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,116 +32,101 @@ namespace CadastroBanco
 
         }
 
+        // Botão para criar/adicionar uma conta
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=banco;";
-
-            string query = "INSERT INTO tb_conta(`numero`, `titular`, `saldo`) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "')";
-
-
-            MySqlConnection databaseConnection = new
-            MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-
-            try
+            Conta novaConta = new Conta()
             {
-                databaseConnection.Open();
-                MySqlDataReader myReader = commandDatabase.ExecuteReader();
+                Numero = textBox1.Text,
+                Titular = textBox2.Text,
+                Saldo = textBox3.Text
+            };
 
-                MessageBox.Show("Usuário cadastrado com sucesso!!!");
-
-                databaseConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                // Caso apareça algum erro no processamento.
-                MessageBox.Show(ex.Message);
-            }
+            contas.Add(novaConta);
+            MessageBox.Show("Usuário cadastrado com sucesso!!!");
         }
 
+        // Botão para ler/exibir todas as contas
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            
-            string connectionString = "datasource=localhost;port=3306;username=root;password=;database=banco;";
 
-            string query = "SELECT * FROM tb_conta";
-
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-
-            commandDatabase.CommandTimeout = 60;
-
-            MySqlDataReader reader;
-
-            try
+            if (contas.Count > 0)
             {
-                databaseConnection.Open();
-
-                reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
+                foreach (var conta in contas)
                 {
-                    while (reader.Read())
-                    {
-
-                        string[] row = { reader.GetString(0), reader.GetString(1), reader.GetString(2) };
-                        //textBox1.Text = row[0];
-                        //textBox2.Text = row[1];
-                        //textBox3.Text = row[2];
-                        listBox1.Items.Add("Numero Conta: " + row[0]);
-                        listBox1.Items.Add("Titular da Conta: " + row[1]);
-                        listBox1.Items.Add("Saldo da Conta: " + row[2]);
-                        listBox1.Items.Add("----------------------------");
-                    }
+                    listBox1.Items.Add("Numero Conta: " + conta.Numero);
+                    listBox1.Items.Add("Titular da Conta: " + conta.Titular);
+                    listBox1.Items.Add("Saldo da Conta: " + conta.Saldo);
+                    listBox1.Items.Add("----------------------------");
                 }
-                else
-                {
-                    MessageBox.Show("Não há registros");
-                }
-
-                databaseConnection.Close();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Não há registros");
             }
         }
 
+        // Botão para atualizar uma conta
         private void button3_Click(object sender, EventArgs e)
         {
-            string connectionString = "datasource=localhost;port=3306;username=root;password=;database=banco;";
+            string numeroConta = textBox1.Text;
 
-            string query = "UPDATE `tb_conta` SET `numero`='" + textBox1.Text + "',`titular`='" + textBox2.Text + "',`saldo`='" + textBox3.Text + "' WHERE numero = '" + textBox1.Text + "'";
+            // Encontrar a conta pelo número
+            Conta contaParaAtualizar = contas.Find(c => c.Numero == numeroConta);
 
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-
-            commandDatabase.CommandTimeout = 60;
-
-            MySqlDataReader reader;
-
-            try
+            if (contaParaAtualizar != null)
             {
-                databaseConnection.Open();
-
-                reader = commandDatabase.ExecuteReader();
-
-                databaseConnection.Close();
+                contaParaAtualizar.Titular = textBox2.Text;
+                contaParaAtualizar.Saldo = textBox3.Text;
+                MessageBox.Show("Usuário atualizado com sucesso!");
             }
-            catch (Exception ex)
+            else
             {
-
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Conta não encontrada.");
             }
         }
 
+        // Botão para deletar uma conta
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string numeroConta = textBox1.Text;
+
+            // Remover a conta da lista pelo número
+            Conta contaParaRemover = contas.Find(c => c.Numero == numeroConta);
+
+            if (contaParaRemover != null)
+            {
+                contas.Remove(contaParaRemover);
+                MessageBox.Show("Conta removida com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Conta não encontrada.");
+            }
+        }
+
+        // Botão para limpar os campos de texto
         private void button5_Click(object sender, EventArgs e)
         {
-            textBox1.Text = " ";
-            textBox2.Text = " ";
-            textBox3.Text = " ";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
