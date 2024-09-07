@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static CadastroBanco.Form1;
 
 namespace CadastroBanco
 {
     public partial class Form1 : Form
     {
         // Lista para armazenar os dados localmente
-        private List<Conta> contas = new List<Conta>();
+        private List<Produto> produtos = new List<Produto>();
 
         public Form1()
         {
@@ -15,12 +16,17 @@ namespace CadastroBanco
            // EnableDragging(); // 
         }
 
-        // Classe para representar uma Conta
-        public class Conta
+        // Classe para representar uma Produto
+        public class Produto
         {
-            public string Numero { get; set; }
-            public string Titular { get; set; }
-            public string Saldo { get; set; }
+            public int Id { get; set; }
+            public string TipoProd { get; set; }
+            public string Marca { get; set; }
+            public double ValorCompra { get; set; }
+            public double ValorVenda { get; set; }
+            public double MargemLucro { get; set; }
+            public string DataVal { get; set; }
+            public bool Sim { get; set; }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,33 +39,43 @@ namespace CadastroBanco
 
         }
 
-        // Botão para criar/adicionar uma conta
+        // Botão para criar/adicionar uma produto
         private void button1_Click(object sender, EventArgs e)
         {
-            Conta novaConta = new Conta()
+            Produto novoProduto = new Produto()
             {
-                Numero = textBox1.Text,
-                Titular = textBox2.Text,
-                Saldo = textBox3.Text
+                Id = Convert.ToInt32(textBox1.Text),
+                TipoProd = textBox2.Text,
+                Marca = textBox3.Text,
+                ValorCompra = Convert.ToDouble(textBox4.Text),
+                ValorVenda = Convert.ToDouble(textBox8.Text),
+                MargemLucro = Convert.ToDouble(textBox6.Text),
+                DataVal = textBox5.Text,
+                Sim = checkBox1.Checked
             };
 
-            contas.Add(novaConta);
-            MessageBox.Show("Usuário cadastrado com sucesso!!!");
+            produtos.Add(novoProduto);
+            MessageBox.Show("Produto cadastrado com sucesso!!!");
         }
 
-        // Botão para ler/exibir todas as contas
+        // Botão para ler/exibir todos os produtos
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
 
-            if (contas.Count > 0)
+            if (produtos.Count > 0)
             {
-                foreach (var conta in contas)
+                foreach (var produto in produtos)
                 {
-                    listBox1.Items.Add("Numero Conta: " + conta.Numero);
-                    listBox1.Items.Add("Titular da Conta: " + conta.Titular);
-                    listBox1.Items.Add("Saldo da Conta: " + conta.Saldo);
-                    listBox1.Items.Add("----------------------------");
+                    listBox1.Items.Add("Código do Produto: " + produto.Id);
+                    listBox1.Items.Add("Tipo do Produto: " + produto.TipoProd);
+                    listBox1.Items.Add("Marca: " + produto.Marca);
+                    listBox1.Items.Add("Valor de Aquisição: " + produto.ValorCompra);
+                    listBox1.Items.Add("Valor de Venda: " + produto.ValorVenda);
+                    listBox1.Items.Add("Margem de Lucro: " + produto.MargemLucro);
+                    listBox1.Items.Add("Comercializável: " + (produto.Sim ? "Sim" : "Não"));
+                    listBox1.Items.Add("Data de validade: " + produto.DataVal);
+                    listBox1.Items.Add("------------------------------------------------------");
                 }
             }
             else
@@ -68,42 +84,47 @@ namespace CadastroBanco
             }
         }
 
-        // Botão para atualizar uma conta
+        // Botão para atualizar um produto
         private void button3_Click(object sender, EventArgs e)
         {
-            string numeroConta = textBox1.Text;
+            int idProduto = Convert.ToInt32(textBox1.Text);
 
-            // Encontrar a conta pelo número
-            Conta contaParaAtualizar = contas.Find(c => c.Numero == numeroConta);
+            // Encontrar o produto pelo id
+            Produto produtoParaAtualizar = produtos.Find(p => p.Id == idProduto);
 
-            if (contaParaAtualizar != null)
+            if (produtoParaAtualizar != null)
             {
-                contaParaAtualizar.Titular = textBox2.Text;
-                contaParaAtualizar.Saldo = textBox3.Text;
-                MessageBox.Show("Usuário atualizado com sucesso!");
+                produtoParaAtualizar.TipoProd = textBox2.Text;
+                produtoParaAtualizar.Marca = textBox3.Text;
+                produtoParaAtualizar.MargemLucro = Convert.ToInt32(textBox6.Text);
+                produtoParaAtualizar.ValorCompra = Convert.ToInt32(textBox4.Text);
+                produtoParaAtualizar.ValorVenda = Convert.ToInt32(textBox8.Text);
+                produtoParaAtualizar.DataVal = textBox5.Text;
+                produtoParaAtualizar.Sim = checkBox1.Checked;
+                MessageBox.Show("Produto atualizado com sucesso!");
             }
             else
             {
-                MessageBox.Show("Conta não encontrada.");
+                MessageBox.Show("Produto não encontrada.");
             }
         }
 
-        // Botão para deletar uma conta
+        // Botão para deletar um produto
         private void button4_Click(object sender, EventArgs e)
         {
-            string numeroConta = textBox1.Text;
+            int idProduto = Convert.ToInt32(textBox1.Text);
 
-            // Remover a conta da lista pelo número
-            Conta contaParaRemover = contas.Find(c => c.Numero == numeroConta);
+            // Remover um produto da lista pelo número
+            Produto produtoParaRemover = produtos.Find(p => p.Id == idProduto);
 
-            if (contaParaRemover != null)
+            if (produtoParaRemover != null)
             {
-                contas.Remove(contaParaRemover);
-                MessageBox.Show("Conta removida com sucesso!");
+                produtos.Remove(produtoParaRemover);
+                MessageBox.Show("Produto removida com sucesso!");
             }
             else
             {
-                MessageBox.Show("Conta não encontrada.");
+                MessageBox.Show("Produto não encontrada.");
             }
         }
 
@@ -113,6 +134,13 @@ namespace CadastroBanco
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -158,6 +186,46 @@ namespace CadastroBanco
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                checkBox2.Checked = false;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox1.Checked = false;
+            }
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            string tipoProd = textBox7.Text;
+            string marca = textBox7.Text;
+            Produto produtoParaAchar = produtos.Find(p => p.TipoProd == tipoProd || p.Marca == marca);
+            if (produtoParaAchar != null)
+            {
+                foreach (var produto in produtos)
+                {
+                    listBox1.Items.Add("Código do Produto: " + produto.Id);
+                    listBox1.Items.Add("Tipo do Produto: " + produto.TipoProd);
+                    listBox1.Items.Add("Marca: " + produto.Marca);
+                    listBox1.Items.Add("Valor de Aquisição: " + produto.ValorCompra);
+                    listBox1.Items.Add("Valor de Venda: " + produto.ValorVenda);
+                    listBox1.Items.Add("Margem de Lucro: " + produto.MargemLucro);
+                    listBox1.Items.Add("Comercializável: " + (produto.Sim ? "Sim" : "Não"));
+                    listBox1.Items.Add("Data de validade: " + produto.DataVal);
+                    listBox1.Items.Add("------------------------------------------------------");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não há registros");
+            }
         }
     }
 }

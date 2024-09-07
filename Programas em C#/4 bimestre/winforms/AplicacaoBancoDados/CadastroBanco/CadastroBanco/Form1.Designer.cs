@@ -314,14 +314,12 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // label9
+            // textBox5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(376, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Buscar por palavra-chave:";
+            this.textBox5.Location = new System.Drawing.Point(64, 385);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(110, 20);
+            this.textBox5.TabIndex = 13;
             // 
             // textBox7
             // 
