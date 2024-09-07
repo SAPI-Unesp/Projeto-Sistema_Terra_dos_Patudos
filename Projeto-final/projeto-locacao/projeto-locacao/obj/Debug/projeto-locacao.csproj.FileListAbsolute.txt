@@ -1,0 +1,128 @@
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.exe.config
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.exe
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.pdb
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csprojAssemblyReference.cache
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarPerfilCliente.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Form1.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.MenuPrincipalCliente.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Properties.Resources.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.GenerateResource.cache
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.CoreCompileInputs.cache
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.exe
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.pdb
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LocacoesCliente.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Devolucoes.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarLocacaoCliente.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarDevolucaoCliente.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarPerfilFuncionario.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LocacoesFuncionario.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.MenuPrincipalFuncionario.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarClienteFuncionario.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarClientePorNomeFuncionario.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarCliente.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CertezaRenovar.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Relatorio.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LivroCliente.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarLivro.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.InformacoesLivro.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LivroFuncionario.resources
+C:\Users\ifsp\Downloads\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarLivroPorNome.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.AssemblyReference.cache
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.SuggestedBindingRedirects.cache
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.exe.config
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarCliente.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Devolucoes.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarLivro.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarPerfilCliente.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarPerfilFuncionario.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.InformacoesLivro.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LivroCliente.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LivroFuncionario.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LocacoesCliente.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LocacoesFuncionario.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.MenuPrincipalCliente.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.MenuPrincipalFuncionario.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarClienteFuncionario.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarClientePorNomeFuncionario.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarLivroPorNome.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Properties.Resources.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Relatorio.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.GenerateResource.cache
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.CoreCompileInputs.cache
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.exe
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.pdb
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Certeza.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.MenuPrincipalAdm.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.exe.config
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.exe
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.pdb
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\MySql.Data.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\Google.Protobuf.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\ZstdNet.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\K4os.Compression.LZ4.Streams.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\BouncyCastle.Crypto.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\Ubiety.Dns.Core.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\System.Buffers.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\K4os.Compression.LZ4.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\K4os.Hash.xxHash.dll
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\MySql.Data.xml
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.CopyComplete
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarLocacao.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarClassificacao.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.DeletarClassificacao.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarLivro.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.RetirarLivro.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Login.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.RetirarCliente.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarFuncionario.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.RetirarFuncionario.resources
+H:\Meu Drive\OneDrive\Documentos\escola\2 ano\Disciplinas Técnicas\LPGO\Programas em C#\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarLocacao.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.exe.config
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.exe
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\projeto-locacao.pdb
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\Google.Protobuf.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\ZstdNet.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\System.Buffers.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\bin\Debug\MySql.Data.xml
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.AssemblyReference.cache
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.SuggestedBindingRedirects.cache
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.exe.config
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarLocacao.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarClassificacao.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarCliente.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarFuncionario.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.CadastrarLivro.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Certeza.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.DeletarClassificacao.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Devolucoes.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarLivro.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarPerfilCliente.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.EditarPerfilFuncionario.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Login.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.InformacoesLivro.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LivroCliente.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LivroFuncionario.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LocacoesCliente.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.LocacoesFuncionario.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.MenuPrincipalAdm.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.MenuPrincipalCliente.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.MenuPrincipalFuncionario.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarClienteFuncionario.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarClientePorNomeFuncionario.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarLivroPorNome.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.ProcurarLocacao.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Properties.Resources.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.Relatorio.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.RetirarCliente.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.RetirarFuncionario.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto_locacao.RetirarLivro.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.GenerateResource.cache
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.csproj.CoreCompileInputs.cache
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-.4478940C.Up2Date
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.exe
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Projeto-final\projeto-locacao\projeto-locacao\obj\Debug\projeto-locacao.pdb
