@@ -41,35 +41,35 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -233,53 +233,123 @@
             this.groupBox1.Text = "Estoque";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox4
+            // pictureBox7
             // 
-            this.textBox4.Location = new System.Drawing.Point(64, 266);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(90, 20);
-            this.textBox4.TabIndex = 12;
+            this.pictureBox7.Image = global::CadastroBanco.Properties.Resources.Subtract;
+            this.pictureBox7.Location = new System.Drawing.Point(630, 52);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(19, 20);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 35;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // textBox5
+            // pictureBox6
             // 
-            this.textBox5.Location = new System.Drawing.Point(64, 385);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(110, 20);
-            this.textBox5.TabIndex = 13;
+            this.pictureBox6.Image = global::CadastroBanco.Properties.Resources.Subtract;
+            this.pictureBox6.Location = new System.Drawing.Point(140, 351);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(14, 16);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 34;
+            this.pictureBox6.TabStop = false;
             // 
-            // label4
+            // pictureBox5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(208, 241);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Valor de Venda:";
+            this.pictureBox5.Image = global::CadastroBanco.Properties.Resources.Subtract;
+            this.pictureBox5.Location = new System.Drawing.Point(307, 303);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(14, 16);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 33;
+            this.pictureBox5.TabStop = false;
             // 
-            // label7
+            // pictureBox4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 241);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Valor de Aquisição";
+            this.pictureBox4.Image = global::CadastroBanco.Properties.Resources.Subtract;
+            this.pictureBox4.Location = new System.Drawing.Point(88, 171);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(14, 16);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 32;
+            this.pictureBox4.TabStop = false;
             // 
-            // textBox8
+            // pictureBox3
             // 
-            this.textBox8.Location = new System.Drawing.Point(228, 266);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(93, 20);
-            this.textBox8.TabIndex = 20;
+            this.pictureBox3.Image = global::CadastroBanco.Properties.Resources.Subtract;
+            this.pictureBox3.Location = new System.Drawing.Point(125, 105);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(14, 16);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
             // 
-            // label8
+            // pictureBox2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 354);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Data de Validade:";
+            this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.Subtract;
+            this.pictureBox2.Location = new System.Drawing.Point(297, 241);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(14, 16);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CadastroBanco.Properties.Resources.Subtract;
+            this.pictureBox1.Location = new System.Drawing.Point(140, 241);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(14, 16);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(376, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 13);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Buscar por palavra-chave:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(379, 52);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(233, 20);
+            this.textBox7.TabIndex = 27;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(108, 324);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(46, 17);
+            this.checkBox2.TabIndex = 26;
+            this.checkBox2.Text = "Não";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(45, 324);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(43, 17);
+            this.checkBox1.TabIndex = 25;
+            this.checkBox1.Text = "Sim";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(41, 303);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 13);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Produto comercializável:";
             // 
             // textBox6
             // 
@@ -297,120 +367,53 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Margem de Lucro:";
             // 
-            // label6
+            // label8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 303);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 13);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Produto comercializável:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(42, 354);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Data de Validade:";
             // 
-            // checkBox1
+            // textBox8
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(45, 324);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(43, 17);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "Sim";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.textBox8.Location = new System.Drawing.Point(228, 266);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(93, 20);
+            this.textBox8.TabIndex = 20;
             // 
-            // checkBox2
+            // label7
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(108, 324);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(46, 17);
-            this.checkBox2.TabIndex = 26;
-            this.checkBox2.Text = "Não";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(42, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Valor de Aquisição";
             // 
-            // textBox7
+            // label4
             // 
-            this.textBox7.Location = new System.Drawing.Point(379, 52);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 20);
-            this.textBox7.TabIndex = 27;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(208, 241);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Valor de Venda:";
             // 
-            // label9
+            // textBox5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(376, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Buscar por palavra-chave:";
+            this.textBox5.Location = new System.Drawing.Point(64, 385);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(110, 20);
+            this.textBox5.TabIndex = 13;
             // 
-            // pictureBox1
+            // textBox4
             // 
-            this.pictureBox1.Image = global::CadastroBanco.Properties.Resources.Subtract;
-            this.pictureBox1.Location = new System.Drawing.Point(140, 241);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(14, 16);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.Subtract;
-            this.pictureBox2.Location = new System.Drawing.Point(297, 241);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(14, 16);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 30;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::CadastroBanco.Properties.Resources.Subtract;
-            this.pictureBox3.Location = new System.Drawing.Point(125, 105);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(14, 16);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::CadastroBanco.Properties.Resources.Subtract;
-            this.pictureBox4.Location = new System.Drawing.Point(88, 171);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(14, 16);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 32;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::CadastroBanco.Properties.Resources.Subtract;
-            this.pictureBox5.Location = new System.Drawing.Point(307, 303);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(14, 16);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 33;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::CadastroBanco.Properties.Resources.Subtract;
-            this.pictureBox6.Location = new System.Drawing.Point(140, 351);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(14, 16);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 34;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::CadastroBanco.Properties.Resources.Subtract;
-            this.pictureBox7.Location = new System.Drawing.Point(630, 52);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(19, 20);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 35;
-            this.pictureBox7.TabStop = false;
+            this.textBox4.Location = new System.Drawing.Point(64, 266);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(90, 20);
+            this.textBox4.TabIndex = 12;
             // 
             // Form1
             // 
@@ -424,13 +427,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
