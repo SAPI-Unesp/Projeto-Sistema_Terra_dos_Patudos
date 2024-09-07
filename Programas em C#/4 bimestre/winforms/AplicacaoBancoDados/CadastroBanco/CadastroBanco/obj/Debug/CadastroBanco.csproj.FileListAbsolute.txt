@@ -43,3 +43,26 @@ C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Programas em 
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\MySql.Data.xml
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\Cadastro.4202E906.Up2Date
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\CadastroBanco.exe.config
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\CadastroBanco.exe
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\CadastroBanco.pdb
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\Google.Protobuf.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\ZstdNet.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\System.Buffers.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\bin\Debug\MySql.Data.xml
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.csproj.AssemblyReference.cache
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.csproj.SuggestedBindingRedirects.cache
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.exe.config
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.Form1.resources
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.Properties.Resources.resources
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.csproj.GenerateResource.cache
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.csproj.CoreCompileInputs.cache
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\Cadastro.4202E906.Up2Date
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.exe
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.pdb
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\RoundRectForm.resources
