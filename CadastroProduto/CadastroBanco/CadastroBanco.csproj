@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
@@ -96,6 +98,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Subtract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subtract.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_alt_fill%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pointers_fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 47.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subtract %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pointers_fill1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 81.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 471.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign_out %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box_open_fill%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign_out %282%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
