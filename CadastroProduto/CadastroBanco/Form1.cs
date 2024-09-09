@@ -5,7 +5,7 @@ using static CadastroBanco.Form1;
 
 namespace CadastroBanco
 {
-    public partial class Form1 : Form
+    public partial class Form1 : RoundRectForm
     {
         // Lista para armazenar os dados localmente
         private List<Produto> produtos = new List<Produto>();
@@ -13,6 +13,35 @@ namespace CadastroBanco
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
 
         // Classe para representar uma Produto
@@ -159,28 +188,30 @@ namespace CadastroBanco
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                checkBox2.Checked = false;
-            }
+            
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked)
-            {
-                checkBox1.Checked = false;
-            }
+           
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)
+        {
             string tipoProd = textBox7.Text;
             string marca = textBox7.Text;
-            Produto produtoParaAchar = produtos.Find(p => p.TipoProd == tipoProd || p.Marca == marca);
-            if (produtoParaAchar != null)
+            List<Produto> produtosB = new List<Produto>();
+            produtosB = produtos.FindAll(p => p.TipoProd == tipoProd || p.Marca == marca);
+           // Produto produtoParaAchar = produtos.Find(p => p.TipoProd == tipoProd || p.Marca == marca);
+            if (produtosB != null)
             {
-                foreach (var produto in produtos)
+                listBox1.Items.Clear();
+                foreach (var produto in produtosB)
                 {
                     listBox1.Items.Add("Código do Produto: " + produto.Id);
                     listBox1.Items.Add("Tipo do Produto: " + produto.TipoProd);
@@ -196,6 +227,22 @@ namespace CadastroBanco
             else
             {
                 MessageBox.Show("Não há registros");
+            }
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                checkBox2.Checked = false;
+            }
+        }
+
+        private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox1.Checked = false;
             }
         }
     }

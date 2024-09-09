@@ -80,6 +80,7 @@ public class RoundRectForm : Form
             // 
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "RoundRectForm";
+            this.Load += new System.EventHandler(this.RoundRectForm_Load);
             this.ResumeLayout(false);
 
     }
@@ -263,5 +264,10 @@ public class RoundRectForm : Form
     {
         // Atualize a posição dos botões no clique para se ajustar ao tamanho da janela
         Invalidate();
+    }
+
+    private void RoundRectForm_Load(object sender, EventArgs e)
+    {
+
     }
 }
