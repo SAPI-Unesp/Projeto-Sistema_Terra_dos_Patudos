@@ -132,7 +132,18 @@ namespace CadastroBanco
         // Botão para atualizar um produto
         private void button3_Click(object sender, EventArgs e)
         {
-            int idProduto = Convert.ToInt32(textBox1.Text);
+            //int idProduto = Convert.ToInt32(textBox1.Text);
+            int idProduto = 0;
+            foreach (var item in listBox1.SelectedItems)
+            {
+                string s = item.ToString();
+                string[] sub = s.Split(':');
+                idProduto = Convert.ToInt32(sub[1]);
+                //textBox1.Text = item.ToString();
+
+                //idProduto = Convert.ToInt32(sub);
+            }
+            // Remover um produto da lista pelo número
 
             // Encontrar o produto pelo id
             Produto produtoParaAtualizar = produtos.Find(p => p.Id == idProduto);
@@ -153,7 +164,7 @@ namespace CadastroBanco
                 MessageBox.Show("Produto não encontrada.");
             }
 
-            Consultar();
+             Consultar();
         }
 
         // Botão para deletar um produto
