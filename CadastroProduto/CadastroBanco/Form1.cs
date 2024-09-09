@@ -231,13 +231,13 @@ namespace CadastroBanco
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
+        { // tesxte
             if (checkBox1.Checked)
             {
                 checkBox2.Checked = false;
             }
         }
-
+            
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkBox2.Checked)
