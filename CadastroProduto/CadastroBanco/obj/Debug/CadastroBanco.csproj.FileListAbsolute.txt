@@ -66,3 +66,28 @@ C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bim
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.exe
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\CadastroBanco.pdb
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\Programas em C#\4 bimestre\winforms\AplicacaoBancoDados\CadastroBanco\CadastroBanco\obj\Debug\RoundRectForm.resources
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.exe.config
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.exe
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.pdb
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\MySql.Data.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Protobuf.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\ZstdNet.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\System.Memory.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\System.Buffers.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\MySql.Data.xml
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.AssemblyReference.cache
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.exe.config
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form1.resources
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Properties.Resources.resources
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\RoundRectForm.resources
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.GenerateResource.cache
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.CoreCompileInputs.cache
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.CopyComplete
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.exe
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.pdb
