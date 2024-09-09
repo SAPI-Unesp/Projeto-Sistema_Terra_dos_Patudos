@@ -9,10 +9,11 @@ namespace CadastroBanco
     {
         // Lista para armazenar os dados localmente
         private List<Produto> produtos = new List<Produto>();
-
+        public int contador = 0;
         public Form1()
         {
             InitializeComponent();
+            textBox1.Text = "0";
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -70,6 +71,7 @@ namespace CadastroBanco
         // Botão para criar/adicionar uma produto
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox1.Text = Convert.ToString(Convert.ToInt32(textBox1.Text) + 1); 
             Produto novoProduto = new Produto()
             {
                 Id = Convert.ToInt32(textBox1.Text),
@@ -82,12 +84,27 @@ namespace CadastroBanco
                 Sim = checkBox1.Checked
             };
 
-            produtos.Add(novoProduto);
-            MessageBox.Show("Produto cadastrado com sucesso!!!");
+            Produto produtoExistente = produtos.Find(p => p.Id == Convert.ToInt32(textBox1.Text));
+
+            if (produtoExistente != null)
+            {
+                MessageBox.Show("Id do produto já existente");
+            }
+            else
+            {
+                produtos.Add(novoProduto);
+                MessageBox.Show("Produto cadastrado com sucesso!!!");
+            }
+            Consultar();
         }
 
         // Botão para ler/exibir todos os produtos
         private void button2_Click(object sender, EventArgs e)
+        {
+            Consultar();
+        }
+
+        void Consultar()
         {
             listBox1.Items.Clear();
 
@@ -135,13 +152,24 @@ namespace CadastroBanco
             {
                 MessageBox.Show("Produto não encontrada.");
             }
+
+            Consultar();
         }
 
         // Botão para deletar um produto
         private void button4_Click(object sender, EventArgs e)
         {
-            int idProduto = Convert.ToInt32(textBox1.Text);
+            //int idProduto = Convert.ToInt32(textBox1.Text);
+            int idProduto = 0;
+            foreach (var item in listBox1.SelectedItems)
+            {
+                string s = item.ToString();
+                string[] sub = s.Split(':');
+                idProduto = Convert.ToInt32(sub[1]);
+                //textBox1.Text = item.ToString();
 
+                //idProduto = Convert.ToInt32(sub);
+            }
             // Remover um produto da lista pelo número
             Produto produtoParaRemover = produtos.Find(p => p.Id == idProduto);
 
@@ -152,8 +180,9 @@ namespace CadastroBanco
             }
             else
             {
-                MessageBox.Show("Produto não encontrada.");
+                MessageBox.Show("Não existe");
             }
+            Consultar();
         }
 
         // Botão para limpar os campos de texto
@@ -207,7 +236,7 @@ namespace CadastroBanco
             string marca = textBox7.Text;
             List<Produto> produtosB = new List<Produto>();
             produtosB = produtos.FindAll(p => p.TipoProd == tipoProd || p.Marca == marca);
-           // Produto produtoParaAchar = produtos.Find(p => p.TipoProd == tipoProd || p.Marca == marca);
+           //Produto produtoParaAchar = produtos.Find(p => p.TipoProd == tipoProd || p.Marca == marca);
             if (produtosB != null)
             {
                 listBox1.Items.Clear();
@@ -231,13 +260,13 @@ namespace CadastroBanco
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
+        { // tesxte 
             if (checkBox1.Checked)
             {
                 checkBox2.Checked = false;
             }
         }
-
+            
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkBox2.Checked)
