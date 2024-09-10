@@ -199,7 +199,7 @@ namespace CadastroBanco
         // Botão para limpar os campos de texto
         private void button5_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            //textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
