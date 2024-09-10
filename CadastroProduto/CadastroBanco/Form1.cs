@@ -114,7 +114,7 @@ namespace CadastroBanco
                 {
                     listBox1.Items.Add("Código do Produto: " + produto.Id);
                     listBox1.Items.Add("Tipo do Produto: " + produto.TipoProd);
-                    listBox1.Items.Add("Marca: " + produto.Marca);
+                    listBox1.Items.Add("Nome do Produto: " + produto.Marca);
                     listBox1.Items.Add("Valor de Aquisição: " + produto.ValorCompra);
                     listBox1.Items.Add("Valor de Venda: " + produto.ValorVenda);
                     listBox1.Items.Add("Margem de Lucro: " + produto.MargemLucro);
@@ -214,6 +214,7 @@ namespace CadastroBanco
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -255,7 +256,7 @@ namespace CadastroBanco
                 {
                     listBox1.Items.Add("Código do Produto: " + produto.Id);
                     listBox1.Items.Add("Tipo do Produto: " + produto.TipoProd);
-                    listBox1.Items.Add("Marca: " + produto.Marca);
+                    listBox1.Items.Add("Nome do Produto: " + produto.Marca);
                     listBox1.Items.Add("Valor de Aquisição: " + produto.ValorCompra);
                     listBox1.Items.Add("Valor de Venda: " + produto.ValorVenda);
                     listBox1.Items.Add("Margem de Lucro: " + produto.MargemLucro);
