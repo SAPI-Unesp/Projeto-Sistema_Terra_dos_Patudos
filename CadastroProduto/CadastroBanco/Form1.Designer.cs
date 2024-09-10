@@ -175,9 +175,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(42, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(113, 16);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Marca";
+            this.label2.Text = "Nome do produto";
             // 
             // label3
             // 
@@ -309,7 +309,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CadastroBanco.Properties.Resources.Pointers_fill;
-            this.pictureBox1.Location = new System.Drawing.Point(94, 131);
+            this.pictureBox1.Location = new System.Drawing.Point(161, 131);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(17, 18);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
