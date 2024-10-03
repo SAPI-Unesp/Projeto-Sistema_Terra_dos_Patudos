@@ -1,0 +1,10 @@
+aaa,12
+12,aa
+opa,2121
+salve,aa
+a,2
+teste,4242
+teste,teste
+Calça, , 0, 0
+Sapato, asdasdadsad, 44, 0
+Calça, aaa, 2, 6
