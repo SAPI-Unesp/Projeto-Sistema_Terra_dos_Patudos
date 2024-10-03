@@ -36,7 +36,6 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +45,10 @@
             this.comprador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnVender = new System.Windows.Forms.Button();
+            this.tabelaVenda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,9 +91,9 @@
             // 
             // btnExibir
             // 
-            this.btnExibir.Location = new System.Drawing.Point(585, 25);
+            this.btnExibir.Location = new System.Drawing.Point(437, 26);
             this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(75, 41);
+            this.btnExibir.Size = new System.Drawing.Size(75, 40);
             this.btnExibir.TabIndex = 5;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = true;
@@ -114,9 +117,9 @@
             this.btnDeletar.BackColor = System.Drawing.Color.Salmon;
             this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDeletar.Location = new System.Drawing.Point(504, 25);
+            this.btnDeletar.Location = new System.Drawing.Point(680, 26);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 41);
+            this.btnDeletar.Size = new System.Drawing.Size(75, 40);
             this.btnDeletar.TabIndex = 7;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = false;
@@ -140,14 +143,7 @@
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.Size = new System.Drawing.Size(948, 442);
             this.dataGridViewDados.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(464, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
             // id
             // 
@@ -201,11 +197,52 @@
             this.vendido.Name = "vendido";
             this.vendido.Width = 70;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(338, 20);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(356, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 40);
+            this.btnBuscar.TabIndex = 11;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnVender
+            // 
+            this.btnVender.Location = new System.Drawing.Point(599, 26);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(75, 40);
+            this.btnVender.TabIndex = 12;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
+            // 
+            // tabelaVenda
+            // 
+            this.tabelaVenda.Location = new System.Drawing.Point(518, 26);
+            this.tabelaVenda.Name = "tabelaVenda";
+            this.tabelaVenda.Size = new System.Drawing.Size(75, 40);
+            this.tabelaVenda.TabIndex = 13;
+            this.tabelaVenda.Text = "Tabela de venda";
+            this.tabelaVenda.UseVisualStyleBackColor = true;
+            this.tabelaVenda.Click += new System.EventHandler(this.tabelaVenda_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 523);
+            this.Controls.Add(this.tabelaVenda);
+            this.Controls.Add(this.btnVender);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridViewDados);
             this.Controls.Add(this.btnDeletar);
@@ -244,5 +281,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn comprador;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendido;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnVender;
+        private System.Windows.Forms.Button tabelaVenda;
     }
 }

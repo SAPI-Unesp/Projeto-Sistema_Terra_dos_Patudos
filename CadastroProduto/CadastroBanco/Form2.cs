@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Security;
 using System.Windows.Forms;
 
 namespace CadastroBanco
@@ -68,7 +69,7 @@ namespace CadastroBanco
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            ExibirDados();
         }
 
         private void btnAdicionar_Click_1(object sender, EventArgs e)
@@ -101,6 +102,7 @@ namespace CadastroBanco
                         dataGridViewDados.Rows.Add(id , categoria, descricao, qnt, preco);
                     }
                 }
+                dataGridViewDados.ClearSelection();
             }
             else
             {
@@ -214,6 +216,128 @@ namespace CadastroBanco
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //Desseleciona os itens selecionados da tabela
+            dataGridViewDados.ClearSelection();
+
+            //Verifica se tem algum texto na busca
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Nenhum item foi pesquisado.");
+                return;
+            }
+
+            string Busca = textBox1.Text;
+
+            
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                //Verifica se a classificação ou a descrição é igual ao texto buscado
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    string BuscaCat = row.Cells[1].Value.ToString();
+                    string BuscaDes = row.Cells[2].Value.ToString();
+                    if (BuscaCat.ToLower().Equals(Busca.ToLower()) || BuscaDes.ToLower().Equals(Busca.ToLower()))
+                    {
+                        //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
+                        row.Visible = true;
+                        row.Selected = true;
+                    }
+                    else
+                    {
+                        //Deixa invisivel as linhas que não tem a classificação ou a descrição igual ao texto buscado
+                        row.Visible = false;
+                    }
+                }
+            }
+
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            //Se não achar nada ele exibe todos os itens denovo e retorna a mensagem
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                ExibirDados();
+                MessageBox.Show("Nenhum item encontrado.");
+                return;
+            }
+            else 
+            {
+                dataGridViewDados.ClearSelection();
+                return;
+            }
+
+
+        }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um item para vender.");
+                return;
+            }
+
+            // Pegar o índice da linha selecionada
+            int index = dataGridViewDados.SelectedRows[0].Index;
+            var linhaSelecionada = dataGridViewDados.Rows[index];
+
+            // Extrair dados da linha selecionada, incluindo o ID
+            string id = linhaSelecionada.Cells[0].Value.ToString();
+            string categoria = linhaSelecionada.Cells[1].Value.ToString();
+            string descricao = linhaSelecionada.Cells[2].Value.ToString();
+            decimal qnt = decimal.Parse(linhaSelecionada.Cells[3].Value.ToString());
+            decimal preco = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
+
+            FormVender formVender = new FormVender(qnt, preco);
+
+            if(formVender.ShowDialog() == DialogResult.OK)
+            {
+                // Se o usuário clicar em OK no formulário de venda, realiza a atualização no arquivo
+
+                // Ler todas as linhas do arquivo
+                var linhas = File.ReadAllLines(caminhoArquivo).ToList();
+
+                // Encontrar a linha correspondente pelo ID
+                int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + ","));
+
+                if (linhaParaAtualizar >= 0)
+                {
+                    // Atualizar a linha com os novos dados
+                    linhas[linhaParaAtualizar] = $"{id},{categoria},{descricao},{formVender.Qtd},{preco}";
+
+                    // Escrever as alterações no arquivo
+                    File.WriteAllLines(caminhoArquivo, linhas);
+                    MessageBox.Show("Venda realizada com sucesso!!");
+
+                    // Recarregar os dados no DataGridView
+                    ExibirDados();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao encontrar o item para vender.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Erro ao vender o item.");
+            }
+
+        }
+
+        private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void tabelaVenda_Click(object sender, EventArgs e)
         {
 
         }
