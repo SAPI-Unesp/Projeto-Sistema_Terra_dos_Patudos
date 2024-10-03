@@ -134,3 +134,18 @@ C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\CadastroProdu
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAdicionar.resources
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizar.resources
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizar.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.exe.config
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.exe
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.pdb
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.AssemblyReference.cache
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form1.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form2.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAdicionar.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizar.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Properties.Resources.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\RoundRectForm.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.GenerateResource.cache
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.CoreCompileInputs.cache
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\Cadastro.4202E906.Up2Date
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.exe
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.pdb
