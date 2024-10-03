@@ -1,6 +1,7 @@
 1, Camiseta,,1000,0
 2, teste,4242
-5,Sapato,asdasdadsad,44,0
-6, Calça, aaa, 2, 6
 7, Camiseta, afasfadfsfasdfsafsadfasdfsadf, 10, 15,00
-8, Blusa, qweqeqe, 1, 12
+3, Sapato, Sapatos pequenos, 7, 2,50
+4, Sapato, sapatos pequenos, 0, 0
+5,Blusa,Blusa P,3,2
+6, Sapato, Sapato marrom tamanho 38, 3, 5
