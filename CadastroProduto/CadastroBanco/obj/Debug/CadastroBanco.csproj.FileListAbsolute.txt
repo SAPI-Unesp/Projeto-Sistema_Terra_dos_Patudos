@@ -149,3 +149,4 @@ C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\D
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\Cadastro.4202E906.Up2Date
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.exe
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.pdb
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormVender.resources
