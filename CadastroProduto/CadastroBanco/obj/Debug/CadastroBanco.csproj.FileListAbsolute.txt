@@ -143,3 +143,6 @@ C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\Cadas
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.pdb
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form2.resources
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAdicionar.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form2.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAdicionar.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive - Unesp\Faculdade\Entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizar.resources

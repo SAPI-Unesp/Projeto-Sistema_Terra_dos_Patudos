@@ -65,6 +65,12 @@
     <Compile Include="FormAdicionar.Designer.cs">
       <DependentUpon>FormAdicionar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAtualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAtualizar.Designer.cs">
+      <DependentUpon>FormAtualizar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundedButton.cs">
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdicionar.resx">
       <DependentUpon>FormAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAtualizar.resx">
+      <DependentUpon>FormAtualizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
