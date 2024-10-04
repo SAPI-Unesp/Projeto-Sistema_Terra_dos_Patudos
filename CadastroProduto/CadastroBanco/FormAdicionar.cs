@@ -44,7 +44,7 @@ namespace CadastroBanco
             int proximoId = ObterProximoIdDisponivel();
 
             // Adiciona ao arquivo
-            File.AppendAllText(caminhoArquivo, $"{proximoId}, {categoria}, {descricao}, {qnt}, {preco}{Environment.NewLine}");
+            File.AppendAllText(caminhoArquivo, $"{proximoId}* {categoria}* {descricao}* {qnt}* {preco}*{DateTime.Now}{Environment.NewLine}");
             MessageBox.Show("Dados adicionados com sucesso!");
 
             // Atualiza o DataGridView no formulário principal
@@ -65,7 +65,7 @@ namespace CadastroBanco
             // Extrair os IDs existentes (supondo que o ID está na primeira coluna)
             var idsExistentes = linhas
                 .Where(l => !string.IsNullOrWhiteSpace(l)) // Ignorar linhas vazias
-                .Select(l => int.Parse(l.Split(',')[0].Trim())) // Pegar o ID (primeiro campo)
+                .Select(l => int.Parse(l.Split('*')[0].Trim())) // Pegar o ID (primeiro campo)
                 .OrderBy(id => id) // Ordenar por ID
                 .ToList();
 

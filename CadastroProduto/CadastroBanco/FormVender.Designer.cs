@@ -41,6 +41,9 @@
             this.precoTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.qtdVenda = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbRealizado = new System.Windows.Forms.CheckBox();
+            this.cbNaoRealizado = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.qtdVenda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +100,7 @@
             this.NomeText.Name = "NomeText";
             this.NomeText.Size = new System.Drawing.Size(100, 20);
             this.NomeText.TabIndex = 6;
+            this.NomeText.TextChanged += new System.EventHandler(this.NomeText_TextChanged);
             // 
             // label4
             // 
@@ -113,6 +117,7 @@
             this.TelText.Name = "TelText";
             this.TelText.Size = new System.Drawing.Size(100, 20);
             this.TelText.TabIndex = 8;
+            this.TelText.TextChanged += new System.EventHandler(this.TelText_TextChanged);
             // 
             // label5
             // 
@@ -158,16 +163,62 @@
             0,
             0,
             0});
+            this.qtdVenda.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.qtdVenda.Name = "qtdVenda";
             this.qtdVenda.Size = new System.Drawing.Size(100, 20);
             this.qtdVenda.TabIndex = 13;
+            this.qtdVenda.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.qtdVenda.ValueChanged += new System.EventHandler(this.qtdVenda_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(155, 120);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Pagamento";
+            // 
+            // cbRealizado
+            // 
+            this.cbRealizado.AutoSize = true;
+            this.cbRealizado.Checked = true;
+            this.cbRealizado.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbRealizado.Location = new System.Drawing.Point(158, 138);
+            this.cbRealizado.Name = "cbRealizado";
+            this.cbRealizado.Size = new System.Drawing.Size(73, 17);
+            this.cbRealizado.TabIndex = 15;
+            this.cbRealizado.Text = "Realizado";
+            this.cbRealizado.UseVisualStyleBackColor = true;
+            this.cbRealizado.CheckedChanged += new System.EventHandler(this.cbRealizado_CheckedChanged);
+            // 
+            // cbNaoRealizado
+            // 
+            this.cbNaoRealizado.AutoSize = true;
+            this.cbNaoRealizado.Location = new System.Drawing.Point(244, 139);
+            this.cbNaoRealizado.Name = "cbNaoRealizado";
+            this.cbNaoRealizado.Size = new System.Drawing.Size(72, 17);
+            this.cbNaoRealizado.TabIndex = 16;
+            this.cbNaoRealizado.Text = "Pendente";
+            this.cbNaoRealizado.UseVisualStyleBackColor = true;
+            this.cbNaoRealizado.CheckedChanged += new System.EventHandler(this.cbNaoRealizado_CheckedChanged);
             // 
             // FormVender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 347);
+            this.Controls.Add(this.cbNaoRealizado);
+            this.Controls.Add(this.cbRealizado);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.qtdVenda);
             this.Controls.Add(this.precoTotal);
             this.Controls.Add(this.label6);
@@ -204,5 +255,8 @@
         private System.Windows.Forms.TextBox precoTotal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown qtdVenda;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox cbRealizado;
+        private System.Windows.Forms.CheckBox cbNaoRealizado;
     }
 }

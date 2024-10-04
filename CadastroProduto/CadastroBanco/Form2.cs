@@ -9,7 +9,7 @@ namespace CadastroBanco
     public partial class Form2 : Form
     {
         string caminhoArquivo = "dados.txt"; // Arquivo onde os dados serão armazenados
-
+        string caminhoArquivoVendas = "Vendas.txt"; // Arquivo onde os dados serão armazenados
         public Form2()
         {
             InitializeComponent();
@@ -50,7 +50,7 @@ namespace CadastroBanco
 
             // Ler todas as linhas
             var linhas = File.ReadAllLines(caminhoArquivo).ToList();
-            linhas[index] = $"{nome},{idade}"; // Atualiza o item selecionado
+            linhas[index] = $"{nome}*{idade}"; // Atualiza o item selecionado
 
             // Sobrescreve o arquivo com as alterações
             File.WriteAllLines(caminhoArquivo, linhas);
@@ -87,19 +87,20 @@ namespace CadastroBanco
                 var linhas = File.ReadAllLines(caminhoArquivo);
                 foreach (var linha in linhas)
                 {
-                    var dados = linha.Split(',');
+                    var dados = linha.Split('*');
 
                     // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                    if (dados.Length == 5)
+                    if (dados.Length == 6)
                     {
                         string id = dados[0].Trim();
                         string categoria = dados[1].Trim();
                         string descricao = dados[2].Trim();
                         string qnt = dados[3].Trim();
                         string preco = dados[4].Trim();
+                        string data = dados[5].Trim();
 
                         // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id , categoria, descricao, qnt, preco);
+                        dataGridViewDados.Rows.Add(id , categoria, descricao, qnt, preco, data);
                     }
                 }
                 dataGridViewDados.ClearSelection();
@@ -109,6 +110,9 @@ namespace CadastroBanco
                 MessageBox.Show("Nenhum dado encontrado.");
             }
         }
+
+
+
 
         private void btnExibir_Click_1(object sender, EventArgs e)
         {
@@ -139,6 +143,7 @@ namespace CadastroBanco
             string descricao = linhaSelecionada.Cells[2].Value.ToString();
             decimal qnt = decimal.Parse(linhaSelecionada.Cells[3].Value.ToString());
             decimal preco = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
+            string data = linhaSelecionada.Cells[5].Value.ToString();
 
             // Abrir o formulário de atualização com os dados atuais
             FormAtualizar formAtualizar = new FormAtualizar(categoria, descricao, qnt, preco);
@@ -151,12 +156,12 @@ namespace CadastroBanco
                 var linhas = File.ReadAllLines(caminhoArquivo).ToList();
 
                 // Encontrar a linha correspondente pelo ID
-                int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + ","));
+                int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
 
                 if (linhaParaAtualizar >= 0)
                 {
                     // Atualizar a linha com os novos dados
-                    linhas[linhaParaAtualizar] = $"{id},{formAtualizar.Categoria},{formAtualizar.Descricao},{formAtualizar.Qnt},{formAtualizar.Preco}";
+                    linhas[linhaParaAtualizar] = $"{id}*{formAtualizar.Categoria}*{formAtualizar.Descricao}*{formAtualizar.Qnt}*{formAtualizar.Preco}*{data}";
 
                     // Escrever as alterações no arquivo
                     File.WriteAllLines(caminhoArquivo, linhas);
@@ -201,7 +206,7 @@ namespace CadastroBanco
                 var linhas = File.ReadAllLines(caminhoArquivo).ToList();
 
                 // Encontra a linha correspondente pelo ID
-                int linhaParaDeletar = linhas.FindIndex(l => l.StartsWith(id + ","));
+                int linhaParaDeletar = linhas.FindIndex(l => l.StartsWith(id + "*"));
                 if (linhaParaDeletar >= 0)
                 {
                     linhas.RemoveAt(linhaParaDeletar); // Remove o item correspondente ao ID
@@ -312,7 +317,7 @@ namespace CadastroBanco
             string descricao = linhaSelecionada.Cells[2].Value.ToString();
             decimal qnt = decimal.Parse(linhaSelecionada.Cells[3].Value.ToString());
             decimal preco = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
-
+            string data = linhaSelecionada.Cells[5].Value.ToString();
             FormVender formVender = new FormVender(qnt, preco);
 
             if(formVender.ShowDialog() == DialogResult.OK)
@@ -320,18 +325,25 @@ namespace CadastroBanco
                 // Se o usuário clicar em OK no formulário de venda, realiza a atualização no arquivo
 
                 // Ler todas as linhas do arquivo
-                var linhas = File.ReadAllLines(caminhoArquivo).ToList();
+                var linhas = File.ReadAllLines(caminhoArquivo).ToList();    
 
                 // Encontrar a linha correspondente pelo ID
-                int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + ","));
+                int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
 
                 if (linhaParaAtualizar >= 0)
                 {
                     // Atualizar a linha com os novos dados
-                    linhas[linhaParaAtualizar] = $"{id},{categoria},{descricao},{formVender.Qtd},{preco}";
+    
+                    linhas[linhaParaAtualizar] = $"{id}*{categoria}*{descricao}*{formVender.Qtd}*{preco}*{data}";
 
                     // Escrever as alterações no arquivo
                     File.WriteAllLines(caminhoArquivo, linhas);
+  
+         
+                    // Escrever as alterações no arquivo
+                    int proximoId = ObterProximoIdDisponivel();
+                   
+                    File.AppendAllText(caminhoArquivoVendas, $"{proximoId}* {categoria}* {descricao}* {formVender.QtdV}*{preco*formVender.QtdV}*{DateTime.Now}*{formVender.nomeComprador}*{formVender.telefoneComprador}*{formVender.pagamento}{Environment.NewLine}");
                     MessageBox.Show("Venda realizada com sucesso!!");
 
                     // Recarregar os dados no DataGridView
@@ -348,6 +360,60 @@ namespace CadastroBanco
             }
 
         }
+        /*
+         * 
+         * string categoria = cbCategoria.Text;
+            string descricao = txtDesc.Text;
+            decimal qnt = numQnt.Value;
+            decimal preco = numPreco.Value;
+
+            if (string.IsNullOrWhiteSpace(categoria))
+            {
+                MessageBox.Show("Preencha a categoria.");
+                return;
+            }
+
+            int proximoId = ObterProximoIdDisponivel();
+
+            // Adiciona ao arquivo
+            File.AppendAllText(caminhoArquivo, $"{proximoId}* {categoria}* {descricao}* {qnt}* {preco}{Environment.NewLine}");
+            MessageBox.Show("Dados adicionados com sucesso!");
+
+            // Atualiza o DataGridView no formulário principal
+            formPrincipal.ExibirDados();
+
+            // Fecha o formulário de adição após a inserção
+            this.Close();
+
+         * */
+        private int ObterProximoIdDisponivel()
+        {
+            // Se o arquivo não existir, o primeiro ID será 1
+            if (!File.Exists(caminhoArquivoVendas))
+                return 1;
+
+            // Ler todas as linhas do arquivo
+            var linhas = File.ReadAllLines(caminhoArquivoVendas);
+
+            // Extrair os IDs existentes (supondo que o ID está na primeira coluna)
+            var idsExistentes = linhas
+                .Where(l => !string.IsNullOrWhiteSpace(l)) // Ignorar linhas vazias
+                .Select(l => int.Parse(l.Split('*')[0].Trim())) // Pegar o ID (primeiro campo)
+                .OrderBy(id => id) // Ordenar por ID
+                .ToList();
+
+            // Encontrar o menor ID não utilizado
+            int proximoId = 1; // Começa com o ID 1
+            foreach (var id in idsExistentes)
+            {
+                if (id == proximoId)
+                    proximoId++; // Se o ID atual já está em uso, incrementar
+                else
+                    break; // Encontrar o menor ID não usado
+            }
+
+            return proximoId;
+        }
 
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -356,7 +422,8 @@ namespace CadastroBanco
 
         private void tabelaVenda_Click(object sender, EventArgs e)
         {
-
+            FormTabelaVenda form = new FormTabelaVenda();
+            form.ShowDialog();
         }
     }
 }

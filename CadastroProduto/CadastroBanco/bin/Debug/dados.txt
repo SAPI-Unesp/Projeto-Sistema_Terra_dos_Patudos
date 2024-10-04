@@ -1,4 +1,0 @@
-2, Sapato, sapatos pequenos, 0, 0
-3,Blusa,Blusa P,3,2
-4, Sapato, Sapato marrom tamanho 38, 3, 5
-5, fjfgnjdfgh, , 1000, 232
