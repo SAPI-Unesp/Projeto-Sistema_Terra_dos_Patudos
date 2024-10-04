@@ -149,7 +149,7 @@
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.btnConfirmar);
             this.Name = "FormAdicionar";
-            this.Text = "FormAdicionar";
+            this.Text = "Adicionar";
             this.Load += new System.EventHandler(this.FormAdicionar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numQnt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPreco)).EndInit();

@@ -123,6 +123,12 @@ namespace CadastroBanco
                 return;
             }
 
+            if (dataGridViewDados.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Selecione apenas um item.");
+                return;
+            }
+
             // Pegar o índice da linha selecionada
             int index = dataGridViewDados.SelectedRows[0].Index;
             var linhaSelecionada = dataGridViewDados.Rows[index];
@@ -172,6 +178,12 @@ namespace CadastroBanco
             if (dataGridViewDados.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um item para deletar.");
+                return;
+            }
+
+            if (dataGridViewDados.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Selecione apenas um item.");
                 return;
             }
 
@@ -282,6 +294,11 @@ namespace CadastroBanco
             if (dataGridViewDados.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um item para vender.");
+                return;
+            }
+            if (dataGridViewDados.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Selecione apenas um item.");
                 return;
             }
 

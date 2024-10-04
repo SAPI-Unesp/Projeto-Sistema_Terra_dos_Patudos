@@ -150,7 +150,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDesc);
             this.Name = "FormAtualizar";
-            this.Text = "FormAtualizar";
+            this.Text = "Atualizar";
             this.Load += new System.EventHandler(this.FormAtualizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPreco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQnt)).EndInit();
