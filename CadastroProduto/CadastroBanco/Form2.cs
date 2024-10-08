@@ -11,6 +11,7 @@ namespace CadastroBanco
         string caminhoArquivo = "dados.txt"; // Arquivo onde os dados serão armazenados
         string caminhoArquivoVendas = "Vendas.txt"; // Arquivo onde os dados serão armazenados
         string caminhoArquivoCategoria = "categoria.txt";
+        string itensComId = "itensComId.txt";
         public Form2()
         {
             InitializeComponent();
@@ -126,6 +127,7 @@ namespace CadastroBanco
         {
             VerificaExiste();
             ExibirTudo();
+            AddId();
         }
 
         private void btnAdicionar_Click_1(object sender, EventArgs e)
@@ -206,6 +208,15 @@ namespace CadastroBanco
                     //Deixa invisivel as linhas que não tem a classificação ou a descrição igual ao texto buscado
                     row.Visible = false;
                 }
+                if (row.Cells[3].Value.ToString() == "0")
+                {
+                    row.Cells[6].Value = "Vendido";
+                }
+                else
+                {
+                    row.Cells[6].Value = "A Vender";
+                }
+
             }
 
 
@@ -228,6 +239,14 @@ namespace CadastroBanco
                 string BuscaCat = cbCategoria.Text;
                 string BuscaDes = row.Cells[1].Value.ToString();
                 row.Visible = true;
+                if (row.Cells[3].Value.ToString() == "0")
+                {
+                    row.Cells[6].Value = "Vendido";
+                }
+                else
+                {
+                    row.Cells[6].Value = "A Vender";
+                }
             }
             cbCategoria.Text = "";
 
@@ -535,6 +554,48 @@ namespace CadastroBanco
             }
 
             return proximoId;
+        }
+
+        public void AddId()
+        {
+            var linhas2 = File.ReadAllLines(caminhoArquivo);
+            string id;
+            string categoria;
+            string descricao;
+            string qnt;
+            string preco;
+            string data;
+
+
+            if (File.Exists(caminhoArquivo))
+            {
+                var linhas = File.ReadAllLines(caminhoArquivo);
+                int i = 0;
+                foreach (var linha in linhas)
+                {
+                    var dados = linha.Split('*');
+
+                    // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
+                  
+                        File.AppendAllText(itensComId, $"{i}*{linha}{Environment.NewLine}");
+                        i++;
+                    
+
+                   
+           
+
+                       
+                 
+                }
+                dataGridViewDados.ClearSelection();
+            }
+            else
+            {
+                MessageBox.Show("Nenhum dado encontrado.");
+            }
+
+            
+
         }
 
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
