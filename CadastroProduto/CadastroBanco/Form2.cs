@@ -290,6 +290,9 @@ namespace CadastroBanco
                 }
             }
 
+          
+            ExibirTudo();
+
         }
 
         private void btnDeletar_Click_1(object sender, EventArgs e)
@@ -338,6 +341,8 @@ namespace CadastroBanco
                 // Se o usuário cancelar, não fazer nada
                 MessageBox.Show("Ação de exclusão cancelada.");
             }
+ 
+            ExibirTudo();
         }
 
 
@@ -473,7 +478,9 @@ namespace CadastroBanco
                 MessageBox.Show("Erro ao vender o item.");
             }
 
+            ExibirTudo();
         }
+
         /*
          * 
          * string categoria = cbCategoria.Text;
@@ -500,6 +507,7 @@ namespace CadastroBanco
             this.Close();
 
          * */
+
         private int ObterProximoIdDisponivel()
         {
             // Se o arquivo não existir, o primeiro ID será 1

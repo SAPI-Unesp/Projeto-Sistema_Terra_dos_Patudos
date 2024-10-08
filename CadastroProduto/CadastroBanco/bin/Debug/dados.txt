@@ -1,7 +1,1 @@
-1* Camiseta* TESTETESTE* 2* 4*08/10/2024 13:48:15
-2*Brincos*asdasd*2*3*08/10/2024 13:48:33
-3* Blusa* * 0* 0*08/10/2024 13:50:42
-4* Vestido* teste* 3* 4*08/10/2024 13:51:13
-5* Calça* asdasd* 2* 3*08/10/2024 13:52:42
-6* Calça* asdasd* 0* 3*08/10/2024 13:52:59
-7* Vestido* aa* 3* 2*08/10/2024 13:55:57
+1* Camiseta* Camiseta vermelha* 4* 5*08/10/2024 14:16:16
