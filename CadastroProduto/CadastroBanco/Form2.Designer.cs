@@ -40,12 +40,14 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
             this.tabelaVenda = new System.Windows.Forms.Button();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siatuacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,10 +134,11 @@
             this.descricao,
             this.quantidade,
             this.preco,
-            this.dataAdicao});
-            this.dataGridViewDados.Location = new System.Drawing.Point(12, 72);
+            this.dataAdicao,
+            this.siatuacao});
+            this.dataGridViewDados.Location = new System.Drawing.Point(12, 106);
             this.dataGridViewDados.Name = "dataGridViewDados";
-            this.dataGridViewDados.Size = new System.Drawing.Size(948, 442);
+            this.dataGridViewDados.Size = new System.Drawing.Size(948, 408);
             this.dataGridViewDados.TabIndex = 9;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
@@ -177,6 +180,16 @@
             this.tabelaVenda.UseVisualStyleBackColor = true;
             this.tabelaVenda.Click += new System.EventHandler(this.tabelaVenda_Click);
             // 
+            // cbCategoria
+            // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(15, 79);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbCategoria.TabIndex = 14;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
+            // 
             // id
             // 
             this.id.HeaderText = "ID";
@@ -192,9 +205,9 @@
             // 
             // descricao
             // 
-            this.descricao.HeaderText = "Descrição";
+            this.descricao.HeaderText = "Peça";
             this.descricao.Name = "descricao";
-            this.descricao.Width = 400;
+            this.descricao.Width = 300;
             // 
             // quantidade
             // 
@@ -214,11 +227,18 @@
             this.dataAdicao.ReadOnly = true;
             this.dataAdicao.Width = 150;
             // 
+            // siatuacao
+            // 
+            this.siatuacao.HeaderText = "Situação";
+            this.siatuacao.Name = "siatuacao";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(970, 523);
+            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.tabelaVenda);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.btnBuscar);
@@ -254,11 +274,13 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Button tabelaVenda;
+        private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAdicao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn siatuacao;
     }
 }

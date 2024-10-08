@@ -10,6 +10,7 @@ namespace CadastroBanco
     {
         string caminhoArquivo = "dados.txt"; // Arquivo onde os dados serão armazenados
         string caminhoArquivoVendas = "Vendas.txt"; // Arquivo onde os dados serão armazenados
+        string caminhoArquivoCategoria = "categoria.txt";
         public Form2()
         {
             InitializeComponent();
@@ -22,6 +23,8 @@ namespace CadastroBanco
             // Impedir edição direta no DataGridView
             dataGridViewDados.AllowUserToAddRows = false;
             dataGridViewDados.ReadOnly = true;
+
+
         }
 
         // Adicionar dados ao arquivo
@@ -67,15 +70,71 @@ namespace CadastroBanco
             txtIdade.Clear();
         }
 
+        public void VerificaExiste()
+        {
+            if (File.Exists(caminhoArquivo))
+            {
+                var linhas = File.ReadAllLines(caminhoArquivo);
+                foreach (var linha in linhas)
+                {
+                    var dados = linha.Split('*');
+
+                    // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
+                    if (dados.Length == 6)
+                    {
+                        string id = dados[0].Trim();
+                        string categoria = dados[1].Trim();
+                        string descricao = dados[2].Trim();
+                        string qnt = dados[3].Trim();
+                        string preco = dados[4].Trim();
+                        string data = dados[5].Trim();
+
+                        // Adicionar os dados no DataGridView
+                        dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco, data);
+                    }
+                }
+                dataGridViewDados.ClearSelection();
+            }
+            else
+            {
+                MessageBox.Show("Nenhum dado encontrado.");
+            }
+
+            if (File.Exists(caminhoArquivoCategoria))
+            {
+                var linhas = File.ReadAllLines(caminhoArquivoCategoria);
+                foreach (var linha in linhas)
+                {
+                    bool contem = false;
+                    foreach (var a in cbCategoria.Items)
+                    {
+                        if (a.Equals(linha))
+                        {
+                            contem = true;
+                        }
+                    }
+                    if (!contem)
+                    {
+                        cbCategoria.Items.Add(linha);
+                    }
+
+                }
+            }
+
+        }
         private void Form2_Load(object sender, EventArgs e)
         {
-            ExibirDados();
+            VerificaExiste();
+            ExibirTudo();
         }
 
         private void btnAdicionar_Click_1(object sender, EventArgs e)
         {
             FormAdicionar formAdicionar = new FormAdicionar(this);
             formAdicionar.ShowDialog();
+            VerificaExiste();
+            cbCategoria.Text = formAdicionar.cbtexto;
+            ExibirDados();
         }
 
         public void ExibirDados()
@@ -109,6 +168,47 @@ namespace CadastroBanco
             {
                 MessageBox.Show("Nenhum dado encontrado.");
             }
+
+            if (File.Exists(caminhoArquivoCategoria))
+            {
+                var linhas = File.ReadAllLines(caminhoArquivoCategoria);
+                foreach (var linha in linhas)
+                {
+                    bool contem = false;
+                    foreach(var a in cbCategoria.Items)
+                    {
+                        if(a.Equals(linha))
+                        {
+                            contem = true;
+                        }
+                    }
+                    if(!contem)
+                    {
+                        cbCategoria.Items.Add(linha);
+                    }
+
+                }
+            }
+
+
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
+            {
+                string BuscaCat = cbCategoria.Text;
+                string BuscaDes = row.Cells[1].Value.ToString();
+                if (BuscaCat.ToLower().Equals(BuscaDes.ToLower()))
+                {
+                    //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
+                    row.Visible = true;
+                    row.Selected = true;
+                }
+                else
+                {
+                    //Deixa invisivel as linhas que não tem a classificação ou a descrição igual ao texto buscado
+                    row.Visible = false;
+                }
+            }
+
+
         }
 
 
@@ -116,7 +216,21 @@ namespace CadastroBanco
 
         private void btnExibir_Click_1(object sender, EventArgs e)
         {
-            ExibirDados();
+
+            ExibirTudo();
+
+        }
+
+        public void ExibirTudo()
+        {
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
+            {
+                string BuscaCat = cbCategoria.Text;
+                string BuscaDes = row.Cells[1].Value.ToString();
+                row.Visible = true;
+            }
+            cbCategoria.Text = "";
+
         }
 
         private void btnAtualizar_Click_1(object sender, EventArgs e)
@@ -424,6 +538,30 @@ namespace CadastroBanco
         {
             FormTabelaVenda form = new FormTabelaVenda();
             form.ShowDialog();
+        }
+
+        private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
+                //Verifica se a classificação ou a descrição é igual ao texto buscado
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    string BuscaCat = cbCategoria.Text;
+                    string BuscaDes = row.Cells[1].Value.ToString();
+                    if (BuscaCat.ToLower().Equals(BuscaDes.ToLower()) )
+                    {
+                        //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
+                        row.Visible = true;
+                        row.Selected = true;
+                    }
+                    else
+                    {
+                        //Deixa invisivel as linhas que não tem a classificação ou a descrição igual ao texto buscado
+                        row.Visible = false;
+                    }
+                }
+            
         }
     }
 }

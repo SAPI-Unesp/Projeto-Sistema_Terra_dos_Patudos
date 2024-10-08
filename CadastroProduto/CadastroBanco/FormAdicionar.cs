@@ -10,11 +10,23 @@ namespace CadastroBanco
     {
         private Form2 formPrincipal; // Referência ao Form1 (formulário principal)
         string caminhoArquivo = "dados.txt"; // Mesmo arquivo usado no Form1
-
+        string caminhoArquivoCategoria = "categoria.txt";
+        public string cbtexto;
         public FormAdicionar(Form2 form)
         {
             InitializeComponent();
             this.formPrincipal = form; // Recebe a referência do Form1
+            if (File.Exists(caminhoArquivoCategoria))
+            {
+                var linhas = File.ReadAllLines(caminhoArquivoCategoria);
+                foreach (var linha in linhas)
+                {
+                   
+                 cbCategoria.Items.Add(linha);
+                    
+                }
+            }
+          
         }
 
         // Botão para confirmar e adicionar os dados ao arquivo TXT
@@ -30,10 +42,31 @@ namespace CadastroBanco
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
-            string categoria = cbCategoria.Text;
-            string descricao = txtDesc.Text;
-            decimal qnt = numQnt.Value;
-            decimal preco = numPreco.Value;
+                string categoria = cbCategoria.Text;
+                cbtexto = categoria;
+                string descricao = txtDesc.Text;
+                decimal qnt = numQnt.Value;
+                decimal preco = numPreco.Value;
+
+            if (File.Exists(caminhoArquivoCategoria))
+            {
+                // Lê todas as linhas do arquivo
+                var categorias = File.ReadAllLines(caminhoArquivoCategoria);
+
+                // Verifica se a categoria está presente
+                if (!categorias.Contains(categoria))
+                {
+                    // A categoria não está no arquivo
+                    //MessageBox.Show("Categoria não encontrada.");
+                    File.AppendAllText(caminhoArquivoCategoria, $"{categoria}{Environment.NewLine}");
+                }
+             
+            }
+            else
+            {
+                File.WriteAllText(caminhoArquivoCategoria, $"{categoria}{Environment.NewLine}");
+            }
+       
 
             if (string.IsNullOrWhiteSpace(categoria))
             {
@@ -80,6 +113,11 @@ namespace CadastroBanco
             }
 
             return proximoId;
+        }
+
+        private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

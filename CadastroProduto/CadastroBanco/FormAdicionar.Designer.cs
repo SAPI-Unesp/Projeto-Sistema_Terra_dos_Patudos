@@ -124,21 +124,17 @@
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Items.AddRange(new object[] {
-            "Camiseta",
-            "Blusa",
-            "Calça",
-            "Sapato"});
             this.cbCategoria.Location = new System.Drawing.Point(26, 29);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cbCategoria.TabIndex = 14;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
             // FormAdicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 339);
+            this.ClientSize = new System.Drawing.Size(377, 339);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
