@@ -37,13 +37,11 @@
             this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnFinalizarCompra = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.nome = new System.Windows.Forms.TextBox();
             this.telefone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbFormapagamento = new System.Windows.Forms.ComboBox();
             this.cbPagamento = new System.Windows.Forms.ComboBox();
             this.tbTotalPagar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -133,16 +131,6 @@
             this.btnFinalizarCompra.UseVisualStyleBackColor = true;
             this.btnFinalizarCompra.Click += new System.EventHandler(this.btnFinalizarCompra_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(850, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Forma de pagamento";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -183,20 +171,6 @@
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "Pagamento";
-            // 
-            // cbFormapagamento
-            // 
-            this.cbFormapagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFormapagamento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cbFormapagamento.Items.AddRange(new object[] {
-            "Pix",
-            "Dinheiro",
-            "Cartão de Débito",
-            "Cartão de Crédito"});
-            this.cbFormapagamento.Location = new System.Drawing.Point(852, 146);
-            this.cbFormapagamento.Name = "cbFormapagamento";
-            this.cbFormapagamento.Size = new System.Drawing.Size(121, 21);
-            this.cbFormapagamento.TabIndex = 21;
             // 
             // cbPagamento
             // 
@@ -248,13 +222,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbTotalPagar);
             this.Controls.Add(this.cbPagamento);
-            this.Controls.Add(this.cbFormapagamento);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.telefone);
             this.Controls.Add(this.nome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFinalizarCompra);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.dataGridViewDados);
@@ -272,13 +244,11 @@
         private System.Windows.Forms.DataGridView dataGridViewDados;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnFinalizarCompra;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox nome;
         private System.Windows.Forms.TextBox telefone;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbFormapagamento;
         private System.Windows.Forms.ComboBox cbPagamento;
         private System.Windows.Forms.TextBox tbTotalPagar;
         private System.Windows.Forms.Label label5;
