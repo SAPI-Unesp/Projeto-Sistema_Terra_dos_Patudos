@@ -127,7 +127,11 @@ namespace CadastroBanco
         {
             VerificaExiste();
             ExibirTudo();
-           
+            System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
+            this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * workingRectangle.Width),
+                Convert.ToInt32(0.5 * workingRectangle.Height));
+
+            this.Location = new System.Drawing.Point(10, 10);
         }
 
         private void btnAdicionar_Click_1(object sender, EventArgs e)
