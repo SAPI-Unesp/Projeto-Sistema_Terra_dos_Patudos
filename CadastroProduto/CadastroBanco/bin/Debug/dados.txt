@@ -1,24 +1,24 @@
 0*Blusas*Blusa azul marinho florida*1*7,00 *08/10/2024 15:41 
 1*Blusas*Blusa branca estamp. Geom.*1*5,00 *08/10/2024 15:41 
 2*Blusas*Blusa branca estampa. Nervura*1*5,00*08/10/2024 15:41
-3*Blusas*Blusa oncinha Nitrogen*1*7,00 *08/10/2024 15:41 
+3*Blusas*Blusa oncinha Nitrogen*0*7,00 *08/10/2024 15:41 
 4*Blusas*Colete preto paetê*1*5,00 *08/10/2024 15:41 
 5*Blusas*Blusa manga verde Marfino*1*10,00 *08/10/2024 15:41 
 6*Blusas*Blusa manga list. Azul e branco*1*10,00 *08/10/2024 15:41 
 7*Blusas*Camiseta marinho luas*1*5,00 *08/10/2024 15:41
 8*Blusas*Camiseta preta mesclada strass*1*5,00 *08/10/2024 15:41
-9*Blusas*Blusa seda costa vermelha*1*5,00 *08/10/2024 15:41
+9*Blusas*Blusa seda costa vermelha*0*5,00 *08/10/2024 15:41
 10*Blusas*Blusa seda costa marinho*1*5,00 *08/10/2024 15:41
-11*Blusas*Regata salmão/verde San Marino*1*5,00 *08/10/2024 15:41
-12*Blusas*Blusa branca elanca decote V*1*5,00 *08/10/2024 15:41
-13*Blusas*Blusa rosa elanca decote V*1*5,00 *08/10/2024 15:41
+11*Blusas*Regata salmão/verde San Marino*0*5,00 *08/10/2024 15:41
+12*Blusas*Blusa branca elanca decote V*0*5,00 *08/10/2024 15:41
+13*Blusas*Blusa rosa elanca decote V*0*5,00 *08/10/2024 15:41
 14*Blusas*Blusa com manga pássaro rosa*1*5,00 *08/10/2024 15:41
 15*Blusas*Blusa com manga onça decote V*1*5,00 *08/10/2024 15:41
 16*Blusas*Camiseta Hering vinho*1*5,00 *08/10/2024 15:41
 17*Blusas*Camiseta Hering branca folhagem*1*5,00 *08/10/2024 15:41
 18*Blusas*Blusa meia manga gola bobo rosa*1*5,00 *08/10/2024 15:41
 19*Blusas*Blusa verde folhagem*1*5,00 *08/10/2024 15:41
-20*Blusas*Cacharrel bordô*1*5,00 *08/10/2024 15:41
+20*Blusas*Cacharrel bordô*0*5,00 *08/10/2024 15:41
 21*Blusas*Cacharrel roxa*1*5,00 *08/10/2024 15:41
 22*Blusas*Camiseta preta Ellus*1*3,00 *08/10/2024 15:41
 23*Blusas*Blusa nadador petróleo*1*3,00 *08/10/2024 15:41
@@ -52,7 +52,7 @@
 51*Vestidos*Vestido animal print com tule*1*25,00 *08/10/2024 15:41
 52*Vestidos*Vestido creme com tule*1*25,00 *08/10/2024 15:41
 53*Vestidos*Vestido rosa e preto JohnJohn*1*20,00 *08/10/2024 15:41
-54*Vestidos*Vestido p&b com capuz*1*10,00 *08/10/2024 15:41
+54*Vestidos*Vestido p&b com capuz*0*10,00 *08/10/2024 15:41
 55*Vestidos*Vestido vermelho Dress*1*10,00 *08/10/2024 15:41
 56*Vestidos*Vestido rosa florido Nitrogen*1*25,00 *08/10/2024 15:41
 57*Vestidos*Vestido laranja e preto Musa*1*5,00 *08/10/2024 15:41
@@ -62,7 +62,7 @@
 61*Blusas*Camiseta preta 33 Hangar*1*10,00 *08/10/2024 15:41
 62*Vestidos*Vestido liganete azul e bege*1*10,00 *08/10/2024 15:41
 63*Vestidos*Vestido marinho estamp. Rosa/pêssego*1*10,00 *08/10/2024 15:41
-64*Vestidos*Vestido verde viscose*1*10,00 *08/10/2024 15:41
+64*Vestidos*Vestido verde viscose*0*10,00 *08/10/2024 15:41
 65*Vestidos*Vestido azul royal*1*5,00 *08/10/2024 15:41
 66*Vestidos*Vestido liganete marrom e bege*1*10,00 *08/10/2024 15:41
 67*Vestidos*Vestido preto com babado Marisa*1*10,00 *08/10/2024 15:41
@@ -79,14 +79,14 @@
 78*Blusas*Camisola preta renda*1*5,00 *08/10/2024 15:41
 79*Blusas*Blusa vermelha e preta dupla face*1*10,00 *08/10/2024 15:41
 80*Blusas*Cardigan vermelho linha vazado*1*15,00 *08/10/2024 15:41
-81*Blusas*Blusa vermelha com camisa xadrez*1*10,00 *08/10/2024 15:41
+81*Blusas*Blusa vermelha com camisa xadrez*0*10,00 *08/10/2024 15:41
 82*Acessórios*Par de meias de meias bege*1*7,00 *08/10/2024 15:41
 83*Acessórios*Touca colorida*1*5,00 *08/10/2024 15:41
-84*Acessórios*Touca vermelha feita a mão*1*5,00 *08/10/2024 15:41
+84*Acessórios*Touca vermelha feita a mão*0*5,00 *08/10/2024 15:41
 85*Acessórios*Cachecol creme trançado*1*10,00 *08/10/2024 15:41
 86*Acessórios*Cachecol rosê aplicação flor*1*5,00 *08/10/2024 15:41
 87*Blusas*Blusa vermelha viscose*1*7,00 *08/10/2024 15:41
-88*Blusas*Blusa azul e verde viscose*1*7,00 *08/10/2024 15:41
+88*Blusas*Blusa azul e verde viscose*0*7,00 *08/10/2024 15:41
 89*Sapatos*Rasteira strass*1*2,00 *08/10/2024 15:41
 90*Acessórios*Carteira bege*1*10,00 *08/10/2024 15:41
 91*Moda Praia*Biquini estampa escura*1*5,00 *08/10/2024 15:41
@@ -105,16 +105,16 @@
 104*Acessórios*Cinto fininho*1*2,00 *08/10/2024 15:41
 105*Moda Praia*Maiô bordô*1*5,00 *08/10/2024 15:41
 106*Calças*Calça jeans flare*1*15,00 *08/10/2024 15:41
-107*Calças*Calça jeans Levis*1*20,00 *08/10/2024 15:41
+107*Calças*Calça jeans Levis*0*20,00 *08/10/2024 15:41
 108*Calças*Calça jeans Rosa Chá*1*20,00 *08/10/2024 15:41
-109*Calças*Calça jeans Hollister*1*20,00 *08/10/2024 15:41
+109*Calças*Calça jeans Hollister*0*20,00 *08/10/2024 15:41
 110*Calças*Calça jeans Alleppo*1*10,00 *08/10/2024 15:41
 111*Shorts*Short jeans Iódice*1*20,00 *08/10/2024 15:41
 112*Shorts*Short jeans Damyller*1*20,00 *08/10/2024 15:41
 113*Shorts*Bermuda jeans Cavalera*1*10,00 *08/10/2024 15:41
 114*Shorts*Short jeans Young Style*1*10,00 *08/10/2024 15:41
 115*Calças*Calça ZamZam*1*5,00 *08/10/2024 15:41
-116*Shorts*Short perna desfiada*1*5,00 *08/10/2024 15:41
+116*Shorts*Short perna desfiada*0*5,00 *08/10/2024 15:41
 117*Utensílios*CD Agito 98 FM*1*2,00 *08/10/2024 15:41
 118*Utensílios*CD Negritude Junior*1*2,00 *08/10/2024 15:41
 119*Utensílios*CD Samba e Pagode 7*1*2,00 *08/10/2024 15:41
@@ -134,29 +134,29 @@
 133*Academia*Squeeze laranja*1*3,00 *08/10/2024 15:41
 134*Vestidos*Macaquinho azul Bobstore*1*15,00 *08/10/2024 15:41
 135*Calças*Legging flare listras p&b*1*10,00 *08/10/2024 15:41
-136*Calças*Legging marrom tecido*1*5,00 *08/10/2024 15:41
-137*Shorts*Bermuda cotton marinho*1*10,00 *08/10/2024 15:41
+136*Calças*Legging marrom tecido*0*5,00 *08/10/2024 15:41
+137*Shorts*Bermuda cotton marinho*0*10,00 *08/10/2024 15:41
 138*Shorts*Bermuda cotton cinza e verde limão*1*5,00 *08/10/2024 15:41
 139*Shorts*Short preto acetinado BlueSteel*1*5,00 *08/10/2024 15:41
-140*Shorts*Bermuda preta Denim*1*5,00 *08/10/2024 15:41
-141*Saias*Saia de malha borboleta*1*15,00 *08/10/2024 15:41
+140*Shorts*Bermuda preta Denim*0*5,00 *08/10/2024 15:41
+141*Saias*Saia de malha borboleta*0*15,00 *08/10/2024 15:41
 142*Saias*Saia curta renda*1*10,00 *08/10/2024 15:41
 143*Saias*Saia marinho linho*1*5,00 *08/10/2024 15:41
 144*Blusas*Blusa preta com nervura*1*5,00 *08/10/2024 15:41
 145*Blusas*Camiseta Star Wars*1*10,00 *08/10/2024 15:41
-146*Blusas*Camiseta preta NU*1*5,00 *08/10/2024 15:41
+146*Blusas*Camiseta preta NU*0*5,00 *08/10/2024 15:41
 147*Blusas*Camiseta cinza caveira*1*5,00 *08/10/2024 15:41
 148*Blusas*Camiseta amarela Brasil Mormai*1*5,00 *08/10/2024 15:41
 149*Blusas*Camiseta amarela Responsa Carioca*1*5,00 *08/10/2024 15:41
 150*Blusas*Camiseta cinza Sulfabril*1*5,00 *08/10/2024 15:41
 151*Blusas*Camiseta terracota*1*3,00 *08/10/2024 15:41
-152*Academia*Blusa*nadador verde limão academia*1*10,00 *08/10/2024 15:41
+152*Academia*Blusa*nadador verde limão academia*1*10,00 
 153*Blusas*Mini blusa pink nó*1*5,00 *08/10/2024 15:41
 154*Blusas*Blusa azul marinho Baianas*1*10,00 *08/10/2024 15:41
 155*Blusas*Blusa marrom pérolas e bolinhas*1*20,00 *08/10/2024 15:41
 156*Blusas*Blusa renda branca botões*1*10,00 *08/10/2024 15:41
 157*Blusas*Blusa preta cacharrel*1*20,00 *08/10/2024 15:41
-158*Shorts*Short preto desfiado Leon*1*5,00 *08/10/2024 15:41
+158*Shorts*Short preto desfiado Leon*0*5,00 *08/10/2024 15:41
 159*Blusas*Blusa strass Rovitex*1*5,00 *08/10/2024 15:41
 160*Blusas*Blusa marinho Dolce Vita*1*3,00 *08/10/2024 15:41
 161*Blusas*Camisola Mickey & Minnie*1*10,00 *08/10/2024 15:41
@@ -171,7 +171,7 @@
 170*Blusas*Blusa royal gola renda brilho*1*5,00 *08/10/2024 15:41
 171*Moda Praia*Body azul florido*1*10,00 *08/10/2024 15:41
 172*Blusas*Blusa vermelha Marisa*1*3,00 *08/10/2024 15:41
-173*Blusas*Cropped listrado de amarrar*1*5,00 *08/10/2024 15:41
+173*Blusas*Cropped listrado de amarrar*0*5,00 *08/10/2024 15:41
 174*Academia*Blusa cinza academia*1*5,00 *08/10/2024 15:41
 175*Blusas*Blusa palha de seda strass*1*10,00 *08/10/2024 15:41
 176*Blusas*Blusa seda quadrados*1*15,00 *08/10/2024 15:41
@@ -194,7 +194,7 @@
 193*Blusas*Frente única uva babado*1*10,00 *08/10/2024 15:41
 194*Blusas*Blusa  cinza canguru com capuz*1*10,00 *08/10/2024 15:41
 195*Blusas*Blusa preta listra branca canelada*1*5,00 *08/10/2024 15:41
-196*Blusas*Bata vermelha viscose vazada*1*10,00 *08/10/2024 15:41
+196*Blusas*Bata vermelha viscose vazada*0*10,00 *08/10/2024 15:41
 197*Academia*Blusa azul de zíper academia*1*10,00 *08/10/2024 15:41
 198*Blusas*Blusa preta florida com babado*1*3,00 *08/10/2024 15:41
 199*Blusas*Cropped marrom babado na manga*1*5,00 *08/10/2024 15:41
@@ -222,14 +222,14 @@
 221*Acessórios*Sacola NP*1*2,00 *08/10/2024 15:41
 222*Acessórios*Sacola Global Green*1*2,00 *08/10/2024 15:41
 223*Acessórios*Sacola Morcegão*1*1,00 *08/10/2024 15:41
-224*Acessórios*Bolsa azul* (02 unidades)*1*2,00 *08/10/2024 15:41
+224*Acessórios*Bolsa azul* (02 unidades)*1*2,00 
 225*Acessórios*Porta níquel marrom*1*1,00 *08/10/2024 15:41
 226*Acessórios*Porta níquel acolchoado*1*1,00 *08/10/2024 15:41
 227*Utensílios*Toalhinha de bandeja*1*1,00 *08/10/2024 15:41
 228*Utensílios*Necessaire Natura*1*2,00 *08/10/2024 15:41
-229*Blusas*Jaqueta preta Mauro*1*30,00 *08/10/2024 15:41
+229*Blusas*Jaqueta preta Mauro*0*30,00 *08/10/2024 15:41
 230*Acessórios*Corrente  *2*8,00 *08/10/2024 15:41
-231*Blusas*Blusa oncinha Hering*1*10,00 *08/10/2024 15:41
+231*Blusas*Blusa oncinha Hering*0*10,00 *08/10/2024 15:41
 232*Blusas*Blusa azul estampada Roth*1*10,00 *08/10/2024 15:41
 233*Blusas*Blusa preta lisa*1*10,00 *08/10/2024 15:41
 234*Blusas*Cropped pêssego bola branca*1*10,00 *08/10/2024 15:41
@@ -240,8 +240,8 @@
 239*Blusas*Blusa royal lisa*1*5,00 *08/10/2024 15:41
 240*Blusas*Blusa preta mesclada NYC*1*5,00 *08/10/2024 15:41
 241*Blusas*Blusa cacharrel chocolate*1*5,00 *08/10/2024 15:41
-242*Blusas*Blusa renda off white*1*7,00 *08/10/2024 15:41
-243*Blusas*Blusa listrada p&b*1*10,00 *08/10/2024 15:41
+242*Blusas*Blusa renda off white*0*7,00 *08/10/2024 15:41
+243*Blusas*Blusa listrada p&b*0*10,00 *08/10/2024 15:41
 244*Blusas*Blusa preta pombinha*1*5,00 *08/10/2024 15:41
 245*Blusas*Blusa cinza com amarelo*1*5,00 *08/10/2024 15:41
 246*Blusas*Blusa preta em V*1*5,00 *08/10/2024 15:41
@@ -253,7 +253,7 @@
 252*Calças*Calça jeans Clock House*1*10,00 *08/10/2024 15:41
 253*Calças*Calça jeans Muito Mais*1*10,00 *08/10/2024 15:41
 254*Calças*Calça jeans Looper*1*10,00 *08/10/2024 15:41
-255*Calças*Calça jeans Colcci*1*15,00 *08/10/2024 15:41
+255*Calças*Calça jeans Colcci*0*15,00 *08/10/2024 15:41
 256*Calças*Calça jeans BlueSteel*1*10,00 *08/10/2024 15:41
 257*Calças*Calça jeans Damyller*1*15,00 *08/10/2024 15:41
 258*Shorts*Short jeans Siberian Denin*1*5,00 *08/10/2024 15:41
@@ -261,15 +261,15 @@
 260*Shorts*Short jeans Marfinno*1*10,00 *08/10/2024 15:41
 261*Saias*Minissaia jeans BlueSteel*1*10,00 *08/10/2024 15:41
 262*Calças*Calça jeans Forever 21*1*20,00 *08/10/2024 15:41
-263*Calças*Calça jeans Love etc*1*10,00 *08/10/2024 15:41
+263*Calças*Calça jeans Love etc*0*10,00 *08/10/2024 15:41
 264*Calças*Calça jeans Damyller*1*20,00 *08/10/2024 15:41
-265*Calças*Calça jeans Zara*1*20,00 *08/10/2024 15:41
+265*Calças*Calça jeans Zara*0*20,00 *08/10/2024 15:41
 266*Calças*Calça jeans Marfinno*1*15,00 *08/10/2024 15:41
 267*Calças*Calça verde Marfinno*1*15,00 *08/10/2024 15:41
 268*Calças*Calça jeans BlueSteel*1*10,00 *08/10/2024 15:41
 269*Calças*Calça amarela Raizz*1*15,00 *08/10/2024 15:41
 270*Shorts*Bermuda jeans Damyller*1*5,00 *08/10/2024 15:41
-271*Shorts*Bermuda Patricia Foster*1*10,00 *08/10/2024 15:41
+271*Shorts*Bermuda Patricia Foster*0*10,00 *08/10/2024 15:41
 272*Blusas*Blusa marinho babado manga longa*1*10,00 *08/10/2024 15:41
 273*Blusas*Blusa mostarda manga longa*1*5,00 *08/10/2024 15:41
 274*Blusas*Blusa malha e renda*1*10,00 *08/10/2024 15:41
@@ -279,8 +279,8 @@
 278*Blusas*Blusa manga longa Ellus*1*10,00 *08/10/2024 15:41
 279*Blusas*Blusa verde manga longa*1*10,00 *08/10/2024 15:41
 280*Blusas*Blusa estampada manga longa*1*5,00 *08/10/2024 15:41
-281*Collant pink*1*5,00 *08/10/2024 15:41
-282*Saias*Saia cinza com bico*1*5,00 *08/10/2024 15:41
+281*Blusas*Collant pink*1*5,00 *08/10/2024 15:41
+282*Saias*Saia cinza com bico*0*5,00 *08/10/2024 15:41
 283*Blusas*Blusa branca preta rosê*1*10,00 *08/10/2024 15:41
 284*Blusas*Blusa preta Paul Mccartney*1*10,00 *08/10/2024 15:41
 285*Blusas*Blusa branca manga bufante*1*10,00 *08/10/2024 15:41
@@ -294,58 +294,58 @@
 293*Blusas*Blusa renda preta transparente*1*5,00 *08/10/2024 15:41
 294*Blusas*Blusa renda preta transparente*1*5,00 *08/10/2024 15:41
 295*Shorts*Bermuda lycra preta*1*5,00 *08/10/2024 15:41
-296*Macacão rosa preto bege*1*20,00 *08/10/2024 15:41
+296*Blusas*Macacão rosa preto bege*1*20,00 *08/10/2024 15:41
 297*Blusas*Regata azul*1*5,00 *08/10/2024 15:41
 298*Blusas*Regata preta*1*5,00 *08/10/2024 15:41
 299*Calças*Calça mesclada*1*15,00 *08/10/2024 15:41
 300*Shorts*Short pêssego e uva*1*10,00 *08/10/2024 15:41
 301*Academia*Blusa nadador preta academia*1*5,00 *08/10/2024 15:41
-302*Top laranja*1*5,00 *08/10/2024 15:41
+302*Blusas*Top laranja*1*5,00 *08/10/2024 15:41
 303*Blusas*Regata alongada preta tule*1*10,00 *08/10/2024 15:41
 304*Academia*Blusa laranja e cinza academia*1*10,00 *08/10/2024 15:41
 305*Shorts*Short renda branca*1*5,00 *08/10/2024 15:41
 306*Shorts*Short vermelho cetim*1*10,00 *08/10/2024 15:41
 307*Shorts*Short azul donuts*1*10,00 *08/10/2024 15:41
-308*Saias*Saia longa verde estampada*1*10,00 *08/10/2024 15:41
-309*Blusas*Blusa flor e onça*1*10,00 *08/10/2024 15:41
-310*Blusas*Blusa listrada p&b*1*10,00 *08/10/2024 15:41
-311*Blusas*Blusa preta renda*1*10,00 *08/10/2024 15:41
-312*Blusas*Blusa preta estampa corrente*1*7,00 *08/10/2024 15:41
+308*Saias*Saia longa verde estampada*0*10,00 *08/10/2024 15:41
+309*Blusas*Blusa flor e onça*0*10,00 *08/10/2024 15:41
+310*Blusas*Blusa listrada p&b*0*10,00 *08/10/2024 15:41
+311*Blusas*Blusa preta renda*0*10,00 *08/10/2024 15:41
+312*Blusas*Blusa preta estampa corrente*0*7,00 *08/10/2024 15:41
 313*Blusas*Regata preta AK Urban*1*10,00 *08/10/2024 15:41
-314*Shorts*Bermuda jeans Contatho*1*5,00 *08/10/2024 15:41
-315*Shorts*Short jeans Max denim*1*5,00 *08/10/2024 15:41
+314*Shorts*Bermuda jeans Contatho*0*5,00 *08/10/2024 15:41
+315*Shorts*Short jeans Max denim*0*5,00 *08/10/2024 15:41
 316*Shorts*Bermuda jeans UVX*1*5,00 *08/10/2024 15:41
 317*Shorts*Short jeans desfiado*1*5,00 *08/10/2024 15:41
 318*Shorts*Short jeans Clock House*1*5,00 *08/10/2024 15:41
 319*Blusas*Blusa branca de avião*1*10,00 *08/10/2024 15:41
 320*Shorts*Bermuda cinza masculina Kalenji*1*5,00 *08/10/2024 15:41
 321*Shorts*Bermuda estampada cetim Pool*1*10,00 *08/10/2024 15:41
-322*Shorts*Bermuda cargo Vilejack*1*25,00 *08/10/2024 15:41
+322*Shorts*Bermuda cargo Vilejack*0*25,00 *08/10/2024 15:41
 323*Shorts*Bermuda cargo Nimitz*1*25,00 *08/10/2024 15:41
 324*Calças*Calça cargo Pool*1*20,00 *08/10/2024 15:41
 325*Blusas*Camiseta preta estampa verde*1*10,00 *08/10/2024 15:41
 326*Blusas*Camiseta verde oliva fusca Hering*1*15,00 *08/10/2024 15:41
-327*Blusas*Camiseta mostarda Hering*1*15,00 *08/10/2024 15:41
+327*Blusas*Camiseta mostarda Hering*0*15,00 *08/10/2024 15:41
 328*Blusas*Camiseta seleção amarela*1*20,00 *08/10/2024 15:41
 329*Blusas*Camiseta azul AERO*1*5,00 *08/10/2024 15:41
 330*Blusas*Camiseta verde Malwee*1*10,00 *08/10/2024 15:41
-331*Blusas*Camiseta verde oliva Hering*1*10,00 *08/10/2024 15:41
+331*Blusas*Camiseta verde oliva Hering*0*10,00 *08/10/2024 15:41
 332*Blusas*Polo ocre Pool*1*10,00 *08/10/2024 15:41
 333*Blusas*Cardigan vermelha Tommy Hilfiger*1*30,00 *08/10/2024 15:41
 334*Academia*Camiseta royal manga longa academia*1*5,00 *08/10/2024 15:41
 335*Blusas*Blusa preta bolinhas manga longa*1*15,00 *08/10/2024 15:41
 336*Academia*Regata uva e rosa academia*1*10,00 *08/10/2024 15:41
-337*Top cinza*1*10,00 *08/10/2024 15:41
+337*Blusas*Top cinza*1*10,00 *08/10/2024 15:41
 338*Academia*Regata branca academia*1*5,00 *08/10/2024 15:41
 339*Academia*calças Legging preta*1*15,00 *08/10/2024 15:41
 340*Blusas*Camiseta pêssego Rolling Stones*1*10,00 *08/10/2024 15:41
-341*Blusas*Mini blusa veludo rosê*1*10,00 *08/10/2024 15:41
+341*Blusas*Mini blusa veludo rosê*0*10,00 *08/10/2024 15:41
 342*Blusas*Camiseta branca bananas*1*5,00 *08/10/2024 15:41
 343*Vestidos*Vestido nadador gatos*1*5,00 *08/10/2024 15:41
 344*Vestidos*Macaquinho listrado Lunender*1*10,00 *08/10/2024 15:41
 345*Blusas*Blusa amarela de amarrar viscose*1*10,00 *08/10/2024 15:41
 346*Blusas*Cropped estampado com zíper*1*7,00 *08/10/2024 15:41
-347*Top vermelho renda*1*3,00 *08/10/2024 15:41
+347*Blusas*Top vermelho renda*1*3,00 *08/10/2024 15:41
 348*Blusas*Blusa nadador cinza com lantejoula*1*10,00 *08/10/2024 15:41
 349*Blusas*Blusa preta estampa floral*1*10,00 *08/10/2024 15:41
 350*Blusas*Blusa nadador uva Ultra*1*5,00 *08/10/2024 15:41
@@ -356,12 +356,12 @@
 355*Blusas*Regata preta caveira Rock*1*5,00 *08/10/2024 15:41
 356*Blusas*Regata cinza mesclado Rolling Stones*1*5,00 *08/10/2024 15:41
 357*Blusas*Bata p&b babado*1*5,00 *08/10/2024 15:41
-358*regata preta estampa flor*1*15,00 *08/10/2024 15:41
+358*Blusas*Regata preta estampa flor*1*15,00 *08/10/2024 15:41
 359*Blusas*Blusa nadador camuflada*1*3,00 *08/10/2024 15:41
 360*Blusas*Regata oncinha renda preta*1*3,00 *08/10/2024 15:41
 361*Moda Praia*Body amarelo Chanel*1*5,00 *08/10/2024 15:41
-362*Moda Praia*Body branco lycra*1*5,00 *08/10/2024 15:41
-363*Blusas*Mini blusa viscose azul*1*5,00 *08/10/2024 15:41
+362*Moda Praia*Body branco lycra*0*5,00 *08/10/2024 15:41
+363*Blusas*Mini blusa viscose azul*0*5,00 *08/10/2024 15:41
 364*Blusas*Bata babado azul*1*5,00 *08/10/2024 15:41
 365*Blusas*Regata preta frente listrada*1*5,00 *08/10/2024 15:41
 366*Blusas*Regata preta Hering*1*10,00 *08/10/2024 15:41
@@ -369,13 +369,13 @@
 368*Blusas*Regata azul turquesa*1*5,00 *08/10/2024 15:41
 369*Blusas*Regata branca renda*1*5,00 *08/10/2024 15:41
 370*Blusas*Blusa voil de seda transparente*1*5,00 *08/10/2024 15:41
-371*camisola seda alaranjada*1*10,00 *08/10/2024 15:41
+371*Blusas*Camisola seda alaranjada*1*10,00 *08/10/2024 15:41
 372*Blusas*Blusa nadador branca renda*1*5,00 *08/10/2024 15:41
 373*Blusas*Regata creme detalhe resina alça*1*7,00 *08/10/2024 15:41
 374*Blusas*Regata preta viscose alcinha*1*5,00 *08/10/2024 15:41
 375*Blusas*Blusa nadador preta Vans*1*2,00 *08/10/2024 15:41
 376*Blusas*Blusa nadador preta viscose e malha*1*5,00 *08/10/2024 15:41
-377*Blusas*Regata linha cobre brilho*1*5,00 *08/10/2024 15:41
+377*Blusas*Regata linha cobre brilho*0*5,00 *08/10/2024 15:41
 378*Blusas*Regata cinza mesclado*1*5,00 *08/10/2024 15:41
 379*Blusas*Camiseta rosa Sumer Vibes*1*5,00 *08/10/2024 15:41
 380*Blusas*Regata preta de bolinha branca*1*5,00 *08/10/2024 15:41
@@ -383,9 +383,9 @@
 382*Blusas*Blusa amarela botão*1*5,00 *08/10/2024 15:41
 383*Blusas*Regata estampa verde vermelha preta*1*10,00 *08/10/2024 15:41
 384*Blusas*Mini blusa xadrez marrom bordô renda*1*5,00 *08/10/2024 15:41
-385*Calças*Legging preta academia*1*15,00 *08/10/2024 15:41
+385*Calças*Legging preta academia*0*15,00 *08/10/2024 15:41
 386*Blusas*Macacão  preto e pink academia*1*25,00 *08/10/2024 15:41
-387*Calças*Legging preta flare*1*10,00 *08/10/2024 15:41
+387*Calças*Legging preta flare*0*10,00 *08/10/2024 15:41
 388*Moda Praia*Body oncinha manga longa*1*10,00 *08/10/2024 15:41
 389*Cama/Mesa/Banho*Lenço branco cruz*1*10,00 *08/10/2024 15:41
 390*Blusas*Blusa de lã branca decote quadrado*1*20,00 *08/10/2024 15:41
@@ -404,14 +404,14 @@
 403*Blusas*Casaquinho bordô botão*1*20,00 *08/10/2024 15:41
 404*Vestidos*Macaquinho preto Zara*1*10,00 *08/10/2024 15:41
 405*Vestidos*Macaquinho bege botão*1*10,00 *08/10/2024 15:41
-406*Blusas*Jaqueta veludo*1*20,00 *08/10/2024 15:41
-407*Blusas*Casaco azul nylon corta vento*1*50,00 *08/10/2024 15:41
+406*Blusas*Jaqueta veludo*0*20,00 *08/10/2024 15:41
+407*Blusas*Casaco azul nylon corta vento*0*50,00 *08/10/2024 15:41
 408*Blusas*Casaco marinho sarja*1*40,00 *08/10/2024 15:41
 409*Roupas Sociais*Blazer preto  listras coloridas*1*20,00 *08/10/2024 15:41
 410*Calças*Calça preta corino*1*20,00 *08/10/2024 15:41
 411*Vestidos*Vestido estampado rosa*1*10,00 *08/10/2024 15:41
 412*Vestidos*Vestido frente única Cia Marítima*1*10,00 *08/10/2024 15:41
-413*Vestidos*Vestido verde Lady Ka*1*7,00 *08/10/2024 15:41
+413*Vestidos*Vestido verde Lady Ka*0*7,00 *08/10/2024 15:41
 414*Vestidos*Vestido verde água laize*1*20,00 *08/10/2024 15:41
 415*Vestidos*Vestido longo estampa flor*1*15,00 *08/10/2024 15:41
 416*Vestidos*Vestido longo cinza sem costas*1*15,00 *08/10/2024 15:41
@@ -431,7 +431,7 @@
 430*Vestidos*Vestido tomara que caia franzido*1*10,00 *08/10/2024 15:41
 431*Vestidos*Vestido longo verde e amarelo*1*15,00 *08/10/2024 15:41
 432*Vestidos*Vestido canelado terracota BlueSteel*1*10,00 *08/10/2024 15:41
-433*Vestidos*Vestido estampado flor*1*30,00 *08/10/2024 15:41
+433*Vestidos*Vestido estampado flor*0*30,00 *08/10/2024 15:41
 434*Cama/Mesa/Banho*Colcha verm. cetim c/uma capa travesseiro*1*30,00 *08/10/2024 15:41
 435*Cama/Mesa/Banho*Cobre leito creme c/três capas travesseiro*1*40,00 *08/10/2024 15:41
 436*Cama/Mesa/Banho* Capas travesseiro adamascado*2*10,00 *08/10/2024 15:41
@@ -447,28 +447,28 @@
 446*Blusas*Camiseta customizada lilás*1*5,00 *08/10/2024 15:41
 447*Blusas*Camisa marinho estrela*1*10,00 *08/10/2024 15:41
 448*Blusas*Camisa jeans detalhe vermelha Nagle*1*20,00 *08/10/2024 15:41
-449*Blusas*Blusa cetim coqueiro*1*10,00 *08/10/2024 15:41
+449*Blusas*Blusa cetim coqueiro*0*10,00 *08/10/2024 15:41
 450*Blusas*Camisa voil de seda manga longa*1*15,00 *08/10/2024 15:41
 451*Calças*Calça Legging cinza manchada preto*1*15,00 *08/10/2024 15:41
-452*Blusas*Polo cinza*1*10,00 *08/10/2024 15:41
+452*Blusas*Polo cinza*0*10,00 *08/10/2024 15:41
 453*Blusas*Camiseta preta gato manga longa*1*10,00 *08/10/2024 15:41
 454*Blusas*Blusa moleton creme Zara*1*20,00 *08/10/2024 15:41
 455*Blusas*Camisa viscose bege e preta*1*15,00 *08/10/2024 15:41
-456*Blusas*Bata seda solferino*1*10,00 *08/10/2024 15:41
+456*Blusas*Bata seda solferino*0*10,00 *08/10/2024 15:41
 457*Blusas*Blusa preta branca vermelha*1*10,00 *08/10/2024 15:41
 458*Blusas*Camisa seda esverdeada*1*15,00 *08/10/2024 15:41
 459*Blusas*Camisa Fucsia*1*10,00 *08/10/2024 15:41
-460*Blusas*Camisa vermelha bolinha branca*1*10,00 *08/10/2024 15:41
+460*Blusas*Camisa vermelha bolinha branca*0*10,00 *08/10/2024 15:41
 461*Blusas*Camisa cavada transparente azul e bege*1*10,00 *08/10/2024 15:41
 462*Blusas*Regata verde folha*1*5,00 *08/10/2024 15:41
 463*Blusas*Camisa verde água tecido amassado*1*10,00 *08/10/2024 15:41
 464*Moda Praia*Saída de praia estampada*1*5,00 *08/10/2024 15:41
 465*Blusas*Blusa rosê botão pérola*1*10,00 *08/10/2024 15:41
-466*Blusas*Bata preta bolinha branca*1*15,00 *08/10/2024 15:41
-467*Blusas*Camisa vermelha bolinha branca*1*15,00 *08/10/2024 15:41
+466*Blusas*Bata preta bolinha branca*0*15,00 *08/10/2024 15:41
+467*Blusas*Camisa vermelha bolinha branca*0*15,00 *08/10/2024 15:41
 468*Blusas*Camisa preta bolinha verde limão*1*10,00 *08/10/2024 15:41
 469*Blusas*Blusa manga cavada oncinha babado*1*10,00 *08/10/2024 15:41
-470*Blusas*Blusa manga 3/4 oncinha*1*10,00 *08/10/2024 15:41
+470*Blusas*Blusa manga 3/4 oncinha*0*10,00 *08/10/2024 15:41
 471*Moda Praia*Maiô marinho*1*5,00 *08/10/2024 15:41
 472*Moda Praia*Maiô marinho com bojo*1*5,00 *08/10/2024 15:41
 473*Moda Praia*Maiô estampado*1*5,00 *08/10/2024 15:41
@@ -484,8 +484,8 @@
 483*Shorts*Short listrado manchado*1*5,00 *08/10/2024 15:41
 484*Shorts*Short linho rosê*1*5,00 *08/10/2024 15:41
 485*Acessórios*Adereço tule com dourado*1*20,00 *08/10/2024 15:41
-486*Bolsas*Bolsa Adidas*1*5,00 *08/10/2024 15:41
-487*Sapatos*Sapatilha Usaflex preta*1*25,00 *08/10/2024 15:41
+486*Bolsas*Bolsa Adidas*0*5,00 *08/10/2024 15:41
+487*Sapatos*Sapatilha Usaflex preta*0*25,00 *08/10/2024 15:41
 488*Sapatos*Sapatilha MULHER MARAVILHA1*1*10,00*08/10/2024 15:41
 489*Sapatos*Sapatilha MARRON E JEANS*1*7,00*08/10/2024 15:41
 490*Sapatos*Sapatilha PRETA MOLECA1*1*10,00*08/10/2024 15:41
@@ -528,15 +528,15 @@
 527*Utensílios*CDS DIVERSOS ( un.)   *1*2,00*08/10/2024 15:41 
 528*Utensílios*COLHER PLASTICA BCA.   *1*1,00*08/10/2024 15:41
 529*Utensílios*CONJTO COPOS PLASTICO COLORIDO   *1*20,00*08/10/2024 15:41
-530*Utensílios*CONJTO SOBREMESAS DE INOX   *1*2  *1*5,00*08/10/2024 15:41
+530*Utensílios*CONJTO SOBREMESAS DE INOX   *1*2  *1
 531*Utensílios*COPINHO SHOT (PINGA)   *1*3,00*08/10/2024 15:41
-532*Utensílios*COPO PLÁSTICO TRANSPARENTE brinde
+532*Utensílios*COPO PLÁSTICO TRANSPARENTE *1*0,00*08/10/2024 15:41
 533*Utensílios*COPO TÉRMICO COM ALÇA   *1*10,00*08/10/2024 15:41
 534*Utensílios*GALHETEIRO   *1*10,00*08/10/2024 15:41
 535*Utensílios*GARRAFA BONJOUR PARIS BCA   *1*5,00*08/10/2024 15:41
 536*Utensílios*GARRAFA DE CAFÉ VERDE   *1*5,00*08/10/2024 15:41
 537*Utensílios*GARRAFA PLASTICA LARANJA   *1*5,00*08/10/2024 15:41
-538*Utensílios*KIT   *1*2 TAÇAS PLÁSTICAS SOBREMESA   *1*5,00*08/10/2024 15:41
+538*Utensílios*KIT   *1*2 TAÇAS PLÁSTICAS SOBREMESA   *1
 539*Utensílios*PORTA CHÁ ROSE   *1*5,00*08/10/2024 15:41
 540*Utensílios*PORTA GUARDANAPO DE INOX   *1*5,00*08/10/2024 15:41
 541*Utensílios*PORTA OVOS DE MICROONDAS   *1*5,00*08/10/2024 15:41

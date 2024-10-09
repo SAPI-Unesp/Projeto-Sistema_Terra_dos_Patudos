@@ -1,4 +1,66 @@
-1* Brincos* asdasd* 1*3*08/10/2024 13:48:46***Realizado
-2* Sapato* DSADASDASD* 1*3*08/10/2024 14:13:28***Realizado
-3* Vestido* Vestido branco e azul e preto* 2*67,60*08/10/2024 14:18:22*Samuel**Realizado
-4* Vestido* * 1*1*08/10/2024 14:59:27***Realizado
+1*Blusas*Blusa oncinha Nitrogen* 1*7,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+2*Blusas*Blusa seda costa vermelha* 1*5,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+3*Blusas*Regata salmão/verde San Marino* 1*5,00*08/10/2024 15:41*Tania*verificar
+4*Blusas*Blusa branca elanca decote V* 1*5,00*08/10/2024 15:41*Lucimar*99136-0140*não pagou
+5*Blusas*Blusa rosa elanca decote V* 1*5,00*08/10/2024 15:41*Lucimar**não pagou
+6*Blusas*Cacharrel bordô* 1*5,00*08/10/2024 15:41*Patricia**verificar
+7*Blusas*Vestido p&b com capuz* 1*10,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+8*Blusas*Vestido verde viscose* 1*10,00*08/10/2024 15:41*Lucimar**não pagou
+9*Blusas*Blusa vermelha com camisa xadrez* 1*10,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+10*Acessórios*Touca vermelha feita a mão* 1*5,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+11*Blusas*Blusa azul e verde viscose* 1*7,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+12*Calças*Calça jeans Levis* 1*20,00*08/10/2024 15:41*Lucimar**não pagou
+13*Calças*Calça jeans Hollister* 1*20,00*08/10/2024 15:41*Lucimar**não pagou
+14*Shorts*Short perna desfiada* 1*5,00*08/10/2024 15:41*Lucimar**não pagou
+15*Calças*Legging marrom tecido* 1*5,00*08/10/2024 15:41*Patricia**verificar
+16*Shorts*Bermuda cotton marinho* 1*10,00*08/10/2024 15:41*Patricia**verificar
+17*Shorts*Bermuda preta Denim* 1*5,00*08/10/2024 15:41*Adrielle**verificar
+18*Saias*Saia de malha borboleta* 1*15,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+19*Blusas*Camiseta preta NU* 1*5,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+20*Shorts*Short preto desfiado Leon* 1*5,00*08/10/2024 15:41*Lucimar**não pagou
+21*Blusas*Cropped listrado de amarrar* 1*5,00*08/10/2024 15:41*Lucimar**não pagou
+22*Blusas*Blusa cinza canguru com capuz* 1*10,00*08/10/2024 15:41*Rosana Fantini**verificar
+23*Blusas*Bata vermelha viscose vazada* 1*10,00*08/10/2024 15:41*Renata Cleber**verificar
+24*Blusas*Jaqueta preta Mauro* 30,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+25*Acessórios*Corrente(em 2)* 2*8,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+26*Blusas*Blusa oncinha Hering* 1*10,00*08/10/2024 15:41*Rosana Fantini**verificar
+27*Blusas*Blusa renda off white* 1*7,00*08/10/2024 15:41*Renata Correa*99779-5296*verificar
+28*Blusas*Blusa listrada p&b* 1*10,00*08/10/2024 15:41*Renata Correa**verificar
+29*Calças*Calça jeans Colcci* 1*15,00*08/10/2024 15:41*Renata Cleber**verificar
+30*Calças*Calça jeans Love etc* 1*10,00*08/10/2024 15:41*Renata Cleber**verificar
+31*Calças*Calça jeans Zara* 1*20,00*08/10/2024 15:41*Renata Cleber**verificar
+32*Shorts*Bermuda Patricia Foster* 1*10,00*08/10/2024 15:41*Adrielle**verificar
+33*Saias*Saia cinza com bico* 1*5,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+34*Saias*Saia longa verde estampada* 1*10,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+35*Blusas*Blusa flor e onça* 1*10,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+36*Blusas*Blusa listrada p&b* 1*10,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+37*Blusas*Blusa preta renda* 1*10,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+38*Blusas*Blusa preta estampa corrente* 1*7,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+39*Shorts*Bermuda jeans Contatho* 1*5,00*08/10/2024 15:41*Rosana Fantini**verificar
+40*Shorts*Short jeans Max denim* 1*5,00*08/10/2024 15:41*Patricia**verificar
+41*Shorts*Bermuda cargo Vilejack* 1*25,00*08/10/2024 15:41*Rosana Fantini**verificar
+42*Blusas*Camiseta mostarda Hering* 1*15,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+43*Blusas*Camiseta verde oliva Hering* 1*10,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+44*Calças*Legging preta* 1*15,00*08/10/2024 15:41*Patricia**verificar
+45*Blusas*Mini blusa veludo rosê* 1*10,00*08/10/2024 15:41*Adrielle**verificar
+46*Moda Praia*Body branco lycra* 1*5,00*08/10/2024 15:41*Patricia**verificar
+47*Blusas*Mini blusa viscose azul* 1*5,00*08/10/2024 15:41*Rosana Fantini**verificar
+48*Blusas*Regata linha cobre brilho* 1*5,00*08/10/2024 15:41*Rosana Fantini**verificar
+49*Academia*Legging preta academia* 1*15,00*08/10/2024 15:41*Patricia**verificar
+50*Calças*Legging preta flare* 1*10,00*08/10/2024 15:41*Patricia**verificar
+51*Blusas*Jaqueta veludo* 1*20,00*08/10/2024 15:41*Renata Cleber**verificar
+52*Blusas*Casaco azul nylon corta vento* 1*50,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+53*Blusas*Vestido verde Lady Ka* 1*7,00*08/10/2024 15:41*Patricia**verificar
+54*Blusas*Vestido estampado flor* 1*30,00*08/10/2024 15:41*Adrielle**verificar
+55*Blusas*Blusa cetim coqueiro* 1*10,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+56*Blusas*Polo cinza* 1*10,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+57*Blusas*Bata seda solferino* 1*10,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+58*Blusas*Camisa vermelha bolinha branca* 1*10,00*08/10/2024 15:41*Renata Cleber**verificar
+59*Blusas*Bata preta bolinha branca* 1*15,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+60*Blusas*Camisa vermelha bolinha branca* 1*15,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+61*Blusas*Blusa manga 3/4 oncinha* 1*10,00*08/10/2024 15:41*Salete*99195-6656*não pagou
+62*Acessórios*Bolsa Adidas* 1*5,00*08/10/2024 15:41*Rosana Dias**vai pagar em outubro
+63*Sapatos*Sapatilha Usaflex preta* 1*25,00*08/10/2024 15:41*Patricia**verificar
+64*Sapatos*Sapatilha Usaflex s/ cadarço preto* 1*25,00*08/10/2024 15:41*Patricia**Realizado
+65*Acessórios*Bolsa Adidas* 1*5,00*08/10/2024 15:41*Rô Dias**Realizado
+66*Religiosos*Maria Santíssima e Jesus*1*10,00*08/10/2024 15:41***Realizado
