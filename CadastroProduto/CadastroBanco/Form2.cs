@@ -663,12 +663,12 @@ namespace CadastroBanco
                     }
                 }
 
-                File.AppendAllText(caminhoArquivoCarrinho, $"{linhaSelecionada.Cells[0].Value.ToString()}*{linhaSelecionada.Cells[1].Value.ToString()}*{linhaSelecionada.Cells[2].Value.ToString()}*{linhaSelecionada.Cells[3].Value.ToString()}*{linhaSelecionada.Cells[4].Value.ToString()}{Environment.NewLine}");
+                File.AppendAllText(caminhoArquivoCarrinho, $"{linhaSelecionada.Cells[0].Value.ToString()}{Environment.NewLine}");
                 MessageBox.Show("Produto adicionado ao carrinho com sucesso!");
             }
             else
             {
-                File.AppendAllText(caminhoArquivoCarrinho, $"{linhaSelecionada.Cells[0].Value.ToString()}*{linhaSelecionada.Cells[1].Value.ToString()}*{linhaSelecionada.Cells[2].Value.ToString()}*{linhaSelecionada.Cells[3].Value.ToString()}*{linhaSelecionada.Cells[4].Value.ToString()}{Environment.NewLine}");
+                File.AppendAllText(caminhoArquivoCarrinho, $"{linhaSelecionada.Cells[0].Value.ToString()}{Environment.NewLine}");
                 MessageBox.Show("Produto adicionado ao carrinho com sucesso!");
             }
 

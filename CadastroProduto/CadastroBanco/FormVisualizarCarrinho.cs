@@ -36,21 +36,23 @@ namespace CadastroBanco
             if (File.Exists(caminhoArquivoCarrinho))
             {
                 var linhas = File.ReadAllLines(caminhoArquivoCarrinho);
+                var linhasD = File.ReadAllLines(caminhoArquivo);
                 foreach (var linha in linhas)
                 {
-                    var dados = linha.Split('*');
-
-                    // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                    if (dados.Length == 5)
+                    foreach (var linhaD in linhasD)
                     {
-                        string id = dados[0].Trim();
-                        string categoria = dados[1].Trim();
-                        string descricao = dados[2].Trim();
-                        string qnt = dados[3].Trim();
-                        string preco = dados[4].Trim();
+                        var dadosD = linhaD.Split('*');
 
-                        // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco);
+                        if(dadosD.Length == 6 && (dadosD[0].Trim() == linha))
+                        {
+                            string id = dadosD[0].Trim();
+                            string categoria = dadosD[1].Trim();
+                            string descricao = dadosD[2].Trim();
+                            string qnt = dadosD[3].Trim();
+                            string preco = dadosD[4].Trim();
+
+                            dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco);
+                        }
                     }
                 }
             }
@@ -94,7 +96,7 @@ namespace CadastroBanco
                 var linhas = File.ReadAllLines(caminhoArquivoCarrinho).ToList();
 
                 // Encontra a linha correspondente pelo ID
-                int linhaParaDeletar = linhas.FindIndex(l => l.StartsWith(id + "*"));
+                int linhaParaDeletar = linhas.FindIndex(l => l.StartsWith(id));
                 if (linhaParaDeletar >= 0)
                 {
                     linhas.RemoveAt(linhaParaDeletar); // Remove o item correspondente ao ID
@@ -114,6 +116,20 @@ namespace CadastroBanco
             }
 
             ExibirDados();
+        }
+
+        private void btnFinalizarCompra_Click(object sender, EventArgs e)
+        {
+            foreach(DataGridViewRow row in dataGridViewDados.Rows)
+            {
+                string qtdE = row.Cells[3].Value.ToString();
+                string qtdV = row.Cells[5].Value.ToString();
+                if (Convert.ToInt32(qtdE) < Convert.ToInt32(qtdV))
+                {
+                    MessageBox.Show("Quantidade no estoque é menor que a quantidade vendida");
+                    return;
+                }
+            }
         }
     }
 }

@@ -36,6 +36,7 @@
             this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemover = new System.Windows.Forms.Button();
+            this.btnFinalizarCompra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +103,7 @@
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(203, 451);
+            this.btnRemover.Location = new System.Drawing.Point(93, 426);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(75, 40);
             this.btnRemover.TabIndex = 11;
@@ -110,11 +111,22 @@
             this.btnRemover.UseVisualStyleBackColor = true;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
+            // btnFinalizarCompra
+            // 
+            this.btnFinalizarCompra.Location = new System.Drawing.Point(12, 426);
+            this.btnFinalizarCompra.Name = "btnFinalizarCompra";
+            this.btnFinalizarCompra.Size = new System.Drawing.Size(75, 40);
+            this.btnFinalizarCompra.TabIndex = 12;
+            this.btnFinalizarCompra.Text = "Finalizar compra";
+            this.btnFinalizarCompra.UseVisualStyleBackColor = true;
+            this.btnFinalizarCompra.Click += new System.EventHandler(this.btnFinalizarCompra_Click);
+            // 
             // FormVisualizarCarrinho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 533);
+            this.Controls.Add(this.btnFinalizarCompra);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.dataGridViewDados);
             this.Name = "FormVisualizarCarrinho";
@@ -135,5 +147,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdVendida;
         private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Button btnFinalizarCompra;
     }
 }
