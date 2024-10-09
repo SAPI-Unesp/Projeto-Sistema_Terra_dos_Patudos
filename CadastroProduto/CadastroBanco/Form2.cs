@@ -127,7 +127,7 @@ namespace CadastroBanco
         {
             VerificaExiste();
             ExibirTudo();
-            AddId();
+           
         }
 
         private void btnAdicionar_Click_1(object sender, EventArgs e)
@@ -542,7 +542,7 @@ namespace CadastroBanco
                 .ToList();
 
             // Encontrar o menor ID não utilizado
-            int proximoId = 1; // Começa com o ID 1
+            int proximoId = 0; // Começa com o ID 1
             foreach (var id in idsExistentes)
             {
                 if (id == proximoId)
