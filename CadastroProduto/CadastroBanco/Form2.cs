@@ -140,6 +140,7 @@ namespace CadastroBanco
             VerificaExiste();
             cbCategoria.Text = formAdicionar.cbtexto;
             ExibirDados();
+            ExibirTudo();
         }
 
         public void ExibirDados()
@@ -310,9 +311,10 @@ namespace CadastroBanco
                 }
             }
 
-          
-            ExibirTudo();
 
+            ExibirTudo();
+            Buscar2();
+            
         }
 
         private void btnDeletar_Click_1(object sender, EventArgs e)
@@ -376,6 +378,42 @@ namespace CadastroBanco
 
         }
 
+        public static int LevenshteinDistance(string s1, string s2)
+        {
+            int[,] matrix = new int[s1.Length + 1, s2.Length + 1];
+
+            for (int i = 0; i <= s1.Length; i++)
+                matrix[i, 0] = i;
+
+            for (int j = 0; j <= s2.Length; j++)
+                matrix[0, j] = j;
+
+            for (int i = 1; i <= s1.Length; i++)
+            {
+                for (int j = 1; j <= s2.Length; j++)
+                {
+                    int cost = (s1[i - 1] == s2[j - 1]) ? 0 : 1;
+                    matrix[i, j] = Math.Min(
+                        Math.Min(matrix[i - 1, j] + 1, matrix[i, j - 1] + 1),
+                        matrix[i - 1, j - 1] + cost);
+                }
+            }
+
+            return matrix[s1.Length, s2.Length];
+        }
+
+        public static string removerAcentos(string texto)
+        {
+            string comAcentos = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇç";
+            string semAcentos = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUuuuuCc";
+
+            for (int i = 0; i < comAcentos.Length; i++)
+            {
+                texto = texto.Replace(comAcentos[i].ToString(), semAcentos[i].ToString());
+            }
+            return texto;
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //Desseleciona os itens selecionados da tabela
@@ -394,23 +432,40 @@ namespace CadastroBanco
             dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
+
+                    foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                    {
+                        row.Visible = false;
+                    }
+
                 //Verifica se a classificação ou a descrição é igual ao texto buscado
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
-                    string BuscaCat = row.Cells[1].Value.ToString();
-                    string BuscaDes = row.Cells[2].Value.ToString();
-                    if (BuscaCat.ToLower().Equals(Busca.ToLower()) || BuscaDes.ToLower().Equals(Busca.ToLower()))
+                    string BuscaDes = row.Cells[2].Value.ToString().Normalize();
+                    string BuscaNomalizada = removerAcentos(BuscaDes);
+                    var dados = BuscaDes.Split(' ');
+                    var buscaTexto = Busca.Split(' ');
+                    bool canExibir = true;
+                    foreach (var a in buscaTexto)
                     {
-                        //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
+
+                        string teste = removerAcentos(a);
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
+                        {
+                           
+                        }
+                        else
+                        {
+                            canExibir = false;
+                        }
+
+                    }
+                    if(canExibir)
+                    {
                         row.Visible = true;
                         row.Selected = true;
                     }
-                    else
-                    {
-                        //Deixa invisivel as linhas que não tem a classificação ou a descrição igual ao texto buscado
-                        row.Visible = false;
-                    }
-                }
+                }                         
             }
 
             catch (Exception exc)
@@ -430,6 +485,79 @@ namespace CadastroBanco
                 return;
             }
 
+
+        }
+
+        public void Buscar2()
+        {
+            //Desseleciona os itens selecionados da tabela
+            dataGridViewDados.ClearSelection();
+
+            //Verifica se tem algum texto na busca
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Nenhum item foi pesquisado.");
+                return;
+            }
+
+            string Busca = textBox1.Text;
+
+
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    row.Visible = false;
+                }
+
+                //Verifica se a classificação ou a descrição é igual ao texto buscado
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    string BuscaDes = row.Cells[2].Value.ToString().Normalize();
+                    string BuscaNomalizada = removerAcentos(BuscaDes);
+                    var dados = BuscaDes.Split(' ');
+                    var buscaTexto = Busca.Split(' ');
+                    bool canExibir = true;
+                    foreach (var a in buscaTexto)
+                    {
+
+                        string teste = removerAcentos(a);
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
+                        {
+
+                        }
+                        else
+                        {
+                            canExibir = false;
+                        }
+
+                    }
+                    if (canExibir)
+                    {
+                        row.Visible = true;
+                        row.Selected = true;
+                    }
+                }
+            }
+
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            //Se não achar nada ele exibe todos os itens denovo e retorna a mensagem
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                ExibirTudo();
+                MessageBox.Show("Nenhum item encontrado.");
+                return;
+            }
+            else
+            {
+                dataGridViewDados.ClearSelection();
+                return;
+            }
 
         }
 
@@ -607,7 +735,9 @@ namespace CadastroBanco
         private void tabelaVenda_Click(object sender, EventArgs e)
         {
             FormTabelaVenda form = new FormTabelaVenda();
+           
             form.ShowDialog();
+            
         }
 
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
@@ -681,13 +811,18 @@ namespace CadastroBanco
         private void btnVisualizarCarrinho_Click(object sender, EventArgs e)
         {
             FormVisualizarCarrinho formVisualizar = new FormVisualizarCarrinho();
-
-            if (formVisualizar.ShowDialog() == DialogResult.OK)
+            if (File.Exists(caminhoArquivoCarrinho))
             {
-                ExibirDados();
-                ExibirTudo();
+                if (formVisualizar.ShowDialog() == DialogResult.OK)
+                {
+                    ExibirDados();
+                    ExibirTudo();
+                }
             }
-
+            else
+            {
+                MessageBox.Show("Nenhum item no carrinho");
+            }
         }
     }
 }

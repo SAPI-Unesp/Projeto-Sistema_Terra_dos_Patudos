@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnFinalizarCompra = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,12 +47,7 @@
             this.cbPagamento = new System.Windows.Forms.ComboBox();
             this.tbTotalPagar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLimparCarrinho = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,13 +73,53 @@
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             this.dataGridViewDados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellValueChanged);
             // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // categoria
+            // 
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            this.categoria.Width = 75;
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Peça";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            this.descricao.Width = 300;
+            // 
+            // quantidade
+            // 
+            this.quantidade.HeaderText = "Quantidade em Estoque";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            this.quantidade.Width = 150;
+            // 
+            // preco
+            // 
+            this.preco.HeaderText = "Preço";
+            this.preco.Name = "preco";
+            this.preco.ReadOnly = true;
+            // 
+            // qtdVendida
+            // 
+            this.qtdVendida.HeaderText = "Quantidade Vendida";
+            this.qtdVendida.Name = "qtdVendida";
+            this.qtdVendida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // btnRemover
             // 
             this.btnRemover.Location = new System.Drawing.Point(12, 426);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(75, 40);
+            this.btnRemover.Size = new System.Drawing.Size(99, 40);
             this.btnRemover.TabIndex = 11;
-            this.btnRemover.Text = "Remover do carrinho";
+            this.btnRemover.Text = "Remover item";
             this.btnRemover.UseVisualStyleBackColor = true;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
@@ -188,51 +229,22 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Total a pagar:";
             // 
-            // id
+            // btnLimparCarrinho
             // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
-            // 
-            // categoria
-            // 
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            this.categoria.Width = 75;
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "Peça";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            this.descricao.Width = 300;
-            // 
-            // quantidade
-            // 
-            this.quantidade.HeaderText = "Quantidade em Estoque";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            this.quantidade.Width = 150;
-            // 
-            // preco
-            // 
-            this.preco.HeaderText = "Preço";
-            this.preco.Name = "preco";
-            this.preco.ReadOnly = true;
-            // 
-            // qtdVendida
-            // 
-            this.qtdVendida.HeaderText = "Quantidade Vendida";
-            this.qtdVendida.Name = "qtdVendida";
-            this.qtdVendida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnLimparCarrinho.Location = new System.Drawing.Point(142, 426);
+            this.btnLimparCarrinho.Name = "btnLimparCarrinho";
+            this.btnLimparCarrinho.Size = new System.Drawing.Size(99, 40);
+            this.btnLimparCarrinho.TabIndex = 25;
+            this.btnLimparCarrinho.Text = "Limpar Carrinho";
+            this.btnLimparCarrinho.UseVisualStyleBackColor = true;
+            this.btnLimparCarrinho.Click += new System.EventHandler(this.btnLimparCarrinho_Click);
             // 
             // FormVisualizarCarrinho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 480);
+            this.Controls.Add(this.btnLimparCarrinho);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbTotalPagar);
             this.Controls.Add(this.cbPagamento);
@@ -276,5 +288,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdVendida;
+        private System.Windows.Forms.Button btnLimparCarrinho;
     }
 }

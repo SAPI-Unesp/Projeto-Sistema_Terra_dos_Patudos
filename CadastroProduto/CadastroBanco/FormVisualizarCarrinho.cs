@@ -35,7 +35,7 @@ namespace CadastroBanco
         {
             // Se o arquivo não existir, o primeiro ID será 0
             if (!File.Exists(caminhoArquivoVendas))
-                return 0;
+                return 1;
 
             // Ler todas as linhas do arquivo
             var linhas = File.ReadAllLines(caminhoArquivoVendas);
@@ -49,7 +49,7 @@ namespace CadastroBanco
 
 
             // Encontrar o menor ID não utilizado
-            int proximoId = 0; // Começa com o ID 0
+            int proximoId = 1; // Começa com o ID 0
             foreach (var id in idsExistentes)
             {
                 if (id == proximoId)
@@ -233,7 +233,6 @@ namespace CadastroBanco
 
                     // Escrever as alterações no arquivo
                     File.WriteAllLines(caminhoArquivo, linhas);
-                    MessageBox.Show("Dados atualizados com sucesso!");
 
                     // Recarregar os dados no DataGridView
                     ExibirDados();
@@ -241,9 +240,11 @@ namespace CadastroBanco
 
                 int idV = ObterProximoIdDisponivel();
 
-                File.AppendAllText(caminhoArquivoVendas, $"{idV.ToString()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{qtdV.ToString()}*{precop.ToString()}*{DateTime.Now}*{nome.Text}*{telefone.Text}*{cbPagamento.Text}{Environment.NewLine}");
+                File.AppendAllText(caminhoArquivoVendas, $"{idV.ToString()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nome.Text}*{telefone.Text}*{cbPagamento.Text}{Environment.NewLine}");
 
             }
+
+            File.Delete(caminhoArquivoCarrinho);
 
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -275,6 +276,18 @@ namespace CadastroBanco
         private void tbTotalPagar_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLimparCarrinho_Click(object sender, EventArgs e)
+        {
+            DialogResult confirmResult = MessageBox.Show("Você tem certeza que deseja deletar este carrinho?",
+                                                         "Confirmação de Exclusão",
+                                                         MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                File.Delete(caminhoArquivoCarrinho);
+            }
+            ExibirDados();
         }
     }
 }

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CadastroBanco
 {
     public partial class FormAtualizar : Form
     {
+        public string caminhoArquivoCategoria = "categoria.txt";
         public string Categoria { get; private set; }
         public string Descricao { get; private set; }
         public decimal Qnt { get; private set; }
@@ -23,6 +25,18 @@ namespace CadastroBanco
             txtDesc.Text = descricao;
             numQnt.Value = qnt;
             numPreco.Value = preco;
+
+            if (File.Exists(caminhoArquivoCategoria))
+            {
+                var linhas = File.ReadAllLines(caminhoArquivoCategoria);
+                foreach (var linha in linhas)
+                {
+
+                    cbCategoria.Items.Add(linha);
+
+                }
+            }
+
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {

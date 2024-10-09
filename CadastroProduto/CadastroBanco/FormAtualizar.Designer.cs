@@ -44,11 +44,6 @@
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Items.AddRange(new object[] {
-            "Camiseta",
-            "Blusa",
-            "Calça",
-            "Sapato"});
             this.cbCategoria.Location = new System.Drawing.Point(31, 28);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(121, 21);
