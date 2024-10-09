@@ -35,11 +35,14 @@
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemover = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewDados
             // 
+            this.dataGridViewDados.AllowUserToAddRows = false;
+            this.dataGridViewDados.AllowUserToDeleteRows = false;
             this.dataGridViewDados.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewDados.ColumnHeadersHeight = 40;
             this.dataGridViewDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -49,8 +52,10 @@
             this.quantidade,
             this.preco,
             this.qtdVendida});
-            this.dataGridViewDados.Location = new System.Drawing.Point(12, 113);
+            this.dataGridViewDados.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
+            this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDados.Size = new System.Drawing.Size(801, 408);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
@@ -93,12 +98,24 @@
             // 
             this.qtdVendida.HeaderText = "Quantidade Vendida";
             this.qtdVendida.Name = "qtdVendida";
+            this.qtdVendida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(203, 451);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 40);
+            this.btnRemover.TabIndex = 11;
+            this.btnRemover.Text = "Remover do carrinho";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // FormVisualizarCarrinho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 533);
+            this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.dataGridViewDados);
             this.Name = "FormVisualizarCarrinho";
             this.Text = "FormVisualizarCarrinho";
@@ -117,5 +134,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdVendida;
+        private System.Windows.Forms.Button btnRemover;
     }
 }

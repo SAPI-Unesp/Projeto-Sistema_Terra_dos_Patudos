@@ -128,6 +128,8 @@
             // 
             // dataGridViewDados
             // 
+            this.dataGridViewDados.AllowUserToAddRows = false;
+            this.dataGridViewDados.AllowUserToDeleteRows = false;
             this.dataGridViewDados.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewDados.ColumnHeadersHeight = 40;
             this.dataGridViewDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -139,7 +141,10 @@
             this.dataAdicao,
             this.siatuacao});
             this.dataGridViewDados.Location = new System.Drawing.Point(12, 106);
+            this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
+            this.dataGridViewDados.ReadOnly = true;
+            this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDados.Size = new System.Drawing.Size(948, 408);
             this.dataGridViewDados.TabIndex = 9;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);

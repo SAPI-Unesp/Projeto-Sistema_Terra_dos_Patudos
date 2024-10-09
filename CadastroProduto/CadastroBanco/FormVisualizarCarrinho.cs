@@ -62,7 +62,58 @@ namespace CadastroBanco
         }
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
 
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um item para deletar.");
+                return;
+            }
+
+            if (dataGridViewDados.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Selecione apenas um item.");
+                return;
+            }
+
+            DialogResult confirmResult = MessageBox.Show("Você tem certeza que deseja deletar este item do carrinho?",
+                                                         "Confirmação de Exclusão",
+                                                         MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                // Se o usuário confirmar, excluir o item
+                int index = dataGridViewDados.SelectedRows[0].Index;
+                var linhaSelecionada = dataGridViewDados.Rows[index];
+
+                string id = linhaSelecionada.Cells[0].Value.ToString(); // Pega o ID
+
+                var linhas = File.ReadAllLines(caminhoArquivoCarrinho).ToList();
+
+                // Encontra a linha correspondente pelo ID
+                int linhaParaDeletar = linhas.FindIndex(l => l.StartsWith(id + "*"));
+                if (linhaParaDeletar >= 0)
+                {
+                    linhas.RemoveAt(linhaParaDeletar); // Remove o item correspondente ao ID
+                    File.WriteAllLines(caminhoArquivoCarrinho, linhas);
+                    MessageBox.Show("Dados deletados com sucesso!");
+                    ExibirDados(); // Recarregar os dados no DataGridView
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao encontrar o item para deletar.");
+                }
+            }
+            else
+            {
+                // Se o usuário cancelar, não fazer nada
+                MessageBox.Show("Ação de exclusão cancelada.");
+            }
+
+            ExibirDados();
         }
     }
 }
