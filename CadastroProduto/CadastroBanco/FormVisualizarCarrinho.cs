@@ -27,6 +27,8 @@ namespace CadastroBanco
         private void FormVisualizarCarrinho_Load(object sender, EventArgs e)
         {
             ExibirDados();
+            cbPagamento.SelectedIndex = 0;
+            cbFormapagamento.SelectedIndex = 0;
         }
 
         public void ExibirDados()
@@ -51,9 +53,9 @@ namespace CadastroBanco
                             string qnt = dadosD[3].Trim();
                             string preco = dadosD[4].Trim();
 
-                            dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco);
+                            dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco, 0);
                         }
-                    }
+                    }   
                 }
             }
             else
@@ -65,6 +67,30 @@ namespace CadastroBanco
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+               
+            
+        private void dataGridViewDados_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            decimal total = 0;
+            foreach(DataGridViewRow row in dataGridViewDados.Rows)
+            {
+                string qtdV;
+                string preco = row.Cells[4].Value.ToString();
+                if(!row.Cells[5].Value.ToString().All(char.IsDigit))
+                {
+                    qtdV = "0";
+                }
+                else
+                {
+                    qtdV = row.Cells[5].Value.ToString();
+                }
+
+                    total += Convert.ToDecimal(preco) * Convert.ToDecimal(qtdV);
+            }
+
+            tbTotalPagar.Text = total.ToString();
         }
 
 
@@ -101,7 +127,6 @@ namespace CadastroBanco
                 {
                     linhas.RemoveAt(linhaParaDeletar); // Remove o item correspondente ao ID
                     File.WriteAllLines(caminhoArquivoCarrinho, linhas);
-                    MessageBox.Show("Dados deletados com sucesso!");
                     ExibirDados(); // Recarregar os dados no DataGridView
                 }
                 else
@@ -109,27 +134,71 @@ namespace CadastroBanco
                     MessageBox.Show("Erro ao encontrar o item para deletar.");
                 }
             }
-            else
-            {
-                // Se o usuário cancelar, não fazer nada
-                MessageBox.Show("Ação de exclusão cancelada.");
-            }
 
             ExibirDados();
         }
 
         private void btnFinalizarCompra_Click(object sender, EventArgs e)
         {
+            if(cbPagamento.SelectedIndex == 1)
+            {
+                if (string.IsNullOrEmpty(nome.Text))
+                {
+                    MessageBox.Show("O nome não pode estar vazio");
+                    return;
+                }
+                if (string.IsNullOrEmpty(telefone.Text))
+                {
+                    MessageBox.Show("O telefone não pode estar vazio");
+                    return;
+                }
+            }
+
             foreach(DataGridViewRow row in dataGridViewDados.Rows)
             {
                 string qtdE = row.Cells[3].Value.ToString();
                 string qtdV = row.Cells[5].Value.ToString();
+                if (!qtdV.All(char.IsDigit))
+                {
+                    MessageBox.Show("A quantidade vendida precisa ser um número");
+                    return;
+                }
                 if (Convert.ToInt32(qtdE) < Convert.ToInt32(qtdV))
                 {
                     MessageBox.Show("Quantidade no estoque é menor que a quantidade vendida");
                     return;
                 }
             }
+
+            // if()
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbPagamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbPagamento.SelectedIndex == 0)
+            {
+                nome.Enabled = false;
+                nome.Text = null;
+                telefone.Enabled = false;
+                telefone.Text = null;
+            }
+
+            if(cbPagamento.SelectedIndex == 1)
+            {
+                nome.Enabled = true;
+                telefone.Enabled = true;
+
+            }
+        }
+
+        private void tbTotalPagar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

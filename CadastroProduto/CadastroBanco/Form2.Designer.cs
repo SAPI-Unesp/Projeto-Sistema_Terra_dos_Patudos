@@ -160,24 +160,28 @@
             // 
             this.categoria.HeaderText = "Categoria";
             this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
             this.categoria.Width = 75;
             // 
             // descricao
             // 
             this.descricao.HeaderText = "Peça";
             this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
             this.descricao.Width = 300;
             // 
             // quantidade
             // 
             this.quantidade.HeaderText = "Quantidade em Estoque";
             this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
             this.quantidade.Width = 150;
             // 
             // preco
             // 
             this.preco.HeaderText = "Preço";
             this.preco.Name = "preco";
+            this.preco.ReadOnly = true;
             // 
             // dataAdicao
             // 
@@ -190,6 +194,7 @@
             // 
             this.siatuacao.HeaderText = "Situação";
             this.siatuacao.Name = "siatuacao";
+            this.siatuacao.ReadOnly = true;
             // 
             // textBox1
             // 
@@ -241,7 +246,7 @@
             // 
             // btnAdicionarCarrinho
             // 
-            this.btnAdicionarCarrinho.Location = new System.Drawing.Point(12, 531);
+            this.btnAdicionarCarrinho.Location = new System.Drawing.Point(12, 520);
             this.btnAdicionarCarrinho.Name = "btnAdicionarCarrinho";
             this.btnAdicionarCarrinho.Size = new System.Drawing.Size(84, 40);
             this.btnAdicionarCarrinho.TabIndex = 15;
@@ -251,7 +256,7 @@
             // 
             // btnVisualizarCarrinho
             // 
-            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(102, 531);
+            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(877, 520);
             this.btnVisualizarCarrinho.Name = "btnVisualizarCarrinho";
             this.btnVisualizarCarrinho.Size = new System.Drawing.Size(83, 40);
             this.btnVisualizarCarrinho.TabIndex = 16;

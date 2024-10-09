@@ -29,14 +29,24 @@
         private void InitializeComponent()
         {
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnFinalizarCompra = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nome = new System.Windows.Forms.TextBox();
+            this.telefone = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbFormapagamento = new System.Windows.Forms.ComboBox();
+            this.cbPagamento = new System.Windows.Forms.ComboBox();
+            this.tbTotalPagar = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.btnFinalizarCompra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,9 +67,126 @@
             this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDados.Size = new System.Drawing.Size(801, 408);
+            this.dataGridViewDados.Size = new System.Drawing.Size(798, 408);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
+            this.dataGridViewDados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellValueChanged);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(12, 426);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 40);
+            this.btnRemover.TabIndex = 11;
+            this.btnRemover.Text = "Remover do carrinho";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // btnFinalizarCompra
+            // 
+            this.btnFinalizarCompra.Location = new System.Drawing.Point(852, 173);
+            this.btnFinalizarCompra.Name = "btnFinalizarCompra";
+            this.btnFinalizarCompra.Size = new System.Drawing.Size(75, 40);
+            this.btnFinalizarCompra.TabIndex = 12;
+            this.btnFinalizarCompra.Text = "Finalizar compra";
+            this.btnFinalizarCompra.UseVisualStyleBackColor = true;
+            this.btnFinalizarCompra.Click += new System.EventHandler(this.btnFinalizarCompra_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(850, 130);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Forma de pagamento";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(849, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Nome:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(849, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Telefone:";
+            // 
+            // nome
+            // 
+            this.nome.Location = new System.Drawing.Point(852, 68);
+            this.nome.Name = "nome";
+            this.nome.Size = new System.Drawing.Size(148, 20);
+            this.nome.TabIndex = 16;
+            // 
+            // telefone
+            // 
+            this.telefone.Location = new System.Drawing.Point(852, 107);
+            this.telefone.Name = "telefone";
+            this.telefone.Size = new System.Drawing.Size(100, 20);
+            this.telefone.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(850, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Pagamento";
+            // 
+            // cbFormapagamento
+            // 
+            this.cbFormapagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFormapagamento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbFormapagamento.Items.AddRange(new object[] {
+            "Pix",
+            "Dinheiro",
+            "Cartão de Débito",
+            "Cartão de Crédito"});
+            this.cbFormapagamento.Location = new System.Drawing.Point(852, 146);
+            this.cbFormapagamento.Name = "cbFormapagamento";
+            this.cbFormapagamento.Size = new System.Drawing.Size(121, 21);
+            this.cbFormapagamento.TabIndex = 21;
+            // 
+            // cbPagamento
+            // 
+            this.cbPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPagamento.FormattingEnabled = true;
+            this.cbPagamento.Items.AddRange(new object[] {
+            "À Vista",
+            "A Pagar"});
+            this.cbPagamento.Location = new System.Drawing.Point(852, 28);
+            this.cbPagamento.Name = "cbPagamento";
+            this.cbPagamento.Size = new System.Drawing.Size(121, 21);
+            this.cbPagamento.TabIndex = 22;
+            this.cbPagamento.SelectedIndexChanged += new System.EventHandler(this.CbPagamento_SelectedIndexChanged);
+            // 
+            // tbTotalPagar
+            // 
+            this.tbTotalPagar.Enabled = false;
+            this.tbTotalPagar.Location = new System.Drawing.Point(710, 426);
+            this.tbTotalPagar.Name = "tbTotalPagar";
+            this.tbTotalPagar.Size = new System.Drawing.Size(100, 20);
+            this.tbTotalPagar.TabIndex = 23;
+            this.tbTotalPagar.TextChanged += new System.EventHandler(this.tbTotalPagar_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(631, 429);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Total a pagar:";
             // 
             // id
             // 
@@ -101,31 +228,21 @@
             this.qtdVendida.Name = "qtdVendida";
             this.qtdVendida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // btnRemover
-            // 
-            this.btnRemover.Location = new System.Drawing.Point(93, 426);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(75, 40);
-            this.btnRemover.TabIndex = 11;
-            this.btnRemover.Text = "Remover do carrinho";
-            this.btnRemover.UseVisualStyleBackColor = true;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
-            // btnFinalizarCompra
-            // 
-            this.btnFinalizarCompra.Location = new System.Drawing.Point(12, 426);
-            this.btnFinalizarCompra.Name = "btnFinalizarCompra";
-            this.btnFinalizarCompra.Size = new System.Drawing.Size(75, 40);
-            this.btnFinalizarCompra.TabIndex = 12;
-            this.btnFinalizarCompra.Text = "Finalizar compra";
-            this.btnFinalizarCompra.UseVisualStyleBackColor = true;
-            this.btnFinalizarCompra.Click += new System.EventHandler(this.btnFinalizarCompra_Click);
-            // 
             // FormVisualizarCarrinho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 533);
+            this.ClientSize = new System.Drawing.Size(1067, 480);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tbTotalPagar);
+            this.Controls.Add(this.cbPagamento);
+            this.Controls.Add(this.cbFormapagamento);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.telefone);
+            this.Controls.Add(this.nome);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFinalizarCompra);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.dataGridViewDados);
@@ -134,19 +251,30 @@
             this.Load += new System.EventHandler(this.FormVisualizarCarrinho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewDados;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Button btnFinalizarCompra;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox nome;
+        private System.Windows.Forms.TextBox telefone;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbFormapagamento;
+        private System.Windows.Forms.ComboBox cbPagamento;
+        private System.Windows.Forms.TextBox tbTotalPagar;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdVendida;
-        private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.Button btnFinalizarCompra;
     }
 }
