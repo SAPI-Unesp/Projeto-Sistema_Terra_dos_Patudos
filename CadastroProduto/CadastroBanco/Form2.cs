@@ -94,7 +94,6 @@ namespace CadastroBanco
                         dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco, data);
                     }
                 }
-                dataGridViewDados.ClearSelection();
             }
             else
             {
@@ -229,7 +228,7 @@ namespace CadastroBanco
 
         private void btnExibir_Click_1(object sender, EventArgs e)
         {
-
+            ExibirDados();
             ExibirTudo();
 
         }
@@ -421,7 +420,7 @@ namespace CadastroBanco
             //Se não achar nada ele exibe todos os itens denovo e retorna a mensagem
             if (dataGridViewDados.SelectedRows.Count == 0)
             {
-                ExibirDados();
+                ExibirTudo();
                 MessageBox.Show("Nenhum item encontrado.");
                 return;
             }
@@ -682,7 +681,13 @@ namespace CadastroBanco
         private void btnVisualizarCarrinho_Click(object sender, EventArgs e)
         {
             FormVisualizarCarrinho formVisualizar = new FormVisualizarCarrinho();
-            formVisualizar.ShowDialog();
+
+            if (formVisualizar.ShowDialog() == DialogResult.OK)
+            {
+                ExibirDados();
+                ExibirTudo();
+            }
+
         }
     }
 }

@@ -31,6 +31,36 @@ namespace CadastroBanco
             cbFormapagamento.SelectedIndex = 0;
         }
 
+        private int ObterProximoIdDisponivel()
+        {
+            // Se o arquivo não existir, o primeiro ID será 0
+            if (!File.Exists(caminhoArquivoVendas))
+                return 0;
+
+            // Ler todas as linhas do arquivo
+            var linhas = File.ReadAllLines(caminhoArquivoVendas);
+
+            // Extrair os IDs existentes (supondo que o ID está na primeira coluna)
+            var idsExistentes = linhas
+                .Where(l => !string.IsNullOrWhiteSpace(l)) // Ignorar linhas vazias
+                .Select(l => int.Parse(l.Split('*')[0].Trim())) // Pegar o ID (primeiro campo)
+                .OrderBy(id => id) // Ordenar por ID
+                .ToList();
+
+
+            // Encontrar o menor ID não utilizado
+            int proximoId = 0; // Começa com o ID 0
+            foreach (var id in idsExistentes)
+            {
+                if (id == proximoId)
+                    proximoId++; // Se o ID atual já está em uso, incrementar
+                else
+                    break; // Encontrar o menor ID não usado
+            }
+
+            return proximoId;
+        }
+
         public void ExibirDados()
         {
             dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
@@ -170,7 +200,53 @@ namespace CadastroBanco
                 }
             }
 
-            // if()
+            var linhas = File.ReadAllLines(caminhoArquivo);
+            var linhasl = File.ReadAllLines(caminhoArquivo).ToList();
+            var linhasV = File.ReadAllLines(caminhoArquivoVendas);
+
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
+            {
+                decimal qtdV = Convert.ToInt32(row.Cells[5].Value.ToString());
+                decimal precop = Convert.ToDecimal(row.Cells[4].Value.ToString());
+                decimal total = precop * qtdV;
+                string qnt = (Convert.ToInt32(row.Cells[3].Value.ToString()) - qtdV).ToString();
+                string id = row.Cells[0].Value.ToString();
+                string data = null;
+
+                int linhaParaAtualizar = linhasl.FindIndex(l => l.StartsWith(id + "*"));
+
+                foreach (var linha in linhas)
+                {
+                    var dados = linha.Split('*');
+
+                    if (dados[0].Trim() == id)
+                    {
+                        data = dados[5].Trim();
+                        break;
+                    }
+                }
+
+                if (linhaParaAtualizar >= 0)
+                {
+                    // Atualizar a linha com os novos dados
+                    linhas[linhaParaAtualizar] = $"{id}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{qnt}*{precop}*{data}";
+
+                    // Escrever as alterações no arquivo
+                    File.WriteAllLines(caminhoArquivo, linhas);
+                    MessageBox.Show("Dados atualizados com sucesso!");
+
+                    // Recarregar os dados no DataGridView
+                    ExibirDados();
+                }
+
+                int idV = ObterProximoIdDisponivel();
+
+                File.AppendAllText(caminhoArquivoVendas, $"{idV.ToString()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{qtdV.ToString()}*{precop.ToString()}*{DateTime.Now}*{nome.Text}*{telefone.Text}*{cbPagamento.Text}{Environment.NewLine}");
+
+            }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-0*Blusas*Blusa azul marinho florida*1*7,00 *08/10/2024 15:41 
+0*Blusas*Blusa azul marinho florida*5*7,00*08/10/2024 15:41
 1*Blusas*Blusa branca estamp. Geom.*1*5,00 *08/10/2024 15:41 
 2*Blusas*Blusa branca estampa. Nervura*1*5,00*08/10/2024 15:41
 3*Blusas*Blusa oncinha Nitrogen*0*7,00 *08/10/2024 15:41 
@@ -98,7 +98,7 @@
 97*Moda Praia*Maiô natação roxo e verde*1*3,00 *08/10/2024 15:41
 98*Calças*Calça de biquini azul marinho*1*2,00 *08/10/2024 15:41
 99*Moda Praia*Sutiã de biquini verde folha*1*5,00 *08/10/2024 15:41
-100*Moda Praia*Sutiã de biquini azul listra*1*5,00 *08/10/2024 15:41
+100*Moda Praia*Sutiã de biquini azul listra*5*5,00*08/10/2024 15:41
 101*Moda Praia*Maiô azul marinho*1*5,00 *08/10/2024 15:41
 102*Cama/Mesa/Banho*Cobertor casal*1*40,00 *08/10/2024 15:41
 103*Acessórios*Cinto preta fivela prateada*1*5,00 *08/10/2024 15:41
