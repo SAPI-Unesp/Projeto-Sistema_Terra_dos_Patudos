@@ -15,7 +15,7 @@ namespace CadastroBanco
         public FormAdicionar(Form2 form)
         {
             InitializeComponent();
-            this.formPrincipal = form; // Recebe a referência do Form1
+            this.formPrincipal = form; // Recebe a referência do Form2
             if (File.Exists(caminhoArquivoCategoria))
             {
                 var linhas = File.ReadAllLines(caminhoArquivoCategoria);

@@ -36,11 +36,6 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnVender = new System.Windows.Forms.Button();
-            this.tabelaVenda = new System.Windows.Forms.Button();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +43,13 @@
             this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siatuacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnVender = new System.Windows.Forms.Button();
+            this.tabelaVenda = new System.Windows.Forms.Button();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnAdicionarCarrinho = new System.Windows.Forms.Button();
+            this.btnVisualizarCarrinho = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,6 +144,48 @@
             this.dataGridViewDados.TabIndex = 9;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // categoria
+            // 
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.Width = 75;
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Peça";
+            this.descricao.Name = "descricao";
+            this.descricao.Width = 300;
+            // 
+            // quantidade
+            // 
+            this.quantidade.HeaderText = "Quantidade em Estoque";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.Width = 150;
+            // 
+            // preco
+            // 
+            this.preco.HeaderText = "Preço";
+            this.preco.Name = "preco";
+            // 
+            // dataAdicao
+            // 
+            this.dataAdicao.HeaderText = "Data de Adição";
+            this.dataAdicao.Name = "dataAdicao";
+            this.dataAdicao.ReadOnly = true;
+            this.dataAdicao.Width = 150;
+            // 
+            // siatuacao
+            // 
+            this.siatuacao.HeaderText = "Situação";
+            this.siatuacao.Name = "siatuacao";
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 37);
@@ -190,54 +234,34 @@
             this.cbCategoria.TabIndex = 14;
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
-            // id
+            // btnAdicionarCarrinho
             // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
+            this.btnAdicionarCarrinho.Location = new System.Drawing.Point(12, 531);
+            this.btnAdicionarCarrinho.Name = "btnAdicionarCarrinho";
+            this.btnAdicionarCarrinho.Size = new System.Drawing.Size(84, 40);
+            this.btnAdicionarCarrinho.TabIndex = 15;
+            this.btnAdicionarCarrinho.Text = "Adicionar ao carrinho";
+            this.btnAdicionarCarrinho.UseVisualStyleBackColor = true;
+            this.btnAdicionarCarrinho.Click += new System.EventHandler(this.btnAdcionarCarrinho_Click);
             // 
-            // categoria
+            // btnVisualizarCarrinho
             // 
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.Width = 75;
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "Peça";
-            this.descricao.Name = "descricao";
-            this.descricao.Width = 300;
-            // 
-            // quantidade
-            // 
-            this.quantidade.HeaderText = "Quantidade em Estoque";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.Width = 150;
-            // 
-            // preco
-            // 
-            this.preco.HeaderText = "Preço";
-            this.preco.Name = "preco";
-            // 
-            // dataAdicao
-            // 
-            this.dataAdicao.HeaderText = "Data de Adição";
-            this.dataAdicao.Name = "dataAdicao";
-            this.dataAdicao.ReadOnly = true;
-            this.dataAdicao.Width = 150;
-            // 
-            // siatuacao
-            // 
-            this.siatuacao.HeaderText = "Situação";
-            this.siatuacao.Name = "siatuacao";
+            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(102, 531);
+            this.btnVisualizarCarrinho.Name = "btnVisualizarCarrinho";
+            this.btnVisualizarCarrinho.Size = new System.Drawing.Size(83, 40);
+            this.btnVisualizarCarrinho.TabIndex = 16;
+            this.btnVisualizarCarrinho.Text = "Visualizar o carrinho";
+            this.btnVisualizarCarrinho.UseVisualStyleBackColor = true;
+            this.btnVisualizarCarrinho.Click += new System.EventHandler(this.btnVisualizarCarrinho_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(970, 523);
+            this.ClientSize = new System.Drawing.Size(970, 600);
+            this.Controls.Add(this.btnVisualizarCarrinho);
+            this.Controls.Add(this.btnAdicionarCarrinho);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.tabelaVenda);
             this.Controls.Add(this.btnVender);
@@ -282,5 +306,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAdicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn siatuacao;
+        private System.Windows.Forms.Button btnAdicionarCarrinho;
+        private System.Windows.Forms.Button btnVisualizarCarrinho;
     }
 }

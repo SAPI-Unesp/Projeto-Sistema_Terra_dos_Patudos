@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Security;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace CadastroBanco
 {
@@ -11,6 +12,7 @@ namespace CadastroBanco
         string caminhoArquivo = "dados.txt"; // Arquivo onde os dados serão armazenados
         string caminhoArquivoVendas = "Vendas.txt"; // Arquivo onde os dados serão armazenados
         string caminhoArquivoCategoria = "categoria.txt";
+        string caminhoArquivoCarrinho = "carrinho.txt";
         string itensComId = "itensComId.txt";
         public Form2()
         {
@@ -24,8 +26,6 @@ namespace CadastroBanco
             // Impedir edição direta no DataGridView
             dataGridViewDados.AllowUserToAddRows = false;
             dataGridViewDados.ReadOnly = true;
-
-
         }
 
         // Adicionar dados ao arquivo
@@ -164,7 +164,6 @@ namespace CadastroBanco
                         dataGridViewDados.Rows.Add(id , categoria, descricao, qnt, preco, data);
                     }
                 }
-                dataGridViewDados.ClearSelection();
             }
             else
             {
@@ -201,7 +200,6 @@ namespace CadastroBanco
                 {
                     //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
                     row.Visible = true;
-                    row.Selected = true;
                 }
                 else
                 {
@@ -234,10 +232,10 @@ namespace CadastroBanco
 
         public void ExibirTudo()
         {
+            cbCategoria.SelectedIndex = -1;
+
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
-                string BuscaCat = cbCategoria.Text;
-                string BuscaDes = row.Cells[1].Value.ToString();
                 row.Visible = true;
                 if (row.Cells[3].Value.ToString() == "0")
                 {
@@ -248,7 +246,7 @@ namespace CadastroBanco
                     row.Cells[6].Value = "A Vender";
                 }
             }
-            cbCategoria.Text = "";
+            dataGridViewDados.ClearSelection();
 
         }
 
@@ -600,7 +598,7 @@ namespace CadastroBanco
 
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void tabelaVenda_Click(object sender, EventArgs e)
@@ -618,11 +616,10 @@ namespace CadastroBanco
                 {
                     string BuscaCat = cbCategoria.Text;
                     string BuscaDes = row.Cells[1].Value.ToString();
-                    if (BuscaCat.ToLower().Equals(BuscaDes.ToLower()) )
+                    if (BuscaCat.ToLower().Equals(BuscaDes.ToLower()))
                     {
                         //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
                         row.Visible = true;
-                        row.Selected = true;
                     }
                     else
                     {
@@ -630,7 +627,58 @@ namespace CadastroBanco
                         row.Visible = false;
                     }
                 }
-            
+        }
+
+        private void btnAdcionarCarrinho_Click(object sender, EventArgs e)
+        {
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um item para adicionar ao carrinho.");
+                return;
+            }
+            if (dataGridViewDados.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Selecione apenas um item.");
+                return;
+            }
+
+            int index = dataGridViewDados.SelectedRows[0].Index;
+            var linhaSelecionada = dataGridViewDados.Rows[index];
+
+            if (File.Exists(caminhoArquivoCarrinho))
+            {
+                var linhas = File.ReadAllLines(caminhoArquivoCarrinho);
+
+                foreach (var linha in linhas)
+                {
+                    var dados = linha.Split('*');
+                    string id = dados[0].Trim();
+
+                    if (linhaSelecionada.Cells[0].Value.ToString() == id)
+                    {
+                        MessageBox.Show("Esse produto já está no carrinho!!");
+                        return;
+                    }
+                }
+
+                File.AppendAllText(caminhoArquivoCarrinho, $"{linhaSelecionada.Cells[0].Value.ToString()}*{linhaSelecionada.Cells[1].Value.ToString()}*{linhaSelecionada.Cells[2].Value.ToString()}*{linhaSelecionada.Cells[3].Value.ToString()}*{linhaSelecionada.Cells[4].Value.ToString()}{Environment.NewLine}");
+                MessageBox.Show("Produto adicionado ao carrinho com sucesso!");
+            }
+            else
+            {
+                File.AppendAllText(caminhoArquivoCarrinho, $"{linhaSelecionada.Cells[0].Value.ToString()}*{linhaSelecionada.Cells[1].Value.ToString()}*{linhaSelecionada.Cells[2].Value.ToString()}*{linhaSelecionada.Cells[3].Value.ToString()}*{linhaSelecionada.Cells[4].Value.ToString()}{Environment.NewLine}");
+                MessageBox.Show("Produto adicionado ao carrinho com sucesso!");
+            }
+
+            dataGridViewDados.ClearSelection();
+        }
+
+        private void btnVisualizarCarrinho_Click(object sender, EventArgs e)
+        {
+            FormVisualizarCarrinho formVisualizar = new FormVisualizarCarrinho();
+            formVisualizar.ShowDialog();
         }
     }
 }
