@@ -170,3 +170,4 @@ C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\D
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.exe.config
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormTabelaVenda.resources
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormVisualizarCarrinho.resources
+C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormVisualizarCarrinho.resources
