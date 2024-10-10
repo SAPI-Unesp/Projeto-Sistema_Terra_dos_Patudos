@@ -159,7 +159,7 @@ namespace CadastroBanco
                     var dados = linha.Split('*');
 
                     // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                    if (dados.Length == 7)
+                    if (dados.Length == 9)
                     {
                         string id = dados[0].Trim();
                         string livroId = dados[1].Trim();
@@ -168,9 +168,10 @@ namespace CadastroBanco
                         string qnt = dados[4].Trim();
                         string preco = dados[5].Trim();
                         string data = dados[6].Trim();
+                        string venda = dados[7].Trim();
 
                         // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id ,livroId, categoria, descricao, qnt, preco, data);
+                        dataGridViewDados.Rows.Add(id ,livroId, categoria, descricao, qnt, preco, data, venda);
                     }
                 }
             }
@@ -183,7 +184,7 @@ namespace CadastroBanco
             {
                 var linhas = File.ReadAllLines(caminhoArquivoCategoria);
                 foreach (var linha in linhas)
-                {
+                {   
                     bool contem = false;
                     foreach(var a in cbCategoria.Items)
                     {
@@ -217,11 +218,11 @@ namespace CadastroBanco
                 }
                 if (row.Cells[3].Value.ToString() == "0")
                 {
-                    row.Cells[6].Value = "Vendido";
+                    //row.Cells[6].Value = "Vendido";
                 }
                 else
                 {
-                    row.Cells[6].Value = "A Vender";
+                    //row.Cells[6].Value = "A Vender";
                 }
 
             }
@@ -241,21 +242,21 @@ namespace CadastroBanco
 
         public void ExibirTudo()
         {
-            /*cbCategoria.SelectedIndex = -1;
+            cbCategoria.SelectedIndex = -1;
 
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 row.Visible = true;
-                if (row.Cells[4].Value.ToString() == "0")
+                /*if (row.Cells[4].Value.ToString() == "0")
                 {
                     row.Cells[6].Value = "Vendido";
                 }
                 else
                 {
                     row.Cells[6].Value = "A Vender";
-                }
+                }*/
             }
-            dataGridViewDados.ClearSelection();*/
+            dataGridViewDados.ClearSelection();
 
         }
 
@@ -279,11 +280,13 @@ namespace CadastroBanco
 
             // Extrair dados da linha selecionada, incluindo o ID
             string id = linhaSelecionada.Cells[0].Value.ToString();
+            string livroId = linhaSelecionada.Cells[1].Value.ToString();
             string categoria = linhaSelecionada.Cells[2].Value.ToString();
             string descricao = linhaSelecionada.Cells[3].Value.ToString();
             decimal qnt = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
             decimal preco = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
             string data = linhaSelecionada.Cells[6].Value.ToString();
+            string venda = linhaSelecionada.Cells[7].Value.ToString();
 
             // Abrir o formulário de atualização com os dados atuais
             FormAtualizar formAtualizar = new FormAtualizar(categoria, descricao, qnt, preco);
@@ -301,7 +304,7 @@ namespace CadastroBanco
                 if (linhaParaAtualizar >= 0)
                 {
                     // Atualizar a linha com os novos dados
-                    linhas[linhaParaAtualizar] = $"{id}*{formAtualizar.Categoria}*{formAtualizar.Descricao}*{formAtualizar.Qnt}*{formAtualizar.Preco}*{data}";
+                    linhas[linhaParaAtualizar] = $"{id}*{livroId}*{formAtualizar.Categoria}*{formAtualizar.Descricao}*{formAtualizar.Qnt}*{formAtualizar.Preco}*{data}*{venda}*";
 
                     // Escrever as alterações no arquivo
                     File.WriteAllLines(caminhoArquivo, linhas);
@@ -446,7 +449,7 @@ namespace CadastroBanco
                 //Verifica se a classificação ou a descrição é igual ao texto buscado
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
-                    string BuscaDes = row.Cells[2].Value.ToString().Normalize();
+                    string BuscaDes = row.Cells[3].Value.ToString().Normalize();
                     string BuscaNomalizada = removerAcentos(BuscaDes);
                     var dados = BuscaDes.Split(' ');
                     var buscaTexto = Busca.Split(' ');
@@ -466,6 +469,29 @@ namespace CadastroBanco
 
                     }
                     if(canExibir)
+                    {
+                        row.Visible = true;
+                        row.Selected = true;
+                    }
+
+                    BuscaDes = row.Cells[1].Value.ToString().Normalize();
+                    BuscaNomalizada = removerAcentos(BuscaDes);
+                    canExibir = true;
+                    foreach (var a in buscaTexto)
+                    {
+
+                        string teste = removerAcentos(a);
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
+                        {
+
+                        }
+                        else
+                        {
+                            canExibir = false;
+                        }
+
+                    }
+                    if (canExibir)
                     {
                         row.Visible = true;
                         row.Selected = true;
@@ -730,7 +756,7 @@ namespace CadastroBanco
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
                     string BuscaCat = cbCategoria.Text;
-                    string BuscaDes = row.Cells[1].Value.ToString();
+                    string BuscaDes = row.Cells[2].Value.ToString();
                     if (BuscaCat.ToLower().Equals(BuscaDes.ToLower()))
                     {
                         //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado

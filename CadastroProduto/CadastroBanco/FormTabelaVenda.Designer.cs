@@ -32,11 +32,11 @@ namespace CadastroBanco
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
             this.cbPessoas = new System.Windows.Forms.ComboBox();
             this.dataPickerStart = new System.Windows.Forms.DateTimePicker();
-            this.dataPickerEnd = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.cbPagamento = new System.Windows.Forms.ComboBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +45,9 @@ namespace CadastroBanco
             this.comprador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +61,7 @@ namespace CadastroBanco
             this.dataGridViewDados.ColumnHeadersHeight = 40;
             this.dataGridViewDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.idLivro,
             this.categoria,
             this.descricao,
             this.quantidade,
@@ -90,18 +94,8 @@ namespace CadastroBanco
             this.dataPickerStart.Name = "dataPickerStart";
             this.dataPickerStart.Size = new System.Drawing.Size(200, 26);
             this.dataPickerStart.TabIndex = 13;
+            this.dataPickerStart.Value = new System.DateTime(2024, 10, 8, 0, 0, 0, 0);
             this.dataPickerStart.ValueChanged += new System.EventHandler(this.dataPickerStart_ValueChanged);
-            // 
-            // dataPickerEnd
-            // 
-            this.dataPickerEnd.Checked = false;
-            this.dataPickerEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPickerEnd.Location = new System.Drawing.Point(956, 158);
-            this.dataPickerEnd.Name = "dataPickerEnd";
-            this.dataPickerEnd.Size = new System.Drawing.Size(200, 26);
-            this.dataPickerEnd.TabIndex = 14;
-            this.dataPickerEnd.Value = new System.DateTime(2024, 10, 10, 0, 0, 0, 0);
-            this.dataPickerEnd.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label1
             // 
@@ -143,6 +137,11 @@ namespace CadastroBanco
             this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
+            // 
+            // idLivro
+            // 
+            this.idLivro.HeaderText = "Pag do livro";
+            this.idLivro.Name = "idLivro";
             // 
             // categoria
             // 
@@ -207,15 +206,44 @@ namespace CadastroBanco
             this.vendido.HeaderText = "Pagamento";
             this.vendido.Name = "vendido";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(956, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Nome : ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(956, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Dia do bazar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1112, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Pagamento :";
+            // 
             // FormTabelaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 687);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbPagamento);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataPickerEnd);
             this.Controls.Add(this.dataPickerStart);
             this.Controls.Add(this.cbPessoas);
             this.Controls.Add(this.dataGridViewDados);
@@ -233,11 +261,11 @@ namespace CadastroBanco
         private System.Windows.Forms.DataGridView dataGridViewDados;
         private System.Windows.Forms.ComboBox cbPessoas;
         private System.Windows.Forms.DateTimePicker dataPickerStart;
-        private System.Windows.Forms.DateTimePicker dataPickerEnd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.ComboBox cbPagamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLivro;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
@@ -246,5 +274,8 @@ namespace CadastroBanco
         private System.Windows.Forms.DataGridViewTextBoxColumn comprador;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendido;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

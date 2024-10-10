@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.txtCaderno = new System.Windows.Forms.TextBox();
+            this.txtCadernoaa = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numQnt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPreco)).BeginInit();
             this.SuspendLayout();
@@ -128,13 +130,32 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cbCategoria.TabIndex = 14;
+            this.cbCategoria.Text = "v";
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
+            // 
+            // txtCaderno
+            // 
+            this.txtCaderno.Location = new System.Drawing.Point(161, 78);
+            this.txtCaderno.Name = "txtCaderno";
+            this.txtCaderno.Size = new System.Drawing.Size(100, 20);
+            this.txtCaderno.TabIndex = 15;
+            // 
+            // txtCadernoaa
+            // 
+            this.txtCadernoaa.AutoSize = true;
+            this.txtCadernoaa.Location = new System.Drawing.Point(158, 63);
+            this.txtCadernoaa.Name = "txtCadernoaa";
+            this.txtCadernoaa.Size = new System.Drawing.Size(97, 13);
+            this.txtCadernoaa.TabIndex = 16;
+            this.txtCadernoaa.Text = "Pagina do caderno";
             // 
             // FormAdicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 339);
+            this.Controls.Add(this.txtCadernoaa);
+            this.Controls.Add(this.txtCaderno);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -165,5 +186,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.TextBox txtCaderno;
+        private System.Windows.Forms.Label txtCadernoaa;
     }
 }

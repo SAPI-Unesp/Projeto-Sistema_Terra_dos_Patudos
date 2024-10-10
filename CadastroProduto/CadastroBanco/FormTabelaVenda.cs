@@ -23,7 +23,7 @@ namespace CadastroBanco
             InitializeComponent();
             DateTime data1 = new DateTime();
             data1 = dataPickerStart.Value;
-            data2 = dataPickerEnd.Value;
+       
             
             cbPessoas.Items.Add("(Todos)");
             cbPessoas.SelectedIndex = 0;
@@ -48,19 +48,20 @@ namespace CadastroBanco
                     var dados = linha.Split('*');
                     bool temNome = false;
                     // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                    if (dados.Length == 9)
+                    if (dados.Length == 10)
                     {
                         string id = dados[0].Trim();
-                        string categoria = dados[1].Trim();
-                        string descricao = dados[2].Trim();
-                        string qnt = dados[3].Trim();
-                        string preco = dados[4].Trim();
-                        string data = dados[5].Trim();
-                        string nome = dados[6].Trim();
-                        string telefone = dados[7].Trim();
-                        string pagamento = dados[8].Trim();
+                        string idLivro = dados[1].Trim();
+                        string categoria = dados[2].Trim();
+                        string descricao = dados[3].Trim();
+                        string qnt = dados[4].Trim();
+                        string preco = dados[5].Trim();
+                        string data = dados[6].Trim();
+                        string nome = dados[7].Trim();
+                        string telefone = dados[8].Trim();
+                        string pagamento = dados[9].Trim();
                         // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
+                        dataGridViewDados.Rows.Add(id, idLivro, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
                         valorTotal += Convert.ToDecimal(preco);
                         foreach(var nomes in cbPessoas.Items)
                         {
@@ -73,6 +74,7 @@ namespace CadastroBanco
                         {
                             cbPessoas.Items.Add(nome);
                         }
+                        
                     }
                     
                 }
@@ -92,25 +94,66 @@ namespace CadastroBanco
             valorTotal = 0;
             dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            if(cbPessoas.Text == "(Todos)")
+            if (cbPessoas.Text == "(Todos)")
             {
                 ExibirDados();
-
-            }
-            else
-            {
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
-                    
-                    if (row.Cells[6].Value.ToString().Equals(cbPessoas.Text))
+
+
+                    DateTime cellDate;
+                    if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                     {
-                        row.Visible = true;
-                        valorTotal += Convert.ToDecimal(row.Cells[4].Value.ToString());
+                        if (cellDate.Date == dataPickerStart.Value.Date)
+                        {
+                            row.Visible = true;
+                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        }
+                        else
+                        {
+                            row.Visible = false;
+                        }
                     }
                     else
                     {
                         row.Visible = false;
                     }
+
+                }
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+
+                    if (row.Cells[7].Value != null &&
+    row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                    {
+                        DateTime cellDate;
+                        if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                        {
+                            if (cellDate.Date == dataPickerStart.Value.Date)
+                            {
+                                row.Visible = true;
+                                valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                        else
+                        {
+                            row.Visible = false;
+                        }
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+
+
+
                 }
             }
             txtTotal.Text = "R$ " + valorTotal.ToString();
@@ -139,22 +182,11 @@ namespace CadastroBanco
             ExibirPessoa();
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-            if(dataPickerEnd.Value <= dataPickerStart.Value)
-            {
-                MessageBox.Show("Tá errado fiote");
-                dataPickerEnd.Value = data2;
-            }
-            else
-            {
-                data2 = dataPickerEnd.Value;
-            }
-        }
+     
 
         private void dataPickerStart_ValueChanged(object sender, EventArgs e)
         {
-
+            ExibirPessoa();
         }
 
         private void cbPagamento_SelectedIndexChanged(object sender, EventArgs e)

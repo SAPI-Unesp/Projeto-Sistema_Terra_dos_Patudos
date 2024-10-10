@@ -42,6 +42,7 @@ namespace CadastroBanco
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
+                 string pagLivro = txtCaderno.Text;
                 string categoria = cbCategoria.Text;
                 cbtexto = categoria;
                 string descricao = txtDesc.Text;
@@ -77,7 +78,7 @@ namespace CadastroBanco
             int proximoId = ObterProximoIdDisponivel();
 
             // Adiciona ao arquivo
-            File.AppendAllText(caminhoArquivo, $"{proximoId}* {categoria}* {descricao}* {qnt}* {preco}*{DateTime.Now}{Environment.NewLine}");
+            File.AppendAllText(caminhoArquivo, $"{proximoId}*{pagLivro}*{categoria}*{descricao}*{qnt}*{preco}*{DateTime.Now}*a vender*{Environment.NewLine}");
             MessageBox.Show("Dados adicionados com sucesso!");
 
             // Atualiza o DataGridView no formulário principal
