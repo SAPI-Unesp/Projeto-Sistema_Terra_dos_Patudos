@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formvisualizarcarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formvisualizarcarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formtabelavenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formtabelavenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formtabelavenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formtabelavenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formvisualizarcarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,16 +19,12 @@
       "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formtabelavenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formtabelavenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formvisualizarcarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formvisualizarcarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|c:\\users\\samue.desktop-lr09iqf\\onedrive\\documentos\\github\\projeto-entensao\\cadastroproduto\\cadastrobanco\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formtabelavenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formtabelavenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formatualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -72,24 +72,24 @@
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "FormTabelaVenda.cs",
               "DocumentMoniker": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormTabelaVenda.cs",
               "RelativeDocumentMoniker": "CadastroBanco\\FormTabelaVenda.cs",
               "ToolTip": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormTabelaVenda.cs",
               "RelativeToolTip": "CadastroBanco\\FormTabelaVenda.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAADsBAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAowLYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T09:33:43.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "FormTabelaVenda.cs [Design]",
               "DocumentMoniker": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormTabelaVenda.cs",
               "RelativeDocumentMoniker": "CadastroBanco\\FormTabelaVenda.cs",
@@ -101,20 +101,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "FormVisualizarCarrinho.cs",
               "DocumentMoniker": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormVisualizarCarrinho.cs",
               "RelativeDocumentMoniker": "CadastroBanco\\FormVisualizarCarrinho.cs",
               "ToolTip": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormVisualizarCarrinho.cs",
               "RelativeToolTip": "CadastroBanco\\FormVisualizarCarrinho.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAgwAYBAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAEBAAAAAAAAAAA8wBUBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T08:03:40.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormVisualizarCarrinho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormVisualizarCarrinho.cs",
               "RelativeDocumentMoniker": "CadastroBanco\\FormVisualizarCarrinho.cs",
@@ -126,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\Form2.cs",
               "RelativeDocumentMoniker": "CadastroBanco\\Form2.cs",
@@ -139,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\samue.DESKTOP-LR09IQF\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\Form2.cs",
               "RelativeDocumentMoniker": "CadastroBanco\\Form2.cs",

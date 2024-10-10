@@ -193,7 +193,7 @@ namespace CadastroBanco
         public void Pagamento()
         {
             string value = cbPagamento.Text;
-            decimal valorTotal = 0;
+            valorTotal = 0;
             dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
             if (!string.IsNullOrEmpty(value))
             {
@@ -207,6 +207,7 @@ namespace CadastroBanco
 
                     foreach (var linha in linhas)
                     {
+
                         var dados = linha.Split('*');
                         if (dados.Length == 10)
                         {
@@ -221,11 +222,30 @@ namespace CadastroBanco
                             string telefone = dados[8].Trim();
                             string pagamento = dados[9].Trim();
 
-                            bool exibeLinha = (pagamento == value) && (cbPessoas.Text == "(Todos)" || cbPessoas.Text == nome);
+                            bool exibeLinha;
+                            DateTime cellDate;
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                {
+
+                                    exibeLinha = (pagamento == value) && (cbPessoas.Text == "(Todos)" || cbPessoas.Text == nome);
+                                }
+                                else
+                                {
+                                    
+                                }
+                            }
+
+                             
                             if (exibeLinha)
                             {
                                 dataGridViewDados.Rows.Add(id, idLivro, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
                                 valorTotal += Convert.ToDecimal(preco);
+                            }
+                            else
+                            {
+
                             }
                         }
                     }
@@ -238,7 +258,8 @@ namespace CadastroBanco
         private void cbPagamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pagamento();
-            
+            ExibirPessoa();
+
         }
 
         private void label5_Click(object sender, EventArgs e)

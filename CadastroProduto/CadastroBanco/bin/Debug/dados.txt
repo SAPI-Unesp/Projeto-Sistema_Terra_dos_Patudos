@@ -191,7 +191,7 @@
 190*10A-09*Blusas*Blusa verde e amarela Adidas*1*  15,00*09/10/2024 20:06:14*a vender* #-
 191*10A-10*Blusas*Blusa oncinha renda preta*1*  5,00*09/10/2024 20:06:14*a vender* #-
 192*10A-11*Academia*Short Saia academia*1*  10,00*09/10/2024 20:06:14*a vender* #-
-193*10A-12*Blusas*Frente única uva babado*1*  10,00*09/10/2024 20:06:14*a vender* #-
+193*10A-12*Blusas*Frente única uva babado(pix)*0*10,00*09/10/2024 20:06:14*a vender*
 194*10A-13*Blusas*Blusa cinza canguru com capuz*1*  10,00*09/10/2024 20:06:14*vendida* #-
 195*10A-14*Blusas*Blusa preta listra branca canelada*1*  5,00*09/10/2024 20:06:14*a vender* #-
 196*10A-15*Blusas*Bata vermelha viscose vazada*1*  10,00*09/10/2024 20:06:14*vendida* #-
@@ -429,7 +429,7 @@
 428*21-24*Vestidos*Vestido preto manga longa*1*  20,00*09/10/2024 20:06:14*a vender* #-
 429*21-25*Vestidos*Vestido p&b listrado*1*  5,00*09/10/2024 20:06:14*a vender* #-
 430*21-26*Vestidos*Vestido tomara que caia franzido*1*  10,00*09/10/2024 20:06:14*a vender* #-
-431*21-27*Vestidos*Vestido longo verde e amarelo*1*  15,00*09/10/2024 20:06:14*a vender* #-
+431*21-27*Vestidos*Vestido longo verde e amarelo(pix)*0*15,00*09/10/2024 20:06:14*a vender*
 432*21-29*Vestidos*Vestido canelado terracota BlueSteel*1*  10,00*09/10/2024 20:06:14*a vender* #-
 433*21-30*Vestidos*Vestido estampado flor*1*  30,00*09/10/2024 20:06:14*vendida* #
 434*22-04*Cama/Mesa/Bango*Colcha  verm, cetim c/uma capa travesseiro*1*  30,00*09/10/2024 20:06:14*a vender* #-
@@ -526,7 +526,7 @@
 525*26-22*Blusas*Camisa florida Crocker*1*  10,00*09/10/2024 20:06:14*a vender* #-
 526*26-23*Blusas*Camisa listra preta/amarela*1*  10,00*09/10/2024 20:06:14*a vender* #-
 527*26-24*Blusas*Camiseta bordô music Hering*1*  10,00*09/10/2024 20:06:14*a vender* #-
-528*26-25*Vestidos*Vestido tecido Xadrez azul/bordô*1*  10,00*09/10/2024 20:06:14*a vender* #-
+528*26-25*Vestidos*Vestido tecido Xadrez azul/bordô(pix)*0*10,00*09/10/2024 20:06:14*a vender*
 529*26-26*Vestidos*Vestido estampado helanca orquídea*1*  15,00*09/10/2024 20:06:14*a vender* #-
 530*27-01*Vestidos*Vestido estampado manga reglan*1*  10,00*09/10/2024 20:06:14*a vender* #-
 531*27-02*Vestidos*Vestido estampado azul/verde/branco*1*  5,00*09/10/2024 20:06:14*a vender* #-
@@ -861,3 +861,4 @@
 860**Cama/Mesa/Banho*Toalha*0*5,00*10/10/2024 11:43:15*a vender*
 861**Kids*Mini melina*0*15,00*10/10/2024 11:49:15*a vender*
 862**Extra*Apenas para teste. (pix)*2*0*10/10/2024 11:54:31*a vender*
+863*13-07*Blusas*Blusa preta(pix)*0*10,00*10/10/2024 12:34:32*a vender*
