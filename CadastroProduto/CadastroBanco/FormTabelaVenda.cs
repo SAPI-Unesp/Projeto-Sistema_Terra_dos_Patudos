@@ -360,5 +360,48 @@ namespace CadastroBanco
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um item para deletar.");
+                return;
+            }
+
+            if (dataGridViewDados.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Selecione apenas um item.");
+                return;
+            }
+
+            DialogResult confirmResult = MessageBox.Show("Você tem certeza que deseja deletar este item?",
+                                                         "Confirmação de Exclusão",
+                                                         MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                // Se o usuário confirmar, excluir o item
+                int index = dataGridViewDados.SelectedRows[0].Index;
+                var linhaSelecionada = dataGridViewDados.Rows[index];
+
+                string id = linhaSelecionada.Cells[0].Value.ToString(); // Pega o ID
+
+                var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
+
+                // Encontra a linha correspondente pelo ID
+                int linhaParaDeletar = linhas.FindIndex(l => l.StartsWith(id + "*"));
+                if (linhaParaDeletar >= 0)
+                {
+                    linhas.RemoveAt(linhaParaDeletar); // Remove o item correspondente ao ID
+                    File.WriteAllLines(caminhoArquivoVendas, linhas);
+                    MessageBox.Show("Dados deletados com sucesso!");
+                    ExibirDados(); // Recarregar os dados no DataGridView
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao encontrar o item para deletar.");
+                }
+            }
+        }
     }
 }

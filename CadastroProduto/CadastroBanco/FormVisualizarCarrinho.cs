@@ -76,7 +76,7 @@ namespace CadastroBanco
                     {
                         var dadosD = linhaD.Split('*');
 
-                        if(dadosD.Length == 9 && (dadosD[0].Trim() == linha))
+                        if (dadosD.Length == 9 && (dadosD[0].Trim() == linha))
                         {
                             string id = dadosD[0].Trim();
                             string livro = dadosD[1].Trim();
@@ -87,7 +87,7 @@ namespace CadastroBanco
 
                             dataGridViewDados.Rows.Add(id, livro, categoria, descricao, qnt, preco, 1);
                         }
-                    }   
+                    }
                 }
             }
             else
@@ -122,8 +122,8 @@ namespace CadastroBanco
             }
 
             tbTotalPagar.Text = total.ToString();
-        }   
-            
+        }
+
         private void dataGridViewDados_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             calcularTotal();
@@ -176,7 +176,7 @@ namespace CadastroBanco
 
         private void btnFinalizarCompra_Click(object sender, EventArgs e)
         {
-            if(cbPagamento.SelectedIndex == 1)
+            if (cbPagamento.SelectedIndex == 1)
             {
                 if (string.IsNullOrEmpty(nome.Text))
                 {
@@ -190,7 +190,7 @@ namespace CadastroBanco
                 }
             }
 
-            foreach(DataGridViewRow row in dataGridViewDados.Rows)
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 string qtdE = row.Cells[4].Value.ToString();
                 string qtdV = row.Cells[6].Value.ToString();
@@ -262,7 +262,7 @@ namespace CadastroBanco
 
         private void CbPagamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbPagamento.SelectedIndex == 0)
+            if (cbPagamento.SelectedIndex == 0)
             {
                 //nome.Enabled = false;
                 nome.Text = null;
@@ -270,7 +270,7 @@ namespace CadastroBanco
                 telefone.Text = null;
             }
 
-            if(cbPagamento.SelectedIndex == 1)
+            if (cbPagamento.SelectedIndex == 1)
             {
                 //nome.Enabled = true;
                 telefone.Enabled = true;
@@ -295,6 +295,27 @@ namespace CadastroBanco
 
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*string forma = comboBox1.Text;
+            string formaPag = "";
+
+            var linhas = File.ReadAllLines(caminhoArquivo);
+            var linhasl = File.ReadAllLines(caminhoArquivo).ToList();
+            var linhasV = File.ReadAllLines(caminhoArquivoVendas);
+
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
+            {
+               formaPag = forma + " " + row.Cells[4].Value.ToString();
+               
+            }*/
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
