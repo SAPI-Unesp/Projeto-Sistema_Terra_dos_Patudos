@@ -64,6 +64,3 @@
 64*aa-aa*Sapatos*Sapatilha Usaflex s/ cadarço preto* 1*25,00*08/10/2024 15:41*Patricia**Realizado
 65*aa-aa*Acessórios*Bolsa Adidas* 1*5,00*08/10/2024 15:41*Rô Dias**Realizado
 66*aa-aa*Religiosos*Maria Santíssima e Jesus*1*10,00*08/10/2024 15:41***Realizado
-67*01-26*Blusas*Blusa manga verde Marfino*3*30,00*10/10/2024 02:46:00*ssd*1234*A Pagar
-68*01A-34*Blusas*Blusa seda costa marinho*3*15,00*10/10/2024 02:46:00*ssd*1234*A Pagar
-69*01-11*Blusas*Blusa branca estamp, Geom,*1*5,00*10/10/2024 02:49:08***À Vista

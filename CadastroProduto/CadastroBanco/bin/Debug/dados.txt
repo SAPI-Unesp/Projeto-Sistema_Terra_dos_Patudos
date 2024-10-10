@@ -1,15 +1,15 @@
 0*01-07*Blusas*Blusa azul marinho florida*1*  7,00*09/10/2024 20:06:14*a vender* #-
-1*01-11*Blusas*Blusa branca estamp, Geom,*1*5,00*09/10/2024 20:06:14*a vender*
-2*01-14*Blusas*Blusa branca estamp, Nervura*1*5,00*09/10/2024 20:06:14*a vender*
+1*01-11*Blusas*Blusa branca estamp, Geom,*1*  5,00*09/10/2024 20:06:14*a vender* #-
+2*01-14*Blusas*Blusa branca estamp, Nervura*1*  5,00*09/10/2024 20:06:14*a vender* #-
 3*01-16*Blusas*Blusa oncinha Nitrogen*1*  7,00*09/10/2024 20:06:14*vendida* #-
-4*01-19*Blusas*Colete preto paetê*1*5,00*09/10/2024 20:06:14*a vender*
-5*01-26*Blusas*Blusa manga verde Marfino*1*10,00*09/10/2024 20:06:14*a vender*
-6*01A-27*Blusas*Blusa manga list, Azul e branco*1*10,00*09/10/2024 20:06:14*a vender*
-7*01A-30*Blusas*Camiseta marinho luas*1*5,00*09/10/2024 20:06:14*a vender*
-8*01A-31*Blusas*Camiseta preta mesclada strass*1*5,00*09/10/2024 20:06:14*a vender*
+4*01-19*Blusas*Colete preto paetê*1*  5,00*09/10/2024 20:06:14*a vender* #-
+5*01-26*Blusas*Blusa manga verde Marfino*1*  10,00*09/10/2024 20:06:14*a vender* #-
+6*01A-27*Blusas*Blusa manga list, Azul e branco*1*  10,00*09/10/2024 20:06:14*a vender* #-
+7*01A-30*Blusas*Camiseta marinho luas*1*  5,00*09/10/2024 20:06:14*a vender* #-
+8*01A-31*Blusas*Camiseta preta mesclada strass*1*  5,00*09/10/2024 20:06:14*a vender* #-
 9*01A-32*Blusas*Blusa seda costa vermelha*1*  5,00*09/10/2024 20:06:14*vendida* #-
-10*01A-34*Blusas*Blusa seda costa marinho*1*5,00*09/10/2024 20:06:14*a vender*
-11*01A-36*Blusas*Regata salmão/verde San Marino*1*5,00*09/10/2024 20:06:14*vendida*
+10*01A-34*Blusas*Blusa seda costa marinho*1*  5,00*09/10/2024 20:06:14*a vender* #-
+11*01A-36*Blusas*Regata salmão/verde San Marino*1*  5,00*09/10/2024 20:06:14*vendida* #-
 12*01A-38*Blusas*Blusa branca elanca decote V*1*  5,00*09/10/2024 20:06:14*vendida* #-
 13*01A-39*Blusas*Blusa rosa elanca decote V*1*  5,00*09/10/2024 20:06:14*vendida* #-
 14*01A-40*Blusas*Blusa com manga pássaro rosa*1*  5,00*09/10/2024 20:06:14*a vender* #-
