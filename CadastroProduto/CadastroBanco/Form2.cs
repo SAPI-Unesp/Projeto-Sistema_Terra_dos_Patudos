@@ -81,17 +81,18 @@ namespace CadastroBanco
                     var dados = linha.Split('*');
 
                     // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                    if (dados.Length == 6)
+                    if (dados.Length == 9)
                     {
                         string id = dados[0].Trim();
-                        string categoria = dados[1].Trim();
-                        string descricao = dados[2].Trim();
-                        string qnt = dados[3].Trim();
-                        string preco = dados[4].Trim();
-                        string data = dados[5].Trim();
-
+                        string livroid = dados[1].Trim();
+                        string categoria = dados[2].Trim();
+                        string descricao = dados[3].Trim();
+                        string qnt = dados[4].Trim();
+                        string preco = dados[5].Trim();
+                        string data = dados[6].Trim();
+                        string venda = dados[7].Trim();
                         // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco, data);
+                        dataGridViewDados.Rows.Add(id, livroid, categoria, descricao, qnt, preco, data, venda);
                     }
                 }
             }
@@ -131,6 +132,9 @@ namespace CadastroBanco
                 Convert.ToInt32(0.5 * workingRectangle.Height));
 
             this.Location = new System.Drawing.Point(10, 10);
+            ///AddId();
+
+
         }
 
         private void btnAdicionar_Click_1(object sender, EventArgs e)
@@ -155,17 +159,18 @@ namespace CadastroBanco
                     var dados = linha.Split('*');
 
                     // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                    if (dados.Length == 6)
+                    if (dados.Length == 7)
                     {
                         string id = dados[0].Trim();
-                        string categoria = dados[1].Trim();
-                        string descricao = dados[2].Trim();
-                        string qnt = dados[3].Trim();
-                        string preco = dados[4].Trim();
-                        string data = dados[5].Trim();
+                        string livroId = dados[1].Trim();
+                        string categoria = dados[2].Trim();
+                        string descricao = dados[3].Trim();
+                        string qnt = dados[4].Trim();
+                        string preco = dados[5].Trim();
+                        string data = dados[6].Trim();
 
                         // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id , categoria, descricao, qnt, preco, data);
+                        dataGridViewDados.Rows.Add(id ,livroId, categoria, descricao, qnt, preco, data);
                     }
                 }
             }
@@ -236,12 +241,12 @@ namespace CadastroBanco
 
         public void ExibirTudo()
         {
-            cbCategoria.SelectedIndex = -1;
+            /*cbCategoria.SelectedIndex = -1;
 
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 row.Visible = true;
-                if (row.Cells[3].Value.ToString() == "0")
+                if (row.Cells[4].Value.ToString() == "0")
                 {
                     row.Cells[6].Value = "Vendido";
                 }
@@ -250,7 +255,7 @@ namespace CadastroBanco
                     row.Cells[6].Value = "A Vender";
                 }
             }
-            dataGridViewDados.ClearSelection();
+            dataGridViewDados.ClearSelection();*/
 
         }
 
@@ -274,11 +279,11 @@ namespace CadastroBanco
 
             // Extrair dados da linha selecionada, incluindo o ID
             string id = linhaSelecionada.Cells[0].Value.ToString();
-            string categoria = linhaSelecionada.Cells[1].Value.ToString();
-            string descricao = linhaSelecionada.Cells[2].Value.ToString();
-            decimal qnt = decimal.Parse(linhaSelecionada.Cells[3].Value.ToString());
-            decimal preco = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
-            string data = linhaSelecionada.Cells[5].Value.ToString();
+            string categoria = linhaSelecionada.Cells[2].Value.ToString();
+            string descricao = linhaSelecionada.Cells[3].Value.ToString();
+            decimal qnt = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
+            decimal preco = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
+            string data = linhaSelecionada.Cells[6].Value.ToString();
 
             // Abrir o formulário de atualização com os dados atuais
             FormAtualizar formAtualizar = new FormAtualizar(categoria, descricao, qnt, preco);
@@ -687,42 +692,19 @@ namespace CadastroBanco
 
         public void AddId()
         {
-            var linhas2 = File.ReadAllLines(caminhoArquivo);
-            string id;
-            string categoria;
-            string descricao;
-            string qnt;
-            string preco;
-            string data;
 
-
-            if (File.Exists(caminhoArquivo))
-            {
+          
                 var linhas = File.ReadAllLines(caminhoArquivo);
                 int i = 0;
                 foreach (var linha in linhas)
                 {
-                    var dados = linha.Split('*');
+                    File.AppendAllText(itensComId, $"{i}*{linha}{Environment.NewLine}");
+                    i++;
 
-                    // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                  
-                        File.AppendAllText(itensComId, $"{i}*{linha}{Environment.NewLine}");
-                        i++;
-                    
-
-                   
-           
-
-                       
-                 
                 }
-                dataGridViewDados.ClearSelection();
-            }
-            else
-            {
-                MessageBox.Show("Nenhum dado encontrado.");
-            }
-
+               
+            
+           
             
 
         }

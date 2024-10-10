@@ -28,7 +28,7 @@ namespace CadastroBanco
         {
             ExibirDados();
             cbPagamento.SelectedIndex = 0;
-            cbFormapagamento.SelectedIndex = 0;
+            //cbFormapagamento.SelectedIndex = 0;
         }
 
         private int ObterProximoIdDisponivel()
