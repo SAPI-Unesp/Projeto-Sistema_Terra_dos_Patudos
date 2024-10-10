@@ -30,11 +30,6 @@ namespace CadastroBanco
         private void InitializeComponent()
         {
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.cbPessoas = new System.Windows.Forms.ComboBox();
-            this.dataPickerStart = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.cbPagamento = new System.Windows.Forms.ComboBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +40,11 @@ namespace CadastroBanco
             this.comprador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbPessoas = new System.Windows.Forms.ComboBox();
+            this.dataPickerStart = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.cbPagamento = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,60 +75,6 @@ namespace CadastroBanco
             this.dataGridViewDados.Size = new System.Drawing.Size(892, 622);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
-            // 
-            // cbPessoas
-            // 
-            this.cbPessoas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPessoas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPessoas.FormattingEnabled = true;
-            this.cbPessoas.Location = new System.Drawing.Point(956, 48);
-            this.cbPessoas.Name = "cbPessoas";
-            this.cbPessoas.Size = new System.Drawing.Size(121, 28);
-            this.cbPessoas.TabIndex = 12;
-            this.cbPessoas.SelectedIndexChanged += new System.EventHandler(this.cbPessoas_SelectedIndexChanged);
-            // 
-            // dataPickerStart
-            // 
-            this.dataPickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPickerStart.Location = new System.Drawing.Point(956, 122);
-            this.dataPickerStart.Name = "dataPickerStart";
-            this.dataPickerStart.Size = new System.Drawing.Size(200, 26);
-            this.dataPickerStart.TabIndex = 13;
-            this.dataPickerStart.Value = new System.DateTime(2024, 10, 8, 0, 0, 0, 0);
-            this.dataPickerStart.ValueChanged += new System.EventHandler(this.dataPickerStart_ValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(966, 368);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Valor Total";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(959, 391);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(183, 31);
-            this.txtTotal.TabIndex = 16;
-            // 
-            // cbPagamento
-            // 
-            this.cbPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPagamento.FormattingEnabled = true;
-            this.cbPagamento.Items.AddRange(new object[] {
-            "Realizado",
-            "não pagou",
-            "verificar"});
-            this.cbPagamento.Location = new System.Drawing.Point(1102, 48);
-            this.cbPagamento.Name = "cbPagamento";
-            this.cbPagamento.Size = new System.Drawing.Size(121, 28);
-            this.cbPagamento.TabIndex = 17;
-            this.cbPagamento.SelectedIndexChanged += new System.EventHandler(this.cbPagamento_SelectedIndexChanged);
             // 
             // id
             // 
@@ -205,6 +151,61 @@ namespace CadastroBanco
             this.vendido.FillWeight = 137.0558F;
             this.vendido.HeaderText = "Pagamento";
             this.vendido.Name = "vendido";
+            // 
+            // cbPessoas
+            // 
+            this.cbPessoas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPessoas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPessoas.FormattingEnabled = true;
+            this.cbPessoas.Location = new System.Drawing.Point(956, 48);
+            this.cbPessoas.Name = "cbPessoas";
+            this.cbPessoas.Size = new System.Drawing.Size(121, 28);
+            this.cbPessoas.TabIndex = 12;
+            this.cbPessoas.SelectedIndexChanged += new System.EventHandler(this.cbPessoas_SelectedIndexChanged);
+            // 
+            // dataPickerStart
+            // 
+            this.dataPickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataPickerStart.Location = new System.Drawing.Point(956, 122);
+            this.dataPickerStart.Name = "dataPickerStart";
+            this.dataPickerStart.Size = new System.Drawing.Size(200, 26);
+            this.dataPickerStart.TabIndex = 13;
+            this.dataPickerStart.Value = new System.DateTime(2024, 10, 8, 0, 0, 0, 0);
+            this.dataPickerStart.ValueChanged += new System.EventHandler(this.dataPickerStart_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(966, 368);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Valor Total";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(959, 391);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(183, 31);
+            this.txtTotal.TabIndex = 16;
+            // 
+            // cbPagamento
+            // 
+            this.cbPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPagamento.FormattingEnabled = true;
+            this.cbPagamento.Items.AddRange(new object[] {
+            "Realizado",
+            "não pagou",
+            "verificar"});
+            this.cbPagamento.Location = new System.Drawing.Point(1102, 48);
+            this.cbPagamento.Name = "cbPagamento";
+            this.cbPagamento.Size = new System.Drawing.Size(121, 28);
+            this.cbPagamento.TabIndex = 17;
+            this.cbPagamento.SelectedIndexChanged += new System.EventHandler(this.cbPagamento_SelectedIndexChanged);
             // 
             // label2
             // 

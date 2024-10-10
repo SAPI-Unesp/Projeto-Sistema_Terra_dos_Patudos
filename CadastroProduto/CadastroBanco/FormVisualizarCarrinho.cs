@@ -27,6 +27,7 @@ namespace CadastroBanco
         private void FormVisualizarCarrinho_Load(object sender, EventArgs e)
         {
             ExibirDados();
+            calcularTotal();
             cbPagamento.SelectedIndex = 0;
             //cbFormapagamento.SelectedIndex = 0;
         }
@@ -75,15 +76,16 @@ namespace CadastroBanco
                     {
                         var dadosD = linhaD.Split('*');
 
-                        if(dadosD.Length == 6 && (dadosD[0].Trim() == linha))
+                        if(dadosD.Length == 9 && (dadosD[0].Trim() == linha))
                         {
                             string id = dadosD[0].Trim();
-                            string categoria = dadosD[1].Trim();
-                            string descricao = dadosD[2].Trim();
-                            string qnt = dadosD[3].Trim();
-                            string preco = dadosD[4].Trim();
+                            string livro = dadosD[1].Trim();
+                            string categoria = dadosD[2].Trim();
+                            string descricao = dadosD[3].Trim();
+                            string qnt = dadosD[4].Trim();
+                            string preco = dadosD[5].Trim();
 
-                            dataGridViewDados.Rows.Add(id, categoria, descricao, qnt, preco, 0);
+                            dataGridViewDados.Rows.Add(id, livro, categoria, descricao, qnt, preco, 1);
                         }
                     }   
                 }
@@ -99,28 +101,32 @@ namespace CadastroBanco
             dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-               
-            
-        private void dataGridViewDados_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void calcularTotal()
         {
             decimal total = 0;
-            foreach(DataGridViewRow row in dataGridViewDados.Rows)
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 string qtdV;
-                string preco = row.Cells[4].Value.ToString();
-                if(!row.Cells[5].Value.ToString().All(char.IsDigit))
+                string preco = row.Cells[5].Value.ToString();
+                if (!row.Cells[6].Value.ToString().All(char.IsDigit))
                 {
-                    qtdV = "0";
+                    qtdV = "1";
+                    row.Cells[6].Value = "1";
                 }
                 else
                 {
-                    qtdV = row.Cells[5].Value.ToString();
+                    qtdV = row.Cells[6].Value.ToString();
                 }
 
-                    total += Convert.ToDecimal(preco) * Convert.ToDecimal(qtdV);
+                total += Convert.ToDecimal(preco) * Convert.ToDecimal(qtdV);
             }
 
             tbTotalPagar.Text = total.ToString();
+        }   
+            
+        private void dataGridViewDados_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            calcularTotal();
         }
 
 
@@ -186,8 +192,8 @@ namespace CadastroBanco
 
             foreach(DataGridViewRow row in dataGridViewDados.Rows)
             {
-                string qtdE = row.Cells[3].Value.ToString();
-                string qtdV = row.Cells[5].Value.ToString();
+                string qtdE = row.Cells[4].Value.ToString();
+                string qtdV = row.Cells[6].Value.ToString();
                 if (!qtdV.All(char.IsDigit))
                 {
                     MessageBox.Show("A quantidade vendida precisa ser um número");
@@ -206,12 +212,13 @@ namespace CadastroBanco
 
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
-                decimal qtdV = Convert.ToInt32(row.Cells[5].Value.ToString());
-                decimal precop = Convert.ToDecimal(row.Cells[4].Value.ToString());
+                decimal qtdV = Convert.ToInt32(row.Cells[6].Value.ToString());
+                decimal precop = Convert.ToDecimal(row.Cells[5].Value.ToString());
                 decimal total = precop * qtdV;
-                string qnt = (Convert.ToInt32(row.Cells[3].Value.ToString()) - qtdV).ToString();
+                string qnt = (Convert.ToInt32(row.Cells[4].Value.ToString()) - qtdV).ToString();
                 string id = row.Cells[0].Value.ToString();
                 string data = null;
+                string paga = null;
 
                 int linhaParaAtualizar = linhasl.FindIndex(l => l.StartsWith(id + "*"));
 
@@ -221,7 +228,8 @@ namespace CadastroBanco
 
                     if (dados[0].Trim() == id)
                     {
-                        data = dados[5].Trim();
+                        data = dados[6].Trim();
+                        paga = dados[7].Trim();
                         break;
                     }
                 }
@@ -229,18 +237,15 @@ namespace CadastroBanco
                 if (linhaParaAtualizar >= 0)
                 {
                     // Atualizar a linha com os novos dados
-                    linhas[linhaParaAtualizar] = $"{id}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{qnt}*{precop}*{data}";
+                    linhas[linhaParaAtualizar] = $"{id}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString()}*{qnt}*{precop}*{data}*{paga}*";
 
                     // Escrever as alterações no arquivo
                     File.WriteAllLines(caminhoArquivo, linhas);
-
-                    // Recarregar os dados no DataGridView
-                    ExibirDados();
                 }
 
                 int idV = ObterProximoIdDisponivel();
 
-                File.AppendAllText(caminhoArquivoVendas, $"{idV.ToString()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nome.Text}*{telefone.Text}*{cbPagamento.Text}{Environment.NewLine}");
+                File.AppendAllText(caminhoArquivoVendas, $"{ObterProximoIdDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString()}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nome.Text}*{telefone.Text}*{cbPagamento.Text}{Environment.NewLine}");
 
             }
 
@@ -287,7 +292,9 @@ namespace CadastroBanco
             {
                 File.Delete(caminhoArquivoCarrinho);
             }
-            ExibirDados();
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

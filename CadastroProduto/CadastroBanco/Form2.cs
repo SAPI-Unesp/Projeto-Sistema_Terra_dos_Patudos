@@ -527,7 +527,6 @@ namespace CadastroBanco
             //Verifica se tem algum texto na busca
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
-                MessageBox.Show("Nenhum item foi pesquisado.");
                 return;
             }
 
