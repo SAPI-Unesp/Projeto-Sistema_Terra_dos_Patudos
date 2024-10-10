@@ -62,3 +62,86 @@
 31*17-09*Blusas*Mini Blusa veludo rosê*1*10,00*10/10/2024 09:59:38*Adrielle* *Pendente
 32*18-09*Blusas*Mini Blusa viscose azul*1*5,00*10/10/2024 09:59:58*Rosana Fantini* *Pendente
 40*13A-05*Calças*Calça jeans Colcci*1*15,00*10/10/2024 10:00:21*Renata Cleber* *Pendente
+41*25-12*Blusas*Bermuda jeans Sawary*1*5,00*10/10/2024 10:31:30***Realizado
+42*30-24*Shorts*Short   listrado colorido Banila*1*15,00*10/10/2024 10:31:30***Realizado
+43**Acessórios*Sacola água de cheiro*1*5,00*10/10/2024 10:31:30***Realizado
+44*30-14*Vestidos*Vestido preto listra branca helanca(dinheiro)*1*5,00*10/10/2024 10:41:48***Realizado
+45*28-02*Blusas*Camisa feminina bege abelhinha colorida*1*5,00*10/10/2024 10:41:48***Realizado
+46*27-08*Roupas Sociais*Blazer e calça  verde*1*10,00*10/10/2024 10:41:48***Realizado
+47*10-10*Blusas*Blusa cinza academia (pix)*1*5,00*10/10/2024 10:44:45***Realizado
+48*21-23*Vestidos*Vestido terracota malha(pix)*1*20,00*10/10/2024 10:48:50***Realizado
+64*99-99*Acessórios*Sacola unesp proec*1*10*10/10/2024 10:51:11***Realizado
+65*16-24*Blusas*Cardigan  vermelha Tommy Hilfiger(pix)*1*30,00*10/10/2024 10:51:11***Realizado
+66*23-08*Blusas*Camisa jeans detalhe vermelha Nagle*1*20,00*10/10/2024 10:53:12***Realizado
+67*33-07*Blusas*Camisa branca flores azuis vazada*1*15,00*10/10/2024 10:53:12***Realizado
+69*27-17*MinisSaias*Saia jeans Blue Zone (pix)*1*5,00*10/10/2024 10:54:09***Realizado
+70*30-09*MinisSaias*Saia jeans Star Blue(pix)*1*5,00*10/10/2024 10:54:48***Realizado
+71*29-18*Blusas*Camisa xadrez Aramis(pix)*1*10,00*10/10/2024 10:57:56***Realizado
+79*29-16*Blusas*Camisa chumbo individual*1*20,00*10/10/2024 10:57:56***Realizado
+80*31-08*Blusas*Polo bege VR*1*10,00*10/10/2024 10:57:56***Realizado
+81*25-23*Blusas*Polo Colisão*1*10,00*10/10/2024 10:57:56***Realizado
+82*32-04*Blusas*Top      Preto Academia (pix)*1*10,00*10/10/2024 11:01:50***Realizado
+83*17-03*Blusas*Top  cinza*1*10,00*10/10/2024 11:01:50***Realizado
+84*14A-08*Blusas*Blusa nadador preta academia*1*5,00*10/10/2024 11:01:50***Realizado
+85**Acessórios*Capuz de urso*1*10,00*10/10/2024 11:01:50***Realizado
+86**Livros*Livro pequeno*1*5,00*10/10/2024 11:01:50***Realizado
+87**Acessórios*Conjunto de quadros (3)*1*10,00*10/10/2024 11:01:50***Realizado
+88*32-22*Shorts*Short  verde pinguim Farm (pix)*1*20,00*10/10/2024 11:03:23***Realizado
+89*32-19*Blusas*Cropped verde pinguim Farm*1*5,00*10/10/2024 11:03:23***Realizado
+90*32-20*Vestidos*Vestido verde manga sem costas Farm (pix)*1*30,00*10/10/2024 11:04:52***Realizado
+91*32-13*Shorts*Short   jeans YoreCom (pix) (+4 reais)*1*5,00*10/10/2024 11:07:05***Realizado
+92*25-15*Calças*Calça bege tecido Jessica City (pix)*1*5,00*10/10/2024 11:08:17***Realizado
+93*27-19*MinisSaias*Saia veludo cotelê preto*1*10,00*10/10/2024 11:12:49***Realizado
+94*31-01*Calças*Pantacourt offwhite linho Hering*1*15,00*10/10/2024 11:12:49***Realizado
+95**Sapatos*Calçados viamar(pix)*1*25,00*10/10/2024 11:12:49***Realizado
+96*26-01*Blusas*Polo azul/verde Aleatory (pix)*1*15,00*10/10/2024 11:17:28***Realizado
+97*23-16*Blusas*Camisa viscose bege e preta*1*15,00*10/10/2024 11:17:28***Realizado
+98*23-02*Blusas*Camiseta pug branca*1*10,00*10/10/2024 11:17:28***Realizado
+99*25-25*Blusas*Polo marinho Highsil*1*15,00*10/10/2024 11:17:28***Realizado
+100*26-03*Blusas*Polo cinza Pool*1*15,00*10/10/2024 11:17:28***Realizado
+101*25-26*Blusas*Polo verde Dydjos*1*10,00*10/10/2024 11:17:28***Realizado
+102**Sapatos*Tenis azul*1*40,00*10/10/2024 11:17:28***Realizado
+103**Acessórios*Urso (2)*1*10,00*10/10/2024 11:17:28***Realizado
+104**Acessórios*Espremedor de frutas*1*25,00*10/10/2024 11:17:28***Realizado
+105**Acessórios*Porta petiscos*1*5,00*10/10/2024 11:17:28***Realizado
+106**Sapatos*Sapatilha (pix)*1*15,00*10/10/2024 11:20:07***Realizado
+107**Acessórios*Cinto beje*1*2,00*10/10/2024 11:20:07***Realizado
+108*14A-11*Blusas*Blusa laranja e cinza academia*1*10,00*10/10/2024 11:20:07***Realizado
+109*08A-05*Calças*Legging flare listras p&b*1*10,00*10/10/2024 11:20:07***Realizado
+110*13A-13*Calças*Calça jeans Forever 21(pix)*1*20,00*10/10/2024 11:23:45***Realizado
+111*26-14*Blusas*Camiseta cinza Highstil*1*15,00*10/10/2024 11:23:45***Realizado
+112*25-05*Blusas*Bermuda jeans Aeroclub*1*5,00*10/10/2024 11:23:45***Realizado
+113*28-18*Shorts*Short   jeans Malwee*1*7,00*10/10/2024 11:23:45***Realizado
+114*35-13*Blusas*Camiseta vermelha cartola*1*5,00*10/10/2024 11:23:45***Realizado
+115**Sapatos*Spato azul nike (pix)*1*10,00*10/10/2024 11:28:42***Realizado
+116*36-02*Blusas*Blusa Polo cinza e vermelha Elian (pix)*1*10,00*10/10/2024 11:34:12***Realizado
+117*26-11*Blusas*Camiseta vermelha academia*1*10,00*10/10/2024 11:34:12***Realizado
+118*29-06*Blusas*Blusa Regata canelada verde limão*1*5,00*10/10/2024 11:34:12***Realizado
+119**Cama/Mesa/Banho*Toalha (2)*1*10,00*10/10/2024 11:34:12***Realizado
+120*29-20*Blusas*Camisa bege Busckman(20)*1*10,00*10/10/2024 11:35:25***Realizado
+121*31-22*Blusas*Mini Blusa verde linha*1*10,00*10/10/2024 11:41:05***Realizado
+122*19-08*Blusas*Regata cinza mesclado*1*5,00*10/10/2024 11:41:06***Realizado
+123*13-20*Blusas*Blusa preta em V*1*5,00*10/10/2024 11:41:06***Realizado
+124**Extra*2 reais extra.*1*2*10/10/2024 11:41:06***Realizado
+125**Calças*Calça 10 reais(31-19 verdadeiro)*1*10,00*10/10/2024 11:41:06***Realizado
+126*18-14*Blusas*Regata azul turquesa(pix)*1*5,00*10/10/2024 11:42:12***Realizado
+127*28-19*Blusas*Blusa manga cavata preta Zara*1*5,00*10/10/2024 11:42:12***Realizado
+128**Extra*2 reais extra.*1*2*10/10/2024 11:42:12***Realizado
+129*27-15*Blusas*Bermuda mesclada malha Blue Steel*1*5,00*10/10/2024 11:43:34***Realizado
+130*29-15*Blusas*Bermuda offwhite masculina Armadillo*1*20,00*10/10/2024 11:43:34***Realizado
+131**Cama/Mesa/Banho*Toalha*1*5,00*10/10/2024 11:43:34***Realizado
+132*29-17*Blusas*Camisa azul listrada Buckman(pix)*1*20,00*10/10/2024 11:44:43***Realizado
+133*34-03*Blusas*Cropped Borboleta (pix)*1*20,00*10/10/2024 11:46:31***Realizado
+134*31-14*Calças*Calça jeans Preferencial (pix)*1*30,00*10/10/2024 11:48:07***Realizado
+135*31-09*Calças*Calça jeans Opchin*1*30,00*10/10/2024 11:48:08***Realizado
+136**Kids*Mini melina*1*15,00*10/10/2024 11:49:42***Realizado
+137**Extra*Apenas para teste. (pix)*1*0*10/10/2024 11:55:33***Realizado
+138*35-18*Shorts*Short   jeans Predilett (pix)*1*10,00*10/10/2024 11:57:50***Realizado
+139*35-16*Shorts*Short   jeans Marisa (pix)*1*10,00*10/10/2024 11:57:50***Realizado
+140*08A-11*Shorts*Short  preto acetinado BlueSteel (pix)*1*5,00*10/10/2024 11:57:50***Realizado
+141*28-20*Academia*Calça legging estampada academia*1*5,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
+142*27-10*Calças*Calça jeans denim Glamour*1*5,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
+143*01A-40*Blusas*Blusa com manga pássaro rosa*1*5,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
+144*31-18*Blusas*Regata alaranjada com renda*1*15,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
+145*35-10*Blusas*Blusa creme com rosa estampada*1*5,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
+146**Extra*2 reais extra.*1*2*10/10/2024 12:04:10*Amanda Maiara* *Pendente

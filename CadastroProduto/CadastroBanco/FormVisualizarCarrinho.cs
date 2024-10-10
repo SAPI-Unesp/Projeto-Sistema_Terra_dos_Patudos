@@ -264,7 +264,7 @@ namespace CadastroBanco
         {
             if(cbPagamento.SelectedIndex == 0)
             {
-                nome.Enabled = false;
+                //nome.Enabled = false;
                 nome.Text = null;
                 telefone.Enabled = false;
                 telefone.Text = null;
@@ -272,7 +272,7 @@ namespace CadastroBanco
 
             if(cbPagamento.SelectedIndex == 1)
             {
-                nome.Enabled = true;
+                //nome.Enabled = true;
                 telefone.Enabled = true;
 
             }
