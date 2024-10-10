@@ -23,8 +23,8 @@ namespace CadastroBanco
             InitializeComponent();
             DateTime data1 = new DateTime();
             data1 = dataPickerStart.Value;
-       
-            
+
+
             cbPessoas.Items.Add("(Todos)");
             cbPessoas.SelectedIndex = 0;
             ExibirDados();
@@ -47,7 +47,7 @@ namespace CadastroBanco
                 {
                     var dados = linha.Split('*');
                     bool temNome = false;
-                    // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
+                    // Certifique-se de que há 10 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
                     if (dados.Length == 10)
                     {
                         string id = dados[0].Trim();
@@ -63,7 +63,7 @@ namespace CadastroBanco
                         // Adicionar os dados no DataGridView
                         dataGridViewDados.Rows.Add(id, idLivro, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
                         valorTotal += Convert.ToDecimal(preco);
-                        foreach(var nomes in cbPessoas.Items)
+                        foreach (var nomes in cbPessoas.Items)
                         {
                             if (nomes.Equals(nome))
                             {
@@ -74,9 +74,9 @@ namespace CadastroBanco
                         {
                             cbPessoas.Items.Add(nome);
                         }
-                        
+
                     }
-                    
+
                 }
                 txtTotal.Text = valorTotal.ToString();
                 dataGridViewDados.ClearSelection();
@@ -157,7 +157,7 @@ namespace CadastroBanco
                 }
             }
             txtTotal.Text = "R$ " + valorTotal.ToString();
-           
+
         }
         private void FormTabelaVenda_Load(object sender, EventArgs e)
         {
@@ -167,13 +167,13 @@ namespace CadastroBanco
 
             this.Location = new System.Drawing.Point(10, 10);
 
-        
+
             this.Width = 1280;
             this.Height = 720;
 
 
 
-           
+
 
         }
 
@@ -182,7 +182,7 @@ namespace CadastroBanco
             ExibirPessoa();
         }
 
-     
+
 
         private void dataPickerStart_ValueChanged(object sender, EventArgs e)
         {
@@ -192,10 +192,163 @@ namespace CadastroBanco
         private void cbPagamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             string value = cbPagamento.Text;
+            decimal valorTotal = 0;
+            dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
+            if (!string.IsNullOrEmpty(value))
+            {
+                if (File.Exists(caminhoArquivoVendas))
+                {
+                    var linhas = File.ReadAllLines(caminhoArquivoVendas);
+                    var nomesJaAdicionados = new HashSet<string>();
 
-            if (value == "realizado")
+                    dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
+                    valorTotal = 0;
+
+                    foreach (var linha in linhas)
+                    {
+                        var dados = linha.Split('*');
+                        if (dados.Length == 10)
+                        {
+                            string id = dados[0].Trim();
+                            string idLivro = dados[1].Trim();
+                            string categoria = dados[2].Trim();
+                            string descricao = dados[3].Trim();
+                            string qnt = dados[4].Trim();
+                            string preco = dados[5].Trim();
+                            string data = dados[6].Trim();
+                            string nome = dados[7].Trim();
+                            string telefone = dados[8].Trim();
+                            string pagamento = dados[9].Trim();
+
+                            bool exibeLinha = (pagamento == value) && (cbPessoas.Text == "(Todos)" || cbPessoas.Text == nome);
+                            if (exibeLinha)
+                            {
+                                dataGridViewDados.Rows.Add(id, idLivro, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
+                                valorTotal += Convert.ToDecimal(preco);
+                            }
+                        }
+                    }
+
+                    txtTotal.Text = valorTotal.ToString();
+                    dataGridViewDados.ClearSelection();
+                }
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public static string removerAcentos(string texto)
+        {
+            string comAcentos = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇç";
+            string semAcentos = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUuuuuCc";
+
+            for (int i = 0; i < comAcentos.Length; i++)
+            {
+                texto = texto.Replace(comAcentos[i].ToString(), semAcentos[i].ToString());
+            }
+            return texto;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //Desseleciona os itens selecionados da tabela
+            dataGridViewDados.ClearSelection();
+
+            //Verifica se tem algum texto na busca
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Nenhum item foi pesquisado.");
+                return;
+            }
+
+            string Busca = textBox1.Text;
+
+
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
             {
 
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    row.Visible = false;
+                }
+
+                //Verifica se a classificação ou a descrição é igual ao texto buscado
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    string BuscaDes = row.Cells[3].Value.ToString().Normalize();
+                    string BuscaNomalizada = removerAcentos(BuscaDes);
+                    var dados = BuscaDes.Split(' ');
+                    var buscaTexto = Busca.Split(' ');
+                    bool canExibir = true;
+                    foreach (var a in buscaTexto)
+                    {
+
+                        string teste = removerAcentos(a);
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
+                        {
+
+                        }
+                        else
+                        {
+                            canExibir = false;
+                        }
+
+                    }
+                    if (canExibir)
+                    {
+                        row.Visible = true;
+                        row.Selected = true;
+                    }
+
+                    BuscaDes = row.Cells[3].Value.ToString().Normalize();
+                    BuscaNomalizada = removerAcentos(BuscaDes);
+                    canExibir = true;
+                    foreach (var a in buscaTexto)
+                    {
+
+                        string teste = removerAcentos(a);
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
+                        {
+
+                        }
+                        else
+                        {
+                            canExibir = false;
+                        }
+
+                    }
+                    if (canExibir)
+                    {
+                        row.Visible = true;
+                        row.Selected = true;
+                    }
+                }
+            }
+
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            //Se não achar nada ele exibe todos os itens denovo e retorna a mensagem
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                ExibirDados();
+                MessageBox.Show("Nenhum item encontrado.");
+                return;
+            }
+            else
+            {
+                dataGridViewDados.ClearSelection();
+                return;
             }
         }
     }

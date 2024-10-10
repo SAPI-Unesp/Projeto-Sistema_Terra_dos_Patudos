@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySqlX.XDevAPI;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security;
@@ -132,7 +134,7 @@ namespace CadastroBanco
                 Convert.ToInt32(0.5 * workingRectangle.Height));
 
             this.Location = new System.Drawing.Point(10, 10);
-            ///AddId();
+            //AddId();
 
 
         }
@@ -717,22 +719,63 @@ namespace CadastroBanco
 
         public void AddId()
         {
+            var linhasVendas = File.ReadAllLines(caminhoArquivoVendas);
+            var linhasLivros = File.ReadAllLines(caminhoArquivo);
 
-          
-                var linhas = File.ReadAllLines(caminhoArquivo);
-                int i = 0;
-                foreach (var linha in linhas)
+            int i = 0;
+            var linhasProcessadas = new HashSet<string>();
+
+            foreach (var linhaVenda in linhasVendas)
+            {
+                var dadosVenda = linhaVenda.Split('*');
+                if (dadosVenda.Length >= 9)
                 {
-                    File.AppendAllText(itensComId, $"{i}*{linha}{Environment.NewLine}");
-                    i++;
+                    string categoriaVenda = dadosVenda[1].Trim();
+                    string descricaoVenda = dadosVenda[2].Trim();
+                    string qntVenda = dadosVenda[3].Trim();
+                    string precoVenda = dadosVenda[4].Trim();
+                    string dataVenda = dadosVenda[5].Trim();
+                    string pessoa = dadosVenda[6].Trim();
+                    string telefone = dadosVenda[7].Trim();
+                    string pendente = dadosVenda[8].Trim();
 
+                    bool encontrou = false;
+
+                    foreach (var linhaLivro in linhasLivros)
+                    {
+                        var dadosLivro = linhaLivro.Split('*');
+                        if (dadosLivro.Length >= 8)
+                        {
+                            string livroId = dadosLivro[1].Trim();
+                            string categoriaLivro = dadosLivro[2].Trim();
+                            string descricaoLivro = dadosLivro[3].Trim();
+                            string qntLivro = dadosLivro[4].Trim();
+                            string precoLivro = dadosLivro[5].Trim();
+                            string dataLivro = dadosLivro[6].Trim();
+                            string vendaLivro = dadosLivro[7].Trim();
+
+                            if (descricaoVenda == descricaoLivro && !linhasProcessadas.Contains(linhaVenda))
+                            {
+                                // Monta a linha com os campos corretos
+                                string linhaSaida = $"{i}*{livroId}*{categoriaLivro}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{pessoa}*{telefone}*{pendente}{Environment.NewLine}";
+
+                                File.AppendAllText(itensComId, linhaSaida);
+
+                                linhasProcessadas.Add(linhaVenda);
+                                encontrou = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (encontrou)
+                    {
+                        i++;
+                    }
                 }
-               
-            
-           
-            
-
+            }
         }
+
 
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
