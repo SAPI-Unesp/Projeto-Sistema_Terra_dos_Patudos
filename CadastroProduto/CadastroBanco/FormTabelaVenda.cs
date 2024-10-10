@@ -180,6 +180,7 @@ namespace CadastroBanco
         private void cbPessoas_SelectedIndexChanged(object sender, EventArgs e)
         {
             ExibirPessoa();
+            Pagamento();
         }
 
 
@@ -189,7 +190,7 @@ namespace CadastroBanco
             ExibirPessoa();
         }
 
-        private void cbPagamento_SelectedIndexChanged(object sender, EventArgs e)
+        public void Pagamento()
         {
             string value = cbPagamento.Text;
             decimal valorTotal = 0;
@@ -233,6 +234,11 @@ namespace CadastroBanco
                     dataGridViewDados.ClearSelection();
                 }
             }
+        }
+        private void cbPagamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Pagamento();
+            
         }
 
         private void label5_Click(object sender, EventArgs e)

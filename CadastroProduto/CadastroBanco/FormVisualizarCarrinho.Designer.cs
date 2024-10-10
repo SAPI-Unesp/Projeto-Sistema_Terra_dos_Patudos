@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnFinalizarCompra = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,13 +47,6 @@
             this.tbTotalPagar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnLimparCarrinho = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +72,52 @@
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             this.dataGridViewDados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellValueChanged);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // pagLivro
+            // 
+            this.pagLivro.HeaderText = "Pag do livro";
+            this.pagLivro.Name = "pagLivro";
+            this.pagLivro.ReadOnly = true;
+            // 
+            // categoria
+            // 
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            this.categoria.Width = 75;
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Peça";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            this.descricao.Width = 300;
+            // 
+            // quantidade
+            // 
+            this.quantidade.HeaderText = "Quantidade em Estoque";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            this.quantidade.Width = 150;
+            // 
+            // preco
+            // 
+            this.preco.HeaderText = "Preço";
+            this.preco.Name = "preco";
+            this.preco.ReadOnly = true;
+            // 
+            // qtdVendida
+            // 
+            this.qtdVendida.HeaderText = "Quantidade Vendida";
+            this.qtdVendida.Name = "qtdVendida";
+            this.qtdVendida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // btnRemover
             // 
@@ -139,8 +185,8 @@
             this.cbPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPagamento.FormattingEnabled = true;
             this.cbPagamento.Items.AddRange(new object[] {
-            "À Vista",
-            "A Pagar"});
+            "Realizado",
+            "Pendente"});
             this.cbPagamento.Location = new System.Drawing.Point(953, 28);
             this.cbPagamento.Name = "cbPagamento";
             this.cbPagamento.Size = new System.Drawing.Size(121, 21);
@@ -174,52 +220,6 @@
             this.btnLimparCarrinho.Text = "Limpar Carrinho";
             this.btnLimparCarrinho.UseVisualStyleBackColor = true;
             this.btnLimparCarrinho.Click += new System.EventHandler(this.btnLimparCarrinho_Click);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
-            // 
-            // pagLivro
-            // 
-            this.pagLivro.HeaderText = "Pag do livro";
-            this.pagLivro.Name = "pagLivro";
-            this.pagLivro.ReadOnly = true;
-            // 
-            // categoria
-            // 
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            this.categoria.Width = 75;
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "Peça";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            this.descricao.Width = 300;
-            // 
-            // quantidade
-            // 
-            this.quantidade.HeaderText = "Quantidade em Estoque";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            this.quantidade.Width = 150;
-            // 
-            // preco
-            // 
-            this.preco.HeaderText = "Preço";
-            this.preco.Name = "preco";
-            this.preco.ReadOnly = true;
-            // 
-            // qtdVendida
-            // 
-            this.qtdVendida.HeaderText = "Quantidade Vendida";
-            this.qtdVendida.Name = "qtdVendida";
-            this.qtdVendida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // FormVisualizarCarrinho
             // 

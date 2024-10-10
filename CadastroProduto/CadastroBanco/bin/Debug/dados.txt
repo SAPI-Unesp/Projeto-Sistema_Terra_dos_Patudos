@@ -82,7 +82,7 @@
 81*05A-07*Blusas*Blusa vermelha com camisa xadrez*1*  10,00*09/10/2024 20:06:14*vendida* 
 82*05A-16*Acessórios*Par de meias  bege*1*  7,00*09/10/2024 20:06:14*a vender* #-
 83*05A-17*Acessórios*Touca  colorida*1*  5,00*09/10/2024 20:06:14*a vender* #-
-84*05A-18*Acessórios*Touca  vermelha feita a mão*1*  5,00*09/10/2024 20:06:14*vendida* #-
+84*05A-18*Acessórios*Touca  vermelha feita a mão*0*5,00*09/10/2024 20:06:14*vendida*
 85*05A-19*Acessórios*Cachecol  creme trançado*1*  10,00*09/10/2024 20:06:14*a vender* #-
 86*05A-22*Acessórios*Cachecol  rosê aplicação flor*1*  5,00*09/10/2024 20:06:14*a vender* #-
 87*05A-25*Blusas*Blusa vermelha viscose*1*  7,00*09/10/2024 20:06:14*a vender* #-
@@ -156,7 +156,7 @@
 155*09-22*Blusas*Blusa marrom pérolas e bolinhas*1*  20,00*09/10/2024 20:06:14*a vender* #-
 156*09-23*Blusas*Blusa renda branca botões*1*  10,00*09/10/2024 20:06:14*a vender* #-
 157*09-24*Blusas*Blusa preta Blusas*Cacharrel     *1*  20,00*09/10/2024 20:06:14*a vender* #-
-158*09A-07*Shorts*Short  preto desfiado Leon*1*  5,00*09/10/2024 20:06:14*vendida* #-
+158*09A-07*Shorts*Short  preto desfiado Leon*0*5,00*09/10/2024 20:06:14*vendida*
 159*09A-09*Blusas*Blusa strass Rovitex*1*  5,00*09/10/2024 20:06:14*a vender* #-
 160*09A-10*Blusas*Blusa marinho Dolce Vita*1*  3,00*09/10/2024 20:06:14*a vender* #-
 161*09A-11*Roupas p/ Dormir*Camisola  Mickey & Minnie*1*  10,00*09/10/2024 20:06:14*a vender* #-
@@ -228,7 +228,7 @@
 227*12-17*Utensílios*Toalhinha  de bandeja*1*  1,00*09/10/2024 20:06:14*a vender* #-
 228*12-18*Acessórios*Necessaire  Natura*1*  2,00*09/10/2024 20:06:14*a vender* #-
 229*12A-08*Acessórios*Jaqueta  preta Mauro*1*  30,00*09/10/2024 20:06:14*vendida* #-
-230*12A-09*Acessórios*Correntes  (02 unidades)*1*  8,00*09/10/2024 20:06:14*vendida* #-
+230*12A-09*Acessórios*Correntes  (02 unidades)*0*8,00*09/10/2024 20:06:14*vendida*
 231*13-02*Blusas*Blusa oncinha Hering*1*  10,00*09/10/2024 20:06:14*vendida* #-
 232*13-03*Blusas*Blusa azul estampada Roth*1*  10,00*09/10/2024 20:06:14*a vender* #-
 233*13-04*Blusas*Blusa preta lisa*1*  10,00*09/10/2024 20:06:14*a vender* #-
@@ -253,7 +253,7 @@
 252*13A-01*Calças*Calça jeans Clock House*1*  10,00*09/10/2024 20:06:14*a vender* #-
 253*13A-02*Calças*Calça jeans Muito Mais*1*  10,00*09/10/2024 20:06:14*a vender* #-
 254*13A-03*Calças*Calça jeans Looper*1*  10,00*09/10/2024 20:06:14*a vender* #-
-255*13A-05*Calças*Calça jeans Colcci*1*  15,00*09/10/2024 20:06:14*vendida* #-
+255*13A-05*Calças*Calça jeans Colcci*0*15,00*09/10/2024 20:06:14*vendida*
 256*13A-07*Calças*Calça jeans BlueSteel*1*  10,00*09/10/2024 20:06:14*a vender* #-
 257*13A-08*Calças*Calça jeans Damyller*1*  15,00*09/10/2024 20:06:14*a vender* #-
 258*13A-09*Shorts*Short  jeans Siberian Denin*1*  5,00*09/10/2024 20:06:14*a vender* #-
@@ -308,12 +308,12 @@
 307*14A-16*Shorts*Short  azul donuts*1*  10,00*09/10/2024 20:06:14*a vender* #-
 308*14A-19*Saias*Saia longa verde estampada*1*  10,00*09/10/2024 20:06:14*vendida* #
 309*14A-23*Blusas*Blusa flor e onça*1*  10,00*09/10/2024 20:06:14*vendida* #-
-310*14A-24*Blusas*Blusa listrada p&b*1*  10,00*09/10/2024 20:06:14*vendida* #-
-311*14A-25*Blusas*Blusa preta renda*1*  10,00*09/10/2024 20:06:14*vendida* #-
+310*14A-24*Blusas*Blusa listrada p&b*0*10,00*09/10/2024 20:06:14*vendida*
+311*14A-25*Blusas*Blusa preta renda*0*10,00*09/10/2024 20:06:14*vendida*
 312*14A-26*Blusas*Blusa preta estampa corrente*1*  7,00*09/10/2024 20:06:14*vendida* #
 313*14A-27*Blusas*Regata preta AK Urban*1*  10,00*09/10/2024 20:06:14*a vender* #-
 314*15-01*Blusas*Bermuda jeans Contatho*1*  5,00*09/10/2024 20:06:14*vendida* #-
-315*15-02*Shorts*Short  jeans Max denim*1*  5,00*09/10/2024 20:06:14*vendida* #-
+315*15-02*Shorts*Short  jeans Max denim*0*5,00*09/10/2024 20:06:14*vendida*
 316*15-03*Blusas*Bermuda jeans UVX*1*  5,00*09/10/2024 20:06:14*a vender* #-
 317*15-04*Shorts*Short  jeans desfiado*1*  5,00*09/10/2024 20:06:14*a vender* #-
 318*15-06*Shorts*Short  jeans Clock House*1*  5,00*09/10/2024 20:06:14*a vender* #-
@@ -339,7 +339,7 @@
 338*17-04*Blusas*Regata branca academia*1*  5,00*09/10/2024 20:06:14*a vender* #-
 339*17-06*Calças*Legging preta*1*  15,00*09/10/2024 20:06:14*vendida* #-
 340*17-08*Blusas*Camiseta pêssego Rolling Stones*1*  10,00*09/10/2024 20:06:14*a vender* #-
-341*17-09*Blusas*Mini Blusa veludo rosê*1*  10,00*09/10/2024 20:06:14*vendida* #-
+341*17-09*Blusas*Mini Blusa veludo rosê*0*10,00*09/10/2024 20:06:14*vendida*
 342*17-10*Blusas*Camiseta branca bananas*1*  5,00*09/10/2024 20:06:14*a vender* #-
 343*17-11*Vestidos*Vestido nadador gatos*1*  5,00*09/10/2024 20:06:14*a vender* #-
 344*17-12*Blusas*Macaquinho listrado Lunender*1*  10,00*09/10/2024 20:06:14*a vender* #-
@@ -361,7 +361,7 @@
 360*18-06*Blusas*Regata oncinha renda preta*1*  3,00*09/10/2024 20:06:14*a vender* #-
 361*18-07*Moda Praia*Body amarelo Chanel*1*  5,00*09/10/2024 20:06:14*a vender* #-
 362*18-08*Moda Praia*Body branco lycra*1*  5,00*09/10/2024 20:06:14*vendida* #-
-363*18-09*Blusas*Mini Blusa viscose azul*1*  5,00*09/10/2024 20:06:14*vendida* #-
+363*18-09*Blusas*Mini Blusa viscose azul*0*5,00*09/10/2024 20:06:14*vendida*
 364*18-10*Blusas*Bata babado azul*1*  5,00*09/10/2024 20:06:14*a vender* #-
 365*18-11*Blusas*Regata preta frente listrada*1*  5,00*09/10/2024 20:06:14*a vender* #-
 366*18-12*Blusas*Regata preta Hering*1*  10,00*09/10/2024 20:06:14*a vender* #-
@@ -383,9 +383,9 @@
 382*19-13*Blusas*Blusa amarela botão*1*  5,00*09/10/2024 20:06:14*a vender* #-
 383*19-14*Blusas*Regata estampa verde vermelha preta*1*  10,00*09/10/2024 20:06:14*a vender* #-
 384*19-15*Blusas*Mini Blusa xadrez marrom bordô renda*1*  5,00*09/10/2024 20:06:14*a vender* #-
-385*19-16*Academia*Legging  preta academia*1*  15,00*09/10/2024 20:06:14*vendida* #
+385*19-16*Academia*Legging  preta academia*0*15,00*09/10/2024 20:06:14*vendida*
 386*19-18*Blusas*Macacão preto e pink academia*1*  25,00*09/10/2024 20:06:14*a vender* #-
-387*19-19*Calças*Legging  preta flare*1*  10,00*09/10/2024 20:06:14*vendida* #
+387*19-19*Calças*Legging  preta flare*0*10,00*09/10/2024 20:06:14*vendida*
 388*19-21*Moda Praia*Body oncinha manga longa*1*  10,00*09/10/2024 20:06:14*a vender* #-
 389*19-22*Cama/Mesa/Banho*Lenço  branco cruz*1*  10,00*09/10/2024 20:06:14*a vender* #-
 390*19-24*Blusas*Blusa de lã branca decote quadrado*1*  20,00*09/10/2024 20:06:14*a vender* #-
@@ -405,7 +405,7 @@
 404*20-15*Blusas*Macaquinho preto Zara*1*  10,00*09/10/2024 20:06:14*a vender* #-
 405*20-16*Blusas*Macaquinho bege botão*1*  10,00*09/10/2024 20:06:14*a vender* #-
 406*20-17*Blusas*Jaqueta veludo*1*  20,00*09/10/2024 20:06:14*vendida* #-
-407*20-19*Blusas*Casaco  azul nylon corta vento*1*  50,00*09/10/2024 20:06:14*vendida* #
+407*20-19*Blusas*Casaco  azul nylon corta vento*0*50,00*09/10/2024 20:06:14*vendida*
 408*20-20*Blusas*Casaco  marinho sarja*1*  40,00*09/10/2024 20:06:14*a vender* #-
 409*20-21*Blusas*Blazer preto listras coloridas*1*  20,00*09/10/2024 20:06:14*a vender* #-
 410*20-25*Calças*Calça preta corino*1*  20,00*09/10/2024 20:06:14*a vender* #-
@@ -802,41 +802,41 @@
 802**Religiosos*QUADRO PEQ. IGREJA ORTODOXA   *1*10,00*08/10/2024 15:41*a vender*
 803**Religiosos*SAGRADO CORAÇÃO DE MARIA (AZUL/BCO)   *1*15,00*08/10/2024 15:41*a vender*
 804**Religiosos*SANTO ANTONIO   *1*7,00*08/10/2024 15:41*a vender*
-805*Sapatos*Sapatilha Usaflex preta*0*25,00 *08/10/2024 15:41*a vender*
-806*Sapatos*Sapatilha MULHER MARAVILHA1*1*10,00*08/10/2024 15:41*a vender*
-807*Sapatos*Sapatilha MARRON E JEANS*1*7,00*08/10/2024 15:41*a vender*
-808*Sapatos*Sapatilha PRETA MOLECA1*1*10,00*08/10/2024 15:41*a vender*
-809*Sapatos*Sapatilha USAFLEX S/ CADARÇO PRETO*1*25,00*08/10/2024 15:41*a vender*
-810*Sapatos*Sapato OXFORD VERDE1*1*10,00*08/10/2024 15:41*a vender*
-811*Sapatos*Sapato OXFORD ROSA CLARO*1*7,00*08/10/2024 15:41*a vender*
-812*Sapatos*Sapatilha COM SALTO PRETA1*1*15,00*08/10/2024 15:41*a vender*
-813*Sapatos*Scarpin VERMELHO VIZZANO1*1*15,00*08/10/2024 15:41*a vender*
-814*Sapatos*Scarpin JORNAL1*1*15,00*08/10/2024 15:41*a vender*
-815*Sapatos*Scarpin BEGE MILANO*1*5,00*08/10/2024 15:41*a vender*
-816*Sapatos*Scarpin BEGE VIZZANO1*1*10,00*08/10/2024 15:41*a vender*
-817*Sapatos*Scarpin BEGE C/ CADARÇO1*1*10,00*08/10/2024 15:41*a vender*
-818*Sapatos*Scarpin SALTO BEGE/DOUR. MY SHOES*1*5,00*08/10/2024 15:41*a vender*
-819*Sapatos*Sandália BEGE1*1*10,00*08/10/2024 15:41*a vender*
-820*Sapatos*Sandália AZUL CLARO*1*5,00*08/10/2024 15:41*a vender*
-821*Sapatos*Sandália SALTO PRETO TABITA1*1*10,00*08/10/2024 15:41*a vender*
-822*Sapatos*Sandália SALTINHO MARRON VIA UNO1*1*15,00*08/10/2024 15:41*a vender*
-823*Sapatos*Sandália CAMURÇA BEGE A/K*1*25,00*08/10/2024 15:41*a vender*
-824*Sapatos*Sandália ROXA LORENA GIOTTA*1*20,00*08/10/2024 15:41*a vender*
-825*Sapatos*Sandália SALTO PRETO/DOUR. BEIRA RIO1*1*15,00*08/10/2024 15:41*a vender*
-826*Sapatos*Sandália PEEP TOE PRETO/DOUR. AREZZO1*1*15,00*08/10/2024 15:41*a vender*
-827*Sapatos*Sandália SALTO PRETO ARA1*1*10,00*08/10/2024 15:41*a vender*
-828*Sapatos*Sandália SALTO PRETO VIZZANO*1*20,00*08/10/2024 15:41*a vender*
-829*Sapatos*Rasteira MARRON VIA UNO*1*20,00*08/10/2024 15:41*a vender*
-830*Sapatos*Rasteira MARRON PERKY1*1*15,00*08/10/2024 15:41*a vender*
-831*Sapatos*Rasteira FLOR1*1*10,00*08/10/2024 15:41*a vender*
-832*Sapatos*Rasteira BOLAS1*1*10,00*08/10/2024 15:41*a vender*
-833*Sapatos*Bota VERDE MASC.1*1*15,00*08/10/2024 15:41*a vender*
-834*Acessórios*Bolsa ADIDAS*1*5,00*08/10/2024 15:41 *a vender*
-835*Acessórios*Bolsa CROCHE CREME1*1*10,00*08/10/2024 15:41*a vender*
-836*Acessórios*Bolsa PEQ. JEANS*1*5,00*08/10/2024 15:41*a vender*
-837*Acessórios*Bolsa PRETA NATURA1*1*10,00*08/10/2024 15:41*a vender*
-838*Acessórios*Necessaire*1*5,00*08/10/2024 15:41*a vender*
-839*Acessórios*ANEIS DIVERSOS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
-840*Acessórios*BRINCOS DIVERSOS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
-841*Acessórios*COLARES DIVERSOS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
-842*Acessórios*PULSEIRAS DIVERSAS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
+805**Sapatos*Sapatilha Usaflex preta*0*25,00 *08/10/2024 15:41*a vender*
+806**Sapatos*Sapatilha MULHER MARAVILHA1*1*10,00*08/10/2024 15:41*a vender*
+807**Sapatos*Sapatilha MARRON E JEANS*1*7,00*08/10/2024 15:41*a vender*
+808**Sapatos*Sapatilha PRETA MOLECA1*1*10,00*08/10/2024 15:41*a vender*
+809**Sapatos*Sapatilha USAFLEX S/ CADARÇO PRETO*1*25,00*08/10/2024 15:41*a vender*
+810**Sapatos*Sapato OXFORD VERDE1*1*10,00*08/10/2024 15:41*a vender*
+811**Sapatos*Sapato OXFORD ROSA CLARO*1*7,00*08/10/2024 15:41*a vender*
+812**Sapatos*Sapatilha COM SALTO PRETA1*1*15,00*08/10/2024 15:41*a vender*
+813**Sapatos*Scarpin VERMELHO VIZZANO1*1*15,00*08/10/2024 15:41*a vender*
+814**Sapatos*Scarpin JORNAL1*1*15,00*08/10/2024 15:41*a vender*
+815**Sapatos*Scarpin BEGE MILANO*1*5,00*08/10/2024 15:41*a vender*
+816**Sapatos*Scarpin BEGE VIZZANO1*1*10,00*08/10/2024 15:41*a vender*
+817**Sapatos*Scarpin BEGE C/ CADARÇO1*1*10,00*08/10/2024 15:41*a vender*
+818**Sapatos*Scarpin SALTO BEGE/DOUR. MY SHOES*1*5,00*08/10/2024 15:41*a vender*
+819**Sapatos*Sandália BEGE1*1*10,00*08/10/2024 15:41*a vender*
+820**Sapatos*Sandália AZUL CLARO*1*5,00*08/10/2024 15:41*a vender*
+821**Sapatos*Sandália SALTO PRETO TABITA1*1*10,00*08/10/2024 15:41*a vender*
+822**Sapatos*Sandália SALTINHO MARRON VIA UNO1*1*15,00*08/10/2024 15:41*a vender*
+823**Sapatos*Sandália CAMURÇA BEGE A/K*1*25,00*08/10/2024 15:41*a vender*
+824**Sapatos*Sandália ROXA LORENA GIOTTA*1*20,00*08/10/2024 15:41*a vender*
+825**Sapatos*Sandália SALTO PRETO/DOUR. BEIRA RIO1*1*15,00*08/10/2024 15:41*a vender*
+826**Sapatos*Sandália PEEP TOE PRETO/DOUR. AREZZO1*1*15,00*08/10/2024 15:41*a vender*
+827**Sapatos*Sandália SALTO PRETO ARA1*1*10,00*08/10/2024 15:41*a vender*
+828**Sapatos*Sandália SALTO PRETO VIZZANO*1*20,00*08/10/2024 15:41*a vender*
+829**Sapatos*Rasteira MARRON VIA UNO*1*20,00*08/10/2024 15:41*a vender*
+830**Sapatos*Rasteira MARRON PERKY1*1*15,00*08/10/2024 15:41*a vender*
+831**Sapatos*Rasteira FLOR1*1*10,00*08/10/2024 15:41*a vender*
+832**Sapatos*Rasteira BOLAS1*1*10,00*08/10/2024 15:41*a vender*
+833**Sapatos*Bota VERDE MASC.1*1*15,00*08/10/2024 15:41*a vender*
+834**Acessórios*Bolsa ADIDAS*1*5,00*08/10/2024 15:41 *a vender*
+835**Acessórios*Bolsa CROCHE CREME1*1*10,00*08/10/2024 15:41*a vender*
+836**Acessórios*Bolsa PEQ. JEANS*1*5,00*08/10/2024 15:41*a vender*
+837**Acessórios*Bolsa PRETA NATURA1*1*10,00*08/10/2024 15:41*a vender*
+838**Acessórios*Necessaire*1*5,00*08/10/2024 15:41*a vender*
+839**Acessórios*ANEIS DIVERSOS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
+840**Acessórios*BRINCOS DIVERSOS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
+841**Acessórios*COLARES DIVERSOS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
+842**Acessórios*PULSEIRAS DIVERSAS ( un.) *1*9999,00*08/10/2024 15:41*a vender*

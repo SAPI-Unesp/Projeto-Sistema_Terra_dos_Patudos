@@ -36,7 +36,7 @@ namespace CadastroBanco
         {
             // Se o arquivo não existir, o primeiro ID será 0
             if (!File.Exists(caminhoArquivoVendas))
-                return 1;
+                return 0;
 
             // Ler todas as linhas do arquivo
             var linhas = File.ReadAllLines(caminhoArquivoVendas);
@@ -50,7 +50,7 @@ namespace CadastroBanco
 
 
             // Encontrar o menor ID não utilizado
-            int proximoId = 1; // Começa com o ID 0
+            int proximoId = 0; // Começa com o ID 0
             foreach (var id in idsExistentes)
             {
                 if (id == proximoId)

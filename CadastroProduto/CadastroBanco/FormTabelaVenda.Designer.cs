@@ -160,7 +160,7 @@ namespace CadastroBanco
             this.cbPessoas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPessoas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPessoas.FormattingEnabled = true;
-            this.cbPessoas.Location = new System.Drawing.Point(956, 48);
+            this.cbPessoas.Location = new System.Drawing.Point(942, 51);
             this.cbPessoas.Name = "cbPessoas";
             this.cbPessoas.Size = new System.Drawing.Size(121, 28);
             this.cbPessoas.TabIndex = 12;
@@ -169,7 +169,7 @@ namespace CadastroBanco
             // dataPickerStart
             // 
             this.dataPickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPickerStart.Location = new System.Drawing.Point(956, 122);
+            this.dataPickerStart.Location = new System.Drawing.Point(942, 125);
             this.dataPickerStart.Name = "dataPickerStart";
             this.dataPickerStart.Size = new System.Drawing.Size(200, 26);
             this.dataPickerStart.TabIndex = 13;
@@ -203,7 +203,7 @@ namespace CadastroBanco
             this.cbPagamento.Items.AddRange(new object[] {
             "Realizado",
             "Pendente"});
-            this.cbPagamento.Location = new System.Drawing.Point(1102, 48);
+            this.cbPagamento.Location = new System.Drawing.Point(1088, 51);
             this.cbPagamento.Name = "cbPagamento";
             this.cbPagamento.Size = new System.Drawing.Size(121, 28);
             this.cbPagamento.TabIndex = 17;
@@ -212,7 +212,7 @@ namespace CadastroBanco
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(956, 29);
+            this.label2.Location = new System.Drawing.Point(942, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 18;
@@ -221,7 +221,7 @@ namespace CadastroBanco
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(956, 106);
+            this.label3.Location = new System.Drawing.Point(942, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 19;
@@ -230,7 +230,7 @@ namespace CadastroBanco
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1112, 29);
+            this.label4.Location = new System.Drawing.Point(1098, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 20;
