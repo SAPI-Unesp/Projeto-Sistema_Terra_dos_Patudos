@@ -188,77 +188,54 @@ namespace CadastroBanco
         private void dataPickerStart_ValueChanged(object sender, EventArgs e)
         {
             ExibirPessoa();
+            Pagamento();
         }
 
         public void Pagamento()
         {
-            string value = cbPagamento.Text;
             valorTotal = 0;
-            dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
-            if (!string.IsNullOrEmpty(value))
+
+
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
-                if (File.Exists(caminhoArquivoVendas))
+                string value = cbPagamento.Text;
+                string pagamento = row.Cells[9].Value?.ToString();
+                string nome = row.Cells[7].Value?.ToString();
+                bool exibeLinha = (pagamento == value) && (cbPessoas.Text == "(Todos)" || cbPessoas.Text == nome);
+                if (exibeLinha)
                 {
-                    var linhas = File.ReadAllLines(caminhoArquivoVendas);
-                    var nomesJaAdicionados = new HashSet<string>();
-
-                    dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
-                    valorTotal = 0;
-
-                    foreach (var linha in linhas)
+                    DateTime cellDate;
+                    if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                     {
-
-                        var dados = linha.Split('*');
-                        if (dados.Length == 10)
+                        if (cellDate.Date == dataPickerStart.Value.Date)
                         {
-                            string id = dados[0].Trim();
-                            string idLivro = dados[1].Trim();
-                            string categoria = dados[2].Trim();
-                            string descricao = dados[3].Trim();
-                            string qnt = dados[4].Trim();
-                            string preco = dados[5].Trim();
-                            string data = dados[6].Trim();
-                            string nome = dados[7].Trim();
-                            string telefone = dados[8].Trim();
-                            string pagamento = dados[9].Trim();
-
-                            bool exibeLinha;
-                            DateTime cellDate;
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
-                            {
-                                if (cellDate.Date == dataPickerStart.Value.Date)
-                                {
-
-                                    exibeLinha = (pagamento == value) && (cbPessoas.Text == "(Todos)" || cbPessoas.Text == nome);
-                                }
-                                else
-                                {
-                                    
-                                }
-                            }
-
-                             
-                            if (exibeLinha)
-                            {
-                                dataGridViewDados.Rows.Add(id, idLivro, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
-                                valorTotal += Convert.ToDecimal(preco);
-                            }
-                            else
-                            {
-
-                            }
+                            row.Visible = true;
+                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        }
+                        else
+                        {
+                            row.Visible = false;
                         }
                     }
-
-                    txtTotal.Text = valorTotal.ToString();
-                    dataGridViewDados.ClearSelection();
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
+                else
+                {
+                    row.Visible = false;
                 }
             }
+            txtTotal.Text = valorTotal.ToString();
         }
         private void cbPagamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pagamento();
             ExibirPessoa();
+
+            ExibirPessoa();
+            Pagamento();
 
         }
 
@@ -377,6 +354,11 @@ namespace CadastroBanco
                 dataGridViewDados.ClearSelection();
                 return;
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
