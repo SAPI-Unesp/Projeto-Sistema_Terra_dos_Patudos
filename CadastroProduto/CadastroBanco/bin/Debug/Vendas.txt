@@ -94,6 +94,7 @@
 93*27-19*MinisSaias*Saia veludo cotelê preto*1*10,00*10/10/2024 11:12:49***Realizado
 94*31-01*Calças*Pantacourt offwhite linho Hering*1*15,00*10/10/2024 11:12:49***Realizado
 95**Sapatos*Calçados viamar(pix)*1*25,00*10/10/2024 11:12:49***Realizado
+96*26-01*Blusas*Polo azul/verde Aleatory (pix)*1*15,00*10/10/2024 11:17:28***Realizado
 97*23-16*Blusas*Camisa viscose bege e preta*1*15,00*10/10/2024 11:17:28***Realizado
 98*23-02*Blusas*Camiseta pug branca*1*10,00*10/10/2024 11:17:28***Realizado
 99*25-25*Blusas*Polo marinho Highsil*1*15,00*10/10/2024 11:17:28***Realizado
@@ -148,3 +149,16 @@
 148*21-27*Vestidos*Vestido longo verde e amarelo(pix)*1*15,00*10/10/2024 12:32:55***Realizado
 149*26-25*Vestidos*Vestido tecido Xadrez azul/bordô(pix)*1*10,00*10/10/2024 12:34:58***Realizado
 150*13-07*Blusas*Blusa preta(pix)*1*10,00*10/10/2024 12:34:58***Realizado
+151**Extra*Apenas para teste. (pix)*1*0*10/10/2024 14:18:03***Realizado
+152*30-23*Shorts*Short   Mickey & Minnie vermelho(PIX)*1*10,00*10/10/2024 14:20:48*Renata Polo**Realizado
+153*07A-20*Calças*Calça ZamZam(PIX)*1*5,00*10/10/2024 14:20:48*Renata Polo**Realizado
+154*32-16*Blusas*Mini Blusa branca Blue Steel(PIX)*1*5,00*10/10/2024 14:20:48*Renata Polo**Realizado
+155*20-10*Shorts*Short  seda Daslu(PIX)*1*5,00*10/10/2024 14:20:48*Renata Polo**Realizado
+156*14-05*Blusas*Blusa marinho nobuck manga longa*1*10,00*10/10/2024 14:24:14*Pedro**Realizado
+157*14A-16*Shorts*Short  azul donuts*1*10,00*10/10/2024 14:26:18*Leonardo**Realizado
+158*08-02*Acessórios*CD  Negritude Junior*1*2,00*10/10/2024 14:26:18*Leonardo**Realizado
+159*20-20*Blusas*Casaco  marinho sarja*1*40,00*10/10/2024 14:27:06*Gabriel**Realizado
+160**Extra*2 reais extra.*1*2*10/10/2024 14:28:12*Eloisa**Realizado
+161*33-24*Blusas*Blusa estampada manga curta Pistachio(pix)*1*20,00*10/10/2024 14:30:20*Paulo**Realizado
+162**Cama/Mesa/Banho*Caminho de mesa + toalha de natal(pix)*1*30,00*10/10/2024 14:30:20*Paulo**Realizado
+163*32-15*Blusas*Camiseta  preta Good Year (pix)*1*10,00*10/10/2024 14:31:46***Realizado

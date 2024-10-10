@@ -245,7 +245,7 @@ namespace CadastroBanco
 
                 int idV = ObterProximoIdDisponivel();
 
-                File.AppendAllText(caminhoArquivoVendas, $"{ObterProximoIdDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString()}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nome.Text}*{telefone.Text}*{cbPagamento.Text}{Environment.NewLine}");
+                File.AppendAllText(caminhoArquivoVendas, $"{ObterProximoIdDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString() + " " + comboBox1.Text}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nome.Text}*{telefone.Text}*{cbPagamento.Text}{Environment.NewLine}");
 
             }
 

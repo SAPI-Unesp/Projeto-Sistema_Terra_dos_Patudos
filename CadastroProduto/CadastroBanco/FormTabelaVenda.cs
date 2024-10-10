@@ -403,5 +403,36 @@ namespace CadastroBanco
                 }
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int index = dataGridViewDados.SelectedRows[0].Index;
+            var linhaSelecionada = dataGridViewDados.Rows[index];
+
+            string id = linhaSelecionada.Cells[0].Value.ToString();
+            string livroId = linhaSelecionada.Cells[1].Value.ToString();
+            string categoria = linhaSelecionada.Cells[2].Value.ToString();
+            string descricao = linhaSelecionada.Cells[3].Value.ToString();
+            decimal qnt = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
+            decimal preco = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
+            string data = linhaSelecionada.Cells[6].Value.ToString();
+            string nome_comprador = linhaSelecionada.Cells[7].Value.ToString();
+            string tell = linhaSelecionada.Cells[8].Value.ToString();
+            string pagamento = linhaSelecionada.Cells[9].Value.ToString();
+            var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
+
+            // Encontrar a linha correspondente pelo ID
+            int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
+
+            if (linhaParaAtualizar >= 0)
+            {
+                // Atualizar a linha com os novos dados
+                linhas[linhaParaAtualizar] = $"{id}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+
+                // Escrever as alterações no arquivo
+                File.WriteAllLines(caminhoArquivoVendas, linhas);
+                MessageBox.Show("Dados atualizados com sucesso!");
+            }
+        }
     }
 }
