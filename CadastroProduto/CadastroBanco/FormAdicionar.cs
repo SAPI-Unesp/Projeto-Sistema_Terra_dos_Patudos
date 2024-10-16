@@ -42,7 +42,7 @@ namespace CadastroBanco
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
-                 string pagLivro = txtCaderno.Text;
+            string pagLivro = ObterProximoIdLivroDisponivel();
                 string categoria = cbCategoria.Text;
                 cbtexto = categoria;
                 string descricao = txtDesc.Text;
@@ -115,6 +115,74 @@ namespace CadastroBanco
 
             return proximoId;
         }
+
+        private string ObterProximoIdLivroDisponivel()
+        {
+            // Se o arquivo não existir, o primeiro ID será "00A-00"
+            if (!File.Exists(caminhoArquivo))
+                return "00A-00";
+
+            // Ler todas as linhas do arquivo
+            var linhas = File.ReadAllLines(caminhoArquivo);
+
+            // Extrair os IDs existentes (supondo que o ID está no segundo campo)
+            var idsExistentes = linhas
+                .Where(l => !string.IsNullOrWhiteSpace(l)) // Ignorar linhas vazias
+                .Select(l => l.Split('*')[1].Trim()) // Pegar o segundo campo, que contém o ID
+                .ToList();
+            Debug.Log(" ");
+            // Ordenar os IDs
+            idsExistentes.Sort();
+
+            // Encontrar o próximo ID disponível
+            string proximoId = "00A-00"; // Começa com o ID "00A-00"
+
+            foreach (var id in idsExistentes)
+            {
+                var partes = id.Split('-');
+                string parteAlfa = partes[0]; // Ex: "13A"
+                string parteNum = partes[1];
+
+                // Verifica se a parte numérica é menor que 26
+                int parteNumn = int.Parse(parteNum);
+                if (int.Parse(parteNum) < 26)
+                {
+                    parteNumn++;
+                }
+                else
+                {
+                    parteNumn = 0; // Redefine para 0
+                                  // Incrementa a parte alfabética
+                    char letra = parteAlfa[parteAlfa.Length - 1]; // Última letra
+                    int numero = int.Parse(parteAlfa.Substring(0, parteAlfa.Length - 1)); // Parte numérica
+                    if (letra < 'Z')
+                    {
+                        letra++; // Incrementa a letra
+                    }
+                    else
+                    {
+                        letra = 'A'; // Redefine a letra
+                        numero++; // Incrementa o número
+                    }
+                    parteAlfa = $"{numero}{letra}"; // Monta a nova parte alfabética
+                }
+
+                // Monta o novo ID atualizado
+                var novoId = $"{parteAlfa}-{parteNumn:D2}"; // Formata a parte numérica com dois dígitos
+
+                // Verifica se o novo ID já está em uso
+                if (novoId != id)
+                {
+                    proximoId = novoId; // Atualiza o próximo ID disponível
+                    break; // Para assim que encontrar um ID disponível
+                }
+            }
+
+            return proximoId;
+        }
+
+
+
 
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
