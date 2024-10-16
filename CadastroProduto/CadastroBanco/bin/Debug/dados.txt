@@ -842,7 +842,7 @@
 842**Acessórios*PULSEIRAS DIVERSAS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
 766**Acessórios*Sacola água de cheiro*0*5,00*10/10/2024 10:30:11*a vender*
 843**Kids*teste*1*0*10/10/2024 10:35:00*a vender*
-844*99-99*Acessórios*Sacola unesp proec*0*10*10/10/2024 10:50:11*a vender*
+844**Acessórios*Sacola unesp proec*0*10*10/10/2024 10:50:11*a vender*
 845**Acessórios*Capuz de urso*0*10,00*10/10/2024 10:58:18*a vender*
 846**Livros*Livro pequeno*0*5,00*10/10/2024 10:58:46*a vender*
 847**Acessórios*Conjunto de quadros (3)*0*10,00*10/10/2024 10:59:07*a vender*
@@ -865,3 +865,6 @@
 864**Cama/Mesa/Banho*Caminho de mesa + toalha de natal(pix)*0*30,00*10/10/2024 14:28:58*a vender*
 865*26-01*TirarDaVenda*Camisa polo*1*15,00*10/10/2024 14:34:40*a vender*
 866*23-16*TirarDaVenda*Camisa beje e preta*1*15,00*10/10/2024 14:46:27*a vender*
+867*36-03*Extra*asdasdasd*5*3*16/10/2024 14:03:38*a vender*
+868*36-04*Extra*asdasdasd*2*3*16/10/2024 14:05:26*a vender*
+869*36-05*Extra*asdasdasd*2*3*16/10/2024 14:09:24*a vender*

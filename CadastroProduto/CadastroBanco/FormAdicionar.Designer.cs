@@ -137,6 +137,7 @@
             // 
             this.txtCaderno.Location = new System.Drawing.Point(161, 78);
             this.txtCaderno.Name = "txtCaderno";
+            this.txtCaderno.ReadOnly = true;
             this.txtCaderno.Size = new System.Drawing.Size(100, 20);
             this.txtCaderno.TabIndex = 15;
             // 

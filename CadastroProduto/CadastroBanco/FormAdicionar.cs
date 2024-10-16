@@ -26,6 +26,7 @@ namespace CadastroBanco
                     
                 }
             }
+            txtCaderno.Text = ObterProximoIdLivroDisponivel();
           
         }
 
@@ -128,57 +129,72 @@ namespace CadastroBanco
             // Extrair os IDs existentes (supondo que o ID está no segundo campo)
             var idsExistentes = linhas
                 .Where(l => !string.IsNullOrWhiteSpace(l)) // Ignorar linhas vazias
-                .Select(l => l.Split('*')[1].Trim()) // Pegar o segundo campo, que contém o ID
+                .Select(l => l.Split('*'))
+                .Where(partes => partes.Length > 1) // Garantir que existem pelo menos 2 partes
+                .Select(partes => partes[1].Trim()) // Pegar o segundo campo, que contém o ID
                 .ToList();
-            Debug.Log(" ");
-            // Ordenar os IDs
             idsExistentes.Sort();
 
             // Encontrar o próximo ID disponível
-            string proximoId = "00A-00"; // Começa com o ID "00A-00"
+            string proximoId = "00-00"; // Começa com o ID "00A-00"
 
+            int parteNumn = 0;
+            int parteAlfan = 0;
             foreach (var id in idsExistentes)
             {
-                var partes = id.Split('-');
-                string parteAlfa = partes[0]; // Ex: "13A"
-                string parteNum = partes[1];
-
-                // Verifica se a parte numérica é menor que 26
-                int parteNumn = int.Parse(parteNum);
-                if (int.Parse(parteNum) < 26)
+                if(id.Contains("-"))
                 {
-                    parteNumn++;
-                }
-                else
-                {
-                    parteNumn = 0; // Redefine para 0
-                                  // Incrementa a parte alfabética
-                    char letra = parteAlfa[parteAlfa.Length - 1]; // Última letra
-                    int numero = int.Parse(parteAlfa.Substring(0, parteAlfa.Length - 1)); // Parte numérica
-                    if (letra < 'Z')
+                    var partes = id.Split('-');
+                    if (partes[0] != "" && partes[1] != "")
                     {
-                        letra++; // Incrementa a letra
-                    }
-                    else
-                    {
-                        letra = 'A'; // Redefine a letra
-                        numero++; // Incrementa o número
-                    }
-                    parteAlfa = $"{numero}{letra}"; // Monta a nova parte alfabética
-                }
+                        try
+                        {
+                            string parteAlfa = partes[0]; // Ex: "13A"
+                            string parteNum = partes[1];
+                            parteAlfa = new string(parteAlfa.Where(char.IsDigit).ToArray());
+                            parteNum = new string(parteNum.Where(char.IsDigit).ToArray());
+                            // Verifica se a parte numérica é menor que 26
+                            if(parteAlfan < int.Parse(parteAlfa))
+                            {
+                                parteAlfan = int.Parse(parteAlfa);
+                                parteNumn = 0;
+                            }
+                                
 
-                // Monta o novo ID atualizado
-                var novoId = $"{parteAlfa}-{parteNumn:D2}"; // Formata a parte numérica com dois dígitos
+                            if (parteNumn < int.Parse(parteNum) && parteAlfan == int.Parse(parteAlfa) )
+                            {
+                                parteNumn = int.Parse(parteNum);
+                            }
+                                
+                        }
+                        catch (Exception er)
+                        {
 
-                // Verifica se o novo ID já está em uso
-                if (novoId != id)
-                {
-                    proximoId = novoId; // Atualiza o próximo ID disponível
-                    break; // Para assim que encontrar um ID disponível
+                        }
+
+                        // Monta o novo ID atualizado
+                        // var novoId = $"{parteAlfan}-{parteNumn:D2}"; // Formata a parte numérica com dois dígitos
+
+
+
+                    }
                 }
+                    
+                
+                
             }
 
-            return proximoId;
+            if (parteNumn < 30)
+            {
+                parteNumn++;
+            }
+            else
+            {
+                parteAlfan++;
+                parteNumn = 0;
+            }
+            var novoId = $"{parteAlfan}-{parteNumn:D2}";
+            return novoId;
         }
 
 
