@@ -16,6 +16,7 @@ namespace CadastroBanco
         decimal valorTotal = 0;
         string caminhoArquivoVendas = "Vendas.txt";
         string caminhoArquivo = "dados.txt";
+        string caminhoArquivoCliente = "cliente.txt";
         DateTime data1;
         DateTime data2;
         public FormTabelaVenda()
@@ -171,11 +172,75 @@ namespace CadastroBanco
             this.Width = 1280;
             this.Height = 720;
 
-
-
-
+            AddCliente();
 
         }
+
+        public void AddCliente()
+        {
+            var linhasVendas = File.ReadAllLines(caminhoArquivoVendas);
+
+            List<string> linhasClientes = new List<string>();
+            if (File.Exists(caminhoArquivoCliente))
+            {
+                linhasClientes = File.ReadAllLines(caminhoArquivoCliente).ToList();
+            }
+
+            foreach (var linhaVenda in linhasVendas)
+            {
+                var dadosVenda = linhaVenda.Split('*');
+                if (dadosVenda.Length >= 9)
+                {
+                    string precoVenda = dadosVenda[5].Trim();   
+                    string pessoa = dadosVenda[7].Trim();       
+                    string pendente = dadosVenda[8].Trim();   
+
+                    bool clienteExistente = false;
+
+                    for (int j = 0; j < linhasClientes.Count; j++)
+                    {
+                        var dadosCliente = linhasClientes[j].Split('*');
+                        string cliente = dadosCliente[1].Trim();
+                        string valorDivida = dadosCliente[2].Trim(); 
+                        string desconto = dadosCliente[3].Trim();
+                        string credito = dadosCliente[4].Trim();
+
+                        if (pessoa.Equals(cliente))
+                        {
+                            clienteExistente = true;
+                            if (pendente == "Pendente")
+                            {
+                                double dividaAtual = Convert.ToDouble(valorDivida);
+                                double novaDivida = Convert.ToDouble(precoVenda);   
+                                double dividaTotal = dividaAtual + novaDivida;        
+
+                                linhasClientes[j] = $"{j}*{cliente}*{dividaTotal}*{desconto}*{credito}";
+                            }
+                            break;
+                        }
+                    }
+
+                    if (!clienteExistente && pendente == "Pendente")
+                    {
+                        double dividaTotal = Convert.ToDouble(precoVenda);
+                        string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*{dividaTotal}*0*0";
+                        linhasClientes.Add(novaLinhaCliente);
+                    }
+                    else if (!clienteExistente && pessoa != "")
+                    {
+                        string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*0*0*0";
+                        linhasClientes.Add(novaLinhaCliente);
+                    }
+                }
+            }
+
+            File.WriteAllLines(caminhoArquivoCliente, linhasClientes);
+        }
+
+
+
+
+
 
         private void cbPessoas_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -433,6 +498,13 @@ namespace CadastroBanco
                 File.WriteAllLines(caminhoArquivoVendas, linhas);
                 MessageBox.Show("Dados atualizados com sucesso!");
             }
+        }
+
+        private void AplicarDesconto_Click(object sender, EventArgs e)
+        {
+            FormDesconto formDesconto = new FormDesconto();
+
+            formDesconto.Show();
         }
     }
 }

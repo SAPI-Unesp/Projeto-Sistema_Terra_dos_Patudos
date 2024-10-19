@@ -190,6 +190,35 @@ namespace CadastroBanco
                 }
             }
 
+            var linhasVClient = File.ReadAllLines(caminhoArquivoVendas);
+            foreach (var linha in linhasVClient)
+            {
+                var dados = linha.Split('*');
+                // Certifique-se de que há 10 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
+                if (dados.Length == 10)
+                {
+                    string nomeC = dados[7].Trim();
+                    if (nome.Text == nomeC)
+                    {
+                        DialogResult confirmResult = MessageBox.Show("Cliente já existe na base de dados, este é o mesmo cliente?", 
+                                                         "Confirmação de existência",
+                                                         MessageBoxButtons.YesNo);
+                        if (confirmResult == DialogResult.Yes)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Digite outro nome para o cliente");
+                            return;
+                        }
+                    }
+                }
+            
+            }
+
+            
+
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 string qtdE = row.Cells[4].Value.ToString();
