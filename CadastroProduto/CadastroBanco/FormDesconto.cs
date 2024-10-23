@@ -128,6 +128,7 @@ namespace CadastroBanco
             {
                 MessageBox.Show("Nenhum dado encontrado."); 
             }
+
         }
 
         private void FormDesconto_Load(object sender, EventArgs e)

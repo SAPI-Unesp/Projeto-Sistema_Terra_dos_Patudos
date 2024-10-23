@@ -159,6 +159,43 @@ namespace CadastroBanco
             }
             txtTotal.Text = "R$ " + valorTotal.ToString();
 
+
+        }
+
+        public void valorTotalDesconto()
+        {
+            
+            decimal valorTotal = Convert.ToDecimal(txtTotal.Text);
+            decimal divida = valorTotal;
+            string pessoa = cbPessoas.Text;
+
+
+            var linhasClientes = File.ReadAllLines(caminhoArquivoCliente);
+
+            foreach (var linhaCliente in linhasClientes)
+            {
+                var dadosCliente = linhaCliente.Split('*');
+                string cliente = dadosCliente[1].Trim();
+                string valorDivida = dadosCliente[2].Trim();
+                string desconto = dadosCliente[3].Trim();
+                string credito = dadosCliente[4].Trim();
+
+                decimal descont = Convert.ToDecimal(desconto);
+                if (pessoa == cliente && cbPagamento.Text != "Realizado")
+                {
+                    divida -= descont;
+                    break;
+                    
+                }else if (pessoa == "(TODOS)" || pessoa == "" && cbPagamento.Text != "Realizado")
+                {
+                    divida -= descont;
+                }
+            }
+            if (divida < 0)
+            {
+                divida = 0;
+            }
+            txtDesconto.Text = "R$ " + divida.ToString();
         }
         private void FormTabelaVenda_Load(object sender, EventArgs e)
         {
@@ -173,6 +210,7 @@ namespace CadastroBanco
             this.Height = 720;
 
             AddCliente();
+            valorTotalDesconto();
 
         }
 
@@ -246,6 +284,7 @@ namespace CadastroBanco
         {
             ExibirPessoa();
             Pagamento();
+            valorTotalDesconto();
         }
 
 
@@ -254,6 +293,7 @@ namespace CadastroBanco
         {
             ExibirPessoa();
             Pagamento();
+            valorTotalDesconto();
         }
 
         public void Pagamento()
@@ -301,6 +341,7 @@ namespace CadastroBanco
 
             ExibirPessoa();
             Pagamento();
+            valorTotalDesconto();
 
         }
 
@@ -505,6 +546,16 @@ namespace CadastroBanco
             FormDesconto formDesconto = new FormDesconto();
 
             formDesconto.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
