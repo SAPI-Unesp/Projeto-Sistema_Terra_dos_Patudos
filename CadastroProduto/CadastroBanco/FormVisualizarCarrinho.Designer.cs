@@ -42,6 +42,8 @@
             this.btnLimparCarrinho = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dataPrazo = new System.Windows.Forms.DateTimePicker();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +72,7 @@
             this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDados.Size = new System.Drawing.Size(896, 408);
+            this.dataGridViewDados.Size = new System.Drawing.Size(933, 408);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             this.dataGridViewDados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellValueChanged);
@@ -87,7 +89,7 @@
             // 
             // btnFinalizarCompra
             // 
-            this.btnFinalizarCompra.Location = new System.Drawing.Point(954, 194);
+            this.btnFinalizarCompra.Location = new System.Drawing.Point(954, 301);
             this.btnFinalizarCompra.Name = "btnFinalizarCompra";
             this.btnFinalizarCompra.Size = new System.Drawing.Size(75, 40);
             this.btnFinalizarCompra.TabIndex = 12;
@@ -200,6 +202,24 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Formas de Pagamento:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(950, 199);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Data prevista de pagamento (opcional)";
+            // 
+            // dataPrazo
+            // 
+            this.dataPrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataPrazo.Location = new System.Drawing.Point(954, 234);
+            this.dataPrazo.Name = "dataPrazo";
+            this.dataPrazo.Size = new System.Drawing.Size(200, 26);
+            this.dataPrazo.TabIndex = 30;
+            this.dataPrazo.Value = new System.DateTime(2024, 10, 10, 0, 0, 0, 0);
+            // 
             // id
             // 
             this.id.HeaderText = "ID";
@@ -212,6 +232,7 @@
             this.pagLivro.HeaderText = "Pag do livro";
             this.pagLivro.Name = "pagLivro";
             this.pagLivro.ReadOnly = true;
+            this.pagLivro.Width = 60;
             // 
             // categoria
             // 
@@ -224,7 +245,7 @@
             // 
             this.descricao.HeaderText = "Peça";
             this.descricao.Name = "descricao";
-            this.descricao.Width = 300;
+            this.descricao.Width = 450;
             // 
             // quantidade
             // 
@@ -237,6 +258,7 @@
             // 
             this.preco.HeaderText = "Preço";
             this.preco.Name = "preco";
+            this.preco.Width = 60;
             // 
             // qtdVendida
             // 
@@ -248,7 +270,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 480);
+            this.ClientSize = new System.Drawing.Size(1173, 480);
+            this.Controls.Add(this.dataPrazo);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnLimparCarrinho);
@@ -288,6 +312,8 @@
         private System.Windows.Forms.Button btnLimparCarrinho;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dataPrazo;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn pagLivro;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;

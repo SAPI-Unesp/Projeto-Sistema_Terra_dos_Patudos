@@ -155,6 +155,7 @@
             this.Controls.Add(this.dataGridViewDados);
             this.Name = "FormDesconto";
             this.Text = "FormDesconto";
+            this.Load += new System.EventHandler(this.FormDesconto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.valor)).EndInit();
             this.ResumeLayout(false);
