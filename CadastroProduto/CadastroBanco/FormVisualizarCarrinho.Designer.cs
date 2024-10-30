@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnFinalizarCompra = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,13 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataPrazo = new System.Windows.Forms.DateTimePicker();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +76,52 @@
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             this.dataGridViewDados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellValueChanged);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // pagLivro
+            // 
+            this.pagLivro.HeaderText = "Pag do livro";
+            this.pagLivro.Name = "pagLivro";
+            this.pagLivro.ReadOnly = true;
+            this.pagLivro.Width = 60;
+            // 
+            // categoria
+            // 
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            this.categoria.Width = 75;
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Peça";
+            this.descricao.Name = "descricao";
+            this.descricao.Width = 450;
+            // 
+            // quantidade
+            // 
+            this.quantidade.HeaderText = "Quantidade em Estoque";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            this.quantidade.Width = 150;
+            // 
+            // preco
+            // 
+            this.preco.HeaderText = "Preço";
+            this.preco.Name = "preco";
+            this.preco.Width = 60;
+            // 
+            // qtdVendida
+            // 
+            this.qtdVendida.HeaderText = "Quantidade Vendida";
+            this.qtdVendida.Name = "qtdVendida";
+            this.qtdVendida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // btnRemover
             // 
@@ -187,7 +233,8 @@
             "Dinheiro",
             "Cartão Debito",
             "Cartão Crédito",
-            "Transferência Bancária"});
+            "Transferência Bancária",
+            "Crédito Loja"});
             this.comboBox1.Location = new System.Drawing.Point(954, 153);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -214,57 +261,11 @@
             // dataPrazo
             // 
             this.dataPrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPrazo.Location = new System.Drawing.Point(954, 234);
+            this.dataPrazo.Location = new System.Drawing.Point(953, 215);
             this.dataPrazo.Name = "dataPrazo";
             this.dataPrazo.Size = new System.Drawing.Size(200, 26);
             this.dataPrazo.TabIndex = 30;
             this.dataPrazo.Value = new System.DateTime(2024, 10, 10, 0, 0, 0, 0);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
-            // 
-            // pagLivro
-            // 
-            this.pagLivro.HeaderText = "Pag do livro";
-            this.pagLivro.Name = "pagLivro";
-            this.pagLivro.ReadOnly = true;
-            this.pagLivro.Width = 60;
-            // 
-            // categoria
-            // 
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            this.categoria.Width = 75;
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "Peça";
-            this.descricao.Name = "descricao";
-            this.descricao.Width = 450;
-            // 
-            // quantidade
-            // 
-            this.quantidade.HeaderText = "Quantidade em Estoque";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            this.quantidade.Width = 150;
-            // 
-            // preco
-            // 
-            this.preco.HeaderText = "Preço";
-            this.preco.Name = "preco";
-            this.preco.Width = 60;
-            // 
-            // qtdVendida
-            // 
-            this.qtdVendida.HeaderText = "Quantidade Vendida";
-            this.qtdVendida.Name = "qtdVendida";
-            this.qtdVendida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // FormVisualizarCarrinho
             // 

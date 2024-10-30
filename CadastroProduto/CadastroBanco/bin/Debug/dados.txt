@@ -865,6 +865,6 @@
 864**Cama/Mesa/Banho*Caminho de mesa + toalha de natal(pix)*0*30,00*10/10/2024 14:28:58*a vender*
 865*26-01*TirarDaVenda*Camisa polo*1*15,00*10/10/2024 14:34:40*a vender*
 866*23-16*TirarDaVenda*Camisa beje e preta*1*15,00*10/10/2024 14:46:27*a vender*
-867*36-03*Extra*Teste de venda*4*3*16/10/2024 14:03:38*a vender*
+867*36-03*Extra*Teste de venda*10*3*16/10/2024 14:03:38*a vender*
 868*36-04*Extra*asdasdasd*2*3*16/10/2024 14:05:26*a vender*
 869*36-05*Extra*asdasdasd*2*3*16/10/2024 14:09:24*a vender*

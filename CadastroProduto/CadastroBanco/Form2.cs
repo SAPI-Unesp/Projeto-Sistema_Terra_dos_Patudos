@@ -625,7 +625,7 @@ namespace CadastroBanco
                 // Se o usuário clicar em OK no formulário de venda, realiza a atualização no arquivo
 
                 // Ler todas as linhas do arquivo
-                var linhas = File.ReadAllLines(caminhoArquivo).ToList();    
+                var linhas = File.ReadAllLines(caminhoArquivo).ToList();
 
                 // Encontrar a linha correspondente pelo ID
                 int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
@@ -851,6 +851,24 @@ namespace CadastroBanco
             else
             {
                 MessageBox.Show("Nenhum item no carrinho");
+            }
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            FormClientes formCliente = new FormClientes();
+
+            if (File.Exists(caminhoArquivoCliente))
+            {
+                if (formCliente.ShowDialog() == DialogResult.OK)
+                {
+                    ExibirDados();
+                    ExibirTudo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum cliente cadastrado");
             }
         }
     }

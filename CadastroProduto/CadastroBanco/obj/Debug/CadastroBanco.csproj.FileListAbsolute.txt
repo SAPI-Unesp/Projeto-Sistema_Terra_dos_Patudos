@@ -252,3 +252,6 @@ C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\Cadas
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.pdb
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormDesconto.resources
 C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormDesconto.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormClientes.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormDesconto.resources
+C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizarCliente.resources

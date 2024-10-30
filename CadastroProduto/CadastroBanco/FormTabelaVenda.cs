@@ -25,11 +25,13 @@ namespace CadastroBanco
             DateTime data1 = new DateTime();
             data1 = dataPickerStart.Value;
 
-
+            AddCliente();
             cbPessoas.Items.Add("(Todos)");
             cbPessoas.SelectedIndex = 0;
             ExibirDados();
         }
+
+
 
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -90,14 +92,14 @@ namespace CadastroBanco
 
         public void ExibirPessoa()
         {
-
+            ExibirDados();
 
             valorTotal = 0;
             dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             if (cbPessoas.Text == "(Todos)")
             {
-                ExibirDados();
+                //ExibirDados();
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
 
@@ -128,7 +130,7 @@ namespace CadastroBanco
                 {
 
                     if (row.Cells[7].Value != null &&
-    row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
                     {
                         DateTime cellDate;
                         if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
@@ -176,9 +178,10 @@ namespace CadastroBanco
             {
                 var dadosCliente = linhaCliente.Split('*');
                 string cliente = dadosCliente[1].Trim();
-                string valorDivida = dadosCliente[2].Trim();
-                string desconto = dadosCliente[3].Trim();
-                string credito = dadosCliente[4].Trim();
+                string telefone = dadosCliente[2].Trim();
+                string valorDivida = dadosCliente[3].Trim();
+                string desconto = dadosCliente[4].Trim();
+                string credito = dadosCliente[5].Trim();
 
                 decimal descont = Convert.ToDecimal(desconto);
                 if (pessoa == cliente && cbPagamento.Text != "Realizado")
@@ -214,7 +217,7 @@ namespace CadastroBanco
 
         }
 
-        public void AddCliente()
+        /*public void AddCliente()
         {
             var linhasVendas = File.ReadAllLines(caminhoArquivoVendas);
 
@@ -273,11 +276,72 @@ namespace CadastroBanco
             }
 
             File.WriteAllLines(caminhoArquivoCliente, linhasClientes);
+        }*/
+
+        public void AddCliente()
+        {
+            var linhasVendas = File.ReadAllLines(caminhoArquivoVendas);
+
+            List<string> linhasClientes = new List<string>();
+            if (!File.Exists(caminhoArquivoCliente))
+            {
+                File.WriteAllText(caminhoArquivoCliente, "");
+            }
+
+            linhasClientes = File.ReadAllLines(caminhoArquivoCliente).ToList();
+
+            foreach (var linhaVenda in linhasVendas)
+            {
+                var dadosVenda = linhaVenda.Split('*');
+                if (dadosVenda.Length >= 10)
+                {
+                    string precoVenda = dadosVenda[5].Trim();
+                    string pessoa = dadosVenda[7].Trim();
+                    string telefonep = dadosVenda[8].Trim();
+                    string pendente = dadosVenda[9].Trim();
+
+                    bool clienteExistente = false;
+
+                    for (int j = 0; j < linhasClientes.Count; j++)
+                    {
+                        var dadosCliente = linhasClientes[j].Split('*');
+                        string cliente = dadosCliente[1].Trim();
+                        string telefone = dadosCliente[2].Trim();
+                        string valorDivida = dadosCliente[3].Trim();
+                        string desconto = dadosCliente[4].Trim();
+                        string credito = dadosCliente[5].Trim();
+
+                        if (pessoa.Equals(cliente))
+                        {
+                            clienteExistente = true;
+                            if (pendente == "Pendente")
+                            {
+                                double dividaAtual = Convert.ToDouble(valorDivida);
+                                double novaDivida = Convert.ToDouble(precoVenda);
+                                double dividaTotal = dividaAtual + novaDivida;
+
+                                linhasClientes[j] = $"{j}*{cliente}*{telefone}*{dividaTotal}*{desconto}*{credito}";
+                            }
+                            break;
+                        }
+                    }
+
+                    if (!clienteExistente && pendente == "Pendente")
+                    {
+                        double dividaTotal = Convert.ToDouble(precoVenda);
+                        string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*{telefonep}*{dividaTotal}*0*0";
+                        linhasClientes.Add(novaLinhaCliente);
+                    }
+                    else if (!clienteExistente && pessoa != "")
+                    {
+                        string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*{telefonep}*0*0*0";
+                        linhasClientes.Add(novaLinhaCliente);
+                    }
+                }
+            }
+
+            File.WriteAllLines(caminhoArquivoCliente, linhasClientes);
         }
-
-
-
-
 
 
         private void cbPessoas_SelectedIndexChanged(object sender, EventArgs e)
@@ -556,6 +620,48 @@ namespace CadastroBanco
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDevolver_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um item para devolver.");
+                return;
+            }
+
+            int index = dataGridViewDados.SelectedRows[0].Index;
+            var linhaSelecionada = dataGridViewDados.Rows[index];
+
+            string id = linhaSelecionada.Cells[0].Value.ToString();
+            string livroId = linhaSelecionada.Cells[1].Value.ToString();
+            string categoria = linhaSelecionada.Cells[2].Value.ToString();
+            string descricao = linhaSelecionada.Cells[3].Value.ToString();
+            decimal qnt = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
+            decimal preco = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
+            string data = linhaSelecionada.Cells[6].Value.ToString();
+            string nome_comprador = linhaSelecionada.Cells[7].Value.ToString();
+            string tell = linhaSelecionada.Cells[8].Value.ToString();
+            string pagamento = linhaSelecionada.Cells[9].Value.ToString();
+            var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
+
+            int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
+
+
+            if (linhaParaAtualizar >= 0)
+            {
+                if (string.IsNullOrEmpty(nome_comprador))
+                {
+
+                }
+
+                // Atualizar a linha com os novos dados
+                linhas[linhaParaAtualizar] = $"{id}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+
+                // Escrever as alterações no arquivo
+                File.WriteAllLines(caminhoArquivoVendas, linhas);
+                MessageBox.Show("Dados atualizados com sucesso!");
+            }
         }
     }
 }

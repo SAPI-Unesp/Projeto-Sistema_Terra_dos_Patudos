@@ -36,12 +36,6 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.tabelaVenda = new System.Windows.Forms.Button();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.btnAdicionarCarrinho = new System.Windows.Forms.Button();
-            this.btnVisualizarCarrinho = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idlivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +44,13 @@
             this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siatuacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.tabelaVenda = new System.Windows.Forms.Button();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnAdicionarCarrinho = new System.Windows.Forms.Button();
+            this.btnVisualizarCarrinho = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,68 +154,6 @@
             this.dataGridViewDados.TabIndex = 9;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(356, 26);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(53, 40);
-            this.btnBuscar.TabIndex = 11;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // tabelaVenda
-            // 
-            this.tabelaVenda.Location = new System.Drawing.Point(518, 26);
-            this.tabelaVenda.Name = "tabelaVenda";
-            this.tabelaVenda.Size = new System.Drawing.Size(75, 40);
-            this.tabelaVenda.TabIndex = 13;
-            this.tabelaVenda.Text = "Tabela de venda";
-            this.tabelaVenda.UseVisualStyleBackColor = true;
-            this.tabelaVenda.Click += new System.EventHandler(this.tabelaVenda_Click);
-            // 
-            // cbCategoria
-            // 
-            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(15, 79);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbCategoria.TabIndex = 14;
-            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
-            // 
-            // btnAdicionarCarrinho
-            // 
-            this.btnAdicionarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdicionarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarCarrinho.Location = new System.Drawing.Point(15, 520);
-            this.btnAdicionarCarrinho.Name = "btnAdicionarCarrinho";
-            this.btnAdicionarCarrinho.Size = new System.Drawing.Size(104, 68);
-            this.btnAdicionarCarrinho.TabIndex = 15;
-            this.btnAdicionarCarrinho.Text = "Adicionar ao carrinho";
-            this.btnAdicionarCarrinho.UseVisualStyleBackColor = true;
-            this.btnAdicionarCarrinho.Click += new System.EventHandler(this.btnAdcionarCarrinho_Click);
-            // 
-            // btnVisualizarCarrinho
-            // 
-            this.btnVisualizarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVisualizarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(866, 520);
-            this.btnVisualizarCarrinho.Name = "btnVisualizarCarrinho";
-            this.btnVisualizarCarrinho.Size = new System.Drawing.Size(94, 68);
-            this.btnVisualizarCarrinho.TabIndex = 16;
-            this.btnVisualizarCarrinho.Text = "Visualizar o carrinho";
-            this.btnVisualizarCarrinho.UseVisualStyleBackColor = true;
-            this.btnVisualizarCarrinho.Click += new System.EventHandler(this.btnVisualizarCarrinho_Click);
-            // 
             // id
             // 
             this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -277,12 +216,85 @@
             this.siatuacao.Name = "siatuacao";
             this.siatuacao.ReadOnly = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(338, 20);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(356, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(53, 40);
+            this.btnBuscar.TabIndex = 11;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // tabelaVenda
+            // 
+            this.tabelaVenda.Location = new System.Drawing.Point(518, 26);
+            this.tabelaVenda.Name = "tabelaVenda";
+            this.tabelaVenda.Size = new System.Drawing.Size(75, 40);
+            this.tabelaVenda.TabIndex = 13;
+            this.tabelaVenda.Text = "Tabela de venda";
+            this.tabelaVenda.UseVisualStyleBackColor = true;
+            this.tabelaVenda.Click += new System.EventHandler(this.tabelaVenda_Click);
+            // 
+            // cbCategoria
+            // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(15, 79);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbCategoria.TabIndex = 14;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
+            // 
+            // btnAdicionarCarrinho
+            // 
+            this.btnAdicionarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAdicionarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarCarrinho.Location = new System.Drawing.Point(15, 520);
+            this.btnAdicionarCarrinho.Name = "btnAdicionarCarrinho";
+            this.btnAdicionarCarrinho.Size = new System.Drawing.Size(104, 68);
+            this.btnAdicionarCarrinho.TabIndex = 15;
+            this.btnAdicionarCarrinho.Text = "Adicionar ao carrinho";
+            this.btnAdicionarCarrinho.UseVisualStyleBackColor = true;
+            this.btnAdicionarCarrinho.Click += new System.EventHandler(this.btnAdcionarCarrinho_Click);
+            // 
+            // btnVisualizarCarrinho
+            // 
+            this.btnVisualizarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVisualizarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(866, 520);
+            this.btnVisualizarCarrinho.Name = "btnVisualizarCarrinho";
+            this.btnVisualizarCarrinho.Size = new System.Drawing.Size(94, 68);
+            this.btnVisualizarCarrinho.TabIndex = 16;
+            this.btnVisualizarCarrinho.Text = "Visualizar o carrinho";
+            this.btnVisualizarCarrinho.UseVisualStyleBackColor = true;
+            this.btnVisualizarCarrinho.Click += new System.EventHandler(this.btnVisualizarCarrinho_Click);
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Location = new System.Drawing.Point(599, 26);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(75, 40);
+            this.btnCliente.TabIndex = 17;
+            this.btnCliente.Text = "Tabela de clientes";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(970, 600);
+            this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnVisualizarCarrinho);
             this.Controls.Add(this.btnAdicionarCarrinho);
             this.Controls.Add(this.cbCategoria);
@@ -330,5 +342,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAdicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn siatuacao;
+        private System.Windows.Forms.Button btnCliente;
     }
 }

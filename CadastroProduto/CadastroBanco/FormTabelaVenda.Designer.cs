@@ -56,6 +56,7 @@ namespace CadastroBanco
             this.AplicarDesconto = new System.Windows.Forms.Button();
             this.txtDesconto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnDevolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -323,11 +324,22 @@ namespace CadastroBanco
             this.label6.Text = "Valor Total com Desconto";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // btnDevolver
+            // 
+            this.btnDevolver.Location = new System.Drawing.Point(1082, 514);
+            this.btnDevolver.Name = "btnDevolver";
+            this.btnDevolver.Size = new System.Drawing.Size(98, 40);
+            this.btnDevolver.TabIndex = 29;
+            this.btnDevolver.Text = "Devolver";
+            this.btnDevolver.UseVisualStyleBackColor = true;
+            this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
+            // 
             // FormTabelaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 687);
+            this.Controls.Add(this.btnDevolver);
             this.Controls.Add(this.txtDesconto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.AplicarDesconto);
@@ -383,5 +395,6 @@ namespace CadastroBanco
         private System.Windows.Forms.DataGridViewTextBoxColumn vendido;
         private System.Windows.Forms.TextBox txtDesconto;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnDevolver;
     }
 }

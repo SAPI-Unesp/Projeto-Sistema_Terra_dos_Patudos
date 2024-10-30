@@ -71,14 +71,15 @@ namespace CadastroBanco
 
                 string id = dadosCliente[0].Trim();
                 string cliente = dadosCliente[1].Trim();
-                string valorDivida = dadosCliente[2].Trim();
-                decimal desconto = Convert.ToDecimal(dadosCliente[3].Trim());
-                string credito = dadosCliente[4].Trim();
+                string telefone = dadosCliente[2].Trim();
+                string valorDivida = dadosCliente[3].Trim();
+                decimal desconto = Convert.ToDecimal(dadosCliente[4].Trim());
+                string credito = dadosCliente[5].Trim();
 
                 if (Cliente == cliente)
                 {
                     desconto += Desconto; 
-                    linhasClientes[i] = $"{id}*{cliente}*{valorDivida}*{desconto}*{credito}"; 
+                    linhasClientes[i] = $"{id}*{cliente}*{telefone}*{valorDivida}*{desconto}*{credito}";
                     break; 
                 }
             }
@@ -103,7 +104,7 @@ namespace CadastroBanco
                 {
                     var dadosCliente = linha.Split('*');
 
-                    if (dadosCliente.Length < 5) continue; 
+                    if (dadosCliente.Length < 6) continue;
 
                     clientes.Add(new string[]
                     {
@@ -111,7 +112,8 @@ namespace CadastroBanco
                     dadosCliente[1].Trim(), 
                     dadosCliente[2].Trim(), 
                     dadosCliente[3].Trim(), 
-                    dadosCliente[4].Trim()  
+                    dadosCliente[4].Trim(),
+                    dadosCliente[5].Trim()
                     });
                 }
 
@@ -121,7 +123,7 @@ namespace CadastroBanco
 
                 foreach (var cliente in clientesFiltrados)
                 {
-                    dataGridViewDados.Rows.Add(cliente[0], cliente[1], cliente[2], cliente[3], cliente[4]);
+                    dataGridViewDados.Rows.Add(cliente[0], cliente[1], cliente[2], cliente[3], cliente[4], cliente[5]);
                 }
             }
             else

@@ -9,8 +9,6 @@
 8*05A-07*Blusas*Blusa vermelha com camisa xadrez*1*10,00*08/10/2024 15:41*Rosana Dias**Pendente
 9*05A-26*Blusas*Blusa azul e verde viscose*1*7,00*08/10/2024 15:41*Salete*99195-6656*Pendente
 10*07A-02*Calças*Calça jeans Levis*1*20,00*08/10/2024 15:41*Lucimar**Pendente
-11*07A-05*Calças*Calça jeans Hollister*1*20,00*08/10/2024 15:41*Lucimar**Pendente
-12*08A-08*Calças*Legging marrom tecido*1*5,00*08/10/2024 15:41*Patricia**Pendente
 13*08A-09*Shorts*Bermuda cotton marinho*1*10,00*08/10/2024 15:41*Patricia**Pendente
 15*08A-13*Shorts*Bermuda preta Denim*1*5,00*08/10/2024 15:41*Adrielle**Pendente
 16*08A-15*Saias*Saia de malha borboleta*1*15,00*08/10/2024 15:41*Salete*99195-6656*Pendente
@@ -163,3 +161,4 @@
 162**Cama/Mesa/Banho*Caminho de mesa + toalha de natal(pix)*1*30,00*10/10/2024 14:30:20*Paulo**Realizado
 163*32-15*Blusas*Camiseta  preta Good Year (pix)*1*10,00*10/10/2024 14:31:46***Realizado
 164*36-03*Extra*Teste de venda Pix Pagamento para : 24/10/2024 00:00:00*1*3*23/10/2024 10:39:13*Pedrao*14 132312312*Pendente
+165*36-03*Extra*Teste de venda Pix - Pagamento para : 10/10/2024 00:00:00*1*3*28/10/2024 19:33:20*sd**Realizado
