@@ -252,7 +252,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(950, 199);
+            this.label6.Location = new System.Drawing.Point(950, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(190, 13);
             this.label6.TabIndex = 29;
@@ -261,7 +261,7 @@
             // dataPrazo
             // 
             this.dataPrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPrazo.Location = new System.Drawing.Point(953, 215);
+            this.dataPrazo.Location = new System.Drawing.Point(953, 193);
             this.dataPrazo.Name = "dataPrazo";
             this.dataPrazo.Size = new System.Drawing.Size(200, 26);
             this.dataPrazo.TabIndex = 30;

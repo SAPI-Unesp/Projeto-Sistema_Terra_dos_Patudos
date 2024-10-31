@@ -1,20 +1,20 @@
-0*Salete*99195-6656*4698*0*0
-1*Tania**135*0*0
-2*Lucimar*99136-0140*1770*0*0
-3*Patricia**2744*0*0
-4*Rosana Dias**3375*0*0
-5*Adrielle**1485*0*0
-6*Rosana Fantini**1620*0*0
-7*Renata Cleber**2295*0*0
-8*Renata Correa*99779-5296*459*0*0
+0*Salete*99195-6656*7585*0*0
+1*Tania**230*0*0
+2*Lucimar*99136-0140*2720*0*0
+3*Patricia**4587*0*0
+4*Rosana Dias**5750*0*0
+5*Adrielle**2530*0*0
+6*Rosana Fantini**2760*0*0
+7*Renata Cleber**3910*0*0
+8*Renata Correa*99779-5296*782*0*0
 9*Rô Dias**0*0*0
-10*Amanda Maiara**999*0*0
+10*Amanda Maiara**1702*0*0
 11*Renata Polo**0*0*0
 12*Pedro**0*0*0
 13*Leonardo**0*0*0
 14*Gabriel**0*0*0
 15*Eloisa**0*0*0
 16*Paulo**0*0*0
-17*Pedrao*14 132312312*81*0*0
+17*Pedrao*14 132312312*138*0*0
 18*sd**0*0*0
 19*Teste**0*0*0

@@ -175,13 +175,13 @@ namespace CadastroBanco
                     MessageBox.Show("Erro ao achar os dados do cliente.");
                 }
 
-                var linhasV = File.ReadAllLines(caminhoArquivoVendas);
+                var linhasV = File.ReadAllLines(caminhoArquivoVendas).ToList();
                 var linhasV1 = File.ReadAllLines(caminhoArquivoVendas);
                 var linhasV2 = File.ReadAllLines(caminhoArquivoVendas).ToList();
                 try
                 {
 
-
+                    int count = 0;
                     foreach (var linha in linhasV1)
                     {
                         var dadosVenda = linha.Split('*');
@@ -201,14 +201,14 @@ namespace CadastroBanco
                             if (pessoa.Equals(cliente))
                             {
                                 int linhasParaAtualizar = linhasV2.FindIndex(l => l.StartsWith(idv + "*"));
-
-                                linhasV[linhaParaAtualizar] = $"{idv}*{idl}*{categoriaVenda}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{pendente}";
-                                File.WriteAllLines(caminhoArquivoVendas, linhasV);
+                                //MessageBox.Show(linhasParaAtualizar.ToString());
+                                linhasV[linhasParaAtualizar] = $"{idv}*{idl}*{categoriaVenda}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{pendente}";
+                                
                             }
                         }
-
+                        count++;
                     }
-
+                    File.WriteAllLines(caminhoArquivoVendas, linhasV);
                     MessageBox.Show("Dados da venda atualizados com sucesso!");
 
                 }

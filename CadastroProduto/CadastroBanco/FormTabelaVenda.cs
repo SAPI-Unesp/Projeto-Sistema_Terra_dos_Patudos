@@ -647,19 +647,25 @@ namespace CadastroBanco
 
             int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
 
-
-            if (linhaParaAtualizar >= 0)
+            var linhasC = File.ReadAllLines(caminhoArquivoCliente).ToList();
+            var linhasD = File.ReadAllLines(caminhoArquivo).ToList();
+            if (linhaParaAtualizar >= 0 && pagamento != "Pendente")
             {
-                if (string.IsNullOrEmpty(nome_comprador))
+                if (!(string.IsNullOrEmpty(nome_comprador)))
                 {
+                    DialogResult confirmResult = MessageBox.Show("Deseja devolver o valor em créditos do sistema?","", MessageBoxButtons.YesNo);
+                   
+                    if(confirmResult == DialogResult.Yes)
+                    {
 
+                    }
                 }
 
                 // Atualizar a linha com os novos dados
-                linhas[linhaParaAtualizar] = $"{id}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+                //linhas[linhaParaAtualizar] = $"{id}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
 
                 // Escrever as alterações no arquivo
-                File.WriteAllLines(caminhoArquivoVendas, linhas);
+                //File.WriteAllLines(caminhoArquivoVendas, linhas);
                 MessageBox.Show("Dados atualizados com sucesso!");
             }
         }
