@@ -57,6 +57,7 @@ namespace CadastroBanco
             this.txtDesconto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnDevolver = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -204,6 +205,7 @@ namespace CadastroBanco
             this.cbPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPagamento.FormattingEnabled = true;
             this.cbPagamento.Items.AddRange(new object[] {
+            "(Todos)",
             "Realizado",
             "Pendente"});
             this.cbPagamento.Location = new System.Drawing.Point(1121, 48);
@@ -334,11 +336,24 @@ namespace CadastroBanco
             this.btnDevolver.UseVisualStyleBackColor = true;
             this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(1181, 122);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 24);
+            this.checkBox1.TabIndex = 30;
+            this.checkBox1.Text = "Ativar";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // FormTabelaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 687);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnDevolver);
             this.Controls.Add(this.txtDesconto);
             this.Controls.Add(this.label6);
@@ -396,5 +411,6 @@ namespace CadastroBanco
         private System.Windows.Forms.TextBox txtDesconto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnDevolver;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

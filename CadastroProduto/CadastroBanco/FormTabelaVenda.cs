@@ -80,7 +80,7 @@ namespace CadastroBanco
                     }
 
                 }
-                txtTotal.Text = valorTotal.ToString();
+                txtTotal.Text = "R$ " + valorTotal.ToString();
                 dataGridViewDados.ClearSelection();
             }
             else
@@ -98,40 +98,12 @@ namespace CadastroBanco
 
             if (cbPessoas.Text == "(Todos)")
             {
-                //ExibirDados();
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
-                {
-
-
+                {   
                     DateTime cellDate;
-                    if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                    bool check = checkBox1.Checked;
+                    if (!check)
                     {
-                        if (cellDate.Date == dataPickerStart.Value.Date)
-                        {
-                            row.Visible = true;
-                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
-                        }
-                        else
-                        {
-                            row.Visible = false;
-                        }
-                    }
-                    else
-                    {
-                        row.Visible = false;
-                    }
-
-                }
-            }
-            else
-            {
-                foreach (DataGridViewRow row in dataGridViewDados.Rows)
-                {
-
-                    if (row.Cells[7].Value != null &&
-                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
-                    {
-                        DateTime cellDate;
                         if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                         {
                             if (cellDate.Date == dataPickerStart.Value.Date)
@@ -151,6 +123,48 @@ namespace CadastroBanco
                     }
                     else
                     {
+                        row.Visible = true;
+                        valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                    }
+                }
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+
+                    if (row.Cells[7].Value != null &&
+                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                    {
+                        DateTime cellDate;
+                        bool check = checkBox1.Checked;
+                        if (!check)
+                        {
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                {
+                                    row.Visible = true;
+                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                }
+                                else
+                                {
+                                    row.Visible = false;
+                                }
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                        else
+                        {
+                            row.Visible = true;
+                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        }
+                    }
+                    else
+                    {
                         row.Visible = false;
                     }
 
@@ -159,14 +173,12 @@ namespace CadastroBanco
                 }
             }
             txtTotal.Text = "R$ " + valorTotal.ToString();
-
-
         }
 
         public void valorTotalDesconto()
         {
-            
-            decimal valorTotal = Convert.ToDecimal(txtTotal.Text);
+            var total = txtTotal.Text.Split(' ');
+            decimal valorTotal = decimal.Parse(total[1]);
             decimal divida = valorTotal;
             string pessoa = cbPessoas.Text;
 
@@ -183,15 +195,32 @@ namespace CadastroBanco
                 string credito = dadosCliente[5].Trim();
 
                 decimal descont = Convert.ToDecimal(desconto);
-                if (pessoa == cliente && cbPagamento.Text != "Realizado")
+                
+                //ignorar data
+                if(checkBox1.Checked)
                 {
-                    divida -= descont;
-                    break;
-                    
-                }else if (pessoa == "(TODOS)" || pessoa == "" && cbPagamento.Text != "Realizado")
-                {
-                    divida -= descont;
+                    if (pessoa == cliente && cbPagamento.Text != "Realizado")
+                    {
+                        divida -= descont;
+                        break;
+
+                    }
+                    else if (pessoa == "(TODOS)" && (cbPagamento.Text == "Realizado" || cbPagamento.Text == "Pendente") )
+                    {
+                       
+                        divida -= descont;
+                        break;
+                    }
+                    else if (pessoa == "(TODOS)" && cbPagamento.Text == "Realizado" )
+                    {
+                        divida -= descont;
+                    }
                 }
+                else
+                {
+
+                }
+                
             }
             if (divida < 0)
             {
@@ -215,67 +244,6 @@ namespace CadastroBanco
             valorTotalDesconto();
 
         }
-
-        /*public void AddCliente()
-        {
-            var linhasVendas = File.ReadAllLines(caminhoArquivoVendas);
-
-            List<string> linhasClientes = new List<string>();
-            if (File.Exists(caminhoArquivoCliente))
-            {
-                linhasClientes = File.ReadAllLines(caminhoArquivoCliente).ToList();
-            }
-
-            foreach (var linhaVenda in linhasVendas)
-            {
-                var dadosVenda = linhaVenda.Split('*');
-                if (dadosVenda.Length >= 9)
-                {
-                    string precoVenda = dadosVenda[5].Trim();   
-                    string pessoa = dadosVenda[7].Trim();       
-                    string pendente = dadosVenda[8].Trim();   
-
-                    bool clienteExistente = false;
-
-                    for (int j = 0; j < linhasClientes.Count; j++)
-                    {
-                        var dadosCliente = linhasClientes[j].Split('*');
-                        string cliente = dadosCliente[1].Trim();
-                        string valorDivida = dadosCliente[2].Trim(); 
-                        string desconto = dadosCliente[3].Trim();
-                        string credito = dadosCliente[4].Trim();
-
-                        if (pessoa.Equals(cliente))
-                        {
-                            clienteExistente = true;
-                            if (pendente == "Pendente")
-                            {
-                                double dividaAtual = Convert.ToDouble(valorDivida);
-                                double novaDivida = Convert.ToDouble(precoVenda);   
-                                double dividaTotal = dividaAtual + novaDivida;        
-
-                                linhasClientes[j] = $"{j}*{cliente}*{dividaTotal}*{desconto}*{credito}";
-                            }
-                            break;
-                        }
-                    }
-
-                    if (!clienteExistente && pendente == "Pendente")
-                    {
-                        double dividaTotal = Convert.ToDouble(precoVenda);
-                        string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*{dividaTotal}*0*0";
-                        linhasClientes.Add(novaLinhaCliente);
-                    }
-                    else if (!clienteExistente && pessoa != "")
-                    {
-                        string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*0*0*0";
-                        linhasClientes.Add(novaLinhaCliente);
-                    }
-                }
-            }
-
-            File.WriteAllLines(caminhoArquivoCliente, linhasClientes);
-        }*/
 
         public void AddCliente()
         {
@@ -385,32 +353,116 @@ namespace CadastroBanco
         public void Pagamento()
         {
             valorTotal = 0;
-
-
+ 
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 string value = cbPagamento.Text;
                 string pagamento = row.Cells[9].Value?.ToString();
                 string nome = row.Cells[7].Value?.ToString();
-                bool exibeLinha = (pagamento == value) && (cbPessoas.Text == "(Todos)" || cbPessoas.Text == nome);
-                if (exibeLinha)
+                bool check = checkBox1.Checked;
+                bool exibeLinha = (pagamento == value);
+                if(value == "(Todos)")
                 {
+
                     DateTime cellDate;
-                    if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+
+                    if (!check)
                     {
-                        if (cellDate.Date == dataPickerStart.Value.Date)
+                        if(cbPessoas.Text == "(Todos)")
                         {
-                            row.Visible = true;
-                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                {
+                                    row.Visible = true;
+                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                }
+                                else
+                                {
+                                    row.Visible = false;
+                                }
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
                         }
-                        else
+                       else if (row.Cells[7].Value != null &&
+                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
                         {
-                            row.Visible = false;
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                {
+                                    row.Visible = true;
+                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                }
+                                else
+                                {
+                                    row.Visible = false;
+                                }
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
                         }
                     }
                     else
                     {
-                        row.Visible = false;
+                        if (cbPessoas.Text == "(Todos)")
+                        {
+                            row.Visible = true;
+                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        }
+
+                        if (row.Cells[7].Value != null &&
+                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        {
+                            row.Visible = true;
+                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        }
+                            
+                    }
+
+                    
+                }
+                else if (exibeLinha)
+                {
+                    DateTime cellDate;
+                    
+                    if (!check)
+                    {
+                        if (row.Cells[7].Value != null &&
+                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        {
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                {
+                                    row.Visible = true;
+                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                }
+                                else
+                                {
+                                    row.Visible = false;
+                                }
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (row.Cells[7].Value != null &&
+                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        {
+                            row.Visible = true;
+                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        }
+                            
                     }
                 }
                 else
@@ -418,7 +470,7 @@ namespace CadastroBanco
                     row.Visible = false;
                 }
             }
-            txtTotal.Text = valorTotal.ToString();
+            txtTotal.Text = "R$ " + valorTotal.ToString();
         }
         private void cbPagamento_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -756,6 +808,21 @@ namespace CadastroBanco
             {
                 MessageBox.Show("Essa venda já foi devolvida");
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+           
+            if (!checkBox1.Checked)
+            {
+                dataPickerStart.Enabled = true;
+            }
+            else
+            {
+                dataPickerStart.Enabled = false;
+            }
+            ExibirPessoa();
+            Pagamento();
         }
     }
 }
