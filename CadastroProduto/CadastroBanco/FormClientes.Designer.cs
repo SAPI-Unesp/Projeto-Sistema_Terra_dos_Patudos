@@ -55,20 +55,20 @@
             this.Divida,
             this.Desconto,
             this.Credito});
-            this.dataGridViewDados.Location = new System.Drawing.Point(12, 69);
+            this.dataGridViewDados.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.ReadOnly = true;
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDados.Size = new System.Drawing.Size(509, 369);
+            this.dataGridViewDados.Size = new System.Drawing.Size(495, 424);
             this.dataGridViewDados.TabIndex = 10;
             // 
             // btnEditar
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.Location = new System.Drawing.Point(615, 398);
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.Location = new System.Drawing.Point(529, 10);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 40);
+            this.btnEditar.Size = new System.Drawing.Size(147, 66);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -76,49 +76,51 @@
             // 
             // ID
             // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 40;
             // 
             // Cliente
             // 
+            this.Cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Cliente.HeaderText = "Cliente";
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
             // 
             // Telefone
             // 
+            this.Telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Telefone.HeaderText = "Telefone";
             this.Telefone.Name = "Telefone";
             this.Telefone.ReadOnly = true;
             // 
             // Divida
             // 
+            this.Divida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Divida.HeaderText = "Dívida";
             this.Divida.Name = "Divida";
             this.Divida.ReadOnly = true;
-            this.Divida.Width = 70;
             // 
             // Desconto
             // 
+            this.Desconto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Desconto.HeaderText = "Desconto";
             this.Desconto.Name = "Desconto";
             this.Desconto.ReadOnly = true;
-            this.Desconto.Width = 70;
             // 
             // Credito
             // 
+            this.Credito.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Credito.HeaderText = "Crédito";
             this.Credito.Name = "Credito";
             this.Credito.ReadOnly = true;
-            this.Credito.Width = 70;
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 450);
+            this.ClientSize = new System.Drawing.Size(688, 448);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridViewDados);
             this.Name = "FormClientes";

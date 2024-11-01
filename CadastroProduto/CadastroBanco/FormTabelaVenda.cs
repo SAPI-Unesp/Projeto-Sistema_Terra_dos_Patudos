@@ -25,9 +25,17 @@ namespace CadastroBanco
             DateTime data1 = new DateTime();
             data1 = dataPickerStart.Value;
 
+            
             cbPessoas.Items.Add("(Todos)");
             cbPessoas.SelectedIndex = 0;
-            ExibirDados();
+            cbPagamento.SelectedIndex = 0;
+            checkBox1.Checked = true;
+            Pagamento();
+            ExibirPessoa();
+            ExibirPessoa();
+            Pagamento();
+            valorTotalDesconto();
+            //ExibirDados();
         }
 
 
@@ -202,23 +210,18 @@ namespace CadastroBanco
                     if (pessoa == cliente && cbPagamento.Text != "Realizado")
                     {
                         divida -= descont;
-                        break;
+                       
 
                     }
-                    else if (pessoa == "(TODOS)" && (cbPagamento.Text == "Realizado" || cbPagamento.Text == "Pendente") )
-                    {
-                       
-                        divida -= descont;
-                        break;
-                    }
-                    else if (pessoa == "(TODOS)" && cbPagamento.Text == "Realizado" )
+                    else if (pessoa == "(Todos)" && cbPagamento.Text == "(Todos)")
                     {
                         divida -= descont;
+                     
                     }
                 }
                 else
                 {
-
+                    
                 }
                 
             }
@@ -363,7 +366,6 @@ namespace CadastroBanco
                 bool exibeLinha = (pagamento == value);
                 if(value == "(Todos)")
                 {
-
                     DateTime cellDate;
 
                     if (!check)
@@ -433,7 +435,26 @@ namespace CadastroBanco
                     
                     if (!check)
                     {
-                        if (row.Cells[7].Value != null &&
+                        if (cbPessoas.Text == "(Todos)")
+                        {
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                {
+                                    row.Visible = true;
+                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                }
+                                else
+                                {
+                                    row.Visible = false;
+                                }
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                        else if (row.Cells[7].Value != null &&
                         row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
                         {
                             if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
@@ -456,7 +477,12 @@ namespace CadastroBanco
                     }
                     else
                     {
-                        if (row.Cells[7].Value != null &&
+                        if (cbPessoas.Text == "(Todos)")
+                        {
+                            row.Visible = true;
+                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        }
+                        else if (row.Cells[7].Value != null &&
                         row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
                         {
                             row.Visible = true;
@@ -823,6 +849,7 @@ namespace CadastroBanco
             }
             ExibirPessoa();
             Pagamento();
+            valorTotalDesconto();
         }
     }
 }

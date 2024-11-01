@@ -45,11 +45,11 @@
 73*B-46*Acessórios*Bolsa Adidas*1*5,00*08/10/2024 15:41*Rosana Dias**Pendente
 74*S-04*Sapatos*Sapatilha Usaflex preta*1*25,00*08/10/2024 15:41*Patricia**Pendente
 75*B-46*Acessórios*Bolsa Adidas*1*5,00*08/10/2024 15:41*Rô Dias**Realizado
-76*12A-08*Blusas*Jaqueta  preta Mauro*1*30,00*08/10/2024 15:41*Salete**Pendente
+76*12A-08*Blusas*Jaqueta  preta Mauro*1*30,00*08/10/2024 15:41*Salete*99195-6656*Pendente
 77**Religiosos*Maria Santíssima e Jesus*1*10,00*08/10/2024 15:41***Realizado
-78*12A-09*Acessórios*Correntes  (02 unidades)*1*8,00*08/10/2024 15:41*Salete* *Pendente
-24*14A-24*Blusas*Blusa listrada p&b*1*10,00*08/10/2024 15:41*Salete* *Pendente
-25*14A-25*Blusas*Blusa preta renda*1*10,00*08/10/2024 15:41*Salete* *Pendente
+78*12A-09*Acessórios*Correntes  (02 unidades)*1*8,00*08/10/2024 15:41*Salete*99195-6656*Pendente
+24*14A-24*Blusas*Blusa listrada p&b*1*10,00*08/10/2024 15:41*Salete*99195-6656*Pendente
+25*14A-25*Blusas*Blusa preta renda*1*10,00*08/10/2024 15:41*Salete*99195-6656*Pendente
 26*09A-07*Shorts*Short  preto desfiado Leon*1*5,00*08/10/2024 15:41*Lucimar* *Pendente
 27*15-02*Shorts*Short  jeans Max denim*1*5,00*08/10/2024 15:41*Patricia* *Pendente
 28*19-16*Academia*Legging  preta academia*1*15,00*08/10/2024 15:41*Patricia* *Pendente

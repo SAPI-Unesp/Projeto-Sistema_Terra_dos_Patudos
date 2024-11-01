@@ -43,49 +43,55 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 82);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cliente:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 133);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 165);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Telefone:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 185);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(186, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(64, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Crédito:";
             // 
             // textBoxCliente
             // 
-            this.textBoxCliente.Location = new System.Drawing.Point(15, 98);
+            this.textBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCliente.Location = new System.Drawing.Point(27, 100);
             this.textBoxCliente.Name = "textBoxCliente";
-            this.textBoxCliente.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCliente.Size = new System.Drawing.Size(117, 26);
             this.textBoxCliente.TabIndex = 3;
             // 
             // textBoxTelefone
             // 
-            this.textBoxTelefone.Location = new System.Drawing.Point(15, 149);
+            this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTelefone.Location = new System.Drawing.Point(27, 189);
             this.textBoxTelefone.Name = "textBoxTelefone";
-            this.textBoxTelefone.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefone.Size = new System.Drawing.Size(117, 26);
             this.textBoxTelefone.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(15, 246);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(190, 165);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(129, 57);
             this.button1.TabIndex = 6;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
@@ -94,32 +100,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 35);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(23, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 13);
+            this.label4.Size = new System.Drawing.Size(30, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "ID:";
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(15, 51);
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(27, 32);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(39, 20);
+            this.textBoxID.Size = new System.Drawing.Size(39, 26);
             this.textBoxID.TabIndex = 8;
             // 
             // numericUpDownCredito
             // 
-            this.numericUpDownCredito.Location = new System.Drawing.Point(15, 201);
+            this.numericUpDownCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownCredito.InterceptArrowKeys = false;
+            this.numericUpDownCredito.Location = new System.Drawing.Point(190, 100);
             this.numericUpDownCredito.Name = "numericUpDownCredito";
-            this.numericUpDownCredito.Size = new System.Drawing.Size(75, 20);
+            this.numericUpDownCredito.Size = new System.Drawing.Size(75, 26);
             this.numericUpDownCredito.TabIndex = 9;
             // 
             // FormAtualizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(369, 241);
             this.Controls.Add(this.numericUpDownCredito);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label4);

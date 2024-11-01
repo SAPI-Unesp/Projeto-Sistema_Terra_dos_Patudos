@@ -268,9 +268,9 @@
             // 
             // btnVisualizarCarrinho
             // 
-            this.btnVisualizarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVisualizarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVisualizarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(866, 520);
+            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(125, 520);
             this.btnVisualizarCarrinho.Name = "btnVisualizarCarrinho";
             this.btnVisualizarCarrinho.Size = new System.Drawing.Size(94, 68);
             this.btnVisualizarCarrinho.TabIndex = 16;
