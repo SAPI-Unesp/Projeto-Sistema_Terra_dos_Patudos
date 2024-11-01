@@ -633,11 +633,11 @@ namespace CadastroBanco
             int index = dataGridViewDados.SelectedRows[0].Index;
             var linhaSelecionada = dataGridViewDados.Rows[index];
 
-            string id = linhaSelecionada.Cells[0].Value.ToString();
+            string idv = linhaSelecionada.Cells[0].Value.ToString();
             string livroId = linhaSelecionada.Cells[1].Value.ToString();
             string categoria = linhaSelecionada.Cells[2].Value.ToString();
             string descricao = linhaSelecionada.Cells[3].Value.ToString();
-            decimal qnt = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
+            int qnt = int.Parse(linhaSelecionada.Cells[4].Value.ToString());
             decimal preco = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
             string data = linhaSelecionada.Cells[6].Value.ToString();
             string nome_comprador = linhaSelecionada.Cells[7].Value.ToString();
@@ -645,28 +645,89 @@ namespace CadastroBanco
             string pagamento = linhaSelecionada.Cells[9].Value.ToString();
             var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
 
-            int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
+            int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(idv + "*"));
 
             var linhasC = File.ReadAllLines(caminhoArquivoCliente).ToList();
-            var linhasD = File.ReadAllLines(caminhoArquivo).ToList();
-            if (linhaParaAtualizar >= 0 && pagamento != "Pendente")
+            var linhasV = File.ReadAllLines(caminhoArquivoVendas).ToList();
+            var linhasP = File.ReadAllLines(caminhoArquivo).ToList();
+            if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
             {
-                if (!(string.IsNullOrEmpty(nome_comprador)))
+                if (!(string.IsNullOrEmpty(nome_comprador)) && pagamento == "Realizado")
                 {
                     DialogResult confirmResult = MessageBox.Show("Deseja devolver o valor em créditos do sistema?","", MessageBoxButtons.YesNo);
                    
                     if(confirmResult == DialogResult.Yes)
                     {
 
+                        foreach (var linha in linhasC)
+                        {
+                            var dadosCliente = linha.Split('*');
+                            if(dadosCliente.Length >= 6)
+                            {
+                                string idc = dadosCliente[0].Trim();
+                                string cliente = dadosCliente[1].Trim();
+                                string telefone = dadosCliente[2].Trim();
+                                string valorDivida = dadosCliente[3].Trim();
+                                string desconto = dadosCliente[4].Trim();
+                                string credito = dadosCliente[5].Trim();
+
+                                if (nome_comprador.Equals(cliente))
+                                {
+                                    int linhaParaAtualizarC = linhasC.FindIndex(l => l.StartsWith(idc + "*"));
+                                    decimal cre = decimal.Parse(credito) + preco;
+                                    linhasC[linhaParaAtualizarC] = $"{idc}*{cliente}*{telefone}*{valorDivida}*{desconto}*{cre.ToString()}";
+                                    break;
+                                }
+                            }
+                        }
+
+                        File.WriteAllLines(caminhoArquivoCliente, linhasC);
                     }
+
+
+
                 }
 
+                foreach(var linha in linhasP)
+                {
+                    var dadosProduto = linha.Split('*');
+                    if(dadosProduto.Length >= 9)
+                    {
+                        string idp = dadosProduto[0].Trim();
+                        string idl = dadosProduto[1].Trim();
+                        string cat = dadosProduto[2].Trim();
+                        string desc = dadosProduto[3].Trim();
+                        string qntp = dadosProduto[4].Trim();
+                        string precop = dadosProduto[5].Trim();
+                        string datap = dadosProduto[6].Trim();
+                        string sit = dadosProduto[7].Trim();
+                        string extra = dadosProduto[8].Trim();
+
+                        if (desc.Equals(descricao))
+                        {
+                            int linhaParaAtualizarP = linhasP.FindIndex(l => l.StartsWith(idp + "*"));
+                            int qntn = int.Parse(qntp) + qnt;
+                            linhasP[linhaParaAtualizarP] = $"{idp}*{idl}*{cat}*{desc}*{qntn.ToString()}*{precop}*{datap}*{sit}*{extra}";
+                            break;
+                        }
+                    }
+                }
+                File.WriteAllLines(caminhoArquivo, linhasP);
+
+                pagamento = "Devolvido";
+
                 // Atualizar a linha com os novos dados
-                //linhas[linhaParaAtualizar] = $"{id}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+                linhas[linhaParaAtualizar] = $"{idv}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
 
                 // Escrever as alterações no arquivo
-                //File.WriteAllLines(caminhoArquivoVendas, linhas);
+                File.WriteAllLines(caminhoArquivoVendas, linhas);
                 MessageBox.Show("Dados atualizados com sucesso!");
+
+                ExibirDados();
+            }
+            else
+            {
+                MessageBox.Show("Essa venda já foi devolvida");
             }
         }
     }
