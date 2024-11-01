@@ -105,7 +105,7 @@
 104*07-25*Acessório*Cinto fininho*1*  2,00*09/10/2024 20:06:14*a vender* #-
 105*07-26*Moda Praia*Maiô bordô*1*  5,00*09/10/2024 20:06:14*a vender* #-
 106*07A-01*Calças*Calça jeans flare*1*  15,00*09/10/2024 20:06:14*a vender* #-
-107*07A-02*Calças*Calça jeans Levis*1*  20,00*09/10/2024 20:06:14*vendida* #-
+107*07A-02*Calças*Calça jeans Levis*1*20,00*09/10/2024 20:06:14*vendida*
 108*07A-04*Calças*Calça jeans Rosa Chá*1*  20,00*09/10/2024 20:06:14*a vender* #-
 109*07A-05*Calças*Calça jeans Hollister*1*  20,00*09/10/2024 20:06:14*vendida* #-
 110*07A-09*Calças*Calça jeans Alleppo*1*  10,00*09/10/2024 20:06:14*a vender* #-

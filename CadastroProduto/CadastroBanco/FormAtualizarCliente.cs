@@ -57,7 +57,8 @@ namespace CadastroBanco
                     if (cliente.Equals(textBoxCliente.Text) && !id.Equals(textBoxID.Text))
                     {
                         MessageBox.Show("Esse cliente já existe!!!");
-                        return;
+
+                        this.DialogResult = DialogResult.Cancel;
                     }
 
                 }

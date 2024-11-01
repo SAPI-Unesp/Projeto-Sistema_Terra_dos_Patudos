@@ -25,7 +25,6 @@ namespace CadastroBanco
             DateTime data1 = new DateTime();
             data1 = dataPickerStart.Value;
 
-            AddCliente();
             cbPessoas.Items.Add("(Todos)");
             cbPessoas.SelectedIndex = 0;
             ExibirDados();
@@ -298,7 +297,6 @@ namespace CadastroBanco
                     string precoVenda = dadosVenda[5].Trim();
                     string pessoa = dadosVenda[7].Trim();
                     string telefonep = dadosVenda[8].Trim();
-                    string pendente = dadosVenda[9].Trim();
 
                     bool clienteExistente = false;
 
@@ -307,32 +305,21 @@ namespace CadastroBanco
                         var dadosCliente = linhasClientes[j].Split('*');
                         string cliente = dadosCliente[1].Trim();
                         string telefone = dadosCliente[2].Trim();
-                        string valorDivida = dadosCliente[3].Trim();
                         string desconto = dadosCliente[4].Trim();
                         string credito = dadosCliente[5].Trim();
 
                         if (pessoa.Equals(cliente))
                         {
                             clienteExistente = true;
-                            if (pendente == "Pendente")
-                            {
-                                double dividaAtual = Convert.ToDouble(valorDivida);
-                                double novaDivida = Convert.ToDouble(precoVenda);
-                                double dividaTotal = dividaAtual + novaDivida;
 
-                                linhasClientes[j] = $"{j}*{cliente}*{telefone}*{dividaTotal}*{desconto}*{credito}";
-                            }
+
+                            linhasClientes[j] = $"{j}*{cliente}*{telefone}*0*{desconto}*{credito}";
+
                             break;
                         }
                     }
 
-                    if (!clienteExistente && pendente == "Pendente")
-                    {
-                        double dividaTotal = Convert.ToDouble(precoVenda);
-                        string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*{telefonep}*{dividaTotal}*0*0";
-                        linhasClientes.Add(novaLinhaCliente);
-                    }
-                    else if (!clienteExistente && pessoa != "")
+                    if (!clienteExistente && pessoa != "")
                     {
                         string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*{telefonep}*0*0*0";
                         linhasClientes.Add(novaLinhaCliente);
@@ -341,6 +328,41 @@ namespace CadastroBanco
             }
 
             File.WriteAllLines(caminhoArquivoCliente, linhasClientes);
+
+            linhasClientes = File.ReadAllLines(caminhoArquivoCliente).ToList();
+            var linhasCliente2 = File.ReadAllLines(caminhoArquivoCliente).ToList();
+
+            foreach (var linha in linhasClientes)
+            {
+                var dadosCliente = linha.Split('*');
+                string id = dadosCliente[0].Trim();
+                string cliente = dadosCliente[1].Trim();
+                string telefone = dadosCliente[2].Trim();
+                string desconto = dadosCliente[4].Trim();
+                string credito = dadosCliente[5].Trim();
+                decimal valorDivida = 0;
+
+                foreach (var linhaV in linhasVendas)
+                {
+                    var dadosVenda = linhaV.Split('*');
+
+                    if (dadosVenda.Length >= 10)
+                    {
+                        string precoVenda = dadosVenda[5].Trim();
+                        string pessoa = dadosVenda[7].Trim();
+
+                        if (pessoa.Equals(cliente))
+                        {
+                            valorDivida += decimal.Parse(precoVenda);
+                        }
+                    }
+                }
+                int linhasParaAtualizar = linhasClientes.FindIndex(l => l.StartsWith(id + "*"));
+
+                linhasCliente2[linhasParaAtualizar] = $"{id}*{cliente}*{telefone}*{valorDivida.ToString()}*{desconto}*{credito}";
+            }
+
+            File.WriteAllLines(caminhoArquivoCliente, linhasCliente2);
         }
 
 
@@ -571,6 +593,9 @@ namespace CadastroBanco
                 {
                     MessageBox.Show("Erro ao encontrar o item para deletar.");
                 }
+
+                AddCliente();
+                ExibirDados();
             }
         }
 
@@ -602,6 +627,7 @@ namespace CadastroBanco
                 // Escrever as alterações no arquivo
                 File.WriteAllLines(caminhoArquivoVendas, linhas);
                 MessageBox.Show("Dados atualizados com sucesso!");
+                AddCliente();
             }
         }
 
@@ -723,6 +749,7 @@ namespace CadastroBanco
                 File.WriteAllLines(caminhoArquivoVendas, linhas);
                 MessageBox.Show("Dados atualizados com sucesso!");
 
+                AddCliente();
                 ExibirDados();
             }
             else

@@ -128,6 +128,7 @@ namespace CadastroBanco
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            AddCliente();
             VerificaExiste();
             ExibirTudo();
             System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
@@ -233,9 +234,93 @@ namespace CadastroBanco
 
         }
 
+        public void AddCliente()
+        {
+            var linhasVendas = File.ReadAllLines(caminhoArquivoVendas);
+
+            List<string> linhasClientes = new List<string>();
+            if (!File.Exists(caminhoArquivoCliente))
+            {
+                File.WriteAllText(caminhoArquivoCliente, "");
+            }
+
+            linhasClientes = File.ReadAllLines(caminhoArquivoCliente).ToList();
+
+            foreach (var linhaVenda in linhasVendas)
+            {
+                var dadosVenda = linhaVenda.Split('*');
+                if (dadosVenda.Length >= 10)
+                {
+                    string precoVenda = dadosVenda[5].Trim();
+                    string pessoa = dadosVenda[7].Trim();
+                    string telefonep = dadosVenda[8].Trim();
+
+                    bool clienteExistente = false;
+
+                    for (int j = 0; j < linhasClientes.Count; j++)
+                    {
+                        var dadosCliente = linhasClientes[j].Split('*');
+                        string cliente = dadosCliente[1].Trim();
+                        string telefone = dadosCliente[2].Trim();
+                        string desconto = dadosCliente[4].Trim();
+                        string credito = dadosCliente[5].Trim();
+
+                        if (pessoa.Equals(cliente))
+                        {
+                            clienteExistente = true;
 
 
+                            linhasClientes[j] = $"{j}*{cliente}*{telefone}*0*{desconto}*{credito}";
 
+                            break;
+                        }
+                    }
+
+                    if (!clienteExistente && pessoa != "")
+                    {
+                        string novaLinhaCliente = $"{linhasClientes.Count}*{pessoa}*{telefonep}*0*0*0";
+                        linhasClientes.Add(novaLinhaCliente);
+                    }
+                }
+            }
+
+            File.WriteAllLines(caminhoArquivoCliente, linhasClientes);
+
+            linhasClientes = File.ReadAllLines(caminhoArquivoCliente).ToList();
+            var linhasCliente2 = File.ReadAllLines(caminhoArquivoCliente).ToList();
+
+            foreach (var linha in linhasClientes)
+            {
+                var dadosCliente = linha.Split('*');
+                string id = dadosCliente[0].Trim();
+                string cliente = dadosCliente[1].Trim();
+                string telefone = dadosCliente[2].Trim();
+                string desconto = dadosCliente[4].Trim();
+                string credito = dadosCliente[5].Trim();
+                decimal valorDivida = 0;
+
+                foreach (var linhaV in linhasVendas)
+                {
+                    var dadosVenda = linhaV.Split('*');
+
+                    if (dadosVenda.Length >= 10)
+                    {
+                        string precoVenda = dadosVenda[5].Trim();
+                        string pessoa = dadosVenda[7].Trim();
+
+                        if (pessoa.Equals(cliente))
+                        {
+                            valorDivida += decimal.Parse(precoVenda);
+                        }
+                    }
+                }
+                int linhasParaAtualizar = linhasClientes.FindIndex(l => l.StartsWith(id + "*"));
+
+                linhasCliente2[linhasParaAtualizar] = $"{id}*{cliente}*{telefone}*{valorDivida.ToString()}*{desconto}*{credito}";
+            }
+
+            File.WriteAllLines(caminhoArquivoCliente, linhasCliente2);
+        }
         private void btnExibir_Click_1(object sender, EventArgs e)
         {
             ExibirDados();
