@@ -6,7 +6,7 @@ using System.Linq;
 using System.Security;
 using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
-
+using System.Drawing;
 namespace CadastroBanco
 {
     public partial class Form2 : Form
@@ -137,7 +137,15 @@ namespace CadastroBanco
 
             this.Location = new System.Drawing.Point(10, 10);
             //AddId();
+            Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
+            dataGridViewDados.ColumnHeadersDefaultCellStyle.Font = headerFont;
+            // Definindo o estilo de fonte para todas as células
+            Font cellFont = new Font("Arial", 10, FontStyle.Bold); // Ajuste o tamanho conforme necessário
+            dataGridViewDados.DefaultCellStyle.Font = cellFont;
 
+            ExibirDados();
+            ExibirTudo();
+            
 
         }
 
@@ -153,7 +161,7 @@ namespace CadastroBanco
 
         public void ExibirDados()
         {
-           dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
+            dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
 
             if (File.Exists(caminhoArquivo))
             {
@@ -162,7 +170,7 @@ namespace CadastroBanco
                 {
                     var dados = linha.Split('*');
 
-                    // Certifique-se de que há 4 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
+                    // Certifique-se de que há 9 campos
                     if (dados.Length == 9)
                     {
                         string id = dados[0].Trim();
@@ -175,7 +183,32 @@ namespace CadastroBanco
                         string venda = dados[7].Trim();
 
                         // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id ,livroId, categoria, descricao, qnt, preco, data, venda);
+                        int rowIndex = 0;
+                        if(Convert.ToInt32(qnt) == 0)
+                        {
+                            rowIndex = dataGridViewDados.Rows.Add(id, livroId, categoria, descricao, qnt, preco, data, "vendida");
+                            venda = "vendida";
+                        }
+                        else
+                        {
+                            rowIndex = dataGridViewDados.Rows.Add(id, livroId, categoria, descricao, qnt, preco, data, venda);
+                        }
+                        
+                        DataGridViewRow row = dataGridViewDados.Rows[rowIndex];
+
+                        // Definindo a cor de fundo com base no status da venda
+                        if (venda.Equals("a vender", StringComparison.OrdinalIgnoreCase))
+                        {
+                            row.DefaultCellStyle.BackColor = Color.FromArgb(220, 220, 255); // Cor pastel para "A Vender"
+                        }
+                        else if (venda.Equals("vendida", StringComparison.OrdinalIgnoreCase) && Convert.ToInt32(qnt) == 0)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.FromArgb(255, 220, 220); // Cor pastel para "Vendido"
+                        }
+                        else if(venda.Equals("vendida", StringComparison.OrdinalIgnoreCase) && Convert.ToInt32(qnt) != 0)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.FromArgb(236, 167, 167);
+                        }
                     }
                 }
             }
@@ -188,51 +221,31 @@ namespace CadastroBanco
             {
                 var linhas = File.ReadAllLines(caminhoArquivoCategoria);
                 foreach (var linha in linhas)
-                {   
+                {
                     bool contem = false;
-                    foreach(var a in cbCategoria.Items)
+                    foreach (var a in cbCategoria.Items)
                     {
-                        if(a.Equals(linha))
+                        if (a.Equals(linha))
                         {
                             contem = true;
                         }
                     }
-                    if(!contem)
+                    if (!contem)
                     {
                         cbCategoria.Items.Add(linha);
                     }
-
                 }
             }
 
-
+            // Filtrando linhas com base na categoria
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 string BuscaCat = cbCategoria.Text;
                 string BuscaDes = row.Cells[1].Value.ToString();
-                if (BuscaCat.ToLower().Equals(BuscaDes.ToLower()))
-                {
-                    //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
-                    row.Visible = true;
-                }
-                else
-                {
-                    //Deixa invisivel as linhas que não tem a classificação ou a descrição igual ao texto buscado
-                    row.Visible = false;
-                }
-                if (row.Cells[3].Value.ToString() == "0")
-                {
-                    //row.Cells[6].Value = "Vendido";
-                }
-                else
-                {
-                    //row.Cells[6].Value = "A Vender";
-                }
-
+                row.Visible = BuscaCat.ToLower().Equals(BuscaDes.ToLower());
             }
-
-
         }
+
 
         public void AddCliente()
         {

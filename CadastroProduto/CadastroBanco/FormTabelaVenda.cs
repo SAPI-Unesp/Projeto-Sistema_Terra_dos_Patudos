@@ -42,8 +42,9 @@ namespace CadastroBanco
 
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
+            if (dataGridViewDados.SelectedRows.Count > 0) 
+                mesesComboBox.Visible = true;
+        }   
 
         public void ExibirDados()
         {
@@ -107,14 +108,15 @@ namespace CadastroBanco
             if (cbPessoas.Text == "(Todos)")
             {
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
-                {   
+                {
                     DateTime cellDate;
                     bool check = checkBox1.Checked;
                     if (!check)
                     {
                         if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                         {
-                            if (cellDate.Date == dataPickerStart.Value.Date)
+                            // Compara apenas mês e ano
+                            if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                             {
                                 row.Visible = true;
                                 valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
@@ -150,7 +152,7 @@ namespace CadastroBanco
                         {
                             if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                             {
-                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
                                     valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
@@ -233,7 +235,7 @@ namespace CadastroBanco
         }
         private void FormTabelaVenda_Load(object sender, EventArgs e)
         {
-            System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
+            /*System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
             this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * workingRectangle.Width),
                 Convert.ToInt32(0.5 * workingRectangle.Height));
 
@@ -241,10 +243,12 @@ namespace CadastroBanco
 
 
             this.Width = 1280;
-            this.Height = 720;
+            this.Height = 720;*/
 
             AddCliente();
             valorTotalDesconto();
+
+            mesesComboBox.Visible = false;
 
         }
 
@@ -339,6 +343,8 @@ namespace CadastroBanco
 
         private void cbPessoas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            mesesComboBox.Visible = false;
+
             ExibirPessoa();
             Pagamento();
             valorTotalDesconto();
@@ -351,12 +357,22 @@ namespace CadastroBanco
             ExibirPessoa();
             Pagamento();
             valorTotalDesconto();
+
+            mesesComboBox.Visible = false;
         }
 
         public void Pagamento()
         {
+            Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
+            dataGridViewDados.ColumnHeadersDefaultCellStyle.Font = headerFont;
+            // Definindo o estilo de fonte para todas as células
+            Font cellFont = new Font("Arial", 10, FontStyle.Bold); // Ajuste o tamanho conforme necessário
+            dataGridViewDados.DefaultCellStyle.Font = cellFont;
+
             valorTotal = 0;
- 
+            Dictionary<DateTime, Color> colorMap = new Dictionary<DateTime, Color>();
+            Random random = new Random();
+
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 string value = cbPagamento.Text;
@@ -364,20 +380,32 @@ namespace CadastroBanco
                 string nome = row.Cells[7].Value?.ToString();
                 bool check = checkBox1.Checked;
                 bool exibeLinha = (pagamento == value);
-                if(value == "(Todos)")
-                {
-                    DateTime cellDate;
+                DateTime cellDate;
 
+                if (value == "(Todos)")
+                {
                     if (!check)
                     {
-                        if(cbPessoas.Text == "(Todos)")
+                        if (cbPessoas.Text == "(Todos)")
                         {
                             if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                             {
-                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
                                     valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+
+                                    // Define a cor da linha
+                                    if (!colorMap.ContainsKey(cellDate))
+                                    {
+                                        Color pastelColor = Color.FromArgb(
+                                            random.Next(200, 256), // Red
+                                            random.Next(200, 256), // Green
+                                            random.Next(200, 256)  // Blue
+                                        );
+                                        colorMap[cellDate] = pastelColor;
+                                    }
+                                    row.DefaultCellStyle.BackColor = colorMap[cellDate];
                                 }
                                 else
                                 {
@@ -389,15 +417,25 @@ namespace CadastroBanco
                                 row.Visible = false;
                             }
                         }
-                       else if (row.Cells[7].Value != null &&
-                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
                         {
                             if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                             {
-                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
                                     valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+
+                                    if (!colorMap.ContainsKey(cellDate))
+                                    {
+                                        Color pastelColor = Color.FromArgb(
+                                            random.Next(200, 256), // Red
+                                            random.Next(200, 256), // Green
+                                            random.Next(200, 256)  // Blue
+                                        );
+                                        colorMap[cellDate] = pastelColor;
+                                    }
+                                    row.DefaultCellStyle.BackColor = colorMap[cellDate];
                                 }
                                 else
                                 {
@@ -416,23 +454,44 @@ namespace CadastroBanco
                         {
                             row.Visible = true;
                             valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
-                        }
 
-                        if (row.Cells[7].Value != null &&
-                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (!colorMap.ContainsKey(cellDate))
+                                {
+                                    Color pastelColor = Color.FromArgb(
+                                        random.Next(200, 256), // Red
+                                        random.Next(200, 256), // Green
+                                        random.Next(200, 256)  // Blue
+                                    );
+                                    colorMap[cellDate] = pastelColor;
+                                }
+                                row.DefaultCellStyle.BackColor = colorMap[cellDate];
+                            }
+                        }
+                        else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
                         {
                             row.Visible = true;
                             valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
-                        }
-                            
-                    }
 
-                    
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (!colorMap.ContainsKey(cellDate))
+                                {
+                                    Color pastelColor = Color.FromArgb(
+                                        random.Next(200, 256), // Red
+                                        random.Next(200, 256), // Green
+                                        random.Next(200, 256)  // Blue
+                                    );
+                                    colorMap[cellDate] = pastelColor;
+                                }
+                                row.DefaultCellStyle.BackColor = colorMap[cellDate];
+                            }
+                        }
+                    }
                 }
                 else if (exibeLinha)
                 {
-                    DateTime cellDate;
-                    
                     if (!check)
                     {
                         if (cbPessoas.Text == "(Todos)")
@@ -443,6 +502,17 @@ namespace CadastroBanco
                                 {
                                     row.Visible = true;
                                     valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+
+                                    if (!colorMap.ContainsKey(cellDate))
+                                    {
+                                        Color pastelColor = Color.FromArgb(
+                                            random.Next(200, 256), // Red
+                                            random.Next(200, 256), // Green
+                                            random.Next(200, 256)  // Blue
+                                        );
+                                        colorMap[cellDate] = pastelColor;
+                                    }
+                                    row.DefaultCellStyle.BackColor = colorMap[cellDate];
                                 }
                                 else
                                 {
@@ -454,8 +524,7 @@ namespace CadastroBanco
                                 row.Visible = false;
                             }
                         }
-                        else if (row.Cells[7].Value != null &&
-                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
                         {
                             if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                             {
@@ -463,6 +532,17 @@ namespace CadastroBanco
                                 {
                                     row.Visible = true;
                                     valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+
+                                    if (!colorMap.ContainsKey(cellDate))
+                                    {
+                                        Color pastelColor = Color.FromArgb(
+                                            random.Next(200, 256), // Red
+                                            random.Next(200, 256), // Green
+                                            random.Next(200, 256)  // Blue
+                                        );
+                                        colorMap[cellDate] = pastelColor;
+                                    }
+                                    row.DefaultCellStyle.BackColor = colorMap[cellDate];
                                 }
                                 else
                                 {
@@ -481,14 +561,40 @@ namespace CadastroBanco
                         {
                             row.Visible = true;
                             valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (!colorMap.ContainsKey(cellDate))
+                                {
+                                    Color pastelColor = Color.FromArgb(
+                                        random.Next(200, 256), // Red
+                                        random.Next(200, 256), // Green
+                                        random.Next(200, 256)  // Blue
+                                    );
+                                    colorMap[cellDate] = pastelColor;
+                                }
+                                row.DefaultCellStyle.BackColor = colorMap[cellDate];
+                            }
                         }
-                        else if (row.Cells[7].Value != null &&
-                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
                         {
                             row.Visible = true;
                             valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+
+                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            {
+                                if (!colorMap.ContainsKey(cellDate))
+                                {
+                                    Color pastelColor = Color.FromArgb(
+                                        random.Next(200, 256), // Red
+                                        random.Next(200, 256), // Green
+                                        random.Next(200, 256)  // Blue
+                                    );
+                                    colorMap[cellDate] = pastelColor;
+                                }
+                                row.DefaultCellStyle.BackColor = colorMap[cellDate];
+                            }
                         }
-                            
                     }
                 }
                 else
@@ -498,6 +604,8 @@ namespace CadastroBanco
             }
             txtTotal.Text = "R$ " + valorTotal.ToString();
         }
+
+
         private void cbPagamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pagamento();
@@ -507,6 +615,8 @@ namespace CadastroBanco
             Pagamento();
             valorTotalDesconto();
 
+
+            mesesComboBox.Visible = false;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -533,6 +643,8 @@ namespace CadastroBanco
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            mesesComboBox.Visible = false;
+
             //Desseleciona os itens selecionados da tabela
             dataGridViewDados.ClearSelection();
 
@@ -651,6 +763,9 @@ namespace CadastroBanco
             if (confirmResult == DialogResult.Yes)
             {
                 // Se o usuário confirmar, excluir o item
+
+                mesesComboBox.Visible = false;
+
                 int index = dataGridViewDados.SelectedRows[0].Index;
                 var linhaSelecionada = dataGridViewDados.Rows[index];
 
@@ -679,7 +794,7 @@ namespace CadastroBanco
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int index = dataGridViewDados.SelectedRows[0].Index;
+            /*int index = dataGridViewDados.SelectedRows[0].Index;
             var linhaSelecionada = dataGridViewDados.Rows[index];
 
             string id = linhaSelecionada.Cells[0].Value.ToString();
@@ -706,7 +821,8 @@ namespace CadastroBanco
                 File.WriteAllLines(caminhoArquivoVendas, linhas);
                 MessageBox.Show("Dados atualizados com sucesso!");
                 AddCliente();
-            }
+            }*/
+            EditarMultiplasLinhas();
         }
 
         private void AplicarDesconto_Click(object sender, EventArgs e)
@@ -850,6 +966,81 @@ namespace CadastroBanco
             ExibirPessoa();
             Pagamento();
             valorTotalDesconto();
+
+            mesesComboBox.Visible = false;
+        }
+
+        private void mesesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (mesesComboBox.Text == "Realizado")
+            {
+                GetSelectedRows("Realizado")
+;            }
+            if(mesesComboBox.Text == "Pendente")
+            {
+                GetSelectedRows("Pendente");
+            }
+        }
+
+        void GetSelectedRows(string novoEstado)
+        {
+            Int32 selectedRowCount =
+                dataGridViewDados.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+            
+                    dataGridViewDados.SelectedRows[i].Cells[9].Value = novoEstado;
+                }
+
+                sb.Append("Total: " + selectedRowCount.ToString());
+               // MessageBox.Show(sb.ToString(), "Selected Rows");
+            }
+        }
+
+        void EditarMultiplasLinhas()
+        {
+            Int32 selectedRowCount =
+                dataGridViewDados.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+
+                    string id = dataGridViewDados.SelectedRows[i].Cells[0].Value.ToString();
+                    string livroId = dataGridViewDados.SelectedRows[i].Cells[1].Value.ToString();
+                    string categoria = dataGridViewDados.SelectedRows[i].Cells[2].Value.ToString();
+                    string descricao = dataGridViewDados.SelectedRows[i].Cells[3].Value.ToString();
+                    decimal qnt = decimal.Parse(dataGridViewDados.SelectedRows[i].Cells[4].Value.ToString());
+                    decimal preco = decimal.Parse(dataGridViewDados.SelectedRows[i].Cells[5].Value.ToString());
+                    string data = dataGridViewDados.SelectedRows[i].Cells[6].Value.ToString();
+                    string nome_comprador = dataGridViewDados.SelectedRows[i].Cells[7].Value.ToString();
+                    string tell = dataGridViewDados.SelectedRows[i].Cells[8].Value.ToString();
+                    string pagamento = dataGridViewDados.SelectedRows[i].Cells[9].Value.ToString();
+                    var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
+                    // Encontrar a linha correspondente pelo ID
+                    int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
+
+                    if (linhaParaAtualizar >= 0)
+                    {
+                        // Atualizar a linha com os novos dados
+                        linhas[linhaParaAtualizar] = $"{id}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+
+                        // Escrever as alterações no arquivo
+                        File.WriteAllLines(caminhoArquivoVendas, linhas);
+                        //MessageBox.Show("Dados atualizados com sucesso!");
+                        AddCliente();
+                    }
+                }
+
+                sb.Append("Total: " + selectedRowCount.ToString());
+                //MessageBox.Show(sb.ToString(), "Selected Rows");
+            }
         }
     }
 }
