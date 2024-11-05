@@ -142,7 +142,7 @@ namespace CadastroBanco
                         string credito = dados[5].Trim();
 
                         // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id, cliente, telefone, divida, desconto, credito);
+                        dataGridViewDados.Rows.Add(id, cliente, telefone, divida, credito);
                     }
                 }
             }

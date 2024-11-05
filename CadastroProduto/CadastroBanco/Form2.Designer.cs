@@ -57,21 +57,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(118, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar produto";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdicionar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAdicionar.Location = new System.Drawing.Point(851, 26);
+            this.btnAdicionar.Location = new System.Drawing.Point(770, 26);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(109, 40);
+            this.btnAdicionar.Size = new System.Drawing.Size(99, 40);
             this.btnAdicionar.TabIndex = 2;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
@@ -93,9 +95,10 @@
             // 
             // btnExibir
             // 
-            this.btnExibir.Location = new System.Drawing.Point(437, 26);
+            this.btnExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExibir.Location = new System.Drawing.Point(445, 26);
             this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(75, 40);
+            this.btnExibir.Size = new System.Drawing.Size(67, 40);
             this.btnExibir.TabIndex = 5;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = true;
@@ -103,10 +106,11 @@
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAtualizar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAtualizar.Location = new System.Drawing.Point(761, 26);
+            this.btnAtualizar.Location = new System.Drawing.Point(680, 26);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(84, 40);
             this.btnAtualizar.TabIndex = 6;
@@ -116,12 +120,13 @@
             // 
             // btnDeletar
             // 
+            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeletar.BackColor = System.Drawing.Color.Salmon;
-            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDeletar.Location = new System.Drawing.Point(680, 26);
+            this.btnDeletar.Location = new System.Drawing.Point(875, 26);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 40);
+            this.btnDeletar.Size = new System.Drawing.Size(85, 40);
             this.btnDeletar.TabIndex = 7;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = false;
@@ -145,12 +150,12 @@
             this.preco,
             this.dataAdicao,
             this.siatuacao});
-            this.dataGridViewDados.Location = new System.Drawing.Point(12, 106);
+            this.dataGridViewDados.Location = new System.Drawing.Point(15, 98);
             this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.ReadOnly = true;
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDados.Size = new System.Drawing.Size(948, 408);
+            this.dataGridViewDados.Size = new System.Drawing.Size(945, 416);
             this.dataGridViewDados.TabIndex = 9;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
@@ -218,17 +223,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 37);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(15, 32);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 20);
+            this.textBox1.Size = new System.Drawing.Size(335, 26);
             this.textBox1.TabIndex = 10;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(356, 26);
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(356, 25);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(53, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(70, 40);
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -236,31 +243,33 @@
             // 
             // tabelaVenda
             // 
+            this.tabelaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabelaVenda.Location = new System.Drawing.Point(518, 26);
             this.tabelaVenda.Name = "tabelaVenda";
             this.tabelaVenda.Size = new System.Drawing.Size(75, 40);
             this.tabelaVenda.TabIndex = 13;
-            this.tabelaVenda.Text = "Tabela de venda";
+            this.tabelaVenda.Text = "Vendas";
             this.tabelaVenda.UseVisualStyleBackColor = true;
             this.tabelaVenda.Click += new System.EventHandler(this.tabelaVenda_Click);
             // 
             // cbCategoria
             // 
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(15, 79);
+            this.cbCategoria.Location = new System.Drawing.Point(15, 64);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbCategoria.Size = new System.Drawing.Size(150, 28);
             this.cbCategoria.TabIndex = 14;
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
             // btnAdicionarCarrinho
             // 
             this.btnAdicionarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdicionarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarCarrinho.Location = new System.Drawing.Point(15, 520);
             this.btnAdicionarCarrinho.Name = "btnAdicionarCarrinho";
-            this.btnAdicionarCarrinho.Size = new System.Drawing.Size(104, 68);
+            this.btnAdicionarCarrinho.Size = new System.Drawing.Size(140, 68);
             this.btnAdicionarCarrinho.TabIndex = 15;
             this.btnAdicionarCarrinho.Text = "Adicionar ao carrinho";
             this.btnAdicionarCarrinho.UseVisualStyleBackColor = true;
@@ -269,10 +278,10 @@
             // btnVisualizarCarrinho
             // 
             this.btnVisualizarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnVisualizarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(125, 520);
+            this.btnVisualizarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(161, 520);
             this.btnVisualizarCarrinho.Name = "btnVisualizarCarrinho";
-            this.btnVisualizarCarrinho.Size = new System.Drawing.Size(94, 68);
+            this.btnVisualizarCarrinho.Size = new System.Drawing.Size(131, 68);
             this.btnVisualizarCarrinho.TabIndex = 16;
             this.btnVisualizarCarrinho.Text = "Visualizar o carrinho";
             this.btnVisualizarCarrinho.UseVisualStyleBackColor = true;
@@ -280,11 +289,12 @@
             // 
             // btnCliente
             // 
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.Location = new System.Drawing.Point(599, 26);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(75, 40);
             this.btnCliente.TabIndex = 17;
-            this.btnCliente.Text = "Tabela de clientes";
+            this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
@@ -293,6 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(970, 600);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnVisualizarCarrinho);

@@ -34,7 +34,6 @@
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Divida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Credito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +52,6 @@
             this.Cliente,
             this.Telefone,
             this.Divida,
-            this.Desconto,
             this.Credito});
             this.dataGridViewDados.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewDados.MultiSelect = false;
@@ -102,13 +100,6 @@
             this.Divida.Name = "Divida";
             this.Divida.ReadOnly = true;
             // 
-            // Desconto
-            // 
-            this.Desconto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Desconto.HeaderText = "Desconto";
-            this.Desconto.Name = "Desconto";
-            this.Desconto.ReadOnly = true;
-            // 
             // Credito
             // 
             this.Credito.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -139,7 +130,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Divida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Credito;
     }
 }

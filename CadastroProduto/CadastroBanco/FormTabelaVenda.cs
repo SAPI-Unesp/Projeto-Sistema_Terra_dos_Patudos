@@ -231,10 +231,12 @@ namespace CadastroBanco
             {
                 divida = 0;
             }
-            txtDesconto.Text = "R$ " + divida.ToString();
+            //txtDesconto.Text = "R$ " + divida.ToString();
         }
+        
         private void FormTabelaVenda_Load(object sender, EventArgs e)
         {
+            
             /*System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
             this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * workingRectangle.Width),
                 Convert.ToInt32(0.5 * workingRectangle.Height));
@@ -354,9 +356,14 @@ namespace CadastroBanco
 
         private void dataPickerStart_ValueChanged(object sender, EventArgs e)
         {
+
+
+            Pagamento();
+            ExibirPessoa();
+
             ExibirPessoa();
             Pagamento();
-            valorTotalDesconto();
+            //valorTotalDesconto();
 
             mesesComboBox.Visible = false;
         }
@@ -498,7 +505,7 @@ namespace CadastroBanco
                         {
                             if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                             {
-                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
                                     valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
@@ -528,7 +535,7 @@ namespace CadastroBanco
                         {
                             if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
                             {
-                                if (cellDate.Date == dataPickerStart.Value.Date)
+                                if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
                                     valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
@@ -555,7 +562,7 @@ namespace CadastroBanco
                             }
                         }
                     }
-                    else
+                    else // nao considera data
                     {
                         if (cbPessoas.Text == "(Todos)")
                         {
@@ -986,6 +993,8 @@ namespace CadastroBanco
         {
             Int32 selectedRowCount =
                 dataGridViewDados.Rows.GetRowCount(DataGridViewElementStates.Selected);
+
+            string input = InputBox.Show("forma de pagamento");
             if (selectedRowCount > 0)
             {
                 System.Text.StringBuilder sb = new System.Text.StringBuilder();
@@ -994,6 +1003,7 @@ namespace CadastroBanco
                 {
             
                     dataGridViewDados.SelectedRows[i].Cells[9].Value = novoEstado;
+                    dataGridViewDados.SelectedRows[i].Cells[3].Value = dataGridViewDados.SelectedRows[i].Cells[3].Value + input;
                 }
 
                 sb.Append("Total: " + selectedRowCount.ToString());
@@ -1043,4 +1053,66 @@ namespace CadastroBanco
             }
         }
     }
+
+    //gpt apagart se der merda
+    public class InputBox
+    {
+        public static string Show(string prompt, string title = "Input")
+        {
+            Form inputForm = new Form();
+            Label label = new Label();
+            //TextBox textBox = new TextBox();
+            ComboBox comboBox = new ComboBox();
+            Button confirmButton = new Button();
+            Button cancelButton = new Button();
+
+            // Configurações do form
+            inputForm.Text = title;
+            inputForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+            inputForm.StartPosition = FormStartPosition.CenterScreen;
+            inputForm.ClientSize = new System.Drawing.Size(300, 120);
+            inputForm.AcceptButton = confirmButton;
+
+            // Configurações do Label
+            label.Text = prompt;
+            label.SetBounds(10, 10, 280, 20);
+
+            // Configurações do TextBox
+            //textBox.SetBounds(10, 40, 260, 20);
+            comboBox.SetBounds(10, 40, 260, 20);
+            comboBox.Items.Add("(PIX)");
+            comboBox.Items.Add("(DINHEIRO)");
+            comboBox.Items.Add("(CREDITO)");
+            comboBox.Items.Add("(DEBITO)");
+            comboBox.Items.Add("(TRANSFERÊNCIA BANCÁRIA)");
+            // Configurações do Button Confirm
+            confirmButton.Text = "OK";
+            confirmButton.DialogResult = DialogResult.OK;
+            confirmButton.SetBounds(180, 70, 75, 23);
+
+            // Configurações do Button Cancel
+            cancelButton.Text = "Cancelar";
+            cancelButton.DialogResult = DialogResult.Cancel;
+            cancelButton.SetBounds(100, 70, 75, 23);
+
+            // Adiciona os controles no form
+            inputForm.Controls.Add(label);
+            //inputForm.Controls.Add(textBox);
+            inputForm.Controls.Add(comboBox);
+            inputForm.Controls.Add(confirmButton);
+            inputForm.Controls.Add(cancelButton);
+            comboBox.SelectedIndex = 0;
+            // Exibe o form e retorna o texto
+            DialogResult result = inputForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                return comboBox.Text;
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
+
 }

@@ -1,4 +1,4 @@
-0*01-07*Blusas*Blusa azul marinho florida*1*  7,00*09/10/2024 20:06:14*a vender* #-
+0*01-07*Blusas*Blusa azul marinho florida*0*7,00*09/10/2024 20:06:14*a vender*
 1*01-11*Blusas*Blusa branca estamp, Geom,*1*  5,00*09/10/2024 20:06:14*a vender* #-
 2*01-14*Blusas*Blusa branca estamp, Nervura*1*  5,00*09/10/2024 20:06:14*a vender* #-
 3*01-16*Blusas*Blusa oncinha Nitrogen*1*  7,00*09/10/2024 20:06:14*vendida* #-
@@ -732,7 +732,7 @@
 731*34-20*Blusas*Polo vermelha Elefantinho*1*  15,00*09/10/2024 20:06:14*a vender*
 732*34-21*Blusas*Polo preta Elefantinho*0*15,00*09/10/2024 20:06:14*a vender*
 733*34-22*Blusas*Camiseta preta Pikachu*0*0,00*09/10/2024 20:06:14*a vender*
-734*34-23*Calças*Calça linho bordô*1*  10,00*09/10/2024 20:06:14*a vender*
+734*34-23*Calças*Calça linho bordô*0*10,00*09/10/2024 20:06:14*a vender*
 735*34-24*Calças*Calça branca J*1*  7,00*09/10/2024 20:06:14*a vender*
 736*34-25*Calças*Calça jeans Back River*1*  20,00*09/10/2024 20:06:14*a vender*
 737*34-26*Shorts*Short verde sarja*1*  5,00*09/10/2024 20:06:14*a vender*
