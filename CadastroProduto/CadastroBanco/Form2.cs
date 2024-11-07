@@ -7,6 +7,7 @@ using System.Security;
 using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
 using System.Drawing;
+using Excel = Microsoft.Office.Interop.Excel;
 namespace CadastroBanco
 {
     public partial class Form2 : Form
@@ -126,6 +127,9 @@ namespace CadastroBanco
             }
 
         }
+
+
+
         private void Form2_Load(object sender, EventArgs e)
         {
             AddCliente();
@@ -145,7 +149,7 @@ namespace CadastroBanco
 
             ExibirDados();
             ExibirTudo();
-            
+
 
         }
 
@@ -184,7 +188,7 @@ namespace CadastroBanco
 
                         // Adicionar os dados no DataGridView
                         int rowIndex = 0;
-                        if(Convert.ToInt32(qnt) == 0)
+                        if (Convert.ToInt32(qnt) == 0)
                         {
                             rowIndex = dataGridViewDados.Rows.Add(id, livroId, categoria, descricao, qnt, preco, data, "vendida");
                             venda = "vendida";
@@ -193,7 +197,7 @@ namespace CadastroBanco
                         {
                             rowIndex = dataGridViewDados.Rows.Add(id, livroId, categoria, descricao, qnt, preco, data, venda);
                         }
-                        
+
                         DataGridViewRow row = dataGridViewDados.Rows[rowIndex];
 
                         // Definindo a cor de fundo com base no status da venda
@@ -205,7 +209,7 @@ namespace CadastroBanco
                         {
                             row.DefaultCellStyle.BackColor = Color.FromArgb(255, 220, 220); // Cor pastel para "Vendido"
                         }
-                        else if(venda.Equals("vendida", StringComparison.OrdinalIgnoreCase) && Convert.ToInt32(qnt) != 0)
+                        else if (venda.Equals("vendida", StringComparison.OrdinalIgnoreCase) && Convert.ToInt32(qnt) != 0)
                         {
                             row.DefaultCellStyle.BackColor = Color.FromArgb(236, 167, 167);
                         }
@@ -423,7 +427,7 @@ namespace CadastroBanco
 
             ExibirTudo();
             Buscar2();
-            
+
         }
 
         private void btnDeletar_Click_1(object sender, EventArgs e)
@@ -472,7 +476,7 @@ namespace CadastroBanco
                 // Se o usuário cancelar, não fazer nada
                 MessageBox.Show("Ação de exclusão cancelada.");
             }
- 
+
             ExibirTudo();
         }
 
@@ -537,15 +541,15 @@ namespace CadastroBanco
 
             string Busca = textBox1.Text;
 
-            
+
             dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
 
-                    foreach (DataGridViewRow row in dataGridViewDados.Rows)
-                    {
-                        row.Visible = false;
-                    }
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    row.Visible = false;
+                }
 
                 //Verifica se a classificação ou a descrição é igual ao texto buscado
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
@@ -561,7 +565,7 @@ namespace CadastroBanco
                         string teste = removerAcentos(a);
                         if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
                         {
-                           
+
                         }
                         else
                         {
@@ -569,7 +573,7 @@ namespace CadastroBanco
                         }
 
                     }
-                    if(canExibir)
+                    if (canExibir)
                     {
                         row.Visible = true;
                         row.Selected = true;
@@ -597,7 +601,7 @@ namespace CadastroBanco
                         row.Visible = true;
                         row.Selected = true;
                     }
-                }                         
+                }
             }
 
             catch (Exception exc)
@@ -611,7 +615,7 @@ namespace CadastroBanco
                 MessageBox.Show("Nenhum item encontrado.");
                 return;
             }
-            else 
+            else
             {
                 dataGridViewDados.ClearSelection();
                 return;
@@ -718,7 +722,7 @@ namespace CadastroBanco
             string data = linhaSelecionada.Cells[5].Value.ToString();
             FormVender formVender = new FormVender(qnt, preco);
 
-            if(formVender.ShowDialog() == DialogResult.OK)
+            if (formVender.ShowDialog() == DialogResult.OK)
             {
                 // Se o usuário clicar em OK no formulário de venda, realiza a atualização no arquivo
 
@@ -731,17 +735,17 @@ namespace CadastroBanco
                 if (linhaParaAtualizar >= 0)
                 {
                     // Atualizar a linha com os novos dados
-    
+
                     linhas[linhaParaAtualizar] = $"{id}*{categoria}*{descricao}*{formVender.Qtd}*{preco}*{data}";
 
                     // Escrever as alterações no arquivo
                     File.WriteAllLines(caminhoArquivo, linhas);
-  
-         
+
+
                     // Escrever as alterações no arquivo
                     int proximoId = ObterProximoIdDisponivel();
-                   
-                    File.AppendAllText(caminhoArquivoVendas, $"{proximoId}* {categoria}* {descricao}* {formVender.QtdV}*{preco*formVender.QtdV}*{DateTime.Now}*{formVender.nomeComprador}*{formVender.telefoneComprador}*{formVender.pagamento}{Environment.NewLine}");
+
+                    File.AppendAllText(caminhoArquivoVendas, $"{proximoId}* {categoria}* {descricao}* {formVender.QtdV}*{preco * formVender.QtdV}*{DateTime.Now}*{formVender.nomeComprador}*{formVender.telefoneComprador}*{formVender.pagamento}{Environment.NewLine}");
                     MessageBox.Show("Venda realizada com sucesso!!");
 
                     // Recarregar os dados no DataGridView
@@ -841,9 +845,9 @@ namespace CadastroBanco
                     string telefone = dadosVenda[7].Trim();
                     string pendente = dadosVenda[8].Trim();
 
-                    
 
-                                // Monta a linha com os campos corretos
+
+                    // Monta a linha com os campos corretos
                     string linhaSaida = $"{i}*{pessoa}*{dividaTotal}*{desconto}{Environment.NewLine}";
 
                     File.AppendAllText(itensComId, linhaSaida);
@@ -862,31 +866,31 @@ namespace CadastroBanco
         private void tabelaVenda_Click(object sender, EventArgs e)
         {
             FormTabelaVenda form = new FormTabelaVenda();
-           
+
             form.ShowDialog();
-            
+
         }
 
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            
-                //Verifica se a classificação ou a descrição é igual ao texto buscado
-                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+
+            //Verifica se a classificação ou a descrição é igual ao texto buscado
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
+            {
+                string BuscaCat = cbCategoria.Text;
+                string BuscaDes = row.Cells[2].Value.ToString();
+                if (BuscaCat.ToLower().Equals(BuscaDes.ToLower()))
                 {
-                    string BuscaCat = cbCategoria.Text;
-                    string BuscaDes = row.Cells[2].Value.ToString();
-                    if (BuscaCat.ToLower().Equals(BuscaDes.ToLower()))
-                    {
-                        //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        //Deixa invisivel as linhas que não tem a classificação ou a descrição igual ao texto buscado
-                        row.Visible = false;
-                    }
+                    //Deixa visivel as linhas que tem a classificação ou a descrição igual ao texto buscado
+                    row.Visible = true;
                 }
+                else
+                {
+                    //Deixa invisivel as linhas que não tem a classificação ou a descrição igual ao texto buscado
+                    row.Visible = false;
+                }
+            }
         }
 
         private void btnAdcionarCarrinho_Click(object sender, EventArgs e)
@@ -967,6 +971,76 @@ namespace CadastroBanco
             else
             {
                 MessageBox.Show("Nenhum cliente cadastrado");
+            }
+        }
+
+        private void copyAlltoClipboard()
+        {
+            dataGridViewDados.SelectAll();
+            DataObject dataObj = dataGridViewDados.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occurred while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Visible = true;
+                Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
+                Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
+                int StartCol = 1;
+                int StartRow = 1;
+                int j = 0, i = 0;
+
+                //Write Headers
+                for (j = 0; j < dataGridViewDados.Columns.Count; j++)
+                {
+                    Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + j];
+                    myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
+                }
+
+                StartRow++;
+
+                //Write datagridview content
+                for (i = 0; i < dataGridViewDados.Rows.Count; i++)
+                {
+                    for (j = 0; j < dataGridViewDados.Columns.Count; j++)
+                    {
+                        try
+                        {
+                            Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + i, StartCol + j];
+                            myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
+                        }
+                        catch
+                        {
+                            ;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

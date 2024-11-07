@@ -51,13 +51,14 @@
             this.btnAdicionarCarrinho = new System.Windows.Forms.Button();
             this.btnVisualizarCarrinho = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 20);
@@ -67,11 +68,11 @@
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdicionar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAdicionar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAdicionar.Location = new System.Drawing.Point(770, 26);
+            this.btnAdicionar.Location = new System.Drawing.Point(19, 548);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(99, 40);
             this.btnAdicionar.TabIndex = 2;
@@ -95,24 +96,25 @@
             // 
             // btnExibir
             // 
+            this.btnExibir.BackColor = System.Drawing.Color.Silver;
             this.btnExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExibir.Location = new System.Drawing.Point(445, 26);
+            this.btnExibir.Location = new System.Drawing.Point(594, 26);
             this.btnExibir.Name = "btnExibir";
             this.btnExibir.Size = new System.Drawing.Size(67, 40);
             this.btnExibir.TabIndex = 5;
             this.btnExibir.Text = "Exibir";
-            this.btnExibir.UseVisualStyleBackColor = true;
+            this.btnExibir.UseVisualStyleBackColor = false;
             this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click_1);
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtualizar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAtualizar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAtualizar.Location = new System.Drawing.Point(680, 26);
+            this.btnAtualizar.Location = new System.Drawing.Point(215, 548);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(84, 40);
+            this.btnAtualizar.Size = new System.Drawing.Size(95, 40);
             this.btnAtualizar.TabIndex = 6;
             this.btnAtualizar.Text = "Editar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
@@ -120,11 +122,11 @@
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDeletar.BackColor = System.Drawing.Color.Salmon;
             this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDeletar.Location = new System.Drawing.Point(875, 26);
+            this.btnDeletar.Location = new System.Drawing.Point(124, 548);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(85, 40);
             this.btnDeletar.TabIndex = 7;
@@ -155,7 +157,7 @@
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.ReadOnly = true;
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDados.Size = new System.Drawing.Size(945, 416);
+            this.dataGridViewDados.Size = new System.Drawing.Size(945, 444);
             this.dataGridViewDados.TabIndex = 9;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
@@ -223,7 +225,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(15, 32);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(335, 26);
@@ -243,13 +245,14 @@
             // 
             // tabelaVenda
             // 
+            this.tabelaVenda.BackColor = System.Drawing.Color.Silver;
             this.tabelaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabelaVenda.Location = new System.Drawing.Point(518, 26);
+            this.tabelaVenda.Location = new System.Drawing.Point(513, 25);
             this.tabelaVenda.Name = "tabelaVenda";
             this.tabelaVenda.Size = new System.Drawing.Size(75, 40);
             this.tabelaVenda.TabIndex = 13;
             this.tabelaVenda.Text = "Vendas";
-            this.tabelaVenda.UseVisualStyleBackColor = true;
+            this.tabelaVenda.UseVisualStyleBackColor = false;
             this.tabelaVenda.Click += new System.EventHandler(this.tabelaVenda_Click);
             // 
             // cbCategoria
@@ -265,11 +268,11 @@
             // 
             // btnAdicionarCarrinho
             // 
-            this.btnAdicionarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAdicionarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdicionarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarCarrinho.Location = new System.Drawing.Point(15, 520);
+            this.btnAdicionarCarrinho.Location = new System.Drawing.Point(741, 19);
             this.btnAdicionarCarrinho.Name = "btnAdicionarCarrinho";
-            this.btnAdicionarCarrinho.Size = new System.Drawing.Size(140, 68);
+            this.btnAdicionarCarrinho.Size = new System.Drawing.Size(101, 52);
             this.btnAdicionarCarrinho.TabIndex = 15;
             this.btnAdicionarCarrinho.Text = "Adicionar ao carrinho";
             this.btnAdicionarCarrinho.UseVisualStyleBackColor = true;
@@ -277,11 +280,11 @@
             // 
             // btnVisualizarCarrinho
             // 
-            this.btnVisualizarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVisualizarCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVisualizarCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(161, 520);
+            this.btnVisualizarCarrinho.Location = new System.Drawing.Point(848, 19);
             this.btnVisualizarCarrinho.Name = "btnVisualizarCarrinho";
-            this.btnVisualizarCarrinho.Size = new System.Drawing.Size(131, 68);
+            this.btnVisualizarCarrinho.Size = new System.Drawing.Size(112, 52);
             this.btnVisualizarCarrinho.TabIndex = 16;
             this.btnVisualizarCarrinho.Text = "Visualizar o carrinho";
             this.btnVisualizarCarrinho.UseVisualStyleBackColor = true;
@@ -289,14 +292,29 @@
             // 
             // btnCliente
             // 
+            this.btnCliente.BackColor = System.Drawing.Color.Silver;
             this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.Location = new System.Drawing.Point(599, 26);
+            this.btnCliente.Location = new System.Drawing.Point(432, 25);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(75, 40);
             this.btnCliente.TabIndex = 17;
             this.btnCliente.Text = "Clientes";
-            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.UseVisualStyleBackColor = false;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnImprimir.Location = new System.Drawing.Point(863, 548);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(95, 40);
+            this.btnImprimir.TabIndex = 18;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // Form2
             // 
@@ -305,6 +323,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(970, 600);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnVisualizarCarrinho);
             this.Controls.Add(this.btnAdicionarCarrinho);
@@ -354,5 +373,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAdicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn siatuacao;
         private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

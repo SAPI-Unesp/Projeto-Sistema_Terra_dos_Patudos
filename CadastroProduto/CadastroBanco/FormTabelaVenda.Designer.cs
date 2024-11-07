@@ -46,7 +46,6 @@ namespace CadastroBanco
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.cbPagamento = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -174,7 +173,7 @@ namespace CadastroBanco
             // 
             this.dataPickerStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataPickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPickerStart.Location = new System.Drawing.Point(403, 68);
+            this.dataPickerStart.Location = new System.Drawing.Point(321, 33);
             this.dataPickerStart.Name = "dataPickerStart";
             this.dataPickerStart.Size = new System.Drawing.Size(326, 26);
             this.dataPickerStart.TabIndex = 13;
@@ -227,17 +226,6 @@ namespace CadastroBanco
             this.label2.TabIndex = 18;
             this.label2.Text = "Nome : ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(399, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 20);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Mes do bazar :";
             // 
             // label4
             // 
@@ -324,7 +312,7 @@ namespace CadastroBanco
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(518, 41);
+            this.checkBox1.Location = new System.Drawing.Point(653, 32);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(95, 24);
             this.checkBox1.TabIndex = 30;
@@ -361,7 +349,6 @@ namespace CadastroBanco
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbPagamento);
             this.Controls.Add(this.txtTotal);
@@ -387,7 +374,6 @@ namespace CadastroBanco
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.ComboBox cbPagamento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox textBox1;
