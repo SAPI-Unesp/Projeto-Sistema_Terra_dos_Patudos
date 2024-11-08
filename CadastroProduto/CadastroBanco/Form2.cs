@@ -528,7 +528,7 @@ namespace CadastroBanco
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
-        {
+        {/*
             //Desseleciona os itens selecionados da tabela
             dataGridViewDados.ClearSelection();
 
@@ -620,7 +620,7 @@ namespace CadastroBanco
                 dataGridViewDados.ClearSelection();
                 return;
             }
-
+            */
 
         }
 
@@ -895,7 +895,7 @@ namespace CadastroBanco
 
         private void btnAdcionarCarrinho_Click(object sender, EventArgs e)
         {
-            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            /*dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             if (dataGridViewDados.SelectedRows.Count == 0)
             {
@@ -936,12 +936,12 @@ namespace CadastroBanco
                 MessageBox.Show("Produto adicionado ao carrinho com sucesso!");
             }
 
-            dataGridViewDados.ClearSelection();
+            dataGridViewDados.ClearSelection();*/
         }
 
         private void btnVisualizarCarrinho_Click(object sender, EventArgs e)
         {
-            FormVisualizarCarrinho formVisualizar = new FormVisualizarCarrinho();
+            /*FormVisualizarCarrinho formVisualizar = new FormVisualizarCarrinho();
             if (File.Exists(caminhoArquivoCarrinho))
             {
                 if (formVisualizar.ShowDialog() == DialogResult.OK)
@@ -953,7 +953,7 @@ namespace CadastroBanco
             else
             {
                 MessageBox.Show("Nenhum item no carrinho");
-            }
+            }*/
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -1042,6 +1042,165 @@ namespace CadastroBanco
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void imgAddCarrinho_Click(object sender, EventArgs e)
+        {
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um item para adicionar ao carrinho.");
+                return;
+            }
+            if (dataGridViewDados.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Selecione apenas um item.");
+                return;
+            }
+
+            int index = dataGridViewDados.SelectedRows[0].Index;
+            var linhaSelecionada = dataGridViewDados.Rows[index];
+
+            if (File.Exists(caminhoArquivoCarrinho))
+            {
+                var linhas = File.ReadAllLines(caminhoArquivoCarrinho);
+
+                foreach (var linha in linhas)
+                {
+                    var dados = linha.Split('*');
+                    string id = dados[0].Trim();
+
+                    if (linhaSelecionada.Cells[0].Value.ToString() == id)
+                    {
+                        MessageBox.Show("Esse produto já está no carrinho!!");
+                        return;
+                    }
+                }
+
+                File.AppendAllText(caminhoArquivoCarrinho, $"{linhaSelecionada.Cells[0].Value.ToString()}{Environment.NewLine}");
+                MessageBox.Show("Produto adicionado ao carrinho com sucesso!");
+            }
+            else
+            {
+                File.AppendAllText(caminhoArquivoCarrinho, $"{linhaSelecionada.Cells[0].Value.ToString()}{Environment.NewLine}");
+                MessageBox.Show("Produto adicionado ao carrinho com sucesso!");
+            }
+
+            dataGridViewDados.ClearSelection();
+        }
+
+        private void imgVerCarrinho_Click(object sender, EventArgs e)
+        {
+            FormVisualizarCarrinho formVisualizar = new FormVisualizarCarrinho();
+            if (File.Exists(caminhoArquivoCarrinho))
+            {
+                if (formVisualizar.ShowDialog() == DialogResult.OK)
+                {
+                    ExibirDados();
+                    ExibirTudo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum item no carrinho");
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //Desseleciona os itens selecionados da tabela
+            dataGridViewDados.ClearSelection();
+
+            //Verifica se tem algum texto na busca
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Nenhum item foi pesquisado.");
+                return;
+            }
+
+            string Busca = textBox1.Text;
+
+
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    row.Visible = false;
+                }
+
+                //Verifica se a classificação ou a descrição é igual ao texto buscado
+                foreach (DataGridViewRow row in dataGridViewDados.Rows)
+                {
+                    string BuscaDes = row.Cells[3].Value.ToString().Normalize();
+                    string BuscaNomalizada = removerAcentos(BuscaDes);
+                    var dados = BuscaDes.Split(' ');
+                    var buscaTexto = Busca.Split(' ');
+                    bool canExibir = true;
+                    foreach (var a in buscaTexto)
+                    {
+
+                        string teste = removerAcentos(a);
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
+                        {
+
+                        }
+                        else
+                        {
+                            canExibir = false;
+                        }
+
+                    }
+                    if (canExibir)
+                    {
+                        row.Visible = true;
+                        row.Selected = true;
+                    }
+
+                    BuscaDes = row.Cells[1].Value.ToString().Normalize();
+                    BuscaNomalizada = removerAcentos(BuscaDes);
+                    canExibir = true;
+                    foreach (var a in buscaTexto)
+                    {
+
+                        string teste = removerAcentos(a);
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
+                        {
+
+                        }
+                        else
+                        {
+                            canExibir = false;
+                        }
+
+                    }
+                    if (canExibir)
+                    {
+                        row.Visible = true;
+                        row.Selected = true;
+                    }
+                }
+            }
+
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            //Se não achar nada ele exibe todos os itens denovo e retorna a mensagem
+            if (dataGridViewDados.SelectedRows.Count == 0)
+            {
+                ExibirTudo();
+                MessageBox.Show("Nenhum item encontrado.");
+                return;
+            }
+            else
+            {
+                dataGridViewDados.ClearSelection();
+                return;
+            }
+
         }
     }
 }

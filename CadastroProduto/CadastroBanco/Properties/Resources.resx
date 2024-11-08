@@ -130,8 +130,14 @@
   <data name="Pointers_fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pointers_fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sign_out (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign_out (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Box_open_fill@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Box_open_fill@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Line_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Line_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ellipse 471" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 471.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,9 +147,6 @@
   </data>
   <data name="Vector 81" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector 81.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Line_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Line_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ellipse 47" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 47.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +160,13 @@
   <data name="Subtract (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Subtract (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sign_out (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sign_out (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="adionar no carrinho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adionar no carrinho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ver carrinho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ver carrinho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

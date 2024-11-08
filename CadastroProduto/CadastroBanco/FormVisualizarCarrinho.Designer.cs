@@ -72,7 +72,7 @@
             this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDados.Size = new System.Drawing.Size(933, 408);
+            this.dataGridViewDados.Size = new System.Drawing.Size(936, 408);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             this.dataGridViewDados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellValueChanged);
@@ -125,22 +125,26 @@
             // 
             // btnRemover
             // 
+            this.btnRemover.BackColor = System.Drawing.Color.Salmon;
+            this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.Location = new System.Drawing.Point(12, 426);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(99, 40);
             this.btnRemover.TabIndex = 11;
-            this.btnRemover.Text = "Remover item";
-            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = false;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnFinalizarCompra
             // 
-            this.btnFinalizarCompra.Location = new System.Drawing.Point(954, 301);
+            this.btnFinalizarCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnFinalizarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizarCompra.Location = new System.Drawing.Point(954, 319);
             this.btnFinalizarCompra.Name = "btnFinalizarCompra";
-            this.btnFinalizarCompra.Size = new System.Drawing.Size(75, 40);
+            this.btnFinalizarCompra.Size = new System.Drawing.Size(199, 101);
             this.btnFinalizarCompra.TabIndex = 12;
-            this.btnFinalizarCompra.Text = "Finalizar compra";
-            this.btnFinalizarCompra.UseVisualStyleBackColor = true;
+            this.btnFinalizarCompra.Text = "Finalizar\r\ncompra";
+            this.btnFinalizarCompra.UseVisualStyleBackColor = false;
             this.btnFinalizarCompra.Click += new System.EventHandler(this.btnFinalizarCompra_Click);
             // 
             // label2
@@ -200,29 +204,33 @@
             // tbTotalPagar
             // 
             this.tbTotalPagar.Enabled = false;
-            this.tbTotalPagar.Location = new System.Drawing.Point(808, 437);
+            this.tbTotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTotalPagar.Location = new System.Drawing.Point(1053, 291);
             this.tbTotalPagar.Name = "tbTotalPagar";
-            this.tbTotalPagar.Size = new System.Drawing.Size(100, 20);
+            this.tbTotalPagar.Size = new System.Drawing.Size(100, 22);
             this.tbTotalPagar.TabIndex = 23;
             this.tbTotalPagar.TextChanged += new System.EventHandler(this.tbTotalPagar_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(729, 440);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(951, 294);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.Size = new System.Drawing.Size(91, 16);
             this.label5.TabIndex = 24;
             this.label5.Text = "Total a pagar:";
             // 
             // btnLimparCarrinho
             // 
-            this.btnLimparCarrinho.Location = new System.Drawing.Point(142, 426);
+            this.btnLimparCarrinho.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimparCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimparCarrinho.Location = new System.Drawing.Point(117, 426);
             this.btnLimparCarrinho.Name = "btnLimparCarrinho";
-            this.btnLimparCarrinho.Size = new System.Drawing.Size(99, 40);
+            this.btnLimparCarrinho.Size = new System.Drawing.Size(64, 40);
             this.btnLimparCarrinho.TabIndex = 25;
-            this.btnLimparCarrinho.Text = "Limpar Carrinho";
-            this.btnLimparCarrinho.UseVisualStyleBackColor = true;
+            this.btnLimparCarrinho.Text = "Limpar";
+            this.btnLimparCarrinho.UseVisualStyleBackColor = false;
             this.btnLimparCarrinho.Click += new System.EventHandler(this.btnLimparCarrinho_Click);
             // 
             // comboBox1
@@ -289,7 +297,7 @@
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.dataGridViewDados);
             this.Name = "FormVisualizarCarrinho";
-            this.Text = "FormVisualizarCarrinho";
+            this.Text = "Carrinho";
             this.Load += new System.EventHandler(this.FormVisualizarCarrinho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
             this.ResumeLayout(false);

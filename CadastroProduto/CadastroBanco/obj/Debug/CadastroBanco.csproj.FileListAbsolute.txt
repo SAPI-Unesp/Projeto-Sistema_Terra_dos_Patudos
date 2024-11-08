@@ -257,3 +257,6 @@ C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\D
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizarCliente.resources
 C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizarCliente.resources
 C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormClientes.resources
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizarCliente.resources
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormClientes.resources
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormDesconto.resources

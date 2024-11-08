@@ -224,5 +224,14 @@
   <ItemGroup>
     <None Include="Resources\Sign_out %282%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adionar no carrinho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ver carrinho.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

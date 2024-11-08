@@ -47,15 +47,18 @@ namespace CadastroBanco
             this.cbPagamento = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.AplicarDesconto = new System.Windows.Forms.Button();
             this.btnDevolver = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.mesesComboBox = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewDados
@@ -80,7 +83,7 @@ namespace CadastroBanco
             this.vendido});
             this.dataGridViewDados.Location = new System.Drawing.Point(-4, 104);
             this.dataGridViewDados.Name = "dataGridViewDados";
-            this.dataGridViewDados.Size = new System.Drawing.Size(1442, 539);
+            this.dataGridViewDados.Size = new System.Drawing.Size(1362, 539);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
@@ -163,7 +166,7 @@ namespace CadastroBanco
             this.cbPessoas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPessoas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPessoas.FormattingEnabled = true;
-            this.cbPessoas.Location = new System.Drawing.Point(12, 33);
+            this.cbPessoas.Location = new System.Drawing.Point(12, 28);
             this.cbPessoas.Name = "cbPessoas";
             this.cbPessoas.Size = new System.Drawing.Size(121, 28);
             this.cbPessoas.TabIndex = 12;
@@ -173,7 +176,7 @@ namespace CadastroBanco
             // 
             this.dataPickerStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataPickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPickerStart.Location = new System.Drawing.Point(321, 33);
+            this.dataPickerStart.Location = new System.Drawing.Point(404, 62);
             this.dataPickerStart.Name = "dataPickerStart";
             this.dataPickerStart.Size = new System.Drawing.Size(326, 26);
             this.dataPickerStart.TabIndex = 13;
@@ -185,20 +188,20 @@ namespace CadastroBanco
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1026, 25);
+            this.label1.Location = new System.Drawing.Point(742, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 24);
+            this.label1.Size = new System.Drawing.Size(56, 24);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Valor Total";
+            this.label1.Text = "Total";
             // 
             // txtTotal
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(1143, 15);
+            this.txtTotal.Location = new System.Drawing.Point(804, 54);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(183, 38);
+            this.txtTotal.Size = new System.Drawing.Size(121, 38);
             this.txtTotal.TabIndex = 16;
             // 
             // cbPagamento
@@ -210,7 +213,7 @@ namespace CadastroBanco
             "(Todos)",
             "Realizado",
             "Pendente"});
-            this.cbPagamento.Location = new System.Drawing.Point(183, 32);
+            this.cbPagamento.Location = new System.Drawing.Point(150, 28);
             this.cbPagamento.Name = "cbPagamento";
             this.cbPagamento.Size = new System.Drawing.Size(121, 28);
             this.cbPagamento.TabIndex = 17;
@@ -220,7 +223,7 @@ namespace CadastroBanco
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 10);
+            this.label2.Location = new System.Drawing.Point(12, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 18;
@@ -231,27 +234,16 @@ namespace CadastroBanco
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(179, 10);
+            this.label4.Location = new System.Drawing.Point(146, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 20;
             this.label4.Text = "Pagamento :";
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(310, 68);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(71, 27);
-            this.btnBuscar.TabIndex = 23;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 68);
+            this.textBox1.Location = new System.Drawing.Point(12, 62);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(292, 26);
             this.textBox1.TabIndex = 22;
@@ -262,9 +254,9 @@ namespace CadastroBanco
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.Salmon;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1185, 59);
+            this.button1.Location = new System.Drawing.Point(1264, 17);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 39);
+            this.button1.Size = new System.Drawing.Size(94, 75);
             this.button1.TabIndex = 24;
             this.button1.Text = "Deletar";
             this.button1.UseVisualStyleBackColor = false;
@@ -274,34 +266,21 @@ namespace CadastroBanco
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(744, 59);
+            this.button2.Location = new System.Drawing.Point(1043, 17);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 39);
+            this.button2.Size = new System.Drawing.Size(94, 74);
             this.button2.TabIndex = 25;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // AplicarDesconto
-            // 
-            this.AplicarDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AplicarDesconto.Enabled = false;
-            this.AplicarDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AplicarDesconto.Location = new System.Drawing.Point(1038, 59);
-            this.AplicarDesconto.Name = "AplicarDesconto";
-            this.AplicarDesconto.Size = new System.Drawing.Size(141, 39);
-            this.AplicarDesconto.TabIndex = 26;
-            this.AplicarDesconto.Text = "Desconto";
-            this.AplicarDesconto.UseVisualStyleBackColor = true;
-            this.AplicarDesconto.Click += new System.EventHandler(this.AplicarDesconto_Click);
-            // 
             // btnDevolver
             // 
             this.btnDevolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDevolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevolver.Location = new System.Drawing.Point(891, 59);
+            this.btnDevolver.Location = new System.Drawing.Point(1143, 17);
             this.btnDevolver.Name = "btnDevolver";
-            this.btnDevolver.Size = new System.Drawing.Size(141, 39);
+            this.btnDevolver.Size = new System.Drawing.Size(115, 75);
             this.btnDevolver.TabIndex = 29;
             this.btnDevolver.Text = "Devolver";
             this.btnDevolver.UseVisualStyleBackColor = true;
@@ -312,7 +291,7 @@ namespace CadastroBanco
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(653, 32);
+            this.checkBox1.Location = new System.Drawing.Point(446, 37);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(95, 24);
             this.checkBox1.TabIndex = 30;
@@ -329,24 +308,59 @@ namespace CadastroBanco
             this.mesesComboBox.Items.AddRange(new object[] {
             "Realizado",
             "Pendente"});
-            this.mesesComboBox.Location = new System.Drawing.Point(1332, 66);
+            this.mesesComboBox.Location = new System.Drawing.Point(931, 63);
             this.mesesComboBox.Name = "mesesComboBox";
             this.mesesComboBox.Size = new System.Drawing.Size(106, 28);
             this.mesesComboBox.TabIndex = 31;
             this.mesesComboBox.SelectedIndexChanged += new System.EventHandler(this.mesesComboBox_SelectedIndexChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CadastroBanco.Properties.Resources.Search_alt_fill_2x;
+            this.pictureBox1.Location = new System.Drawing.Point(310, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.Calendario;
+            this.pictureBox2.Location = new System.Drawing.Point(404, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnImprimir.Location = new System.Drawing.Point(931, 17);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(106, 40);
+            this.btnImprimir.TabIndex = 34;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            // 
             // FormTabelaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1450, 655);
+            this.ClientSize = new System.Drawing.Size(1370, 655);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mesesComboBox);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnDevolver);
-            this.Controls.Add(this.AplicarDesconto);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -360,6 +374,8 @@ namespace CadastroBanco
             this.Text = "FormTabelaVenda";
             this.Load += new System.EventHandler(this.FormTabelaVenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,11 +391,9 @@ namespace CadastroBanco
         private System.Windows.Forms.ComboBox cbPagamento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button AplicarDesconto;
         private System.Windows.Forms.Button btnDevolver;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox mesesComboBox;
@@ -393,5 +407,8 @@ namespace CadastroBanco
         private System.Windows.Forms.DataGridViewTextBoxColumn comprador;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendido;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }
