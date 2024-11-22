@@ -87,7 +87,7 @@
 86**Livros*Livro pequeno(PIX)*1*5,00*10/10/2024 11:01:50***Realizado
 87**Acessórios*Conjunto de quadros (3)(PIX)*1*10,00*10/10/2024 11:01:50***Realizado
 88*32-22*Shorts*Short  verde pinguim Farm (PIX)*1*20,00*10/10/2024 11:03:23***Realizado
-89*32-19*Blusas*Cropped verde pinguim Farm(PIX)*1*5,00*10/10/2024 11:03:23***Realizado
+89*32-19*Blusas*Cropped verde pinguim Farm#(PIX)*1*5,00*10/10/2024 11:03:23***Realizado
 90*32-20*Vestidos*Vestido verde manga sem costas Farm (PIX)*1*30,00*10/10/2024 11:04:52***Realizado
 91*32-13*Shorts*Short   jeans YoreCom (PIX) (+4 reais)*1*5,00*10/10/2024 11:07:05***Realizado
 92*25-15*Calças*Calça bege tecido Jessica City (PIX)*1*5,00*10/10/2024 11:08:17***Realizado
@@ -134,59 +134,59 @@
 133*34-03*Blusas*Cropped Borboleta (PIX)*1*20,00*10/10/2024 11:46:31***Realizado
 134*31-14*Calças*Calça jeans Preferencial (PIX)*1*30,00*10/10/2024 11:48:07***Realizado
 135*31-09*Calças*Calça jeans Opchin(PIX)*1*30,00*10/10/2024 11:48:08***Realizado
-136**Kids*Mini melina(PIX)*1*15,00*10/10/2024 11:49:42***Realizado
-137**Extra*Apenas para teste. (PIX)*1*0*10/10/2024 11:55:33***Realizado
-138*35-18*Shorts*Short   jeans Predilett (PIX)*1*10,00*10/10/2024 11:57:50***Realizado
-139*35-16*Shorts*Short   jeans Marisa (PIX)*1*10,00*10/10/2024 11:57:50***Realizado
-140*08A-11*Shorts*Short  preto acetinado BlueSteel (PIX)*1*5,00*10/10/2024 11:57:50***Realizado
+136**Kids*Mini melina#(PIX)*1*15,00*10/10/2024 11:49:42***Realizado
+137**Extra*Apenas para teste. #(PIX)*1*0*10/10/2024 11:55:33***Realizado
+138*35-18*Shorts*Short   jeans Predilett #(PIX)*1*10,00*10/10/2024 11:57:50***Realizado
+139*35-16*Shorts*Short   jeans Marisa #(PIX)*1*10,00*10/10/2024 11:57:50***Realizado
+140*08A-11*Shorts*Short  preto acetinado BlueSteel #(PIX)*1*5,00*10/10/2024 11:57:50***Realizado
 141*28-20*Academia*Calça legging estampada academia*1*5,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
 142*27-10*Calças*Calça jeans denim Glamour*1*5,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
 143*01A-40*Blusas*Blusa com manga pássaro rosa*1*5,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
 144*31-18*Blusas*Regata alaranjada com renda*1*15,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
 145*35-10*Blusas*Blusa creme com rosa estampada*1*5,00*10/10/2024 12:04:10*Amanda Maiara* *Pendente
 146**Extra*2 reais extra.*1*2*10/10/2024 12:04:10*Amanda Maiara**Pendente
-147*10A-12*Blusas*Frente única uva babado(PIX)*1*10,00*10/10/2024 12:32:55***Realizado
-148*21-27*Vestidos*Vestido longo verde e amarelo(PIX)*1*15,00*10/10/2024 12:32:55***Realizado
-149*26-25*Vestidos*Vestido tecido Xadrez azul/bordô(PIX)*1*10,00*10/10/2024 12:34:58***Realizado
-150*13-07*Blusas*Blusa preta(PIX)*1*10,00*10/10/2024 12:34:58***Realizado
-151**Extra*Apenas para teste. (PIX)*1*0*10/10/2024 14:18:03***Realizado
-152*30-23*Shorts*Short   Mickey & Minnie vermelho(PIX)*1*10,00*10/10/2024 14:20:48*Renata Polo**Realizado
+147*10A-12*Blusas*Frente única uva babado#(PIX)*1*10,00*10/10/2024 12:32:55***Realizado
+148*21-27*Vestidos*Vestido longo verde e amarelo#(PIX)*1*15,00*10/10/2024 12:32:55***Realizado
+149*26-25*Vestidos*Vestido tecido Xadrez azul/bordô#(PIX)*1*10,00*10/10/2024 12:34:58***Realizado
+150*13-07*Blusas*Blusa preta#(PIX)*1*10,00*10/10/2024 12:34:58***Realizado
+151**Extra*Apenas para teste. #(PIX)*1*0*10/10/2024 14:18:03***Realizado
+152*30-23*Shorts*Short   Mickey & Minnie vermelho#(PIX)*1*10,00*10/10/2024 14:20:48*Renata Polo**Realizado
 153*07A-20*Calças*Calça ZamZam(PIX)*1*5,00*10/10/2024 14:20:48*Renata Polo**Realizado
 154*32-16*Blusas*Mini Blusa branca Blue Steel(PIX)*1*5,00*10/10/2024 14:20:48*Renata Polo**Realizado
 155*20-10*Shorts*Short  seda Daslu(PIX)*1*5,00*10/10/2024 14:20:48*Renata Polo**Realizado
-156*14-05*Blusas*Blusa marinho nobuck manga longa(PIX)*1*10,00*10/10/2024 14:24:14*Pedro**Realizado
-157*14A-16*Shorts*Short  azul donuts(PIX)*1*10,00*10/10/2024 14:26:18*Leonardo**Realizado
-158*08-02*Acessórios*CD  Negritude Junior(PIX)*1*2,00*10/10/2024 14:26:18*Leonardo**Realizado
-159*20-20*Blusas*Casaco  marinho sarja(PIX)*1*40,00*10/10/2024 14:27:06*Gabriel**Realizado
-160**Extra*2 reais extra.(PIX)*1*2*10/10/2024 14:28:12*Eloisa**Realizado
-161*33-24*Blusas*Blusa estampada manga curta Pistachio(PIX)*1*20,00*10/10/2024 14:30:20*Paulo**Realizado
-162**Cama/Mesa/Banho*Caminho de mesa + toalha de natal(PIX)*1*30,00*10/10/2024 14:30:20*Paulo**Realizado
-163*32-15*Blusas*Camiseta  preta Good Year (PIX)*1*10,00*10/10/2024 14:31:46***Realizado
+156*14-05*Blusas*Blusa marinho nobuck manga longa#(PIX)*1*10,00*10/10/2024 14:24:14*Pedro**Realizado
+157*14A-16*Shorts*Short  azul donuts#(PIX)*1*10,00*10/10/2024 14:26:18*Leonardo**Realizado
+158*08-02*Acessórios*CD  Negritude Junior#(PIX)*1*2,00*10/10/2024 14:26:18*Leonardo**Realizado
+159*20-20*Blusas*Casaco  marinho sarja#(PIX)*1*40,00*10/10/2024 14:27:06*Gabriel**Realizado
+160**Extra*2 reais extra.#(PIX)*1*2*10/10/2024 14:28:12*Eloisa**Realizado
+161*33-24*Blusas*Blusa estampada manga curta Pistachio#(PIX)*1*20,00*10/10/2024 14:30:20*Paulo**Realizado
+162**Cama/Mesa/Banho*Caminho de mesa + toalha de natal#(PIX)*1*30,00*10/10/2024 14:30:20*Paulo**Realizado
+163*32-15*Blusas*Camiseta  preta Good Year #(PIX)*1*10,00*10/10/2024 14:31:46***Realizado
 164*28-06*Blusas*Regata preta tecido Rovitex(PIX)*1*7,00*10/10/2024 15:10:03*Michelle**Realizado
-165*17-21*Blusas*Regata rosa com renda(PIX)*1*7,00*10/10/2024 15:12:14*Natalia**Realizado
-166*13-18*Blusas*Blusa preta pombinha(PIX)*1*5,00*10/10/2024 15:12:14*Natalia**Realizado
-167*34-22*Blusas*Camiseta preta Pikachu(FREE)*1*0,00*10/10/2024 15:21:11*Samuel**Realizado
-168*05A-05*Blusas*Cardigan  vermelho linha vazado(PIX)*1*15,00*10/10/2024 15:37:31*Sabrina**Realizado
-169*27-20*Shorts*Short   pink adidas(PIX)*1*10,00*10/10/2024 15:37:31*Sabrina**Realizado
-170*07A-01*Calças*Calça jeans flare(PIX)*1*15,00*10/10/2024 15:37:31*Sabrina**Realizado
-171**Blusas*Cacharrel canelada(PIX)*1*5,00*10/10/2024 15:37:31*Sabrina**Realizado
-172**Sapatos*Sandália beira rio(PIX)*1*15,00*10/10/2024 15:37:31*Sabrina**Realizado
-173*09-23*Blusas*Blusa renda branca botões(PIX)*1*10,00*10/10/2024 15:52:39*Sofia**Realizado
-174*32-01*Vestidos*Vestido marinho florido (TRANSFERÊNCIA BANCÁRIA)*1*15,00*10/10/2024 16:19:29*Priscila**Pendente
+165*17-21*Blusas*Regata rosa com renda#(PIX)*1*7,00*10/10/2024 15:12:14*Natalia**Realizado
+166*13-18*Blusas*Blusa preta pombinha#(PIX)*1*5,00*10/10/2024 15:12:14*Natalia**Realizado
+167*34-22*Blusas*Camiseta preta Pikachu#(FREE)*1*0,00*10/10/2024 15:21:11*Samuel**Realizado
+168*05A-05*Blusas*Cardigan  vermelho linha vazado#(PIX)*1*15,00*10/10/2024 15:37:31*Sabrina**Realizado
+169*27-20*Shorts*Short   pink adidas#(PIX)*1*10,00*10/10/2024 15:37:31*Sabrina**Realizado
+170*07A-01*Calças*Calça jeans flare#(PIX)*1*15,00*10/10/2024 15:37:31*Sabrina**Realizado
+171**Blusas*Cacharrel canelada#(PIX)*1*5,00*10/10/2024 15:37:31*Sabrina**Realizado
+172**Sapatos*Sandália beira rio#(PIX)*1*15,00*10/10/2024 15:37:31*Sabrina**Realizado
+173*09-23*Blusas*Blusa renda branca botões#(PIX)*1*10,00*10/10/2024 15:52:39*Sofia**Realizado
+174*32-01*Vestidos*Vestido marinho florido #(TRANSFERÊNCIA BANCÁRIA)*1*15,00*10/10/2024 16:19:29*Priscila**Pendente
 175*31-15*Vestidos*Vestido preto frente única viscose*1*20,00*10/10/2024 16:33:38*Lara**Pendente
-176*01-26*Blusas*Blusa manga verde Marfino (PIX)*1*0,00*10/10/2024 16:55:22*João**Realizado
-177*34-21*Blusas*Polo preta Elefantinho (PIX)*1*15,00*10/10/2024 16:58:09*Samuel**Realizado
-178*10A-04*Blusas*Blusa outubro rosa (DINHEIRO)*1*5,00*10/10/2024 17:18:50***Realizado
-179*25-08*Shorts*Short  listrado manchado (DINHEIRO)*1*5,00*10/10/2024 17:18:50***Realizado
-180*26-10*Blusas*Camiseta vermelha Hering (PIX)*1*15,00*10/10/2024 17:21:39***Realizado
-181*26-07*Blusas*Camiseta verde água Hering (PIX)*1*10,00*10/10/2024 17:22:40***Realizado
-182*25-20*Calças*Calça verde tecido pantalona (PIX)*1*5,00*10/10/2024 17:30:27***Realizado
-183**Utensílios*Relogio herweg (PIX)*1*10,00*10/10/2024 17:33:21***Realizado
-184*34-14*Moda Praia*Buiquini  parte superior (PIX)*1*10,00*10/10/2024 17:53:23***Realizado
-185*13-08*Blusas*Cropped lilás (PIX)*1*10,00*10/10/2024 17:53:23***Realizado
-186**Calças*Calça preta Preston Field (PIX)*1*25,00*10/10/2024 18:40:02***Realizado
-187*09-07*Blusas*Camiseta amarela Responsa Carioca (PIX)*1*5,00*10/10/2024 18:40:02***Realizado
-188*26-23*Blusas*Camisa listra preta/amarela (PIX)*1*10,00*10/10/2024 18:40:02***Realizado
-189*16-19*Blusas*Camiseta verde Malwee (PIX)*1*10,00*10/10/2024 18:40:02***Realizado
-190*13A-09*Shorts*Short  jeans Siberian Denin (PIX)*1*5,00*10/10/2024 19:30:47***Realizado
+176*01-26*Blusas*Blusa manga verde Marfino #(PIX)*1*0,00*10/10/2024 16:55:22*João**Realizado
+177*34-21*Blusas*Polo preta Elefantinho #(PIX)*1*15,00*10/10/2024 16:58:09*Samuel**Realizado
+178*10A-04*Blusas*Blusa outubro rosa #(DINHEIRO)*1*5,00*10/10/2024 17:18:50***Realizado
+179*25-08*Shorts*Short  listrado manchado #(DINHEIRO)*1*5,00*10/10/2024 17:18:50***Realizado
+180*26-10*Blusas*Camiseta vermelha Hering #(PIX)*1*15,00*10/10/2024 17:21:39***Realizado
+181*26-07*Blusas*Camiseta verde água Hering #(PIX)*1*10,00*10/10/2024 17:22:40***Realizado
+182*25-20*Calças*Calça verde tecido pantalona #(PIX)*1*5,00*10/10/2024 17:30:27***Realizado
+183**Utensílios*Relogio herweg #(PIX)*1*10,00*10/10/2024 17:33:21***Realizado
+184*34-14*Moda Praia*Buiquini  parte superior #(PIX)*1*10,00*10/10/2024 17:53:23***Realizado
+185*13-08*Blusas*Cropped lilás #(PIX)*1*10,00*10/10/2024 17:53:23***Realizado
+186**Calças*Calça preta Preston Field #(PIX)*1*25,00*10/10/2024 18:40:02***Realizado
+187*09-07*Blusas*Camiseta amarela Responsa Carioca #(PIX)*1*5,00*10/10/2024 18:40:02***Realizado
+188*26-23*Blusas*Camisa listra preta/amarela #(PIX)*1*10,00*10/10/2024 18:40:02***Realizado
+189*16-19*Blusas*Camiseta verde Malwee #(PIX)*1*10,00*10/10/2024 18:40:02***Realizado
+190*13A-09*Shorts*Short  jeans Siberian Denin #(PIX)*1*5,00*10/10/2024 19:30:47***Realizado
 191*14A-03*Blusas*Regata azul *1*5,00*10/10/2024 20:05:38*Flavia*997354466*Pendente
