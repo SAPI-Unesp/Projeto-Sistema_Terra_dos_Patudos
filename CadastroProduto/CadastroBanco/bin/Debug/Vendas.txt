@@ -1,10 +1,8 @@
 0*01-16*Blusas*Blusa oncinha Nitrogen*1*7,00*05/05/2024 15:41*Salete*99195-6656*Pendente
 1*01A-32*Blusas*Blusa seda costa vermelha*1*5,00*05/05/2024 15:41*Salete*99195-6656*Pendente
-2*01A-36*Blusas*Regata salmão/verde San Marino*1*5,00*05/05/2024 15:41*Tania**Pendente
-3*01A-38*Blusas*Blusa branca elanca decote V*1*5,00*05/05/2024 15:41*Lucimar*99136-0140*Pendente
-4*01A-39*Blusas*Blusa rosa elanca decote V*1*5,00*05/05/2024 15:41*Lucimar**Pendente
-5*01A-50*Blusas*Cacharrel bordô*1*5,00*05/05/2024 15:41*Patricia**Pendente
-6*03A-45*Blusas*Vestido p&b com capuz*1*10,00*05/05/2024 15:41*Rosana Dias**Pendente
+2*01A-36*Blusas*Regata salmão/verde San Marino*1*5,00*05/05/2024 15:41*Tania**Devolvido
+5*01A-50*Blusas*Cacharrel bordô*1*5,00*05/05/2024 15:41*Patricia**Devolvido
+6*03A-45*Blusas*Vestido p&b com capuz*1*10,00*05/05/2024 15:41*Rosana Dias**Devolvido
 7*04A-04*Blusas*Vestido verde viscose*1*10,00*05/05/2024 15:41*Lucimar**Pendente
 8*05A-07*Blusas*Blusa vermelha com camisa xadrez*1*10,00*05/05/2024 15:41*Rosana Dias**Pendente
 9*05A-26*Blusas*Blusa azul e verde viscose*1*7,00*05/05/2024 15:41*Salete*99195-6656*Pendente
