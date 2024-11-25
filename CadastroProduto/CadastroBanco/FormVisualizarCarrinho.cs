@@ -278,22 +278,28 @@ namespace CadastroBanco
                 }
             }
 
-            var linhasVClient = File.ReadAllLines(caminhoArquivoVendas);
-            foreach (var linha in linhasVClient)
+            string nomedocliente = nome.Text;
+            string telefonedocliente = telefone.Text;
+
+            var linhasClient = File.ReadAllLines(caminhoArquivoCliente);
+            foreach (var linha in linhasClient)
             {
                 var dados = linha.Split('*');
                 // Certifique-se de que há 10 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                if (dados.Length == 10)
+                if (dados.Length == 5)
                 {
-                    string nomeC = dados[7].Trim();
-                    if (nome.Text == nomeC)
+                    string nomeC = dados[2].Trim();
+                    string telefoneC = dados[3].Trim();
+                    if (nomedocliente == nomeC)
                     {
                         DialogResult confirmResult = MessageBox.Show("Cliente já existe na base de dados, este é o mesmo cliente?", 
                                                          "Confirmação de existência",
                                                          MessageBoxButtons.YesNo);
                         if (confirmResult == DialogResult.Yes)
                         {
-                            continue;
+                            nomedocliente = nomeC;
+                            telefonedocliente = telefoneC;
+                            break;
                         }
                         else
                         {
@@ -362,7 +368,13 @@ namespace CadastroBanco
 
                 int idV = ObterProximoIdDisponivel();
 
-                File.AppendAllText(caminhoArquivoVendas, $"{ObterProximoIdDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString() + " " + comboBox1.Text + " - Pagamento para : " + dataPrazo.Value.ToString()}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nome.Text}*{telefone.Text}*{cbPagamento.Text}{Environment.NewLine}");
+                if (cbPagamento.Text.Equals("Pendente"))
+                {
+                    File.AppendAllText(caminhoArquivoVendas, $"{ObterProximoIdDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString() + " " + comboBox1.Text + " - Pagamento para : " + dataPrazo.Value.ToString()}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nomedocliente}*{telefonedocliente}*{cbPagamento.Text}{Environment.NewLine}");
+                }else if (cbPagamento.Text.Equals("Realizado"))
+                {
+                    File.AppendAllText(caminhoArquivoVendas, $"{ObterProximoIdDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString() + " " + comboBox1.Text}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nomedocliente}*{telefonedocliente}*{cbPagamento.Text}{Environment.NewLine}");
+                }
                 AddCliente();
             }
 

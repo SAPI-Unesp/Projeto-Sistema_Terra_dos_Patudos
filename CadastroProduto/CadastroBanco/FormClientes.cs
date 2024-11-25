@@ -68,7 +68,7 @@ namespace CadastroBanco
                             clienteExistente = true;
                             
 
-                            linhasClientes[j] = $"{j}*{cliente}*{telefone}*0*{desconto}*{credito}";
+                            linhasClientes[j] = $"{j}*{cliente}*{telefone}*0*0*{credito}";
                             
                             break;
                         }
@@ -114,7 +114,7 @@ namespace CadastroBanco
                 }
                 int linhasParaAtualizar = linhasClientes.FindIndex(l => l.StartsWith(id + "*"));
 
-                linhasCliente2[linhasParaAtualizar] = $"{id}*{cliente}*{telefone}*{valorDivida.ToString()}*{desconto}*{credito}";
+                linhasCliente2[linhasParaAtualizar] = $"{id}*{cliente}*{telefone}*{valorDivida.ToString()}*0*{credito}";
             }
 
             File.WriteAllLines(caminhoArquivoCliente, linhasCliente2);
@@ -168,8 +168,7 @@ namespace CadastroBanco
             string cliente = linhaSelecionada.Cells[1].Value.ToString();
             string telefone = linhaSelecionada.Cells[2].Value.ToString();
             decimal divida = decimal.Parse(linhaSelecionada.Cells[3].Value.ToString());
-            decimal desconto = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
-            decimal credito = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
+            decimal credito = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
 
             // Abrir o formulário de atualização com os dados atuais
             FormAtualizarCliente formAtualizarCliente = new FormAtualizarCliente(id, cliente, telefone, credito);
@@ -183,7 +182,7 @@ namespace CadastroBanco
                 if (linhaParaAtualizar >= 0)
                 {
                     // Atualizar a linha com os novos dados
-                    linhasC[linhaParaAtualizar] = $"{id}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{divida}*{desconto}*{formAtualizarCliente.Credito}";
+                    linhasC[linhaParaAtualizar] = $"{id}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{divida}*0*{formAtualizarCliente.Credito}";
 
                     // Escrever as alterações no arquivo
                     File.WriteAllLines(caminhoArquivoCliente, linhasC);
@@ -243,6 +242,11 @@ namespace CadastroBanco
             {
                 MessageBox.Show("Erro ao atualizar os dados do cliente.");
             }
+        }
+
+        private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

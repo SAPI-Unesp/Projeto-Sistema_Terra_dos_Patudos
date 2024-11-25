@@ -877,6 +877,9 @@ namespace CadastroBanco
             var linhasC = File.ReadAllLines(caminhoArquivoCliente).ToList();
             var linhasV = File.ReadAllLines(caminhoArquivoVendas).ToList();
             var linhasP = File.ReadAllLines(caminhoArquivo).ToList();
+
+
+
             if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
             {
                 if (!(string.IsNullOrEmpty(nome_comprador)) && pagamento == "Realizado")

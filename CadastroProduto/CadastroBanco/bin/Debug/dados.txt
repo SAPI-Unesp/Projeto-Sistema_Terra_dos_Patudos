@@ -841,7 +841,7 @@
 842**Acessórios*PULSEIRAS DIVERSAS ( un.) *1*9999,00*08/10/2024 15:41*a vender*
 766**Acessórios*Sacola água de cheiro*0*5,00*10/10/2024 10:30:11*a vender*
 843**Kids*teste*1*0*10/10/2024 10:35:00*a vender*
-844*99-99*Acessórios*Sacola unesp proec*0*10*10/10/2024 10:50:11*a vender*
+844*36-04*Acessórios*Sacola unesp proec*0*10*10/10/2024 10:50:11*a vender*
 845**Acessórios*Capuz de urso*0*10,00*10/10/2024 10:58:18*a vender*
 846**Livros*Livro pequeno*0*5,00*10/10/2024 10:58:46*a vender*
 847**Acessórios*Conjunto de quadros (3)*0*10,00*10/10/2024 10:59:07*a vender*
