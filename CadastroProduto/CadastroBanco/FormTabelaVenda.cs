@@ -44,8 +44,21 @@ namespace CadastroBanco
         {
             if (dataGridViewDados.SelectedRows.Count > 0) 
                 mesesComboBox.Visible = true;
-        }   
+            mesesComboBox.Visible = true;
+        }
 
+        private void dataGridViewDados_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewDados.SelectedRows.Count > 0)
+            {
+                mesesComboBox.Visible = true;
+            }
+            else
+            {
+                //mesesComboBox.Visible = false; // Opcional, caso queira esconder quando nada estiver selecionado
+            }
+        }
+       
         public void ExibirDados()
         {
 
@@ -1196,6 +1209,15 @@ namespace CadastroBanco
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void dataGridViewDados_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica se a linha clicada é válida
+            if (e.RowIndex >= 0)
+            {
+                mesesComboBox.Visible = true;
             }
         }
     }

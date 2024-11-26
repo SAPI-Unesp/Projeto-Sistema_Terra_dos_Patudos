@@ -85,6 +85,7 @@ namespace CadastroBanco
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.Size = new System.Drawing.Size(1362, 539);
             this.dataGridViewDados.TabIndex = 10;
+            this.dataGridViewDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellClick_1);
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
             // id
@@ -188,7 +189,7 @@ namespace CadastroBanco
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(742, 30);
+            this.label1.Location = new System.Drawing.Point(706, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 24);
             this.label1.TabIndex = 15;
@@ -198,10 +199,10 @@ namespace CadastroBanco
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(804, 19);
+            this.txtTotal.Location = new System.Drawing.Point(761, 19);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(121, 38);
+            this.txtTotal.Size = new System.Drawing.Size(164, 38);
             this.txtTotal.TabIndex = 16;
             // 
             // cbPagamento

@@ -273,7 +273,7 @@
             this.dataPrazo.Name = "dataPrazo";
             this.dataPrazo.Size = new System.Drawing.Size(200, 26);
             this.dataPrazo.TabIndex = 30;
-            this.dataPrazo.Value = new System.DateTime(2024, 10, 10, 0, 0, 0, 0);
+            this.dataPrazo.Value = new System.DateTime(2024, 11, 26, 0, 0, 0, 0);
             // 
             // FormVisualizarCarrinho
             // 
