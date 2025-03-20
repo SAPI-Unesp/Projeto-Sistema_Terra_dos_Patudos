@@ -30,6 +30,108 @@ namespace CadastroBanco
         private void FormClientes_Load(object sender, EventArgs e)
         {
             ExibirTudo();
+            CompararESalvarDados();
+        }
+
+        private void CompararESalvarDados()
+        {
+            string caminhoVendas = "vendas.txt";
+            string caminhoDados = "dados.txt";
+            string caminhoNewDados = "newDados.txt";
+
+            if (!File.Exists(caminhoVendas) || !File.Exists(caminhoDados))
+            {
+                MessageBox.Show("Arquivos de vendas ou dados não encontrados.");
+                return;
+            }
+
+            var linhasVendas = File.ReadAllLines(caminhoVendas);
+            var linhasDados = File.ReadAllLines(caminhoDados);
+            var newDados = new List<string>();
+
+            foreach (var linhaVenda in linhasVendas)
+            {
+                bool encontrouSimilar = false;
+
+                foreach (var linhaDado in linhasDados)
+                {
+                    var camposDado = linhaDado.Split('*');
+                    var camposVenda = linhaVenda.Split('*');
+
+                    if (camposDado[1] == camposVenda[1])
+                    {
+                        string idDado = camposDado[0].Trim(); // Pega o ID da linha de dados.txt
+
+                        // Concatena a linha de vendas com o ID de dados.txt
+                        var dadosConcatenados = idDado + "*" + linhaVenda;
+                        newDados.Add(dadosConcatenados);
+                        encontrouSimilar = true;
+                        break;
+                    }
+                    else if (CalcularSimilaridade(linhaVenda, linhaDado) >= 0.65 )
+                    {
+                        // Encontrou uma linha similar, extrai o ID de dados.txt
+                        
+                        if (camposDado.Length > 0)
+                        {
+                            string idDado = camposDado[0].Trim(); // Pega o ID da linha de dados.txt
+
+                            // Concatena a linha de vendas com o ID de dados.txt
+                            var dadosConcatenados = idDado + "*" + linhaVenda;
+                            newDados.Add(dadosConcatenados);
+                            encontrouSimilar = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (!encontrouSimilar)
+                {
+                    // Se não encontrou similar, adiciona a linha de vendas sem modificação
+                    newDados.Add(linhaVenda);
+                }
+            }
+
+            // Salva os novos dados no arquivo newDados.txt
+            File.WriteAllLines(caminhoNewDados, newDados);
+            MessageBox.Show("Dados comparados e salvos com sucesso em newDados.txt!");
+        }
+
+        private double CalcularSimilaridade(string str1, string str2)
+        {
+            // Algoritmo simples de similaridade baseado na distância de Levenshtein
+            int maxLen = Math.Max(str1.Length, str2.Length);
+            if (maxLen == 0) return 1.0;
+
+            int distancia = CalcularDistanciaLevenshtein(str1, str2);
+            return 1.0 - (double)distancia / maxLen;
+        }
+
+        private int CalcularDistanciaLevenshtein(string s, string t)
+        {
+            int n = s.Length;
+            int m = t.Length;
+            int[,] d = new int[n + 1, m + 1];
+
+            if (n == 0) return m;
+            if (m == 0) return n;
+
+            for (int i = 0; i <= n; d[i, 0] = i++) ;
+            for (int j = 0; j <= m; d[0, j] = j++) ;
+
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= m; j++)
+                {
+                    int custo = (t[j - 1] == s[i - 1]) ? 0 : 1;
+
+                    d[i, j] = Math.Min(
+                        Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
+                        d[i - 1, j - 1] + custo);
+                }
+            }
+
+            return d[n, m];
         }
 
         public void AddCliente()
