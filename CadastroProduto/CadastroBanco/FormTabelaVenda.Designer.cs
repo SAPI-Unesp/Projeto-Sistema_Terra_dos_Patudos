@@ -30,16 +30,6 @@ namespace CadastroBanco
         private void InitializeComponent()
         {
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbPessoas = new System.Windows.Forms.ComboBox();
             this.dataPickerStart = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,6 +46,17 @@ namespace CadastroBanco
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,6 +73,7 @@ namespace CadastroBanco
             this.dataGridViewDados.ColumnHeadersHeight = 40;
             this.dataGridViewDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.IdVenda,
             this.idLivro,
             this.categoria,
             this.descricao,
@@ -87,80 +89,6 @@ namespace CadastroBanco
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellClick_1);
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.FillWeight = 22.83764F;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // idLivro
-            // 
-            this.idLivro.HeaderText = "Pag do livro";
-            this.idLivro.Name = "idLivro";
-            this.idLivro.Width = 70;
-            // 
-            // categoria
-            // 
-            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categoria.FillWeight = 79.41525F;
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descricao.FillWeight = 229.4967F;
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            // 
-            // quantidade
-            // 
-            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantidade.FillWeight = 79.41525F;
-            this.quantidade.HeaderText = "Quantidade Vendida";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            // 
-            // preco
-            // 
-            this.preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.preco.FillWeight = 79.41525F;
-            this.preco.HeaderText = "Lucro";
-            this.preco.Name = "preco";
-            // 
-            // dataAdicao
-            // 
-            this.dataAdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataAdicao.FillWeight = 158.7526F;
-            this.dataAdicao.HeaderText = "Data da Venda";
-            this.dataAdicao.Name = "dataAdicao";
-            this.dataAdicao.ReadOnly = true;
-            // 
-            // comprador
-            // 
-            this.comprador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.comprador.FillWeight = 79.41525F;
-            this.comprador.HeaderText = "Nome do Comprador";
-            this.comprador.Name = "comprador";
-            // 
-            // telefone
-            // 
-            this.telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.telefone.FillWeight = 79.41525F;
-            this.telefone.HeaderText = "Telefone do Comprador";
-            this.telefone.Name = "telefone";
-            // 
-            // vendido
-            // 
-            this.vendido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.vendido.FillWeight = 91.83672F;
-            this.vendido.HeaderText = "Pagamento";
-            this.vendido.Name = "vendido";
-            this.vendido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // cbPessoas
             // 
@@ -351,6 +279,86 @@ namespace CadastroBanco
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.FillWeight = 22.83764F;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // IdVenda
+            // 
+            this.IdVenda.HeaderText = "ID da Venda";
+            this.IdVenda.Name = "IdVenda";
+            this.IdVenda.ReadOnly = true;
+            // 
+            // idLivro
+            // 
+            this.idLivro.HeaderText = "Pag do livro";
+            this.idLivro.Name = "idLivro";
+            this.idLivro.Width = 70;
+            // 
+            // categoria
+            // 
+            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.categoria.FillWeight = 79.41525F;
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricao.FillWeight = 229.4967F;
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            // 
+            // quantidade
+            // 
+            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantidade.FillWeight = 79.41525F;
+            this.quantidade.HeaderText = "Quantidade Vendida";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            // 
+            // preco
+            // 
+            this.preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.preco.FillWeight = 79.41525F;
+            this.preco.HeaderText = "Lucro";
+            this.preco.Name = "preco";
+            // 
+            // dataAdicao
+            // 
+            this.dataAdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataAdicao.FillWeight = 158.7526F;
+            this.dataAdicao.HeaderText = "Data da Venda";
+            this.dataAdicao.Name = "dataAdicao";
+            this.dataAdicao.ReadOnly = true;
+            // 
+            // comprador
+            // 
+            this.comprador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.comprador.FillWeight = 79.41525F;
+            this.comprador.HeaderText = "Nome do Comprador";
+            this.comprador.Name = "comprador";
+            // 
+            // telefone
+            // 
+            this.telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telefone.FillWeight = 79.41525F;
+            this.telefone.HeaderText = "Telefone do Comprador";
+            this.telefone.Name = "telefone";
+            // 
+            // vendido
+            // 
+            this.vendido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.vendido.FillWeight = 91.83672F;
+            this.vendido.HeaderText = "Pagamento";
+            this.vendido.Name = "vendido";
+            this.vendido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // FormTabelaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +408,11 @@ namespace CadastroBanco
         private System.Windows.Forms.Button btnDevolver;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox mesesComboBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdVenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLivro;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
@@ -410,8 +422,5 @@ namespace CadastroBanco
         private System.Windows.Forms.DataGridViewTextBoxColumn comprador;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendido;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnImprimir;
     }
 }

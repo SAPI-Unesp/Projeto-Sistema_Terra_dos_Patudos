@@ -72,20 +72,21 @@ namespace CadastroBanco
                     var dados = linha.Split('*');
                     bool temNome = false;
                     // Certifique-se de que há 10 campos (categoria, descrição, quantidade, preço) // agr to pegando o id junto já q ele tá iterável
-                    if (dados.Length == 10)
+                    if (dados.Length == 11)
                     {
                         string id = dados[0].Trim();
-                        string idLivro = dados[1].Trim();
-                        string categoria = dados[2].Trim();
-                        string descricao = dados[3].Trim();
-                        string qnt = dados[4].Trim();
-                        string preco = dados[5].Trim();
-                        string data = dados[6].Trim();
-                        string nome = dados[7].Trim();
-                        string telefone = dados[8].Trim();
-                        string pagamento = dados[9].Trim();
+                        string idVenda = dados[1].Trim();
+                        string idLivro = dados[2].Trim();
+                        string categoria = dados[3].Trim();
+                        string descricao = dados[4].Trim();
+                        string qnt = dados[5].Trim();
+                        string preco = dados[6].Trim();
+                        string data = dados[7].Trim();
+                        string nome = dados[8].Trim();
+                        string telefone = dados[9].Trim();
+                        string pagamento = dados[10].Trim();
                         // Adicionar os dados no DataGridView
-                        dataGridViewDados.Rows.Add(id, idLivro, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
+                        dataGridViewDados.Rows.Add(id, idVenda, idLivro, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
                         valorTotal += Convert.ToDecimal(preco);
                         foreach (var nomes in cbPessoas.Items)
                         {
@@ -126,13 +127,13 @@ namespace CadastroBanco
                     bool check = checkBox1.Checked;
                     if (!check)
                     {
-                        if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                        if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                         {
                             // Compara apenas mês e ano
                             if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                             {
                                 row.Visible = true;
-                                valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
                             }
                             else
                             {
@@ -147,7 +148,7 @@ namespace CadastroBanco
                     else
                     {
                         row.Visible = true;
-                        valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
                     }
                 }
             }
@@ -156,19 +157,19 @@ namespace CadastroBanco
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
 
-                    if (row.Cells[7].Value != null &&
-                        row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                    if (row.Cells[8].Value != null &&
+                        row.Cells[8].Value.ToString().Equals(cbPessoas.Text))
                     {
                         DateTime cellDate;
                         bool check = checkBox1.Checked;
                         if (!check)
                         {
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
-                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                    valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
                                 }
                                 else
                                 {
@@ -183,7 +184,7 @@ namespace CadastroBanco
                         else
                         {
                             row.Visible = true;
-                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                            valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
                         }
                     }
                     else
@@ -284,9 +285,9 @@ namespace CadastroBanco
                 var dadosVenda = linhaVenda.Split('*');
                 if (dadosVenda.Length >= 10)
                 {
-                    string precoVenda = dadosVenda[5].Trim();
-                    string pessoa = dadosVenda[7].Trim();
-                    string telefonep = dadosVenda[8].Trim();
+                    string precoVenda = dadosVenda[6].Trim();
+                    string pessoa = dadosVenda[8].Trim();
+                    string telefonep = dadosVenda[9].Trim();
 
                     bool clienteExistente = false;
 
@@ -338,8 +339,8 @@ namespace CadastroBanco
 
                     if (dadosVenda.Length >= 10)
                     {
-                        string precoVenda = dadosVenda[5].Trim();
-                        string pessoa = dadosVenda[7].Trim();
+                        string precoVenda = dadosVenda[6].Trim();
+                        string pessoa = dadosVenda[8].Trim();
 
                         if (pessoa.Equals(cliente))
                         {
@@ -396,8 +397,8 @@ namespace CadastroBanco
             foreach (DataGridViewRow row in dataGridViewDados.Rows)
             {
                 string value = cbPagamento.Text;
-                string pagamento = row.Cells[9].Value?.ToString();
-                string nome = row.Cells[7].Value?.ToString();
+                string pagamento = row.Cells[10].Value?.ToString();
+                string nome = row.Cells[8].Value?.ToString();
                 bool check = checkBox1.Checked;
                 bool exibeLinha = (pagamento == value);
                 DateTime cellDate;
@@ -408,12 +409,12 @@ namespace CadastroBanco
                     {
                         if (cbPessoas.Text == "(Todos)")
                         {
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
-                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                    valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
 
                                     // Define a cor da linha
                                     if (!colorMap.ContainsKey(cellDate))
@@ -437,14 +438,14 @@ namespace CadastroBanco
                                 row.Visible = false;
                             }
                         }
-                        else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        else if (row.Cells[8].Value != null && row.Cells[8].Value.ToString().Equals(cbPessoas.Text))
                         {
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
-                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                    valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
 
                                     if (!colorMap.ContainsKey(cellDate))
                                     {
@@ -473,9 +474,9 @@ namespace CadastroBanco
                         if (cbPessoas.Text == "(Todos)")
                         {
                             row.Visible = true;
-                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                            valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
 
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (!colorMap.ContainsKey(cellDate))
                                 {
@@ -489,12 +490,12 @@ namespace CadastroBanco
                                 row.DefaultCellStyle.BackColor = colorMap[cellDate];
                             }
                         }
-                        else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        else if (row.Cells[8].Value != null && row.Cells[8].Value.ToString().Equals(cbPessoas.Text))
                         {
                             row.Visible = true;
-                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                            valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
 
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (!colorMap.ContainsKey(cellDate))
                                 {
@@ -516,12 +517,12 @@ namespace CadastroBanco
                     {
                         if (cbPessoas.Text == "(Todos)")
                         {
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
-                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                    valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
 
                                     if (!colorMap.ContainsKey(cellDate))
                                     {
@@ -544,14 +545,14 @@ namespace CadastroBanco
                                 row.Visible = false;
                             }
                         }
-                        else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        else if (row.Cells[8].Value != null && row.Cells[8].Value.ToString().Equals(cbPessoas.Text))
                         {
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (cellDate.Month == dataPickerStart.Value.Month && cellDate.Year == dataPickerStart.Value.Year)
                                 {
                                     row.Visible = true;
-                                    valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                                    valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
 
                                     if (!colorMap.ContainsKey(cellDate))
                                     {
@@ -580,9 +581,9 @@ namespace CadastroBanco
                         if (cbPessoas.Text == "(Todos)")
                         {
                             row.Visible = true;
-                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                            valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
 
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (!colorMap.ContainsKey(cellDate))
                                 {
@@ -596,12 +597,12 @@ namespace CadastroBanco
                                 row.DefaultCellStyle.BackColor = colorMap[cellDate];
                             }
                         }
-                        else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals(cbPessoas.Text))
+                        else if (row.Cells[8].Value != null && row.Cells[8].Value.ToString().Equals(cbPessoas.Text))
                         {
                             row.Visible = true;
-                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                            valorTotal += Convert.ToDecimal(row.Cells[6].Value.ToString());
 
-                            if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                            if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
                                 if (!colorMap.ContainsKey(cellDate))
                                 {
@@ -690,7 +691,7 @@ namespace CadastroBanco
                 //Verifica se a classificação ou a descrição é igual ao texto buscado
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
-                    string BuscaDes = row.Cells[3].Value.ToString().Normalize();
+                    string BuscaDes = row.Cells[4].Value.ToString().Normalize();
                     string BuscaNomalizada = removerAcentos(BuscaDes);
                     var dados = BuscaDes.Split(' ');
                     var buscaTexto = Busca.Split(' ');
@@ -715,7 +716,7 @@ namespace CadastroBanco
                         row.Selected = true;
                     }
 
-                    BuscaDes = row.Cells[3].Value.ToString().Normalize();
+                    BuscaDes = row.Cells[4].Value.ToString().Normalize();
                     BuscaNomalizada = removerAcentos(BuscaDes);
                     canExibir = true;
                     foreach (var a in buscaTexto)
@@ -819,15 +820,16 @@ namespace CadastroBanco
             var linhaSelecionada = dataGridViewDados.Rows[index];
 
             string id = linhaSelecionada.Cells[0].Value.ToString();
-            string livroId = linhaSelecionada.Cells[1].Value.ToString();
-            string categoria = linhaSelecionada.Cells[2].Value.ToString();
-            string descricao = linhaSelecionada.Cells[3].Value.ToString();
-            decimal qnt = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
-            decimal preco = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
-            string data = linhaSelecionada.Cells[6].Value.ToString();
-            string nome_comprador = linhaSelecionada.Cells[7].Value.ToString();
-            string tell = linhaSelecionada.Cells[8].Value.ToString();
-            string pagamento = linhaSelecionada.Cells[9].Value.ToString();
+            string idVenda = linhaSelecionada.Cells[1].Value.ToString();
+            string livroId = linhaSelecionada.Cells[2].Value.ToString();
+            string categoria = linhaSelecionada.Cells[3].Value.ToString();
+            string descricao = linhaSelecionada.Cells[4].Value.ToString();
+            decimal qnt = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
+            decimal preco = decimal.Parse(linhaSelecionada.Cells[6].Value.ToString());
+            string data = linhaSelecionada.Cells[7].Value.ToString();
+            string nome_comprador = linhaSelecionada.Cells[8].Value.ToString();
+            string tell = linhaSelecionada.Cells[9].Value.ToString();
+            string pagamento = linhaSelecionada.Cells[10].Value.ToString();
             var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
 
             // Encontrar a linha correspondente pelo ID
@@ -874,19 +876,20 @@ namespace CadastroBanco
             int index = dataGridViewDados.SelectedRows[0].Index;
             var linhaSelecionada = dataGridViewDados.Rows[index];
 
-            string idv = linhaSelecionada.Cells[0].Value.ToString();
-            string livroId = linhaSelecionada.Cells[1].Value.ToString();
-            string categoria = linhaSelecionada.Cells[2].Value.ToString();
-            string descricao = linhaSelecionada.Cells[3].Value.ToString();
-            int qnt = int.Parse(linhaSelecionada.Cells[4].Value.ToString());
-            decimal preco = decimal.Parse(linhaSelecionada.Cells[5].Value.ToString());
-            string data = linhaSelecionada.Cells[6].Value.ToString();
-            string nome_comprador = linhaSelecionada.Cells[7].Value.ToString();
-            string tell = linhaSelecionada.Cells[8].Value.ToString();
-            string pagamento = linhaSelecionada.Cells[9].Value.ToString();
+            string id = linhaSelecionada.Cells[0].Value.ToString();
+            string idv = linhaSelecionada.Cells[1].Value.ToString();
+            string livroId = linhaSelecionada.Cells[2].Value.ToString();
+            string categoria = linhaSelecionada.Cells[3].Value.ToString();
+            string descricao = linhaSelecionada.Cells[4].Value.ToString();
+            int qnt = int.Parse(linhaSelecionada.Cells[5].Value.ToString());
+            decimal preco = decimal.Parse(linhaSelecionada.Cells[6].Value.ToString());
+            string data = linhaSelecionada.Cells[7].Value.ToString();
+            string nome_comprador = linhaSelecionada.Cells[8].Value.ToString();
+            string tell = linhaSelecionada.Cells[9].Value.ToString();
+            string pagamento = linhaSelecionada.Cells[10].Value.ToString();
             var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
 
-            int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(idv + "*"));
+            int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*" + idv + "*"));
 
             var linhasC = File.ReadAllLines(caminhoArquivoCliente).ToList();
             var linhasV = File.ReadAllLines(caminhoArquivoVendas).ToList();
@@ -896,7 +899,7 @@ namespace CadastroBanco
 
             if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
             {
-                if (!(string.IsNullOrEmpty(nome_comprador)) && pagamento == "Realizado")
+                /*if (!(string.IsNullOrEmpty(nome_comprador)) && pagamento == "Realizado")
                 {
                     DialogResult confirmResult = MessageBox.Show("Deseja devolver o valor em créditos do sistema?","", MessageBoxButtons.YesNo);
                    
@@ -928,9 +931,7 @@ namespace CadastroBanco
                         File.WriteAllLines(caminhoArquivoCliente, linhasC);
                     }
 
-
-
-                }
+                }*/
 
                 foreach(var linha in linhasP)
                 {
@@ -947,7 +948,7 @@ namespace CadastroBanco
                         string sit = dadosProduto[7].Trim();
                         string extra = dadosProduto[8].Trim();
 
-                        if (desc.Equals(descricao))
+                        if (idp.Equals(id))
                         {
                             int linhaParaAtualizarP = linhasP.FindIndex(l => l.StartsWith(idp + "*"));
                             int qntn = int.Parse(qntp) + qnt;
@@ -961,7 +962,7 @@ namespace CadastroBanco
                 pagamento = "Devolvido";
 
                 // Atualizar a linha com os novos dados
-                linhas[linhaParaAtualizar] = $"{idv}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+                linhas[linhaParaAtualizar] = $"{id}*{idv}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
 
                 // Escrever as alterações no arquivo
                 File.WriteAllLines(caminhoArquivoVendas, linhas);
@@ -1020,8 +1021,8 @@ namespace CadastroBanco
                 for (int i = 0; i < selectedRowCount; i++)
                 {
             
-                    dataGridViewDados.SelectedRows[i].Cells[9].Value = novoEstado;
-                    dataGridViewDados.SelectedRows[i].Cells[3].Value = dataGridViewDados.SelectedRows[i].Cells[3].Value + input;
+                    dataGridViewDados.SelectedRows[i].Cells[10].Value = novoEstado;
+                    dataGridViewDados.SelectedRows[i].Cells[4].Value = dataGridViewDados.SelectedRows[i].Cells[4].Value + input;
                 }
 
                 sb.Append("Total: " + selectedRowCount.ToString());
@@ -1041,23 +1042,24 @@ namespace CadastroBanco
                 {
 
                     string id = dataGridViewDados.SelectedRows[i].Cells[0].Value.ToString();
-                    string livroId = dataGridViewDados.SelectedRows[i].Cells[1].Value.ToString();
-                    string categoria = dataGridViewDados.SelectedRows[i].Cells[2].Value.ToString();
-                    string descricao = dataGridViewDados.SelectedRows[i].Cells[3].Value.ToString();
-                    decimal qnt = decimal.Parse(dataGridViewDados.SelectedRows[i].Cells[4].Value.ToString());
-                    decimal preco = decimal.Parse(dataGridViewDados.SelectedRows[i].Cells[5].Value.ToString());
-                    string data = dataGridViewDados.SelectedRows[i].Cells[6].Value.ToString();
-                    string nome_comprador = dataGridViewDados.SelectedRows[i].Cells[7].Value.ToString();
-                    string tell = dataGridViewDados.SelectedRows[i].Cells[8].Value.ToString();
-                    string pagamento = dataGridViewDados.SelectedRows[i].Cells[9].Value.ToString();
+                    string idV = dataGridViewDados.SelectedRows[i].Cells[1].Value.ToString();
+                    string livroId = dataGridViewDados.SelectedRows[i].Cells[2].Value.ToString();
+                    string categoria = dataGridViewDados.SelectedRows[i].Cells[3].Value.ToString();
+                    string descricao = dataGridViewDados.SelectedRows[i].Cells[4].Value.ToString();
+                    decimal qnt = decimal.Parse(dataGridViewDados.SelectedRows[i].Cells[5].Value.ToString());
+                    decimal preco = decimal.Parse(dataGridViewDados.SelectedRows[i].Cells[6].Value.ToString());
+                    string data = dataGridViewDados.SelectedRows[i].Cells[7].Value.ToString();
+                    string nome_comprador = dataGridViewDados.SelectedRows[i].Cells[8].Value.ToString();
+                    string tell = dataGridViewDados.SelectedRows[i].Cells[9].Value.ToString();
+                    string pagamento = dataGridViewDados.SelectedRows[i].Cells[10].Value.ToString();
                     var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
                     // Encontrar a linha correspondente pelo ID
-                    int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*"));
+                    int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(idV + "*"));
 
                     if (linhaParaAtualizar >= 0)
                     {
                         // Atualizar a linha com os novos dados
-                        linhas[linhaParaAtualizar] = $"{id}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+                        linhas[linhaParaAtualizar] = $"{id}*{idV}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
 
                         // Escrever as alterações no arquivo
                         File.WriteAllLines(caminhoArquivoVendas, linhas);
@@ -1100,7 +1102,7 @@ namespace CadastroBanco
                 //Verifica se a classificação ou a descrição é igual ao texto buscado
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
-                    string BuscaDes = row.Cells[3].Value.ToString().Normalize();
+                    string BuscaDes = row.Cells[4].Value.ToString().Normalize();
                     string BuscaNomalizada = removerAcentos(BuscaDes);
                     var dados = BuscaDes.Split(' ');
                     var buscaTexto = Busca.Split(' ');
@@ -1125,7 +1127,7 @@ namespace CadastroBanco
                         row.Selected = true;
                     }
 
-                    BuscaDes = row.Cells[3].Value.ToString().Normalize();
+                    BuscaDes = row.Cells[4].Value.ToString().Normalize();
                     BuscaNomalizada = removerAcentos(BuscaDes);
                     canExibir = true;
                     foreach (var a in buscaTexto)
