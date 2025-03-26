@@ -260,3 +260,5 @@ C:\Users\Lepec\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\o
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizarCliente.resources
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormClientes.resources
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormDesconto.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizarCliente.resources
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormClientes.resources

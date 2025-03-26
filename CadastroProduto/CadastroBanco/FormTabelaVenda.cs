@@ -25,7 +25,10 @@ namespace CadastroBanco
             DateTime data1 = new DateTime();
             data1 = dataPickerStart.Value;
 
-            
+            dataPickerStart.Format = DateTimePickerFormat.Custom;
+            dataPickerStart.CustomFormat = "MMMM/yyyy"; // Exibe apenas mês e ano
+            dataPickerStart.ShowUpDown = true; // Permite alterar mês/ano com setas
+
             cbPessoas.Items.Add("(Todos)");
             cbPessoas.SelectedIndex = 0;
             cbPagamento.SelectedIndex = 0;
