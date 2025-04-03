@@ -219,7 +219,7 @@ namespace CadastroBanco
                 string telefone = dadosCliente[2].Trim();
                 string valorDivida = dadosCliente[3].Trim();
                 string desconto = dadosCliente[4].Trim();
-                string credito = dadosCliente[5].Trim();
+                string credito = "0";
 
                 decimal descont = Convert.ToDecimal(desconto);
                 
@@ -300,7 +300,7 @@ namespace CadastroBanco
                         string cliente = dadosCliente[1].Trim();
                         string telefone = dadosCliente[2].Trim();
                         string desconto = dadosCliente[4].Trim();
-                        string credito = dadosCliente[5].Trim();
+                        string credito = "0";
 
                         if (pessoa.Equals(cliente))
                         {
@@ -333,7 +333,7 @@ namespace CadastroBanco
                 string cliente = dadosCliente[1].Trim();
                 string telefone = dadosCliente[2].Trim();
                 string desconto = dadosCliente[4].Trim();
-                string credito = dadosCliente[5].Trim();
+                string credito = "0";
                 decimal valorDivida = 0;
 
                 foreach (var linhaV in linhasVendas)
@@ -342,7 +342,7 @@ namespace CadastroBanco
 
                     if (dadosVenda.Length >= 10)
                     {
-                        string precoVenda = dadosVenda[6].Trim();
+                        string precoVenda = dadosVenda[5].Trim();
                         string pessoa = dadosVenda[8].Trim();
 
                         if (pessoa.Equals(cliente))

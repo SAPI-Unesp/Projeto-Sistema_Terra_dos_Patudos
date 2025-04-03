@@ -268,9 +268,9 @@ namespace CadastroBanco
                 var dadosVenda = linhaVenda.Split('*');
                 if (dadosVenda.Length >= 10)
                 {
-                    string precoVenda = dadosVenda[5].Trim();
-                    string pessoa = dadosVenda[7].Trim();
-                    string telefonep = dadosVenda[8].Trim();
+                    string precoVenda = dadosVenda[6].Trim();
+                    string pessoa = dadosVenda[8].Trim();
+                    string telefonep = dadosVenda[9].Trim();
 
                     bool clienteExistente = false;
 
@@ -280,7 +280,7 @@ namespace CadastroBanco
                         string cliente = dadosCliente[1].Trim();
                         string telefone = dadosCliente[2].Trim();
                         string desconto = dadosCliente[4].Trim();
-                        string credito = dadosCliente[5].Trim();
+                        string credito = "0";
 
                         if (pessoa.Equals(cliente))
                         {
@@ -313,7 +313,7 @@ namespace CadastroBanco
                 string cliente = dadosCliente[1].Trim();
                 string telefone = dadosCliente[2].Trim();
                 string desconto = dadosCliente[4].Trim();
-                string credito = dadosCliente[5].Trim();
+                string credito = "0";
                 decimal valorDivida = 0;
 
                 foreach (var linhaV in linhasVendas)
@@ -323,7 +323,7 @@ namespace CadastroBanco
                     if (dadosVenda.Length >= 10)
                     {
                         string precoVenda = dadosVenda[5].Trim();
-                        string pessoa = dadosVenda[7].Trim();
+                        string pessoa = dadosVenda[8].Trim();
 
                         if (pessoa.Equals(cliente))
                         {

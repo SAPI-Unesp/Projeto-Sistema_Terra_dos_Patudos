@@ -30,7 +30,7 @@ namespace CadastroBanco
         private void FormClientes_Load(object sender, EventArgs e)
         {
             ExibirTudo();
-            CompararESalvarDados();
+            //CompararESalvarDados();
         }
 
         private void CompararESalvarDados()
@@ -270,7 +270,7 @@ namespace CadastroBanco
             string cliente = linhaSelecionada.Cells[1].Value.ToString();
             string telefone = linhaSelecionada.Cells[2].Value.ToString();
             decimal divida = decimal.Parse(linhaSelecionada.Cells[3].Value.ToString());
-            decimal credito = decimal.Parse(linhaSelecionada.Cells[4].Value.ToString());
+            decimal credito = 0;
 
             // Abrir o formulário de atualização com os dados atuais
             FormAtualizarCliente formAtualizarCliente = new FormAtualizarCliente(id, cliente, telefone, credito);
@@ -284,7 +284,7 @@ namespace CadastroBanco
                 if (linhaParaAtualizar >= 0)
                 {
                     // Atualizar a linha com os novos dados
-                    linhasC[linhaParaAtualizar] = $"{id}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{divida}*0*{formAtualizarCliente.Credito}";
+                    linhasC[linhaParaAtualizar] = $"{id}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{divida}*0";
 
                     // Escrever as alterações no arquivo
                     File.WriteAllLines(caminhoArquivoCliente, linhasC);

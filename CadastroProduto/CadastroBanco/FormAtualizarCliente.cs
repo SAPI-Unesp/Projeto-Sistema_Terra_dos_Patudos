@@ -22,14 +22,12 @@ namespace CadastroBanco
         string itensComId = "itensComId.txt";
         public string Cliente { get; private set; }
         public string Telefone { get; private set; }
-        public decimal Credito { get; private set; }
         public FormAtualizarCliente(string id ,string clienteo, string telefone, decimal credito)
         {
             InitializeComponent();
             textBoxID.Text = id;
             textBoxCliente.Text = clienteo;
             textBoxTelefone.Text = telefone;
-            numericUpDownCredito.Value = credito;
         }
 
         private void FormAtualizarCliente_Load(object sender, EventArgs e)
@@ -66,7 +64,6 @@ namespace CadastroBanco
 
             Cliente = textBoxCliente.Text;
             Telefone = textBoxTelefone.Text;
-            Credito = numericUpDownCredito.Value;
 
             this.DialogResult = DialogResult.OK;
             this.Close();
