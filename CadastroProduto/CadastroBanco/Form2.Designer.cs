@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -52,6 +53,9 @@
             this.imgAddCarrinho = new System.Windows.Forms.PictureBox();
             this.imgVerCarrinho = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textQnt = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgAddCarrinho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVerCarrinho)).BeginInit();
@@ -322,6 +326,29 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // textQnt
+            // 
+            this.textQnt.Location = new System.Drawing.Point(739, 567);
+            this.textQnt.Name = "textQnt";
+            this.textQnt.Size = new System.Drawing.Size(107, 20);
+            this.textQnt.TabIndex = 22;
+            this.textQnt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(612, 567);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Quantidade de produtos";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +356,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(970, 600);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textQnt);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.imgVerCarrinho);
             this.Controls.Add(this.imgAddCarrinho);
@@ -383,5 +412,8 @@
         private System.Windows.Forms.PictureBox imgAddCarrinho;
         private System.Windows.Forms.PictureBox imgVerCarrinho;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textQnt;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label2;
     }
 }

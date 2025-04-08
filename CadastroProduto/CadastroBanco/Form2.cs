@@ -166,7 +166,7 @@ namespace CadastroBanco
         public void ExibirDados()
         {
             dataGridViewDados.Rows.Clear(); // Limpa as linhas antes de exibir
-
+            double totalQnt = 0;
             if (File.Exists(caminhoArquivo))
             {
                 var linhas = File.ReadAllLines(caminhoArquivo);
@@ -185,7 +185,8 @@ namespace CadastroBanco
                         string preco = dados[5].Trim();
                         string data = dados[6].Trim();
                         string venda = dados[7].Trim();
-
+                   
+                        totalQnt += Convert.ToDouble(qnt);
                         // Adicionar os dados no DataGridView
                         int rowIndex = 0;
                         if (Convert.ToInt32(qnt) == 0)
@@ -248,6 +249,7 @@ namespace CadastroBanco
                 string BuscaDes = row.Cells[1].Value.ToString();
                 row.Visible = BuscaCat.ToLower().Equals(BuscaDes.ToLower());
             }
+            textQnt.Text = totalQnt.ToString();
         }
 
 
@@ -1200,6 +1202,16 @@ namespace CadastroBanco
                 dataGridViewDados.ClearSelection();
                 return;
             }
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
