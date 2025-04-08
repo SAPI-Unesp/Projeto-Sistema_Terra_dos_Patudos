@@ -32,7 +32,7 @@ namespace CadastroBanco
             cbPessoas.Items.Add("(Todos)");
             cbPessoas.SelectedIndex = 0;
             cbPagamento.SelectedIndex = 0;
-            checkBox1.Checked = true;
+            checkBox1.Checked = false;
             Pagamento();
             ExibirPessoa();
             ExibirPessoa();
@@ -128,7 +128,7 @@ namespace CadastroBanco
                 {
                     DateTime cellDate;
                     bool check = checkBox1.Checked;
-                    if (!check)
+                    if (check)
                     {
                         if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                         {
@@ -165,7 +165,7 @@ namespace CadastroBanco
                     {
                         DateTime cellDate;
                         bool check = checkBox1.Checked;
-                        if (!check)
+                        if (check)
                         {
                             if (DateTime.TryParse(row.Cells[7].Value?.ToString(), out cellDate))
                             {
@@ -224,7 +224,7 @@ namespace CadastroBanco
                 decimal descont = Convert.ToDecimal(desconto);
                 
                 //ignorar data
-                if(checkBox1.Checked)
+                if(!checkBox1.Checked)
                 {
                     if (pessoa == cliente && cbPagamento.Text != "Realizado")
                     {
@@ -408,7 +408,7 @@ namespace CadastroBanco
 
                 if (value == "(Todos)")
                 {
-                    if (!check)
+                    if (check)
                     {
                         if (cbPessoas.Text == "(Todos)")
                         {
@@ -440,6 +440,18 @@ namespace CadastroBanco
                             {
                                 row.Visible = false;
                             }
+                            if (row.Cells[10].Value.ToString() == "Pendente")
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(156, 0, 0);
+                            }
+                            else if(row.Cells[10].Value.ToString() == "Realizado")
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(0, 156, 0);
+                            }
+                            else
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(0, 0, 156);
+                            }
                         }
                         else if (row.Cells[8].Value != null && row.Cells[8].Value.ToString().Equals(cbPessoas.Text))
                         {
@@ -469,6 +481,18 @@ namespace CadastroBanco
                             else
                             {
                                 row.Visible = false;
+                            }
+                            if (row.Cells[10].Value.ToString() == "Pendente")
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(156, 0, 0);
+                            }
+                            else if (row.Cells[10].Value.ToString() == "Realizado")
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(0, 156, 0);
+                            }
+                            else
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(0, 0, 156);
                             }
                         }
                     }
@@ -547,6 +571,18 @@ namespace CadastroBanco
                             {
                                 row.Visible = false;
                             }
+                            if (row.Cells[10].Value.ToString() == "Pendente")
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(156, 0, 0);
+                            }
+                            else if (row.Cells[10].Value.ToString() == "Realizado")
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(0, 156, 0);
+                            }
+                            else
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(0, 0, 156);
+                            }
                         }
                         else if (row.Cells[8].Value != null && row.Cells[8].Value.ToString().Equals(cbPessoas.Text))
                         {
@@ -576,6 +612,18 @@ namespace CadastroBanco
                             else
                             {
                                 row.Visible = false;
+                            }
+                            if (row.Cells[10].Value.ToString() == "Pendente")
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(156, 0, 0);
+                            }
+                            else if (row.Cells[10].Value.ToString() == "Realizado")
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(0, 156, 0);
+                            }
+                            else
+                            {
+                                row.Cells[10].Style.ForeColor = Color.FromArgb(0, 0, 156);
                             }
                         }
                     }
@@ -624,6 +672,18 @@ namespace CadastroBanco
                 else
                 {
                     row.Visible = false;
+                }
+                if (row.Cells[10].Value.ToString() == "Pendente")
+                {
+                    row.Cells[10].Style.ForeColor = Color.FromArgb(156, 0, 0);
+                }
+                else if (row.Cells[10].Value.ToString() == "Realizado")
+                {
+                    row.Cells[10].Style.ForeColor = Color.FromArgb(0, 156, 0);
+                }
+                else
+                {
+                    row.Cells[10].Style.ForeColor = Color.FromArgb(0, 0, 156);
                 }
             }
             txtTotal.Text = "R$ " + valorTotal.ToString();
@@ -984,7 +1044,7 @@ namespace CadastroBanco
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
            
-            if (!checkBox1.Checked)
+            if (checkBox1.Checked)
             {
                 dataPickerStart.Enabled = true;
             }
