@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Security;
+using System.Reflection;
 namespace CadastroBanco
 {
     public partial class FormTabelaVenda : Form
