@@ -33,6 +33,15 @@ namespace CadastroBanco
             cbPessoas.SelectedIndex = 0;
             cbPagamento.SelectedIndex = 0;
             checkBox1.Checked = false;
+
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type dgvType = dataGridViewDados.GetType();
+                PropertyInfo pi = dgvType.GetProperty("DoubleBuffered",
+                BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(dataGridViewDados, true, null);
+            }
+            
             Pagamento();
             ExibirPessoa();
             ExibirPessoa();
