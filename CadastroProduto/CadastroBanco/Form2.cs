@@ -1,4 +1,4 @@
-﻿using MySqlX.XDevAPI;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
 using System.Drawing;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
+
 namespace CadastroBanco
 {
     public partial class Form2 : Form
@@ -1017,28 +1019,44 @@ namespace CadastroBanco
                 excel.Visible = true;
                 Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
                 Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
+                Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
+                sheet1.Cells.Font.Size = 10;
+
                 int StartCol = 1;
                 int StartRow = 1;
                 int j = 0, i = 0;
 
+                   
                 //Write Headers
-                for (j = 0; j < dataGridViewDados.Columns.Count; j++)
+                for (j = 1; j < dataGridViewDados.Columns.Count; j++)
                 {
-                    Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + j];
-                    myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
+                    Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + (j-1)];
+                    if (dataGridViewDados.Columns[j].HeaderText == "Quantidade em Estoque")
+                        myRange.Value2 = "QTDE";
+                    else if (dataGridViewDados.Columns[j].HeaderText == "Pag do Livro")
+                        myRange.Value2 = "Pag";
+
+                    else
+                        myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
+
+                    myRange.Columns.AutoFit();
+                    
                 }
 
                 StartRow++;
 
                 //Write datagridview content
-                for (i = 0; i < dataGridViewDados.Rows.Count; i++)
+                for (i = 1; i < dataGridViewDados.Rows.Count; i++)
                 {
-                    for (j = 0; j < dataGridViewDados.Columns.Count; j++)
+                    sheet1.Columns.AutoFit();
+                    for (j = 1; j < dataGridViewDados.Columns.Count; j++)
                     {
                         try
                         {
-                            Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + i, StartCol + j];
+                            Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + (i-1), StartCol + (j-1)];
                             myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
+                            sheet1.Cells[i-1, j-1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
                         }
                         catch
                         {
@@ -1046,6 +1064,7 @@ namespace CadastroBanco
                         }
                     }
                 }
+            
             }
             catch (Exception ex)
             {
