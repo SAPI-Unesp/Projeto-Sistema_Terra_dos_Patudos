@@ -30,6 +30,13 @@ namespace CadastroBanco
             // Impedir edição direta no DataGridView
             dataGridViewDados.AllowUserToAddRows = false;
             dataGridViewDados.ReadOnly = true;
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type dgvType = dataGridViewDados.GetType();
+                PropertyInfo pi = dgvType.GetProperty("DoubleBuffered",
+                BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(dataGridViewDados, true, null);
+            }
         }
 
         // Adicionar dados ao arquivo
