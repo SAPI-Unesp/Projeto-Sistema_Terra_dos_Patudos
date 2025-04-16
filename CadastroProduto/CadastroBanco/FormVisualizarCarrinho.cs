@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace CadastroBanco
 {
@@ -447,6 +448,12 @@ namespace CadastroBanco
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://www.youtube.com/watch?v=35rYnRX_8J8&list=PLhEZRWtYRMyt4enwYFTX7io5NHKbluSaG")
+            { UseShellExecute = true });
         }
     }
 }

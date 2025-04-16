@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Divida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewDados
@@ -59,19 +61,6 @@
             this.dataGridViewDados.Size = new System.Drawing.Size(543, 424);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(573, 12);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(103, 47);
-            this.btnEditar.TabIndex = 18;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // ID
             // 
@@ -101,17 +90,43 @@
             this.Divida.Name = "Divida";
             this.Divida.ReadOnly = true;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(573, 12);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(103, 47);
+            this.btnEditar.TabIndex = 18;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.duvida;
+            this.pictureBox2.Location = new System.Drawing.Point(650, 416);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 448);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridViewDados);
             this.Name = "FormClientes";
             this.Text = "Tabela de Clientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +139,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Divida;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

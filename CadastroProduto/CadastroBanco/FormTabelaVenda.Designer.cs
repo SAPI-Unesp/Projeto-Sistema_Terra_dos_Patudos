@@ -57,9 +57,11 @@ namespace CadastroBanco
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewDados
@@ -358,11 +360,23 @@ namespace CadastroBanco
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CadastroBanco.Properties.Resources.duvida;
+            this.pictureBox3.Location = new System.Drawing.Point(310, 28);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // FormTabelaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 655);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -386,6 +400,7 @@ namespace CadastroBanco
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,5 +436,6 @@ namespace CadastroBanco
         private System.Windows.Forms.DataGridViewTextBoxColumn comprador;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendido;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

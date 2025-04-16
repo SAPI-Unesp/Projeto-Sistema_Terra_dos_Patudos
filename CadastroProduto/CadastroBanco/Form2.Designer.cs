@@ -50,16 +50,18 @@
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.imgAddCarrinho = new System.Windows.Forms.PictureBox();
-            this.imgVerCarrinho = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textQnt = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgVerCarrinho = new System.Windows.Forms.PictureBox();
+            this.imgAddCarrinho = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAddCarrinho)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVerCarrinho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVerCarrinho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAddCarrinho)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -288,18 +290,51 @@
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // imgAddCarrinho
+            // textQnt
             // 
-            this.imgAddCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgAddCarrinho.ErrorImage = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
-            this.imgAddCarrinho.Image = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
-            this.imgAddCarrinho.Location = new System.Drawing.Point(789, 19);
-            this.imgAddCarrinho.Name = "imgAddCarrinho";
-            this.imgAddCarrinho.Size = new System.Drawing.Size(88, 53);
-            this.imgAddCarrinho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAddCarrinho.TabIndex = 19;
-            this.imgAddCarrinho.TabStop = false;
-            this.imgAddCarrinho.Click += new System.EventHandler(this.imgAddCarrinho_Click);
+            this.textQnt.Location = new System.Drawing.Point(789, 568);
+            this.textQnt.Name = "textQnt";
+            this.textQnt.Size = new System.Drawing.Size(68, 20);
+            this.textQnt.TabIndex = 22;
+            this.textQnt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(653, 575);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Quantidade de produtos";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.duvida;
+            this.pictureBox2.Location = new System.Drawing.Point(316, 559);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
+            this.pictureBox1.Image = global::CadastroBanco.Properties.Resources.Search_alt_fill_2x;
+            this.pictureBox1.Location = new System.Drawing.Point(356, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // imgVerCarrinho
             // 
@@ -314,40 +349,18 @@
             this.imgVerCarrinho.TabStop = false;
             this.imgVerCarrinho.Click += new System.EventHandler(this.imgVerCarrinho_Click);
             // 
-            // pictureBox1
+            // imgAddCarrinho
             // 
-            this.pictureBox1.ErrorImage = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
-            this.pictureBox1.Image = global::CadastroBanco.Properties.Resources.Search_alt_fill_2x;
-            this.pictureBox1.Location = new System.Drawing.Point(356, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // textQnt
-            // 
-            this.textQnt.Location = new System.Drawing.Point(739, 567);
-            this.textQnt.Name = "textQnt";
-            this.textQnt.Size = new System.Drawing.Size(107, 20);
-            this.textQnt.TabIndex = 22;
-            this.textQnt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(612, 567);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Quantidade de produtos";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.imgAddCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgAddCarrinho.ErrorImage = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
+            this.imgAddCarrinho.Image = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
+            this.imgAddCarrinho.Location = new System.Drawing.Point(789, 19);
+            this.imgAddCarrinho.Name = "imgAddCarrinho";
+            this.imgAddCarrinho.Size = new System.Drawing.Size(88, 53);
+            this.imgAddCarrinho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAddCarrinho.TabIndex = 19;
+            this.imgAddCarrinho.TabStop = false;
+            this.imgAddCarrinho.Click += new System.EventHandler(this.imgAddCarrinho_Click);
             // 
             // Form2
             // 
@@ -356,6 +369,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(970, 600);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textQnt);
             this.Controls.Add(this.pictureBox1);
@@ -378,9 +392,10 @@
             this.Text = "Sistema Bazar";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAddCarrinho)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVerCarrinho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVerCarrinho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAddCarrinho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,5 +430,6 @@
         private System.Windows.Forms.TextBox textQnt;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

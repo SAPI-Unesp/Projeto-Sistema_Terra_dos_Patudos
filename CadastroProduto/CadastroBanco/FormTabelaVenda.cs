@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Security;
 using System.Reflection;
+using System.Diagnostics;
 namespace CadastroBanco
 {
     public partial class FormTabelaVenda : Form
@@ -1294,6 +1295,12 @@ namespace CadastroBanco
             {
                 mesesComboBox.Visible = true;
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://www.youtube.com/watch?v=HAImeHSBUfE&list=PLhEZRWtYRMyt4enwYFTX7io5NHKbluSaG")
+            { UseShellExecute = true });
         }
     }
 

@@ -9,6 +9,7 @@ using static System.Windows.Forms.LinkLabel;
 using System.Drawing;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace CadastroBanco
 {
@@ -1239,6 +1240,19 @@ namespace CadastroBanco
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            /*Process.Start(new ProcessStartInfo("https://www.youtube.com/playlist?list=PLhEZRWtYRMyt4enwYFTX7io5NHKbluSaG")
+            {UseShellExecute = true});*/
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://www.youtube.com/watch?v=skhtgRXdeys&list=PLhEZRWtYRMyt4enwYFTX7io5NHKbluSaG&index")
+            { UseShellExecute = true });
         }
     }
 }

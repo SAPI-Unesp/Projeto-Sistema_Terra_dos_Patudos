@@ -51,7 +51,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataPrazo = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewDados
@@ -275,11 +277,23 @@
             this.dataPrazo.TabIndex = 30;
             this.dataPrazo.Value = new System.DateTime(2024, 11, 26, 0, 0, 0, 0);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.duvida;
+            this.pictureBox2.Location = new System.Drawing.Point(1131, 445);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // FormVisualizarCarrinho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 480);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dataPrazo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -300,6 +314,7 @@
             this.Text = "Carrinho";
             this.Load += new System.EventHandler(this.FormVisualizarCarrinho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdVendida;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

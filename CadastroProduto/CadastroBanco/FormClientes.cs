@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace CadastroBanco
 {
@@ -349,6 +350,12 @@ namespace CadastroBanco
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://www.youtube.com/watch?v=eim9yoGW0eE&list=PLhEZRWtYRMyt4enwYFTX7io5NHKbluSaG")
+            { UseShellExecute = true });
         }
     }
 }

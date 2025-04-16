@@ -93,6 +93,26 @@ namespace CadastroBanco.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Design_sem_nome__1__removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Design_sem_nome__1_-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap duvida {
+            get {
+                object obj = ResourceManager.GetObject("duvida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ellipse_47 {
             get {
                 object obj = ResourceManager.GetObject("Ellipse 47", resourceCulture);

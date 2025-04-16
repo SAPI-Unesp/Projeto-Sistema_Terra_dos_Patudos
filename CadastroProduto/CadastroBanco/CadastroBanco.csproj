@@ -224,5 +224,11 @@
   <ItemGroup>
     <None Include="Resources\ver carrinho.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design_sem_nome__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duvida.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
