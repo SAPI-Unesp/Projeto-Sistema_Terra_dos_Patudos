@@ -59,7 +59,6 @@ namespace CadastroBanco
             if (dataGridViewDados.SelectedRows.Count > 0) 
                 mesesComboBox.Visible = true;
             mesesComboBox.Visible = true;
-            
        
         }
 
