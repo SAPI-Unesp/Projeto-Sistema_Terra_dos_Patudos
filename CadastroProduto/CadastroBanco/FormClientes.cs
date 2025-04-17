@@ -152,9 +152,9 @@ namespace CadastroBanco
                 var dadosVenda = linhaVenda.Split('*');
                 if (dadosVenda.Length >= 10)
                 {
-                    string precoVenda = dadosVenda[5].Trim();
-                    string pessoa = dadosVenda[7].Trim();
-                    string telefonep = dadosVenda[8].Trim();
+                    string precoVenda = dadosVenda[6].Trim();
+                    string pessoa = dadosVenda[8].Trim();
+                    string telefonep = dadosVenda[9].Trim();
 
                     bool clienteExistente = false;
 
@@ -206,8 +206,8 @@ namespace CadastroBanco
 
                     if(dadosVenda.Length >= 10)
                     {
-                        string precoVenda = dadosVenda[5].Trim();
-                        string pessoa = dadosVenda[7].Trim();
+                        string precoVenda = dadosVenda[6].Trim();
+                        string pessoa = dadosVenda[8].Trim();
 
                         if (pessoa.Equals(cliente))
                         {
@@ -311,22 +311,23 @@ namespace CadastroBanco
                         var dadosVenda = linha.Split('*');
                         if (dadosVenda.Length >= 10)
                         {
-                            string idv = dadosVenda[0].Trim();
-                            string idl = dadosVenda[1].Trim();
-                            string categoriaVenda = dadosVenda[2].Trim();
-                            string descricaoVenda = dadosVenda[3].Trim();
-                            string qntVenda = dadosVenda[4].Trim();
-                            string precoVenda = dadosVenda[5].Trim();
-                            string dataVenda = dadosVenda[6].Trim();
-                            string pessoa = dadosVenda[7].Trim();
-                            string telefonev = dadosVenda[8].Trim();
-                            string pendente = dadosVenda[9].Trim();
+                            string id = dadosVenda[0].Trim();
+                            string idv = dadosVenda[1].Trim();
+                            string idl = dadosVenda[2].Trim();
+                            string categoriaVenda = dadosVenda[3].Trim();
+                            string descricaoVenda = dadosVenda[4].Trim();
+                            string qntVenda = dadosVenda[5].Trim();
+                            string precoVenda = dadosVenda[6].Trim();
+                            string dataVenda = dadosVenda[7].Trim();
+                            string pessoa = dadosVenda[8].Trim();
+                            string telefonev = dadosVenda[9].Trim();
+                            string pendente = dadosVenda[10].Trim();
 
                             if (pessoa.Equals(cliente))
                             {
                                 int linhasParaAtualizar = linhasV2.FindIndex(l => l.StartsWith(idv + "*"));
                                 //MessageBox.Show(linhasParaAtualizar.ToString());
-                                linhasV[linhasParaAtualizar] = $"{idv}*{idl}*{categoriaVenda}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{pendente}";
+                                linhasV[linhasParaAtualizar] = $"{id}{idv}*{idl}*{categoriaVenda}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{pendente}";
                                 
                             }
                         }
