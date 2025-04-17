@@ -334,7 +334,7 @@ namespace CadastroBanco
 
                     if (dadosVenda.Length >= 10)
                     {
-                        string precoVenda = dadosVenda[5].Trim();
+                        string precoVenda = dadosVenda[6].Trim();
                         string pessoa = dadosVenda[8].Trim();
 
                         if (pessoa.Equals(cliente))
