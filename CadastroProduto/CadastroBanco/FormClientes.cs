@@ -311,7 +311,7 @@ namespace CadastroBanco
                         var dadosVenda = linha.Split('*');
                         if (dadosVenda.Length >= 10)
                         {
-                            string id = dadosVenda[0].Trim();
+                            string ido = dadosVenda[0].Trim();
                             string idv = dadosVenda[1].Trim();
                             string idl = dadosVenda[2].Trim();
                             string categoriaVenda = dadosVenda[3].Trim();
@@ -327,7 +327,7 @@ namespace CadastroBanco
                             {
                                 int linhasParaAtualizar = linhasV2.FindIndex(l => l.StartsWith(idv + "*"));
                                 //MessageBox.Show(linhasParaAtualizar.ToString());
-                                linhasV[linhasParaAtualizar] = $"{id}{idv}*{idl}*{categoriaVenda}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{pendente}";
+                                linhasV[linhasParaAtualizar] = $"{ido}{idv}*{idl}*{categoriaVenda}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{pendente}";
                                 
                             }
                         }
@@ -341,6 +341,10 @@ namespace CadastroBanco
                 {
                     MessageBox.Show(exc.Message);
                 }
+            }
+            else if(formAtualizarCliente.ShowDialog() == DialogResult.Cancel)
+            {
+
             }
             else
             {
