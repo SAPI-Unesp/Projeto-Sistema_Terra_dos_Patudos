@@ -105,6 +105,8 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.duvida;
             this.pictureBox2.Location = new System.Drawing.Point(650, 416);
             this.pictureBox2.Name = "pictureBox2";

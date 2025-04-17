@@ -79,6 +79,7 @@
             // 
             this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAdicionar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAdicionar.Location = new System.Drawing.Point(19, 548);
@@ -106,6 +107,7 @@
             // btnExibir
             // 
             this.btnExibir.BackColor = System.Drawing.Color.Silver;
+            this.btnExibir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExibir.Location = new System.Drawing.Point(594, 26);
             this.btnExibir.Name = "btnExibir";
@@ -119,6 +121,7 @@
             // 
             this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAtualizar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAtualizar.Location = new System.Drawing.Point(215, 548);
@@ -133,6 +136,7 @@
             // 
             this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDeletar.BackColor = System.Drawing.Color.Salmon;
+            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnDeletar.Location = new System.Drawing.Point(124, 548);
@@ -244,6 +248,7 @@
             // tabelaVenda
             // 
             this.tabelaVenda.BackColor = System.Drawing.Color.Silver;
+            this.tabelaVenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabelaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabelaVenda.Location = new System.Drawing.Point(513, 25);
             this.tabelaVenda.Name = "tabelaVenda";
@@ -267,6 +272,7 @@
             // btnCliente
             // 
             this.btnCliente.BackColor = System.Drawing.Color.Silver;
+            this.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.Location = new System.Drawing.Point(432, 25);
             this.btnCliente.Name = "btnCliente";
@@ -280,6 +286,7 @@
             // 
             this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnImprimir.Location = new System.Drawing.Point(863, 548);
@@ -292,6 +299,7 @@
             // 
             // textQnt
             // 
+            this.textQnt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textQnt.Location = new System.Drawing.Point(789, 568);
             this.textQnt.Name = "textQnt";
             this.textQnt.Size = new System.Drawing.Size(68, 20);
@@ -305,6 +313,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(653, 575);
             this.label2.Name = "label2";
@@ -315,6 +324,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.duvida;
             this.pictureBox2.Location = new System.Drawing.Point(316, 559);
@@ -327,6 +337,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.ErrorImage = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
             this.pictureBox1.Image = global::CadastroBanco.Properties.Resources.Search_alt_fill_2x;
             this.pictureBox1.Location = new System.Drawing.Point(356, 26);
@@ -340,6 +351,7 @@
             // imgVerCarrinho
             // 
             this.imgVerCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgVerCarrinho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgVerCarrinho.ErrorImage = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
             this.imgVerCarrinho.Image = global::CadastroBanco.Properties.Resources.ver_carrinho;
             this.imgVerCarrinho.Location = new System.Drawing.Point(872, 19);
@@ -353,6 +365,7 @@
             // imgAddCarrinho
             // 
             this.imgAddCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgAddCarrinho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgAddCarrinho.ErrorImage = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
             this.imgAddCarrinho.Image = global::CadastroBanco.Properties.Resources.adionar_no_carrinho;
             this.imgAddCarrinho.Location = new System.Drawing.Point(789, 19);
@@ -389,6 +402,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Form2";
             this.Text = "Sistema Bazar";
             this.Load += new System.EventHandler(this.Form2_Load);
