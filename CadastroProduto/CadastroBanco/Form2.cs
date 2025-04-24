@@ -10,6 +10,9 @@ using System.Drawing;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Reflection;
 using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace CadastroBanco
 {
@@ -709,7 +712,7 @@ namespace CadastroBanco
         }
 
         private void btnVender_Click(object sender, EventArgs e)
-        {
+        {/*
             if (dataGridViewDados.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um item para vender.");
@@ -773,7 +776,7 @@ namespace CadastroBanco
                 MessageBox.Show("Erro ao vender o item.");
             }
 
-            ExibirTudo();
+            ExibirTudo();*/
         }
 
         /*
@@ -1023,54 +1026,91 @@ namespace CadastroBanco
                 Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
                 sheet1.Cells.Font.Size = 10;
 
-                int StartCol = 1;
-                int StartRow = 1;
-                int j = 0, i = 0;
 
-                   
-                //Write Headers
-                for (j = 1; j < dataGridViewDados.Columns.Count; j++)
+                var formProgresso = new FormVender();
+                formProgresso.Show();
+
+
+                BackgroundWorker worker = new BackgroundWorker();
+                worker.WorkerReportsProgress = true;
+                    worker.WorkerSupportsCancellation = true;
+                worker.DoWork += (s, args) =>
                 {
-                    Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + (j-1)];
-                    if (dataGridViewDados.Columns[j].HeaderText == "Quantidade em Estoque")
-                        myRange.Value2 = "QTDE";
-                    else if (dataGridViewDados.Columns[j].HeaderText == "Pag do Livro")
-                        myRange.Value2 = "Pag";
 
-                    else
-                        myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
 
-                    myRange.Columns.AutoFit();
-                    
-                }
 
-                StartRow++;
+                    int StartCol = 1;
+                    int StartRow = 1;
+                    int j = 0, i = 0;
 
-                //Write datagridview content
-                for (i = 1; i < dataGridViewDados.Rows.Count; i++)
-                {
-                    sheet1.Columns.AutoFit();
+
+                    //Write Headers
                     for (j = 1; j < dataGridViewDados.Columns.Count; j++)
                     {
-                        try
+                        if (formProgresso.Cancelar == true)
                         {
-                            Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + (i-1), StartCol + (j-1)];
-                            myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
-                            sheet1.Cells[i-1, j-1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-
+                            args.Cancel = true;
                         }
-                        catch
+                        Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + (j - 1)];
+                        if (dataGridViewDados.Columns[j].HeaderText == "Quantidade em Estoque")
+                            myRange.Value2 = "QTDE";
+                        else if (dataGridViewDados.Columns[j].HeaderText == "Pag do Livro")
+                            myRange.Value2 = "Pag";
+
+                        else
+                            myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
+
+                        myRange.Columns.AutoFit();
+
+                        worker.ReportProgress(0, $"Exportando cabeçalhos....");
+                    }
+
+                    StartRow++;
+
+                    //Write datagridview content
+                    for (i = 1; i < dataGridViewDados.Rows.Count; i++)
+                    {
+                        sheet1.Columns.AutoFit();
+                        for (j = 1; j < dataGridViewDados.Columns.Count; j++)
                         {
-                            ;
+                            try
+                            {
+                                Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + (i - 1), StartCol + (j - 1)];
+                                myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
+                                sheet1.Cells[i - 1, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                                int progresso = (int)((double)i / dataGridViewDados.Rows.Count * 100);
+                                worker.ReportProgress(progresso, $"Exportando linhas {i} de {dataGridViewDados.Rows.Count}");
+                            }
+                            catch
+                            {
+                                ;
+                            }
                         }
                     }
-                }
-            
+                    
+                };
+
+                worker.ProgressChanged += (s, args) =>
+                {
+                    formProgresso.AttBar(args.ProgressPercentage, (string) args.UserState);
+                };
+                worker.RunWorkerCompleted += (s, args) =>
+                {
+                    formProgresso.Close();
+                    
+                };
+                worker.RunWorkerAsync();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void imgAddCarrinho_Click(object sender, EventArgs e)
