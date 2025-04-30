@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formvender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|c:\\users\\020549\\documents\\github\\projeto-entensao\\cadastroproduto\\cadastrobanco\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -23,15 +23,15 @@
       "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|c:\\users\\020549\\documents\\github\\projeto-entensao\\cadastroproduto\\cadastrobanco\\formvender.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formvender.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formvender.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|c:\\users\\020549\\documents\\github\\projeto-entensao\\cadastroproduto\\cadastrobanco\\formvender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formvender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formvender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|c:\\users\\020549\\documents\\github\\projeto-entensao\\cadastroproduto\\cadastrobanco\\formadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\cadastrobanco\\formadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|CadastroBanco\\CadastroBanco.csproj|solutionrelative:cadastrobanco\\formadicionar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -90,8 +90,8 @@
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\Form2.cs",
               "RelativeDocumentMoniker": "CadastroBanco\\Form2.cs",
-              "ToolTip": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\Form2.cs [Design]",
-              "RelativeToolTip": "CadastroBanco\\Form2.cs [Design]",
+              "ToolTip": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\Form2.cs [Design]*",
+              "RelativeToolTip": "CadastroBanco\\Form2.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T20:10:06.267Z",
               "EditorCaption": " [Design]"
@@ -106,8 +106,7 @@
               "RelativeToolTip": "CadastroBanco\\FormVender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T19:11:44.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T19:11:44.678Z"
             },
             {
               "$type": "Document",
@@ -119,8 +118,7 @@
               "RelativeToolTip": "CadastroBanco\\FormAdicionar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T20:02:07.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T20:02:07.062Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "CadastroBanco\\FormVender.Designer.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAiwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T19:59:41.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T19:59:41.59Z"
             },
             {
               "$type": "Document",
@@ -144,8 +141,7 @@
               "ToolTip": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormVender.cs [Design]",
               "RelativeToolTip": "CadastroBanco\\FormVender.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T19:57:58.539Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-24T19:57:58.539Z"
             },
             {
               "$type": "Document",
@@ -153,9 +149,9 @@
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\Form2.cs",
               "RelativeDocumentMoniker": "CadastroBanco\\Form2.cs",
-              "ToolTip": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\Form2.cs",
-              "RelativeToolTip": "CadastroBanco\\Form2.cs",
-              "ViewState": "AgIAACQEAAAAAAAAAAAlwDAEAAAYAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\Form2.cs*",
+              "RelativeToolTip": "CadastroBanco\\Form2.cs*",
+              "ViewState": "AgIAAAkEAAAAAAAAAAAlwCgEAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T11:31:17.34Z",
               "EditorCaption": ""
@@ -181,8 +177,7 @@
               "RelativeToolTip": "CadastroBanco\\FormVisualizarCarrinho.cs",
               "ViewState": "AgIAALIBAAAAAAAAAAAqwMcBAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T08:03:40.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-09T08:03:40.228Z"
             },
             {
               "$type": "Document",
@@ -193,8 +188,7 @@
               "ToolTip": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormAdicionar.cs [Design]",
               "RelativeToolTip": "CadastroBanco\\FormAdicionar.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T12:18:45.439Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-03T12:18:45.439Z"
             },
             {
               "$type": "Document",
@@ -228,8 +222,7 @@
               "ToolTip": "C:\\Users\\020549\\Documents\\GitHub\\projeto-entensao\\CadastroProduto\\CadastroBanco\\FormTabelaVenda.cs [Design]",
               "RelativeToolTip": "CadastroBanco\\FormTabelaVenda.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:01:36.794Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-16T16:01:36.794Z"
             },
             {
               "$type": "Document",
@@ -241,8 +234,7 @@
               "RelativeToolTip": "CadastroBanco\\FormTabelaVenda.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T15:30:57.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T15:30:57.243Z"
             },
             {
               "$type": "Document",
@@ -290,8 +282,7 @@
               "RelativeToolTip": "CadastroBanco\\FormVisualizarCarrinho.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T12:10:46.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-09T12:10:46.908Z"
             }
           ]
         }

@@ -1020,12 +1020,10 @@ namespace CadastroBanco
             try
             {
                 Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-                excel.Visible = true;
                 Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
                 Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
                 Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
                 sheet1.Cells.Font.Size = 10;
-
 
                 var formProgresso = new FormVender();
                 formProgresso.Show();
@@ -1063,6 +1061,8 @@ namespace CadastroBanco
                         myRange.Columns.AutoFit();
 
                         worker.ReportProgress(0, $"Exportando cabeçalhos....");
+
+                        sheet1.Cells[StartRow, j].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                     }
 
                     StartRow++;
@@ -1077,10 +1077,11 @@ namespace CadastroBanco
                             {
                                 Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + (i - 1), StartCol + (j - 1)];
                                 myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
-                                sheet1.Cells[i - 1, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                                sheet1.Cells[i + 1, j].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
                                 int progresso = (int)((double)i / dataGridViewDados.Rows.Count * 100);
                                 worker.ReportProgress(progresso, $"Exportando linhas {i} de {dataGridViewDados.Rows.Count}");
+                                
                             }
                             catch
                             {
@@ -1088,7 +1089,7 @@ namespace CadastroBanco
                             }
                         }
                     }
-                    
+
                 };
 
                 worker.ProgressChanged += (s, args) =>
@@ -1098,14 +1099,17 @@ namespace CadastroBanco
                 worker.RunWorkerCompleted += (s, args) =>
                 {
                     formProgresso.Close();
-                    
+                    excel.Application.Visible = true;
+
                 };
                 worker.RunWorkerAsync();
+              
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+            
         }
 
         private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
