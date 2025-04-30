@@ -13,6 +13,8 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Runtime.InteropServices;
+using Microsoft.Office.Interop.Excel;
 
 namespace CadastroBanco
 {
@@ -154,10 +156,10 @@ namespace CadastroBanco
 
             this.Location = new System.Drawing.Point(10, 10);
             //AddId();
-            Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
+            System.Drawing.Font headerFont = new System.Drawing.Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
             dataGridViewDados.ColumnHeadersDefaultCellStyle.Font = headerFont;
             // Definindo o estilo de fonte para todas as células
-            Font cellFont = new Font("Arial", 10, FontStyle.Bold); // Ajuste o tamanho conforme necessário
+            System.Drawing.Font cellFont = new System.Drawing.Font("Arial", 10, FontStyle.Bold); // Ajuste o tamanho conforme necessário
             dataGridViewDados.DefaultCellStyle.Font = cellFont;
 
             ExibirDados();
@@ -1017,16 +1019,20 @@ namespace CadastroBanco
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
+            Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
+
+            var formProgresso = new FormVender();
+            formProgresso.Show();
+
             try
             {
-                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-                Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
-                Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
-                Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
-                sheet1.Cells.Font.Size = 10;
 
-                var formProgresso = new FormVender();
-                formProgresso.Show();
+                System.Drawing.Font headerFont = new System.Drawing.Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
+                sheet1.Cells.Font.Size = 9.4f;
+
+               
 
 
                 BackgroundWorker worker = new BackgroundWorker();
@@ -1047,6 +1053,7 @@ namespace CadastroBanco
                         if (formProgresso.Cancelar == true)
                         {
                             args.Cancel = true;
+                            return;
                         }
                         Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + (j - 1)];
                         if (dataGridViewDados.Columns[j].HeaderText == "Quantidade em Estoque")
@@ -1078,6 +1085,10 @@ namespace CadastroBanco
                             try
                             {
                                 Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + (i - 1), StartCol + (j - 1)];
+
+                                if (j == 1)
+                                    myRange.NumberFormat = "@";
+
                                 myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
                                 sheet1.Cells[i + 1, j].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
@@ -1101,7 +1112,18 @@ namespace CadastroBanco
                 worker.RunWorkerCompleted += (s, args) =>
                 {
                     formProgresso.Close();
-                    excel.Application.Visible = true;
+
+                    if (!args.Cancelled)
+                    {
+                        excel.Visible = true;
+                        Marshal.ReleaseComObject(sheet1);
+                        Marshal.ReleaseComObject(workbook);
+                        Marshal.ReleaseComObject(excel);
+                    }
+                    else
+                    {
+                        CleanupExcel(excel, workbook, sheet1);
+                    }
 
                 };
                 worker.RunWorkerAsync();
@@ -1110,8 +1132,35 @@ namespace CadastroBanco
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                CleanupExcel(excel, workbook, sheet1);
+                formProgresso.Close();
             }
             
+        }
+        private void CleanupExcel(Microsoft.Office.Interop.Excel.Application excel, Microsoft.Office.Interop.Excel.Workbook workbook, Microsoft.Office.Interop.Excel.Worksheet sheet1)
+        {
+            try
+            {
+                if (workbook != null)
+                {
+                    workbook.Close(false);
+                    Marshal.ReleaseComObject(workbook);
+                }
+                if (excel != null)
+                {
+                    excel.Quit();
+                    Marshal.ReleaseComObject(excel);
+                }
+                if (sheet1 != null)
+                {
+                    Marshal.ReleaseComObject(sheet1);
+                }
+            }
+            finally
+            {
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
         }
 
         private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

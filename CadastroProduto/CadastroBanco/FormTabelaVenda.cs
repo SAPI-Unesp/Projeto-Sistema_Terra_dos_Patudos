@@ -1249,49 +1249,46 @@ namespace CadastroBanco
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            //excel.Visible = true; //tirar
-            Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
-            Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
+            Microsoft.Office.Interop.Excel.Application excel = null;
+            Microsoft.Office.Interop.Excel.Workbook workbook = null;
+            Microsoft.Office.Interop.Excel.Worksheet sheet1 = null;
+            var formProgresso = new FormVender();
+
             try
             {
+                excel = new Microsoft.Office.Interop.Excel.Application();
+                workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
+                sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
 
-                Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
+                Font headerFont = new Font("Arial", 10, FontStyle.Bold);
                 sheet1.Cells.Font.Size = 10;
                 int StartCol = 1;
                 int StartRow = 1;
                 int j = 0, i = 0;
                 sheet1.PageSetup.Orientation = Microsoft.Office.Interop.Excel.XlPageOrientation.xlLandscape;
 
-                var formProgresso = new FormVender();
                 formProgresso.Show();
-
 
                 BackgroundWorker worker = new BackgroundWorker();
                 worker.WorkerReportsProgress = true;
                 worker.WorkerSupportsCancellation = true;
+
                 worker.DoWork += (s, args) =>
                 {
-
                     //Write Headers
                     for (j = 2; j < dataGridViewDados.Columns.Count; j++)
                     {
-                        if(formProgresso.Cancelar == true)
+                        if (formProgresso.Cancelar)
                         {
                             args.Cancel = true;
-                            workbook.Close();
-                            Marshal.ReleaseComObject(workbook);
-                            excel.Quit();
-                            Marshal.ReleaseComObject(excel);
-
-                            GC.Collect();
-                            GC.WaitForPendingFinalizers();
+                            return;
                         }
+
                         Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + j - 2];
 
                         if (dataGridViewDados.Columns[j].HeaderText == "Pag do livro")
                             myRange.Value2 = "Pag";
-                        else if(dataGridViewDados.Columns[j].HeaderText == "Quantidade Vendida")
+                        else if (dataGridViewDados.Columns[j].HeaderText == "Quantidade Vendida")
                             myRange.Value2 = "QTV";
                         else
                             myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
@@ -1310,59 +1307,87 @@ namespace CadastroBanco
                     //Write datagridview content
                     for (i = 0; i < dataGridViewDados.Rows.Count; i++)
                     {
+                        if (formProgresso.Cancelar)
+                        {
+                            args.Cancel = true;
+                            return;
+                        }
+
                         sheet1.Columns.AutoFit();
                         for (j = 2; j < dataGridViewDados.Columns.Count; j++)
                         {
-                            try
-                            {
-                                Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + i, StartCol + j - 2];
-                                myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
-                                sheet1.Cells[StartRow + i, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                            Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + i, StartCol + j - 2];
+                            if(j == 2)
+                                myRange.NumberFormat = "@";
 
-                                //formatação
-                                myRange.Borders.Color = ColorTranslator.ToOle(Color.FromArgb(0, 0, 0));
+                            myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
 
-                                int progresso = (int)((double)i / dataGridViewDados.Rows.Count * 100);
-                                worker.ReportProgress(progresso, $"Exportando linhas {i} de {dataGridViewDados.Rows.Count}");
-                            }
-                            catch
-                            {
-                                ;
-                            }
+                            
+                                
+                                
+
+                            sheet1.Cells[StartRow + i, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                            myRange.Borders.Color = ColorTranslator.ToOle(Color.FromArgb(0, 0, 0));
+
+                            int progresso = (int)((double)i / dataGridViewDados.Rows.Count * 100);
+                            worker.ReportProgress(progresso, $"Exportando linhas {i} de {dataGridViewDados.Rows.Count}");
                         }
                     }
                 };
+
                 worker.ProgressChanged += (s, args) =>
                 {
                     formProgresso.AttBar(args.ProgressPercentage, (string)args.UserState);
                 };
+
                 worker.RunWorkerCompleted += (s, args) =>
                 {
                     formProgresso.Close();
-                    
-                    excel.Application.Visible = true;
-                };
-                worker.RunWorkerAsync();
 
-                
+                    if (!args.Cancelled)
+                    {
+                        excel.Visible = true;
+                        Marshal.ReleaseComObject(sheet1);
+                        Marshal.ReleaseComObject(workbook);
+                        Marshal.ReleaseComObject(excel);
+                    }
+                    else
+                    {
+                        CleanupExcel(excel, workbook, sheet1);
+                    }
+                };
+
+                worker.RunWorkerAsync();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                CleanupExcel(excel, workbook, sheet1);
+                formProgresso.Close();
             }
-            finally
+        }
+
+        private void CleanupExcel(Microsoft.Office.Interop.Excel.Application excel, Microsoft.Office.Interop.Excel.Workbook workbook, Microsoft.Office.Interop.Excel.Worksheet sheet1)
+        {
+            try
             {
-                if(workbook != null)
+                if (workbook != null)
                 {
                     workbook.Close(false);
                     Marshal.ReleaseComObject(workbook);
-                    
                 }
-                if(excel != null)
+                if (excel != null)
                 {
                     excel.Quit();
                     Marshal.ReleaseComObject(excel);
                 }
+                if(sheet1 != null)
+                {
+                    Marshal.ReleaseComObject(sheet1);
+                }
+            }
+            finally
+            {
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
             }
