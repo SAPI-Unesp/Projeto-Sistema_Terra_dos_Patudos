@@ -22,7 +22,7 @@ namespace CadastroBanco
             this.ControlBox = false;
             this.Text = "Exportando...";
             this.StartPosition = FormStartPosition.CenterScreen;
-
+            
         }
 
         public void AttBar(int porcentagem, string status = null)
@@ -31,7 +31,9 @@ namespace CadastroBanco
             if (status != null)
             {
                 lblStatus.Text = status;
+                
             }
+            label1.Text = porcentagem.ToString() + "%";
         }
 
 

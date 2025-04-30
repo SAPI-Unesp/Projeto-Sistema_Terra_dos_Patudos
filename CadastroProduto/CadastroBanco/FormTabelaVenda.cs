@@ -11,6 +11,8 @@ using System.IO;
 using System.Security;
 using System.Reflection;
 using System.Diagnostics;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
 namespace CadastroBanco
 {
     public partial class FormTabelaVenda : Form
@@ -1247,18 +1249,19 @@ namespace CadastroBanco
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            //excel.Visible = true; //tirar
+            Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
+            Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
             try
             {
-                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-                //excel.Visible = true; //tirar
-                Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
-                Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
+
                 Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
                 sheet1.Cells.Font.Size = 10;
                 int StartCol = 1;
                 int StartRow = 1;
                 int j = 0, i = 0;
-
+                sheet1.PageSetup.Orientation = Microsoft.Office.Interop.Excel.XlPageOrientation.xlLandscape;
 
                 var formProgresso = new FormVender();
                 formProgresso.Show();
@@ -1276,6 +1279,13 @@ namespace CadastroBanco
                         if(formProgresso.Cancelar == true)
                         {
                             args.Cancel = true;
+                            workbook.Close();
+                            Marshal.ReleaseComObject(workbook);
+                            excel.Quit();
+                            Marshal.ReleaseComObject(excel);
+
+                            GC.Collect();
+                            GC.WaitForPendingFinalizers();
                         }
                         Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + j - 2];
 
@@ -1287,6 +1297,9 @@ namespace CadastroBanco
                             myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
 
                         myRange.Columns.AutoFit();
+                        myRange.Interior.Color = ColorTranslator.ToOle(Color.FromArgb(93, 173, 226));
+                        myRange.Borders.Color = ColorTranslator.ToOle(Color.FromArgb(0, 0, 0));
+                        myRange.Font.Bold = true;
                         worker.ReportProgress(0, $"Exportando cabeçalhos....");
 
                         sheet1.Cells[StartRow, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
@@ -1306,6 +1319,9 @@ namespace CadastroBanco
                                 myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
                                 sheet1.Cells[StartRow + i, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
+                                //formatação
+                                myRange.Borders.Color = ColorTranslator.ToOle(Color.FromArgb(0, 0, 0));
+
                                 int progresso = (int)((double)i / dataGridViewDados.Rows.Count * 100);
                                 worker.ReportProgress(progresso, $"Exportando linhas {i} de {dataGridViewDados.Rows.Count}");
                             }
@@ -1323,14 +1339,32 @@ namespace CadastroBanco
                 worker.RunWorkerCompleted += (s, args) =>
                 {
                     formProgresso.Close();
+                    
                     excel.Application.Visible = true;
-
                 };
                 worker.RunWorkerAsync();
+
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                if(workbook != null)
+                {
+                    workbook.Close(false);
+                    Marshal.ReleaseComObject(workbook);
+                    
+                }
+                if(excel != null)
+                {
+                    excel.Quit();
+                    Marshal.ReleaseComObject(excel);
+                }
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
             }
         }
 

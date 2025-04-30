@@ -1058,7 +1058,8 @@ namespace CadastroBanco
                             myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
 
                         myRange.Columns.AutoFit();
-                        //myRange.Interior.Color = ColorTranslator.ToHtml(Color.DeepSkyBlue);
+                        myRange.Interior.Color = ColorTranslator.ToOle(Color.FromArgb(93, 173, 226));
+                        myRange.Borders.Color = ColorTranslator.ToOle(Color.FromArgb(0, 0, 0));
                         myRange.Font.Bold = true;
 
                         worker.ReportProgress(0, $"Exportando cabeçalhos....");
