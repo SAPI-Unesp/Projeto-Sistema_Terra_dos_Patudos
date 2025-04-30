@@ -1030,7 +1030,7 @@ namespace CadastroBanco
             {
 
                 System.Drawing.Font headerFont = new System.Drawing.Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
-                sheet1.Cells.Font.Size = 9.4f;
+                sheet1.Cells.Font.Size = 9;
 
                
 
