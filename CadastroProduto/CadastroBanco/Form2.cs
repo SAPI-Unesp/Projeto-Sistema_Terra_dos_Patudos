@@ -1036,7 +1036,6 @@ namespace CadastroBanco
                 {
 
 
-
                     int StartCol = 1;
                     int StartRow = 1;
                     int j = 0, i = 0;
@@ -1059,6 +1058,8 @@ namespace CadastroBanco
                             myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
 
                         myRange.Columns.AutoFit();
+                        //myRange.Interior.Color = ColorTranslator.ToHtml(Color.DeepSkyBlue);
+                        myRange.Font.Bold = true;
 
                         worker.ReportProgress(0, $"Exportando cabeçalhos....");
 

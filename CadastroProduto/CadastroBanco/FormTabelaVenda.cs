@@ -1250,38 +1250,83 @@ namespace CadastroBanco
             try
             {
                 Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-                excel.Visible = true;
+                //excel.Visible = true; //tirar
                 Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
                 Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
+                Font headerFont = new Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
+                sheet1.Cells.Font.Size = 10;
                 int StartCol = 1;
                 int StartRow = 1;
                 int j = 0, i = 0;
 
-                //Write Headers
-                for (j = 0; j < dataGridViewDados.Columns.Count; j++)
-                {
-                    Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + j];
-                    myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
-                }
 
-                StartRow++;
+                var formProgresso = new FormVender();
+                formProgresso.Show();
 
-                //Write datagridview content
-                for (i = 0; i < dataGridViewDados.Rows.Count; i++)
+
+                BackgroundWorker worker = new BackgroundWorker();
+                worker.WorkerReportsProgress = true;
+                worker.WorkerSupportsCancellation = true;
+                worker.DoWork += (s, args) =>
                 {
-                    for (j = 0; j < dataGridViewDados.Columns.Count; j++)
+
+                    //Write Headers
+                    for (j = 2; j < dataGridViewDados.Columns.Count; j++)
                     {
-                        try
+                        if(formProgresso.Cancelar == true)
                         {
-                            Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + i, StartCol + j];
-                            myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
+                            args.Cancel = true;
                         }
-                        catch
+                        Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + j - 2];
+
+                        if (dataGridViewDados.Columns[j].HeaderText == "Pag do livro")
+                            myRange.Value2 = "Pag";
+                        else if(dataGridViewDados.Columns[j].HeaderText == "Quantidade Vendida")
+                            myRange.Value2 = "QTV";
+                        else
+                            myRange.Value2 = dataGridViewDados.Columns[j].HeaderText;
+
+                        myRange.Columns.AutoFit();
+                        worker.ReportProgress(0, $"Exportando cabeçalhos....");
+
+                        sheet1.Cells[StartRow, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                    }
+
+                    StartRow++;
+
+                    //Write datagridview content
+                    for (i = 0; i < dataGridViewDados.Rows.Count; i++)
+                    {
+                        sheet1.Columns.AutoFit();
+                        for (j = 2; j < dataGridViewDados.Columns.Count; j++)
                         {
-                            ;
+                            try
+                            {
+                                Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + i, StartCol + j - 2];
+                                myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
+                                sheet1.Cells[StartRow + i, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                                int progresso = (int)((double)i / dataGridViewDados.Rows.Count * 100);
+                                worker.ReportProgress(progresso, $"Exportando linhas {i} de {dataGridViewDados.Rows.Count}");
+                            }
+                            catch
+                            {
+                                ;
+                            }
                         }
                     }
-                }
+                };
+                worker.ProgressChanged += (s, args) =>
+                {
+                    formProgresso.AttBar(args.ProgressPercentage, (string)args.UserState);
+                };
+                worker.RunWorkerCompleted += (s, args) =>
+                {
+                    formProgresso.Close();
+                    excel.Application.Visible = true;
+
+                };
+                worker.RunWorkerAsync();
             }
             catch (Exception ex)
             {
