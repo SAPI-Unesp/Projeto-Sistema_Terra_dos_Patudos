@@ -30,17 +30,6 @@ namespace CadastroBanco
         private void InitializeComponent()
         {
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comprador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbPessoas = new System.Windows.Forms.ComboBox();
             this.dataPickerStart = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,6 +47,17 @@ namespace CadastroBanco
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,92 +85,12 @@ namespace CadastroBanco
             this.comprador,
             this.telefone,
             this.vendido});
-            this.dataGridViewDados.Location = new System.Drawing.Point(-4, 104);
+            this.dataGridViewDados.Location = new System.Drawing.Point(12, 104);
             this.dataGridViewDados.Name = "dataGridViewDados";
-            this.dataGridViewDados.Size = new System.Drawing.Size(1362, 539);
+            this.dataGridViewDados.Size = new System.Drawing.Size(1384, 539);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellClick_1);
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.FillWeight = 22.83764F;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // IdVenda
-            // 
-            this.IdVenda.HeaderText = "ID da Venda";
-            this.IdVenda.Name = "IdVenda";
-            this.IdVenda.ReadOnly = true;
-            // 
-            // idLivro
-            // 
-            this.idLivro.HeaderText = "Pag do livro";
-            this.idLivro.Name = "idLivro";
-            this.idLivro.Width = 70;
-            // 
-            // categoria
-            // 
-            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categoria.FillWeight = 79.41525F;
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descricao.FillWeight = 229.4967F;
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            // 
-            // quantidade
-            // 
-            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantidade.FillWeight = 79.41525F;
-            this.quantidade.HeaderText = "Quantidade Vendida";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            // 
-            // preco
-            // 
-            this.preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.preco.FillWeight = 79.41525F;
-            this.preco.HeaderText = "Lucro";
-            this.preco.Name = "preco";
-            // 
-            // dataAdicao
-            // 
-            this.dataAdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataAdicao.FillWeight = 158.7526F;
-            this.dataAdicao.HeaderText = "Data da Venda";
-            this.dataAdicao.Name = "dataAdicao";
-            this.dataAdicao.ReadOnly = true;
-            // 
-            // comprador
-            // 
-            this.comprador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.comprador.FillWeight = 79.41525F;
-            this.comprador.HeaderText = "Nome do Comprador";
-            this.comprador.Name = "comprador";
-            // 
-            // telefone
-            // 
-            this.telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.telefone.FillWeight = 79.41525F;
-            this.telefone.HeaderText = "Telefone do Comprador";
-            this.telefone.Name = "telefone";
-            // 
-            // vendido
-            // 
-            this.vendido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.vendido.FillWeight = 91.83672F;
-            this.vendido.HeaderText = "Pagamento";
-            this.vendido.Name = "vendido";
-            this.vendido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // cbPessoas
             // 
@@ -200,7 +120,7 @@ namespace CadastroBanco
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(742, 21);
+            this.label1.Location = new System.Drawing.Point(780, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 24);
             this.label1.TabIndex = 15;
@@ -210,7 +130,7 @@ namespace CadastroBanco
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(746, 54);
+            this.txtTotal.Location = new System.Drawing.Point(784, 54);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(179, 38);
@@ -267,7 +187,7 @@ namespace CadastroBanco
             this.button1.BackColor = System.Drawing.Color.Salmon;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1264, 17);
+            this.button1.Location = new System.Drawing.Point(1302, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 75);
             this.button1.TabIndex = 24;
@@ -280,7 +200,7 @@ namespace CadastroBanco
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1043, 18);
+            this.button2.Location = new System.Drawing.Point(1081, 18);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 74);
             this.button2.TabIndex = 25;
@@ -293,7 +213,7 @@ namespace CadastroBanco
             this.btnDevolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDevolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDevolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevolver.Location = new System.Drawing.Point(1143, 17);
+            this.btnDevolver.Location = new System.Drawing.Point(1181, 17);
             this.btnDevolver.Name = "btnDevolver";
             this.btnDevolver.Size = new System.Drawing.Size(115, 75);
             this.btnDevolver.TabIndex = 29;
@@ -323,7 +243,7 @@ namespace CadastroBanco
             this.mesesComboBox.Items.AddRange(new object[] {
             "Realizado",
             "Pendente"});
-            this.mesesComboBox.Location = new System.Drawing.Point(931, 17);
+            this.mesesComboBox.Location = new System.Drawing.Point(969, 17);
             this.mesesComboBox.Name = "mesesComboBox";
             this.mesesComboBox.Size = new System.Drawing.Size(106, 28);
             this.mesesComboBox.TabIndex = 31;
@@ -358,7 +278,7 @@ namespace CadastroBanco
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnImprimir.Location = new System.Drawing.Point(931, 52);
+            this.btnImprimir.Location = new System.Drawing.Point(969, 52);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(106, 40);
             this.btnImprimir.TabIndex = 34;
@@ -378,11 +298,92 @@ namespace CadastroBanco
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // id
+            // 
+            this.id.FillWeight = 24F;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 55;
+            // 
+            // IdVenda
+            // 
+            this.IdVenda.HeaderText = "ID da Venda";
+            this.IdVenda.Name = "IdVenda";
+            this.IdVenda.ReadOnly = true;
+            this.IdVenda.Width = 55;
+            // 
+            // idLivro
+            // 
+            this.idLivro.HeaderText = "Pag do livro";
+            this.idLivro.Name = "idLivro";
+            this.idLivro.Width = 70;
+            // 
+            // categoria
+            // 
+            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.categoria.FillWeight = 85F;
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricao.FillWeight = 250F;
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            // 
+            // quantidade
+            // 
+            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantidade.FillWeight = 45F;
+            this.quantidade.HeaderText = "Qtd Vendida";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            // 
+            // preco
+            // 
+            this.preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.preco.FillWeight = 30F;
+            this.preco.HeaderText = "Lucro";
+            this.preco.Name = "preco";
+            // 
+            // dataAdicao
+            // 
+            this.dataAdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataAdicao.FillWeight = 85F;
+            this.dataAdicao.HeaderText = "Data da Venda";
+            this.dataAdicao.Name = "dataAdicao";
+            this.dataAdicao.ReadOnly = true;
+            // 
+            // comprador
+            // 
+            this.comprador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.comprador.FillWeight = 69.41525F;
+            this.comprador.HeaderText = "Nome do Comprador";
+            this.comprador.Name = "comprador";
+            // 
+            // telefone
+            // 
+            this.telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telefone.FillWeight = 69.41525F;
+            this.telefone.HeaderText = "Telefone do Comprador";
+            this.telefone.Name = "telefone";
+            // 
+            // vendido
+            // 
+            this.vendido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.vendido.FillWeight = 65F;
+            this.vendido.HeaderText = "Pagamento";
+            this.vendido.Name = "vendido";
+            this.vendido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // FormTabelaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 655);
+            this.ClientSize = new System.Drawing.Size(1408, 655);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.pictureBox2);
@@ -432,6 +433,7 @@ namespace CadastroBanco
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdVenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLivro;
@@ -443,6 +445,5 @@ namespace CadastroBanco
         private System.Windows.Forms.DataGridViewTextBoxColumn comprador;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendido;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

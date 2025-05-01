@@ -138,7 +138,6 @@ C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\bin\D
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.exe
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.pdb
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.AssemblyReference.cache
-C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form1.resources
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form2.resources
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAdicionar.resources
 C:\Users\leona\source\repos\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAtualizar.resources

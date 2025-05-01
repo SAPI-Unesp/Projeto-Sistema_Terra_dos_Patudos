@@ -60,6 +60,9 @@
             // 
             this.dataGridViewDados.AllowUserToAddRows = false;
             this.dataGridViewDados.AllowUserToDeleteRows = false;
+            this.dataGridViewDados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewDados.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewDados.ColumnHeadersHeight = 40;
             this.dataGridViewDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -70,7 +73,7 @@
             this.quantidade,
             this.preco,
             this.qtdVendida});
-            this.dataGridViewDados.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewDados.Location = new System.Drawing.Point(8, 12);
             this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -127,6 +130,7 @@
             // 
             // btnRemover
             // 
+            this.btnRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRemover.BackColor = System.Drawing.Color.Salmon;
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.Location = new System.Drawing.Point(12, 426);
@@ -139,6 +143,7 @@
             // 
             // btnFinalizarCompra
             // 
+            this.btnFinalizarCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizarCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnFinalizarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizarCompra.Location = new System.Drawing.Point(954, 319);
@@ -151,6 +156,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(950, 52);
             this.label2.Name = "label2";
@@ -160,6 +166,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(950, 91);
             this.label3.Name = "label3";
@@ -169,6 +176,7 @@
             // 
             // nome
             // 
+            this.nome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nome.Location = new System.Drawing.Point(953, 68);
             this.nome.Name = "nome";
             this.nome.Size = new System.Drawing.Size(148, 20);
@@ -176,6 +184,7 @@
             // 
             // telefone
             // 
+            this.telefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.telefone.Location = new System.Drawing.Point(953, 107);
             this.telefone.Name = "telefone";
             this.telefone.Size = new System.Drawing.Size(100, 20);
@@ -183,6 +192,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(951, 12);
             this.label4.Name = "label4";
@@ -192,6 +202,7 @@
             // 
             // cbPagamento
             // 
+            this.cbPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPagamento.FormattingEnabled = true;
             this.cbPagamento.Items.AddRange(new object[] {
@@ -205,6 +216,7 @@
             // 
             // tbTotalPagar
             // 
+            this.tbTotalPagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tbTotalPagar.Enabled = false;
             this.tbTotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTotalPagar.Location = new System.Drawing.Point(1053, 291);
@@ -215,6 +227,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(951, 294);
@@ -225,6 +238,7 @@
             // 
             // btnLimparCarrinho
             // 
+            this.btnLimparCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLimparCarrinho.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLimparCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparCarrinho.Location = new System.Drawing.Point(117, 426);
@@ -237,6 +251,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Pix",
@@ -252,6 +267,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(951, 137);
             this.label1.Name = "label1";
@@ -261,6 +277,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(950, 177);
             this.label6.Name = "label6";
@@ -270,6 +287,7 @@
             // 
             // dataPrazo
             // 
+            this.dataPrazo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataPrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataPrazo.Location = new System.Drawing.Point(953, 193);
             this.dataPrazo.Name = "dataPrazo";
@@ -279,6 +297,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.duvida;
             this.pictureBox2.Location = new System.Drawing.Point(1131, 445);
             this.pictureBox2.Name = "pictureBox2";

@@ -37,14 +37,6 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idlivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.siatuacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabelaVenda = new System.Windows.Forms.Button();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
@@ -57,6 +49,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgVerCarrinho = new System.Windows.Forms.PictureBox();
             this.imgAddCarrinho = new System.Windows.Forms.PictureBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idlivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siatuacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -154,6 +154,7 @@
             this.dataGridViewDados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewDados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDados.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewDados.ColumnHeadersHeight = 40;
             this.dataGridViewDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -169,72 +170,11 @@
             this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.ReadOnly = true;
+            this.dataGridViewDados.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDados.Size = new System.Drawing.Size(945, 444);
             this.dataGridViewDados.TabIndex = 9;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.FillWeight = 72.16494F;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // idlivro
-            // 
-            this.idlivro.HeaderText = "Pag do Livro";
-            this.idlivro.Name = "idlivro";
-            this.idlivro.ReadOnly = true;
-            // 
-            // categoria
-            // 
-            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categoria.FillWeight = 104.6392F;
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descricao.FillWeight = 104.6392F;
-            this.descricao.HeaderText = "Peça";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            // 
-            // quantidade
-            // 
-            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantidade.FillWeight = 104.6392F;
-            this.quantidade.HeaderText = "Quantidade em Estoque";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            // 
-            // preco
-            // 
-            this.preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.preco.FillWeight = 104.6392F;
-            this.preco.HeaderText = "Preço";
-            this.preco.Name = "preco";
-            this.preco.ReadOnly = true;
-            // 
-            // dataAdicao
-            // 
-            this.dataAdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataAdicao.FillWeight = 104.6392F;
-            this.dataAdicao.HeaderText = "Data de Adição";
-            this.dataAdicao.Name = "dataAdicao";
-            this.dataAdicao.ReadOnly = true;
-            // 
-            // siatuacao
-            // 
-            this.siatuacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.siatuacao.FillWeight = 104.6392F;
-            this.siatuacao.HeaderText = "Situação";
-            this.siatuacao.Name = "siatuacao";
-            this.siatuacao.ReadOnly = true;
             // 
             // textBox1
             // 
@@ -302,6 +242,7 @@
             this.textQnt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textQnt.Location = new System.Drawing.Point(789, 568);
             this.textQnt.Name = "textQnt";
+            this.textQnt.ReadOnly = true;
             this.textQnt.Size = new System.Drawing.Size(68, 20);
             this.textQnt.TabIndex = 22;
             this.textQnt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -376,11 +317,76 @@
             this.imgAddCarrinho.TabStop = false;
             this.imgAddCarrinho.Click += new System.EventHandler(this.imgAddCarrinho_Click);
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.FillWeight = 20F;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // idlivro
+            // 
+            this.idlivro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idlivro.FillWeight = 27F;
+            this.idlivro.HeaderText = "Pag do Livro";
+            this.idlivro.Name = "idlivro";
+            this.idlivro.ReadOnly = true;
+            // 
+            // categoria
+            // 
+            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.categoria.FillWeight = 40F;
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricao.FillWeight = 110F;
+            this.descricao.HeaderText = "Peça";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            // 
+            // quantidade
+            // 
+            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantidade.FillWeight = 30F;
+            this.quantidade.HeaderText = "Qtd em Estoque";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            // 
+            // preco
+            // 
+            this.preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.preco.FillWeight = 23F;
+            this.preco.HeaderText = "Preço";
+            this.preco.Name = "preco";
+            this.preco.ReadOnly = true;
+            // 
+            // dataAdicao
+            // 
+            this.dataAdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataAdicao.FillWeight = 60F;
+            this.dataAdicao.HeaderText = "Data de Adição";
+            this.dataAdicao.Name = "dataAdicao";
+            this.dataAdicao.ReadOnly = true;
+            // 
+            // siatuacao
+            // 
+            this.siatuacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.siatuacao.FillWeight = 35F;
+            this.siatuacao.HeaderText = "Situação";
+            this.siatuacao.Name = "siatuacao";
+            this.siatuacao.ReadOnly = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(970, 600);
             this.Controls.Add(this.pictureBox2);
@@ -429,14 +435,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button tabelaVenda;
         private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idlivro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataAdicao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn siatuacao;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.PictureBox imgAddCarrinho;
@@ -446,5 +444,13 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlivro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataAdicao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn siatuacao;
     }
 }

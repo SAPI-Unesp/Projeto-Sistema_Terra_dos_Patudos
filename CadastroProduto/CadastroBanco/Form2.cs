@@ -45,6 +45,8 @@ namespace CadastroBanco
                 BindingFlags.Instance | BindingFlags.NonPublic);
                 pi.SetValue(dataGridViewDados, true, null);
             }
+
+
         }
 
         // Adicionar dados ao arquivo
