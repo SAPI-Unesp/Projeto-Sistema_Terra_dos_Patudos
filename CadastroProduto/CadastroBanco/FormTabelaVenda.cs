@@ -1320,11 +1320,24 @@ namespace CadastroBanco
                             if(j == 2)
                                 myRange.NumberFormat = "@";
 
-                            myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
-
-                            
-                                
-                                
+                            if(j == 3)
+                            {
+                                string str = dataGridViewDados[j, i].Value.ToString();
+                                string str2;
+                                if (str.Length >= 30)
+                                {
+                                    str2 = str.Remove(29);
+                                    myRange.Value2 = str2 + "...";
+                                }
+                                else
+                                {
+                                    myRange.Value2 = str;
+                                }
+                            }
+                            else
+                            {
+                                myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
+                            }
 
                             sheet1.Cells[StartRow + i, j - 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                             myRange.Borders.Color = ColorTranslator.ToOle(Color.FromArgb(0, 0, 0));

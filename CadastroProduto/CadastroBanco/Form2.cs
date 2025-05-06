@@ -1024,6 +1024,7 @@ namespace CadastroBanco
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
             Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
+            sheet1.PageSetup.Orientation = Microsoft.Office.Interop.Excel.XlPageOrientation.xlLandscape;
 
             var formProgresso = new FormVender();
             formProgresso.Show();
@@ -1032,7 +1033,7 @@ namespace CadastroBanco
             {
 
                 System.Drawing.Font headerFont = new System.Drawing.Font("Arial", 10, FontStyle.Bold); // Fonte para cabeçalhos
-                sheet1.Cells.Font.Size = 9;
+                sheet1.Cells.Font.Size = 12;
 
                
 
@@ -1091,7 +1092,25 @@ namespace CadastroBanco
                                 if (j == 1)
                                     myRange.NumberFormat = "@";
 
-                                myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;
+                                if(j == 3)
+                                {
+                                    string str = dataGridViewDados[j, i].Value.ToString();
+                                    string str2;
+                                    if (str.Length >= 30)
+                                    {
+                                        str2 = str.Remove(29);
+                                        myRange.Value2 = str2 + "...";
+                                    }
+                                    else
+                                    {
+                                        myRange.Value2 = str;
+                                    }
+                                }
+                                else
+                                {
+                                    myRange.Value2 = dataGridViewDados[j, i].Value == null ? "" : dataGridViewDados[j, i].Value;    
+                                }
+                                
                                 sheet1.Cells[i + 1, j].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
                                 int progresso = (int)((double)i / dataGridViewDados.Rows.Count * 100);
