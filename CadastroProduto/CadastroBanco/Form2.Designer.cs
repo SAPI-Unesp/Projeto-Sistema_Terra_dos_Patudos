@@ -57,6 +57,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgVerCarrinho = new System.Windows.Forms.PictureBox();
             this.imgAddCarrinho = new System.Windows.Forms.PictureBox();
+            this.backup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -304,10 +305,11 @@
             // textQnt
             // 
             this.textQnt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textQnt.Location = new System.Drawing.Point(789, 568);
+            this.textQnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textQnt.Location = new System.Drawing.Point(657, 568);
             this.textQnt.Name = "textQnt";
             this.textQnt.ReadOnly = true;
-            this.textQnt.Size = new System.Drawing.Size(68, 20);
+            this.textQnt.Size = new System.Drawing.Size(91, 26);
             this.textQnt.TabIndex = 22;
             this.textQnt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -320,9 +322,10 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(653, 575);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(653, 545);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.Size = new System.Drawing.Size(181, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Quantidade de produtos";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -381,12 +384,26 @@
             this.imgAddCarrinho.TabStop = false;
             this.imgAddCarrinho.Click += new System.EventHandler(this.imgAddCarrinho_Click);
             // 
+            // backup
+            // 
+            this.backup.BackColor = System.Drawing.Color.Silver;
+            this.backup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backup.Location = new System.Drawing.Point(667, 25);
+            this.backup.Name = "backup";
+            this.backup.Size = new System.Drawing.Size(72, 40);
+            this.backup.TabIndex = 26;
+            this.backup.Text = "Backup";
+            this.backup.UseVisualStyleBackColor = false;
+            this.backup.Click += new System.EventHandler(this.backup_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(970, 600);
+            this.Controls.Add(this.backup);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textQnt);
@@ -450,5 +467,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAdicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn siatuacao;
+        private System.Windows.Forms.Button backup;
     }
 }

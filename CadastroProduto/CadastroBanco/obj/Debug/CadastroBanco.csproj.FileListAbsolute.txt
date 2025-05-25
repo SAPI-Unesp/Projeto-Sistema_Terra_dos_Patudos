@@ -235,7 +235,6 @@ C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\Cadas
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.AssemblyReference.cache
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.SuggestedBindingRedirects.cache
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.exe.config
-C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form1.resources
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form2.resources
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormVisualizarCarrinho.resources
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.FormAdicionar.resources
@@ -328,3 +327,18 @@ C:\Users\020549\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\
 C:\Users\020549\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.GenerateResource.cache
 C:\Users\020549\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.CoreCompileInputs.cache
 C:\Users\020549\Documents\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\Cadastro.4202E906.Up2Date
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Auth.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Core.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Drive.v3.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Newtonsoft.Json.dll
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.pdb
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.xml
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Auth.xml
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Core.pdb
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Core.xml
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Drive.v3.pdb
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Drive.v3.xml
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Newtonsoft.Json.xml
+C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Backup.resources

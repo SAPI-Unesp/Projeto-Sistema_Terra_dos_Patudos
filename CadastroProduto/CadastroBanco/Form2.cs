@@ -1370,5 +1370,11 @@ namespace CadastroBanco
             Process.Start(new ProcessStartInfo("https://www.youtube.com/watch?v=skhtgRXdeys&list=PLhEZRWtYRMyt4enwYFTX7io5NHKbluSaG&index")
             { UseShellExecute = true });
         }
+
+        private void backup_Click(object sender, EventArgs e)
+        {
+            Backup form = new Backup();
+            form.ShowDialog();
+        }
     }
 }

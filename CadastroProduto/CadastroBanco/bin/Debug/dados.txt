@@ -764,18 +764,18 @@
 763*35-26*Blusas*Blusas*Top      branco linho*1*  5,00*09/10/2024 20:06:14*a vender*
 764*36-01*Blusas*Camiseta bordô homem aranha*1*  7,00*09/10/2024 20:06:14*a vender*
 765*36-02*Blusas*Blusa Polo cinza e vermelha Elian (pix)*0*10,00*09/10/2024 20:06:14*a vender*
-767**Utensílios*CACHEPO BRANCO   *1*5,00*08/10/2024 15:41*a vender*
-768**Utensílios*CANECA ED. FÍSICA   *1*5,00*08/10/2024 15:41*a vender*
-769**Utensílios*CDS DIVERSOS ( un.)   *1*2,00*08/10/2024 15:41*a vender*
+767**Utensílios*CACHEPO BRANCO*0*5,00*08/10/2024 15:41*a vender*
+768**Utensílios*CANECA ED. FÍSICA*0*5,00*08/10/2024 15:41*a vender*
+769**Utensílios*CDS DIVERSOS ( un.)*0*2,00*08/10/2024 15:41*a vender*
 770**Utensílios*COLHER PLASTICA BCA.   *1*1,00*08/10/2024 15:41*a vender*
-771**Utensílios*CONJTO COPOS PLASTICO COLORIDO   *1*20,00*08/10/2024 15:41*a vender*
-772**Utensílios*CONJTO SOBREMESAS DE INOX   *1*25,00 *08/10/2024 15:41*a vender*
+771**Utensílios*CONJTO COPOS PLASTICO COLORIDO*0*20,00*08/10/2024 15:41*a vender*
+772**Utensílios*CONJTO SOBREMESAS DE INOX*0*25,00*08/10/2024 15:41*a vender*
 773*Utensílios*COPINHO SHOT (PINGA)   *1*3,00*08/10/2024 15:41*a vender*
 774**Utensílios*COPO PLÁSTICO TRANSPARENTE *1*0,00*08/10/2024 15:41*a vender*
 775**Utensílios*COPO TÉRMICO COM ALÇA   *1*10,00*08/10/2024 15:41*a vender*
 776**Utensílios*GALHETEIRO   *1*10,00*08/10/2024 15:41*a vender*
-777**Utensílios*GARRAFA BONJOUR PARIS BCA   *1*5,00*08/10/2024 15:41*a vender*
-778**Utensílios*GARRAFA DE CAFÉ VERDE   *1*5,00*08/10/2024 15:41*a vender*
+777**Utensílios*GARRAFA BONJOUR PARIS BCA*0*5,00*08/10/2024 15:41*a vender*
+778**Utensílios*GARRAFA DE CAFÉ VERDE*0*5,00*08/10/2024 15:41*a vender*
 779**Utensílios*GARRAFA PLASTICA LARANJA   *1*5,00*08/10/2024 15:41*a vender*
 780**Utensílios*KIT   *1*2 TAÇAS PLÁSTICAS SOBREMESA   *1*5,00*08/10/2024 15:41*a vender*
 781**Utensílios*PORTA CHÁ ROSE   *1*5,00*08/10/2024 15:41*a vender*
@@ -879,3 +879,4 @@
 878**Kids*Roupa infantil*11*10,00*10/10/2024 19:07:01*a vender*
 880**Kids*Roupa infantil*15*5,00*10/10/2024 19:26:44*a vender*
 881**Kids*Roupa infantil*15*3,00*10/10/2024 19:33:43*a vender*
+879*100-00*TesteComBackup*dadas*0*0*25/05/2025 08:43:34*a vender*

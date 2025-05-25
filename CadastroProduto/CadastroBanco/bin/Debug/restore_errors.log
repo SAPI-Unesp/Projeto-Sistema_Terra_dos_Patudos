@@ -1,0 +1,30 @@
+[25/05/2025 08:43:51] Erro geral: Erro ao processar os arquivos recebidos
+Detalhes: Unexpected character encountered while parsing value: S. Path '', line 0, position 0.
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 341
+[25/05/2025 09:00:16] Erro geral: Falha ao descomprimir dados recebidos
+Detalhes: Falha ao descomprimir dados recebidos
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 345
+[25/05/2025 09:00:39] Erro geral: Falha ao descomprimir dados recebidos
+Detalhes: Falha ao descomprimir dados recebidos
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 345
+[25/05/2025 09:03:00] Erro geral: Falha ao descomprimir dados recebidos
+Detalhes: Falha ao descomprimir dados recebidos
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 345
+[25/05/2025 09:04:56] Erro geral: Falha ao descomprimir dados recebidos
+Detalhes: Falha ao descomprimir dados recebidos
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 345
+[25/05/2025 09:05:59] Erro geral: Falha ao descomprimir dados recebidos
+Detalhes: Falha ao descomprimir dados recebidos
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 345
+[25/05/2025 09:29:21] Erro geral: Erro ao processar os arquivos recebidos. Formato inválido.
+Dados iniciais: H4sIAAAAAAAA/7V9SZPkNpLuX6FpzNTqmJaK+5K3yKUWKbfJzKqRZLowI5hZlBhkiBGRXVVjcxh7h7E5zB94N70+tLXMdOqeSx9f/LHn7gC4AGAmwezXplZJqqwPIIDP3eHw5d8+W1TlNiu3m88OPvu3Hz5bpstq89X2w/aHzw5++Mye2c6XdjQ7LHabdMN+sdJPu8Ja
+Detalhes: Unexpected character encountered while parsing value: H. Path '', line 0, position 0.
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 419
+[25/05/2025 09:30:44] Erro geral: Erro ao processar os arquivos recebidos. Formato inválido.
+Dados iniciais: H4sIAAAAAAAA/7V9SZPkNpLuX6FpzNTqmJaK+5K3yKUWKbfJzKqRZLowI5hZlBhkiBGRXVVjcxh7h7E5zB94N70+tLXMdOqeSx9f/LHn7gC4AGAmwezXplZJqqwPIIDP3eHw5d8+W1TlNiu3m88OPvu3Hz5bpstq89X2w/aHzw5++Mye2c6XdjQ7LHabdMN+sdJPu8Ja
+Detalhes: Unexpected character encountered while parsing value: H. Path '', line 0, position 0.
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 419
+[25/05/2025 13:55:31] System.Exception: Nenhum backup encontrado
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 340
+[25/05/2025 13:56:07] System.Exception: Nenhum backup encontrado
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 340
