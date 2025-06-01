@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -124,6 +125,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridViewDados);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormClientes";
             this.Text = "Tabela de Clientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);

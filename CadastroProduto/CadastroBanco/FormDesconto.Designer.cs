@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDesconto));
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.valor = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbCliente = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.divida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.credito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.valor = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbCliente = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valor)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +65,42 @@
             this.dataGridViewDados.Size = new System.Drawing.Size(549, 352);
             this.dataGridViewDados.TabIndex = 11;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Cliente";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Telefone
+            // 
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
+            // 
+            // divida
+            // 
+            this.divida.HeaderText = "Dívida";
+            this.divida.Name = "divida";
+            this.divida.ReadOnly = true;
+            this.divida.Width = 75;
+            // 
+            // desconto
+            // 
+            this.desconto.HeaderText = "Desconto";
+            this.desconto.Name = "desconto";
+            // 
+            // credito
+            // 
+            this.credito.HeaderText = "Crédito";
+            this.credito.Name = "credito";
             // 
             // button1
             // 
@@ -119,42 +156,6 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Clientes:";
             // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Cliente";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // Telefone
-            // 
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            this.Telefone.ReadOnly = true;
-            // 
-            // divida
-            // 
-            this.divida.HeaderText = "Dívida";
-            this.divida.Name = "divida";
-            this.divida.ReadOnly = true;
-            this.divida.Width = 75;
-            // 
-            // desconto
-            // 
-            this.desconto.HeaderText = "Desconto";
-            this.desconto.Name = "desconto";
-            // 
-            // credito
-            // 
-            this.credito.HeaderText = "Crédito";
-            this.credito.Name = "credito";
-            // 
             // FormDesconto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,7 +167,9 @@
             this.Controls.Add(this.valor);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewDados);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDesconto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDesconto";
             this.Load += new System.EventHandler(this.FormDesconto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).EndInit();

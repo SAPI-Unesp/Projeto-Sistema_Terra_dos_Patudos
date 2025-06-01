@@ -120,7 +120,6 @@ C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\Cadas
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.exe
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\CadastroBanco.pdb
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.AssemblyReference.cache
-C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Form1.resources
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Properties.Resources.resources
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\RoundRectForm.resources
 C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.csproj.GenerateResource.cache
@@ -342,3 +341,18 @@ C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\Cadas
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Drive.v3.xml
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Newtonsoft.Json.xml
 C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Backup.resources
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Auth.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Core.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Drive.v3.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.pdb
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.xml
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Auth.xml
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Core.pdb
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Core.xml
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Drive.v3.pdb
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Google.Apis.Drive.v3.xml
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wkjoa\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\obj\Debug\CadastroBanco.Backup.resources

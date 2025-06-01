@@ -29,6 +29,7 @@ namespace CadastroBanco
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTabelaVenda));
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -402,6 +403,7 @@ namespace CadastroBanco
             this.Controls.Add(this.dataPickerStart);
             this.Controls.Add(this.cbPessoas);
             this.Controls.Add(this.dataGridViewDados);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTabelaVenda";
             this.Text = "FormTabelaVenda";
             this.Load += new System.EventHandler(this.FormTabelaVenda_Load);

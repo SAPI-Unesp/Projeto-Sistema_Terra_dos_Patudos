@@ -152,7 +152,7 @@ namespace CadastroBanco
                 var dadosVenda = linhaVenda.Split('*');
                 if (dadosVenda.Length >= 10)
                 {
-                    string precoVenda = dadosVenda[6].Trim();
+                    string precoVenda = dadosVenda[7].Trim();
                     string pessoa = dadosVenda[8].Trim();
                     string telefonep = dadosVenda[9].Trim();
 
