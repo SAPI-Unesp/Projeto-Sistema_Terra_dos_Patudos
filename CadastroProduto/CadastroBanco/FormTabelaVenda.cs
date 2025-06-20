@@ -1013,8 +1013,7 @@ namespace CadastroBanco
             var linhasV = File.ReadAllLines(caminhoArquivoVendas).ToList();
             var linhasP = File.ReadAllLines(caminhoArquivo).ToList();
 
-
-            if(form.ShowDialog() == DialogResult.OK)
+            if (qnt == 1)
             {
                 if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
                 {
@@ -1044,13 +1043,59 @@ namespace CadastroBanco
                     }
                     File.WriteAllLines(caminhoArquivo, linhasP);
 
-                    if(form.Quantidade == qnt)
+                    pagamento = "Devolvido";
+                    linhas[linhaParaAtualizar] = $"{id}*{idv}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+
+                    File.WriteAllLines(caminhoArquivoVendas, linhas);
+                    MessageBox.Show("Dados atualizados com sucesso!");
+
+                    AddCliente();
+                    ExibirDados();
+                }
+                else
+                {
+                    MessageBox.Show("Essa venda já foi devolvida");
+                }
+                Pagamento();
+
+            }
+            else if (form.ShowDialog() == DialogResult.OK)
+            {
+                if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
+                {
+                    foreach (var linha in linhasP)
+                    {
+                        var dadosProduto = linha.Split('*');
+                        if (dadosProduto.Length >= 9)
+                        {
+                            string idp = dadosProduto[0].Trim();
+                            string idl = dadosProduto[1].Trim();
+                            string cat = dadosProduto[2].Trim();
+                            string desc = dadosProduto[3].Trim();
+                            string qntp = dadosProduto[4].Trim();
+                            string precop = dadosProduto[5].Trim();
+                            string datap = dadosProduto[6].Trim();
+                            string sit = dadosProduto[7].Trim();
+                            string extra = dadosProduto[8].Trim();
+
+                            if (idp.Equals(id))
+                            {
+                                int linhaParaAtualizarP = linhasP.FindIndex(l => l.StartsWith(idp + "*"));
+                                int qntn = (int)(int.Parse(qntp) + form.Quantidade);
+                                linhasP[linhaParaAtualizarP] = $"{idp}*{idl}*{cat}*{desc}*{qntn.ToString()}*{precop}*{datap}*{sit}*{extra}";
+                                break;
+                            }
+                        }
+                    }
+                    File.WriteAllLines(caminhoArquivo, linhasP);
+
+                    if (form.Quantidade == qnt)
                     {
                         pagamento = "Devolvido";
                         linhas[linhaParaAtualizar] = $"{id}*{idv}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
 
                         File.WriteAllLines(caminhoArquivoVendas, linhas);
-                        MessageBox.Show("Dados atualizados com sucesso!(form.qnt == qnt)");
+                        MessageBox.Show("Dados atualizados com sucesso!");
                     }
                     else
                     {
@@ -1061,8 +1106,8 @@ namespace CadastroBanco
 
                         decimal precodevolvido = precoUnidade * form.Quantidade;
                         pagamento = "Devolvido";
-                        File.AppendAllText(caminhoArquivoVendas, $"{id}*{ObterProximoIdVendasDisponivel()}*{livroId}*{categoria}*{descricao}*{form.Quantidades}*{precodevolvido}*{data}*{nome_comprador}*{tell}*{pagamento}");
-                        MessageBox.Show("Dados atualizados com sucesso!(form.qnt < qnt)");
+                        File.AppendAllText(caminhoArquivoVendas, $"{id}*{ObterProximoIdVendasDisponivel()}*{livroId}*{categoria}*{descricao}*{form.Quantidade}*{precodevolvido}*{data}*{nome_comprador}*{tell}*{pagamento}");
+                        MessageBox.Show("Dados atualizados com sucesso!");
                     }
 
                     AddCliente();
@@ -1075,85 +1120,6 @@ namespace CadastroBanco
                 Pagamento();
             }
 
-            /*if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
-            {
-                if (!(string.IsNullOrEmpty(nome_comprador)) && pagamento == "Realizado")
-                {
-                    DialogResult confirmResult = MessageBox.Show("Deseja devolver o valor em créditos do sistema?","", MessageBoxButtons.YesNo);
-                   
-                    if(confirmResult == DialogResult.Yes)
-                    {
-
-                        foreach (var linha in linhasC)
-                        {
-                            var dadosCliente = linha.Split('*');
-                            if(dadosCliente.Length >= 6)
-                            {
-                                string idc = dadosCliente[0].Trim();
-                                string cliente = dadosCliente[1].Trim();
-                                string telefone = dadosCliente[2].Trim();
-                                string valorDivida = dadosCliente[3].Trim();
-                                string desconto = dadosCliente[4].Trim();
-                                string credito = dadosCliente[5].Trim();
-
-                                if (nome_comprador.Equals(cliente))
-                                {
-                                    int linhaParaAtualizarC = linhasC.FindIndex(l => l.StartsWith(idc + "*"));
-                                    decimal cre = decimal.Parse(credito) + preco;
-                                    linhasC[linhaParaAtualizarC] = $"{idc}*{cliente}*{telefone}*{valorDivida}*{desconto}*{cre.ToString()}";
-                                    break;
-                                }
-                            }
-                        }
-
-                        File.WriteAllLines(caminhoArquivoCliente, linhasC);
-                    }
-
-                }
-                
-                foreach(var linha in linhasP)
-                {
-                    var dadosProduto = linha.Split('*');
-                    if(dadosProduto.Length >= 9)
-                    {
-                        string idp = dadosProduto[0].Trim();
-                        string idl = dadosProduto[1].Trim();
-                        string cat = dadosProduto[2].Trim();
-                        string desc = dadosProduto[3].Trim();
-                        string qntp = dadosProduto[4].Trim();
-                        string precop = dadosProduto[5].Trim();
-                        string datap = dadosProduto[6].Trim();
-                        string sit = dadosProduto[7].Trim();
-                        string extra = dadosProduto[8].Trim();
-
-                        if (idp.Equals(id))
-                        {
-                            int linhaParaAtualizarP = linhasP.FindIndex(l => l.StartsWith(idp + "*"));
-                            int qntn = int.Parse(qntp) + qnt;
-                            linhasP[linhaParaAtualizarP] = $"{idp}*{idl}*{cat}*{desc}*{qntn.ToString()}*{precop}*{datap}*{sit}*{extra}";
-                            break;
-                        }
-                    }
-                }
-                File.WriteAllLines(caminhoArquivo, linhasP);
-
-                pagamento = "Devolvido";
-
-                // Atualizar a linha com os novos dados
-                linhas[linhaParaAtualizar] = $"{id}*{idv}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
-
-                // Escrever as alterações no arquivo
-                File.WriteAllLines(caminhoArquivoVendas, linhas);
-                MessageBox.Show("Dados atualizados com sucesso!");
-
-                AddCliente();
-                ExibirDados();
-            }
-            else
-            {
-                MessageBox.Show("Essa venda já foi devolvida");
-            }
-            Pagamento();*/
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -1583,5 +1549,35 @@ namespace CadastroBanco
             }
         }
     }
+
+    //Ideias mirabolantes
+    /*
+      foreach (var linha in linhasV)
+                        {
+                            var dadosVenda = linha.Split('*');
+                            if (dadosVenda.Length >= 11)
+                            {
+                                string cid = linhaSelecionada.Cells[0].Value.ToString();
+                                string cidv = linhaSelecionada.Cells[1].Value.ToString();
+                                string clivroId = linhaSelecionada.Cells[2].Value.ToString();
+                                string ccategoria = linhaSelecionada.Cells[3].Value.ToString();
+                                string cdescricao = linhaSelecionada.Cells[4].Value.ToString();
+                                int cqnt = int.Parse(linhaSelecionada.Cells[5].Value.ToString());
+                                decimal cpreco = decimal.Parse(linhaSelecionada.Cells[6].Value.ToString());
+                                string cdata = linhaSelecionada.Cells[7].Value.ToString();
+                                string cnome_comprador = linhaSelecionada.Cells[8].Value.ToString();
+                                string ctell = linhaSelecionada.Cells[9].Value.ToString();
+                                string cpagamento = linhaSelecionada.Cells[10].Value.ToString();
+
+                                if (cdata.Equals(data) && cpagamento == "Devolvido")
+                                {
+                                    int linhaParaAtualizarP = linhasP.FindIndex(l => l.StartsWith(cid + "*" + cidv));
+                                    int qntn = (int)(cqnt + form.Quantidade);
+                                    linhasP[linhaParaAtualizarP] = $"{cid}*{cidv}*{clivroId}*{ccategoria}*{cdescricao}*{qntn.ToString()}*{precop}*{datap}*{sit}*{extra}";
+                                    break;
+                                }
+                            }
+                        }
+     */
 
 }
