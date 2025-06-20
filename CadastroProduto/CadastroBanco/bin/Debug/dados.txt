@@ -11,7 +11,7 @@
 10*01A-34*Blusas*Blusa seda costa marinho*1*  5,00*09/10/2024 20:06:14*a vender* #-
 11*01A-36*Blusas*Regata salmão/verde San Marino*1*  5,00*09/10/2024 20:06:14*vendida* #-
 12*01A-38*Blusas*Blusa branca elanca decote V*1*  5,00*09/10/2024 20:06:14*vendida* #-
-13*01A-39*Blusas*Blusa rosa elanca decote V*1*  5,00*09/10/2024 20:06:14*vendida* #-
+13*01A-39*Blusas*Blusa rosa elanca decote V*2*5,00*09/10/2024 20:06:14*vendida*#-
 14*01A-40*Blusas*Blusa com manga pássaro rosa*0*5,00*09/10/2024 20:06:14*a vender*
 15*01A-41*Blusas*Blusa com manga onça decote V*1*  5,00*09/10/2024 20:06:14*a vender* #-
 16*01A-43*Blusas*Camiseta Hering vinho*1*  5,00*09/10/2024 20:06:14*a vender* #-

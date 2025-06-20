@@ -34,6 +34,38 @@ namespace CadastroBanco
             //cbFormapagamento.SelectedIndex = 0;
         }
 
+        private int ObterProximoIdVendasDisponivel()
+        {
+            // Se o arquivo não existir, o primeiro ID será 0
+            if (!File.Exists(caminhoArquivoVendas))
+                return 0;
+
+            // Ler todas as linhas do arquivo
+            var linhas = File.ReadAllLines(caminhoArquivoVendas);
+
+            var idsExistentes = linhas
+                .Where(l => !string.IsNullOrWhiteSpace(l))// ignora linhas vazias
+                .Select(l => l.Split('*'))// divide os campos
+                .Where(partes => partes.Length > 1)// garante que tem ao menos dois campos
+                .Select(partes => int.Parse(partes[1].Trim()))// pega o segundo campo como int
+                .Distinct()// remove duplicatas
+                .OrderBy(id => id)// ordena
+                .ToList();
+
+
+            int proximoId = 0; 
+            foreach (var id in idsExistentes)
+            {
+                if (id == proximoId)
+                    proximoId++; // Se o ID atual já está em uso, incrementar
+                else
+                    break; // Encontrar o menor ID não usado
+            }
+
+            return proximoId;
+        }
+
+        /*
         private int ObterProximoIdDisponivel()
         {
             // Se o arquivo não existir, o primeiro ID será 0
@@ -46,13 +78,11 @@ namespace CadastroBanco
             // Extrair os IDs existentes (supondo que o ID está na primeira coluna)
             var idsExistentes = linhas
                 .Where(l => !string.IsNullOrWhiteSpace(l)) // Ignorar linhas vazias
-                .Select(l => int.Parse(l.Split('*')[0].Trim())) // Pegar o ID (primeiro campo)
+                .Select(l => int.Parse(l.Split('*')[1].Trim())) // Pegar o ID (primeiro campo)
                 .OrderBy(id => id) // Ordenar por ID
                 .ToList();
 
-
-            // Encontrar o menor ID não utilizado
-            int proximoId = 0; // Começa com o ID 0
+            int proximoId = 0;
             foreach (var id in idsExistentes)
             {
                 if (id == proximoId)
@@ -63,6 +93,8 @@ namespace CadastroBanco
 
             return proximoId;
         }
+        */
+
         public void AddCliente()
         {
             var linhasVendas = File.ReadAllLines(caminhoArquivoVendas);
@@ -367,14 +399,14 @@ namespace CadastroBanco
                     File.WriteAllLines(caminhoArquivo, linhas);
                 }
 
-                int idV = ObterProximoIdDisponivel();
+                //int idV = ObterProximoIdVendasDisponivel();
 
                 if (cbPagamento.Text.Equals("Pendente"))
                 {
-                    File.AppendAllText(caminhoArquivoVendas, $"{ObterProximoIdDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString() + " " + comboBox1.Text + " - Pagamento para : " + dataPrazo.Value.ToString()}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nomedocliente}*{telefonedocliente}*{cbPagamento.Text}{Environment.NewLine}");
+                    File.AppendAllText(caminhoArquivoVendas, $"{id}*{ObterProximoIdVendasDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString() + " " + comboBox1.Text + " - Pagamento para : " + dataPrazo.Value.ToString()}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nomedocliente}*{telefonedocliente}*{cbPagamento.Text}{Environment.NewLine}");
                 }else if (cbPagamento.Text.Equals("Realizado"))
                 {
-                    File.AppendAllText(caminhoArquivoVendas, $"{ObterProximoIdDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString() + " " + comboBox1.Text}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nomedocliente}*{telefonedocliente}*{cbPagamento.Text}{Environment.NewLine}");
+                    File.AppendAllText(caminhoArquivoVendas, $"{id}*{ObterProximoIdVendasDisponivel()}*{row.Cells[1].Value.ToString()}*{row.Cells[2].Value.ToString()}*{row.Cells[3].Value.ToString() + " " + comboBox1.Text}*{qtdV.ToString()}*{total.ToString()}*{DateTime.Now}*{nomedocliente}*{telefonedocliente}*{cbPagamento.Text}{Environment.NewLine}");
                 }
                 AddCliente();
             }

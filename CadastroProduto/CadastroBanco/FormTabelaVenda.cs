@@ -1,18 +1,20 @@
-﻿using System;
+﻿using MySqlX.XDevAPI.Relational;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Security;
-using System.Reflection;
-using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Excel = Microsoft.Office.Interop.Excel;
-using System.Runtime.InteropServices;
 namespace CadastroBanco
 {
     public partial class FormTabelaVenda : Form
@@ -54,7 +56,36 @@ namespace CadastroBanco
             //ExibirDados();
         }
 
+        private int ObterProximoIdVendasDisponivel()
+        {
+            // Se o arquivo não existir, o primeiro ID será 0
+            if (!File.Exists(caminhoArquivoVendas))
+                return 0;
 
+            // Ler todas as linhas do arquivo
+            var linhas = File.ReadAllLines(caminhoArquivoVendas);
+
+            var idsExistentes = linhas
+                .Where(l => !string.IsNullOrWhiteSpace(l))// ignora linhas vazias
+                .Select(l => l.Split('*'))// divide os campos
+                .Where(partes => partes.Length > 1)// garante que tem ao menos dois campos
+                .Select(partes => int.Parse(partes[1].Trim()))// pega o segundo campo como int
+                .Distinct()// remove duplicatas
+                .OrderBy(id => id)// ordena
+                .ToList();
+
+
+            int proximoId = 0;
+            foreach (var id in idsExistentes)
+            {
+                if (id == proximoId)
+                    proximoId++; // Se o ID atual já está em uso, incrementar
+                else
+                    break; // Encontrar o menor ID não usado
+            }
+
+            return proximoId;
+        }
 
         private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -951,6 +982,11 @@ namespace CadastroBanco
                 MessageBox.Show("Selecione um item para devolver.");
                 return;
             }
+            else if(dataGridViewDados.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Selecione apenas um item para devolver.");
+                return;
+            }
 
             int index = dataGridViewDados.SelectedRows[0].Index;
             var linhaSelecionada = dataGridViewDados.Rows[index];
@@ -967,18 +1003,83 @@ namespace CadastroBanco
             string tell = linhaSelecionada.Cells[9].Value.ToString();
             string pagamento = linhaSelecionada.Cells[10].Value.ToString();
             var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
+            decimal precoUnidade = preco / qnt;
 
             int linhaParaAtualizar = linhas.FindIndex(l => l.StartsWith(id + "*" + idv + "*"));
+
+            FormDesconto form = new FormDesconto(qnt);
+
+            form.ShowDialog();
 
             var linhasC = File.ReadAllLines(caminhoArquivoCliente).ToList();
             var linhasV = File.ReadAllLines(caminhoArquivoVendas).ToList();
             var linhasP = File.ReadAllLines(caminhoArquivo).ToList();
 
 
-
-            if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
+            if(form.ShowDialog() == DialogResult.OK)
             {
-                /*if (!(string.IsNullOrEmpty(nome_comprador)) && pagamento == "Realizado")
+                if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
+                {
+                    foreach (var linha in linhasP)
+                    {
+                        var dadosProduto = linha.Split('*');
+                        if (dadosProduto.Length >= 9)
+                        {
+                            string idp = dadosProduto[0].Trim();
+                            string idl = dadosProduto[1].Trim();
+                            string cat = dadosProduto[2].Trim();
+                            string desc = dadosProduto[3].Trim();
+                            string qntp = dadosProduto[4].Trim();
+                            string precop = dadosProduto[5].Trim();
+                            string datap = dadosProduto[6].Trim();
+                            string sit = dadosProduto[7].Trim();
+                            string extra = dadosProduto[8].Trim();
+
+                            if (idp.Equals(id))
+                            {
+                                int linhaParaAtualizarP = linhasP.FindIndex(l => l.StartsWith(idp + "*"));
+                                int qntn = (int)(int.Parse(qntp) + form.Quantidade);
+                                linhasP[linhaParaAtualizarP] = $"{idp}*{idl}*{cat}*{desc}*{qntn.ToString()}*{precop}*{datap}*{sit}*{extra}";
+                                break;
+                            }
+                        }
+                    }
+                    File.WriteAllLines(caminhoArquivo, linhasP);
+
+                    if(form.Quantidade == qnt)
+                    {
+                        pagamento = "Devolvido";
+                        linhas[linhaParaAtualizar] = $"{id}*{idv}*{livroId}*{categoria}*{descricao}*{qnt}*{preco}*{data}*{nome_comprador}*{tell}*{pagamento}";
+
+                        File.WriteAllLines(caminhoArquivoVendas, linhas);
+                        MessageBox.Show("Dados atualizados com sucesso!(form.qnt == qnt)");
+                    }
+                    else
+                    {
+                        qnt -= (int)form.Quantidade;
+                        decimal preconovo = precoUnidade * qnt;
+                        linhas[linhaParaAtualizar] = $"{id}*{idv}*{livroId}*{categoria}*{descricao}*{qnt}*{preconovo}*{data}*{nome_comprador}*{tell}*{pagamento}";
+                        File.WriteAllLines(caminhoArquivoVendas, linhas);
+
+                        decimal precodevolvido = precoUnidade * form.Quantidade;
+                        pagamento = "Devolvido";
+                        File.AppendAllText(caminhoArquivoVendas, $"{id}*{ObterProximoIdVendasDisponivel()}*{livroId}*{categoria}*{descricao}*{qnt}*{precodevolvido}*{data}*{nome_comprador}*{tell}*{pagamento}");
+                        MessageBox.Show("Dados atualizados com sucesso!(form.qnt < qnt)");
+                    }
+
+                    AddCliente();
+                    ExibirDados();
+                }
+                else
+                {
+                    MessageBox.Show("Essa venda já foi devolvida");
+                }
+                Pagamento();
+            }
+
+            /*if (linhaParaAtualizar >= 0 && pagamento != "Devolvido")
+            {
+                if (!(string.IsNullOrEmpty(nome_comprador)) && pagamento == "Realizado")
                 {
                     DialogResult confirmResult = MessageBox.Show("Deseja devolver o valor em créditos do sistema?","", MessageBoxButtons.YesNo);
                    
@@ -1010,8 +1111,8 @@ namespace CadastroBanco
                         File.WriteAllLines(caminhoArquivoCliente, linhasC);
                     }
 
-                }*/
-
+                }
+                
                 foreach(var linha in linhasP)
                 {
                     var dadosProduto = linha.Split('*');
@@ -1054,7 +1155,7 @@ namespace CadastroBanco
             {
                 MessageBox.Show("Essa venda já foi devolvida");
             }
-            Pagamento();
+            Pagamento();*/
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

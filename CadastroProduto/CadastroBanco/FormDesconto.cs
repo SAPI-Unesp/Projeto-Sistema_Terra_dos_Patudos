@@ -14,30 +14,14 @@ namespace CadastroBanco
     public partial class FormDesconto : Form
     {
         public string caminhoArquivoCliente = "cliente.txt";
-        public decimal Desconto { get; set; }
-        public string Cliente { get; set; }
-        private List<string[]> clientes = new List<string[]>();
+        public decimal Quantidade { get; set; }
+        public int max;
 
-        public FormDesconto()
+        public FormDesconto(int max)
         {
+            this.max = max;
+            valor.Value = 1;
             InitializeComponent();
-            if (File.Exists(caminhoArquivoCliente))
-            {
-                var linhas = File.ReadAllLines(caminhoArquivoCliente);
-                foreach (var linha in linhas)
-                {
-                    var dadosCliente = linha.Split('*');
-                    if (dadosCliente.Length > 1)
-                    {
-                        cbCliente.Items.Add(dadosCliente[1].Trim());
-                    }
-                }
-            }
-            ExibirDados();
-
-
-
-
 
         }
 
@@ -49,93 +33,33 @@ namespace CadastroBanco
 
         private void cbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Cliente = cbCliente.Text;
-            ExibirDados();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Desconto = valor.Value; 
-            Cliente = cbCliente.Text;
-
-            List<string> linhasClientes = File.Exists(caminhoArquivoCliente)
-                ? File.ReadAllLines(caminhoArquivoCliente).ToList()
-                : new List<string>();
 
 
-            for (int i = 0; i < linhasClientes.Count; i++)
-            {
-                var dadosCliente = linhasClientes[i].Split('*');
+            Quantidade = valor.Value;
 
-                if (dadosCliente.Length < 5) continue;
-
-                string id = dadosCliente[0].Trim();
-                string cliente = dadosCliente[1].Trim();
-                string telefone = dadosCliente[2].Trim();
-                string valorDivida = dadosCliente[3].Trim();
-                decimal desconto = Convert.ToDecimal(dadosCliente[4].Trim());
-                string credito = dadosCliente[5].Trim();
-
-                if (Cliente == cliente)
-                {
-                    desconto += Desconto; 
-                    linhasClientes[i] = $"{id}*{cliente}*{telefone}*{valorDivida}*{desconto}*{credito}";
-                    break; 
-                }
-            }
-
-            File.WriteAllLines(caminhoArquivoCliente, linhasClientes);
-            valor.Value = 0; 
-            cbCliente.Text = "";
-            ExibirDados();
-
-        }
-
-        public void ExibirDados()
-        {
-
-            clientes.Clear();
-            dataGridViewDados.Rows.Clear();
-
-            if (File.Exists(caminhoArquivoCliente))
-            {
-                var linhas = File.ReadAllLines(caminhoArquivoCliente);
-                foreach (var linha in linhas)
-                {
-                    var dadosCliente = linha.Split('*');
-
-                    if (dadosCliente.Length < 6) continue;
-
-                    clientes.Add(new string[]
-                    {
-                    dadosCliente[0].Trim(), 
-                    dadosCliente[1].Trim(), 
-                    dadosCliente[2].Trim(), 
-                    dadosCliente[3].Trim(), 
-                    dadosCliente[4].Trim(),
-                    dadosCliente[5].Trim()
-                    });
-                }
-
-                List<string[]> clientesFiltrados = Cliente == "Todos" || string.IsNullOrEmpty(Cliente)
-                    ? clientes
-                    : clientes.Where(c => c[1] == Cliente).ToList(); 
-
-                foreach (var cliente in clientesFiltrados)
-                {
-                    dataGridViewDados.Rows.Add(cliente[0], cliente[1], cliente[2], cliente[3], cliente[4], cliente[5]);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nenhum dado encontrado."); 
-            }
-
+            this.DialogResult = DialogResult.OK; // Retornar OK para confirmar a atualização
+            this.Close();
         }
 
         private void FormDesconto_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void valor_ValueChanged(object sender, EventArgs e)
+        {
+            if (valor.Value > max)
+            {
+                valor.Value = max;
+            }else if (valor.Value < 1)
+            {
+                valor.Value = 1;
+            }
         }
     }
 }
