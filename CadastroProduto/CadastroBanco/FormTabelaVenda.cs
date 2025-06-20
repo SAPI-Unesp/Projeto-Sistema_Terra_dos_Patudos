@@ -1009,8 +1009,6 @@ namespace CadastroBanco
 
             FormDesconto form = new FormDesconto(qnt);
 
-            form.ShowDialog();
-
             var linhasC = File.ReadAllLines(caminhoArquivoCliente).ToList();
             var linhasV = File.ReadAllLines(caminhoArquivoVendas).ToList();
             var linhasP = File.ReadAllLines(caminhoArquivo).ToList();
@@ -1063,7 +1061,7 @@ namespace CadastroBanco
 
                         decimal precodevolvido = precoUnidade * form.Quantidade;
                         pagamento = "Devolvido";
-                        File.AppendAllText(caminhoArquivoVendas, $"{id}*{ObterProximoIdVendasDisponivel()}*{livroId}*{categoria}*{descricao}*{qnt}*{precodevolvido}*{data}*{nome_comprador}*{tell}*{pagamento}");
+                        File.AppendAllText(caminhoArquivoVendas, $"{id}*{ObterProximoIdVendasDisponivel()}*{livroId}*{categoria}*{descricao}*{form.Quantidades}*{precodevolvido}*{data}*{nome_comprador}*{tell}*{pagamento}");
                         MessageBox.Show("Dados atualizados com sucesso!(form.qnt < qnt)");
                     }
 
@@ -1524,7 +1522,7 @@ namespace CadastroBanco
             { UseShellExecute = true });
         }
     }
-
+    
     //gpt apagart se der merda
     public class InputBox
     {
@@ -1533,9 +1531,9 @@ namespace CadastroBanco
             Form inputForm = new Form();
             Label label = new Label();
             //TextBox textBox = new TextBox();
-            ComboBox comboBox = new ComboBox();
-            Button confirmButton = new Button();
-            Button cancelButton = new Button();
+            System.Windows.Forms.ComboBox comboBox = new System.Windows.Forms.ComboBox();
+            System.Windows.Forms.Button confirmButton = new System.Windows.Forms.Button();
+            System.Windows.Forms.Button cancelButton = new System.Windows.Forms.Button();
 
             // Configurações do form
             inputForm.Text = title;

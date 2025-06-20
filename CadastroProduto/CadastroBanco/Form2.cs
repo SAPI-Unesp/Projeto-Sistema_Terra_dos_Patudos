@@ -889,6 +889,8 @@ namespace CadastroBanco
 
             form.ShowDialog();
 
+            ExibirDados();
+            ExibirTudo();
         }
 
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)

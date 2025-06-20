@@ -20,9 +20,8 @@ namespace CadastroBanco
         public FormDesconto(int max)
         {
             this.max = max;
-            valor.Value = 1;
             InitializeComponent();
-
+            valor.Value = 1;
         }
 
 
@@ -38,11 +37,9 @@ namespace CadastroBanco
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             Quantidade = valor.Value;
 
-            this.DialogResult = DialogResult.OK; // Retornar OK para confirmar a atualização
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
