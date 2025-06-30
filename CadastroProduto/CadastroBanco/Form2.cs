@@ -178,6 +178,8 @@ namespace CadastroBanco
             cbCategoria.Text = formAdicionar.cbtexto;
             ExibirDados();
             ExibirTudo();
+            if (textBox1.Text != "")
+                Buscarr();
         }
 
         public void ExibirDados()
@@ -445,8 +447,9 @@ namespace CadastroBanco
             }
 
 
-            ExibirTudo();
-            Buscar2();
+            //ExibirTudo();
+            if(textBox1.Text != "")
+                Buscarr();
 
         }
 
@@ -497,7 +500,8 @@ namespace CadastroBanco
                 MessageBox.Show("Ação de exclusão cancelada.");
             }
 
-            ExibirTudo();
+            if (textBox1.Text != "")
+                Buscarr();
         }
 
 
@@ -1254,8 +1258,7 @@ namespace CadastroBanco
                 MessageBox.Show("Nenhum item no carrinho");
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        public void Buscarr()
         {
             //Desseleciona os itens selecionados da tabela
             dataGridViewDados.ClearSelection();
@@ -1348,9 +1351,14 @@ namespace CadastroBanco
                 dataGridViewDados.ClearSelection();
                 return;
             }
-
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Buscarr();
+
+        }
+       
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 

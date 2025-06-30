@@ -152,7 +152,7 @@ namespace CadastroBanco
                 var dadosVenda = linhaVenda.Split('*');
                 if (dadosVenda.Length >= 10)
                 {
-                    string precoVenda = dadosVenda[7].Trim();
+                    string precoVenda = dadosVenda[6].Trim();
                     string pessoa = dadosVenda[8].Trim();
                     string telefonep = dadosVenda[9].Trim();
 
@@ -164,15 +164,15 @@ namespace CadastroBanco
                         string cliente = dadosCliente[1].Trim();
                         string telefone = dadosCliente[2].Trim();
                         string desconto = dadosCliente[4].Trim();
-                        string credito = dadosCliente[5].Trim();
+                        string credito = "0";
 
                         if (pessoa.Equals(cliente))
                         {
                             clienteExistente = true;
-                            
 
-                            linhasClientes[j] = $"{j}*{cliente}*{telefone}*0*0*{credito}";
-                            
+
+                            linhasClientes[j] = $"{j}*{cliente}*{telefone}*0*{desconto}*{credito}";
+
                             break;
                         }
                     }
@@ -197,27 +197,28 @@ namespace CadastroBanco
                 string cliente = dadosCliente[1].Trim();
                 string telefone = dadosCliente[2].Trim();
                 string desconto = dadosCliente[4].Trim();
-                string credito = dadosCliente[5].Trim();
+                string credito = "0";
                 decimal valorDivida = 0;
 
-                foreach(var linhaV in linhasVendas)
+                foreach (var linhaV in linhasVendas)
                 {
                     var dadosVenda = linhaV.Split('*');
 
-                    if(dadosVenda.Length >= 10)
+                    if (dadosVenda.Length >= 10)
                     {
                         string precoVenda = dadosVenda[6].Trim();
                         string pessoa = dadosVenda[8].Trim();
-
+                        string penRe = dadosVenda[10].Trim();
                         if (pessoa.Equals(cliente))
                         {
-                            valorDivida += decimal.Parse(precoVenda);
+                            if (penRe == "Pendente")
+                                valorDivida += decimal.Parse(precoVenda);
                         }
                     }
                 }
                 int linhasParaAtualizar = linhasClientes.FindIndex(l => l.StartsWith(id + "*"));
 
-                linhasCliente2[linhasParaAtualizar] = $"{id}*{cliente}*{telefone}*{valorDivida.ToString()}*0*{credito}";
+                linhasCliente2[linhasParaAtualizar] = $"{id}*{cliente}*{telefone}*{valorDivida.ToString()}*{desconto}*{credito}";
             }
 
             File.WriteAllLines(caminhoArquivoCliente, linhasCliente2);
@@ -299,6 +300,8 @@ namespace CadastroBanco
                     MessageBox.Show("Erro ao achar os dados do cliente.");
                 }
 
+                
+
                 var linhasV = File.ReadAllLines(caminhoArquivoVendas).ToList();
                 var linhasV1 = File.ReadAllLines(caminhoArquivoVendas);
                 var linhasV2 = File.ReadAllLines(caminhoArquivoVendas).ToList();
@@ -325,16 +328,18 @@ namespace CadastroBanco
 
                             if (pessoa.Equals(cliente))
                             {
-                                int linhasParaAtualizar = linhasV2.FindIndex(l => l.StartsWith(idv + "*"));
+                                int linhasParaAtualizar = linhasV2.FindIndex(l => l.StartsWith(ido + "*"));
                                 //MessageBox.Show(linhasParaAtualizar.ToString());
-                                linhasV[linhasParaAtualizar] = $"{ido}{idv}*{idl}*{categoriaVenda}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{pendente}";
+                                linhasV[linhasParaAtualizar] = $"{ido}*{idv}*{idl}*{categoriaVenda}*{descricaoVenda}*{qntVenda}*{precoVenda}*{dataVenda}*{formAtualizarCliente.Cliente}*{formAtualizarCliente.Telefone}*{pendente}";
                                 
                             }
                         }
                         count++;
                     }
                     File.WriteAllLines(caminhoArquivoVendas, linhasV);
-                    MessageBox.Show("Dados da venda atualizados com sucesso!");
+                    //MessageBox.Show("Dados da venda atualizados com sucesso!");
+                    AddCliente();
+                    ExibirTudo();
 
                 }
                 catch (Exception exc)
@@ -342,13 +347,11 @@ namespace CadastroBanco
                     MessageBox.Show(exc.Message);
                 }
             }
-            else if(formAtualizarCliente.ShowDialog() == DialogResult.Cancel)
-            {
-
-            }
+           
             else
             {
-                MessageBox.Show("Erro ao atualizar os dados do cliente.");
+                //if(! (formAtualizarCliente.ShowDialog() == DialogResult.Cancel))
+                //MessageBox.Show("Erro ao atualizar os dados do cliente.");
             }
         }
 

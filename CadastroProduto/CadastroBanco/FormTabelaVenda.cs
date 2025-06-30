@@ -387,13 +387,12 @@ namespace CadastroBanco
 
                     if (dadosVenda.Length >= 10)
                     {
-                        string precoVenda = dadosVenda[5].Trim();
+                        string precoVenda = dadosVenda[6].Trim();
                         string pessoa = dadosVenda[8].Trim();
-                        string pendenteRealizado = dadosVenda[10].Trim();
-
+                        string penRe = dadosVenda[10].Trim();
                         if (pessoa.Equals(cliente))
                         {
-                            if(pendenteRealizado == "Pendente")
+                            if (penRe == "Pendente")
                                 valorDivida += decimal.Parse(precoVenda);
                         }
                     }
