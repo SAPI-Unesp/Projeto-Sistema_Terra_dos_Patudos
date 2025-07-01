@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CadastroProduto",
+    "\\CadastroProduto\\CadastroBanco",
+    "\\CadastroProduto\\CadastroBanco\\bin"
   ],
+  "SelectedNode": "\\CadastroProduto\\CadastroBanco\\FormClientes.cs",
   "PreviewInSolutionExplorer": false
 }
