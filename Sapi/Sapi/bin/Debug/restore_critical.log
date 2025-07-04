@@ -1,0 +1,72 @@
+[25/05/2025 09:34:53] ERRO CRÍTICO: System.Exception: Erro ao interpretar os arquivos do backup. Formato inválido. ---> Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: H. Path '', line 0, position 0.
+   em Newtonsoft.Json.JsonTextReader.ParseValue()
+   em Newtonsoft.Json.JsonTextReader.Read()
+   em Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   em Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   em Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 383
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 397
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 397
+[25/05/2025 09:35:10] ERRO CRÍTICO: System.Exception: Erro ao interpretar os arquivos do backup. Formato inválido. ---> Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: H. Path '', line 0, position 0.
+   em Newtonsoft.Json.JsonTextReader.ParseValue()
+   em Newtonsoft.Json.JsonTextReader.Read()
+   em Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   em Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   em Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 383
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 397
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 397
+[25/05/2025 09:38:36] ERRO CRÍTICO: System.Exception: Erro ao interpretar os arquivos do backup. Formato inválido. ---> Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: H. Path '', line 0, position 0.
+   em Newtonsoft.Json.JsonTextReader.ParseValue()
+   em Newtonsoft.Json.JsonTextReader.Read()
+   em Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   em Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   em Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   em Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 383
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 397
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 397
+[25/05/2025 13:15:21] ERRO CRÍTICO: System.Exception: Formato dos dados não reconhecido. Não é JSON nem formato alternativo. ---> System.Exception: Não foi possível extrair arquivos dos dados recebidos
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 410
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 415
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 415
+[25/05/2025 13:15:42] ERRO CRÍTICO: System.Exception: Formato dos dados não reconhecido. Não é JSON nem formato alternativo. ---> System.Exception: Não foi possível extrair arquivos dos dados recebidos
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 410
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 415
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 415
+[25/05/2025 13:23:02] ERRO CRÍTICO: System.Exception: Erro no servidor: Unexpected error while getting the method or property getFolderById on object DriveApp.
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 352
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 352
+[25/05/2025 13:24:01] ERRO CRÍTICO: System.Exception: Erro no servidor: Unexpected error while getting the method or property getFolderById on object DriveApp.
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 352
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 352
+[25/05/2025 13:31:26] ERRO CRÍTICO: System.Exception: Erro no servidor: Unexpected error while getting the method or property getFolderById on object DriveApp.
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 352
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 352
+[25/05/2025 13:32:17] ERRO CRÍTICO: System.Exception: Erro no servidor: Unexpected error while getting the method or property getFolderById on object DriveApp.
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 363
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 363
+[25/05/2025 13:40:57] ERRO CRÍTICO: System.Exception: Erro no servidor: Unexpected error while getting the method or property getFolderById on object DriveApp.
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 363
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 363
+[25/05/2025 13:47:43] ERRO CRÍTICO: System.Exception: Falha ao descomprimir os dados recebidos. O backup pode estar corrompido ou em formato incompatível. ---> System.Exception: Falha ao processar os dados recebidos. Formato pode estar incorreto. ---> System.Exception: Dados não estão em formato Base64 válido
+   em CadastroBanco.Backup.DecompressData(String compressedData) na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 176
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em CadastroBanco.Backup.DecompressData(String compressedData) na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 203
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 388
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 394
+Stack Trace:    em CadastroBanco.Backup.<btnImport_Click_1>d__13.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 394

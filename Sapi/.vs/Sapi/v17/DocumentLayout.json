@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|c:\\users\\wkjoa\\onedrive\\documentos\\github\\projeto-entensao\\sapi\\sapi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|solutionrelative:sapi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|c:\\users\\wkjoa\\onedrive\\documentos\\github\\projeto-entensao\\sapi\\sapi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|solutionrelative:sapi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|c:\\users\\wkjoa\\onedrive\\documentos\\github\\projeto-entensao\\sapi\\sapi\\backup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|solutionrelative:sapi\\backup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|c:\\users\\wkjoa\\onedrive\\documentos\\github\\projeto-entensao\\sapi\\sapi\\backup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|solutionrelative:sapi\\backup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|c:\\users\\wkjoa\\onedrive\\documentos\\github\\projeto-entensao\\sapi\\sapi\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4C175A4-DE56-44F8-953E-28BB25BE6E65}|Sapi\\Sapi.csproj|solutionrelative:sapi\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Backup.cs",
+              "DocumentMoniker": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\Backup.cs",
+              "RelativeDocumentMoniker": "Sapi\\Backup.cs",
+              "ToolTip": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\Backup.cs",
+              "RelativeToolTip": "Sapi\\Backup.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAowCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T00:54:55.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\Form2.cs",
+              "RelativeDocumentMoniker": "Sapi\\Form2.cs",
+              "ToolTip": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\Form2.cs",
+              "RelativeToolTip": "Sapi\\Form2.cs",
+              "ViewState": "AQIAAFsFAAAAAAAAAAAxwGcFAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T00:54:46.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\Form2.cs",
+              "RelativeDocumentMoniker": "Sapi\\Form2.cs",
+              "ToolTip": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\Form2.cs [Design]",
+              "RelativeToolTip": "Sapi\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T00:54:45.134Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Backup.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\Backup.cs",
+              "RelativeDocumentMoniker": "Sapi\\Backup.cs",
+              "ToolTip": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\Backup.cs [Design]",
+              "RelativeToolTip": "Sapi\\Backup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T00:54:41.584Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormClientes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\FormClientes.cs",
+              "RelativeDocumentMoniker": "Sapi\\FormClientes.cs",
+              "ToolTip": "C:\\Users\\wkjoa\\OneDrive\\Documentos\\GitHub\\projeto-entensao\\Sapi\\Sapi\\FormClientes.cs [Design]",
+              "RelativeToolTip": "Sapi\\FormClientes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T00:52:24.992Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
