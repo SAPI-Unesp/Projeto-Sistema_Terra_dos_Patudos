@@ -1,3 +1,0 @@
-[25/05/2025 13:47:43] Erro ao processar dados. Início: {"contents":"{\"dados.txt\":\"0*01-07*Blusas*Blusa
-System.Exception: Dados não estão em formato Base64 válido
-   em CadastroBanco.Backup.DecompressData(String compressedData) na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 176

@@ -1,6 +1,0 @@
-[25/05/2025 13:41:24] System.Exception: Unexpected error while getting the method or property getFolderById on object DriveApp.
-   em CadastroBanco.Backup.<exportar_Click>d__12.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 284
-[25/05/2025 13:41:40] System.Exception: Unexpected error while getting the method or property getFolderById on object DriveApp.
-   em CadastroBanco.Backup.<exportar_Click>d__12.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 284
-[25/05/2025 13:45:21] System.Exception: Unexpected error while getting the method or property getFolderById on object DriveApp.
-   em CadastroBanco.Backup.<exportar_Click>d__12.MoveNext() na C:\Users\samue.DESKTOP-LR09IQF\OneDrive\Documentos\GitHub\projeto-entensao\CadastroProduto\CadastroBanco\Backup.cs:linha 284

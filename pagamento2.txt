@@ -1,0 +1,35 @@
+valorTotal = 0;
+
+
+            foreach (DataGridViewRow row in dataGridViewDados.Rows)
+            {
+                string value = cbPagamento.Text;
+                string pagamento = row.Cells[9].Value?.ToString();
+                string nome = row.Cells[7].Value?.ToString();
+                bool exibeLinha = (pagamento == value) && (cbPessoas.Text == "(Todos)" || cbPessoas.Text == nome);
+                if (exibeLinha)
+                {
+                    DateTime cellDate;
+                    if (DateTime.TryParse(row.Cells[6].Value?.ToString(), out cellDate))
+                    {
+                        if (cellDate.Date == dataPickerStart.Value.Date)
+                        {
+                            row.Visible = true;
+                            valorTotal += Convert.ToDecimal(row.Cells[5].Value.ToString());
+                        }
+                        else
+                        {
+                            row.Visible = false;
+                        }
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
+                else
+                {
+                    row.Visible = false;
+                }
+            }
+            txtTotal.Text = valorTotal.ToString();
