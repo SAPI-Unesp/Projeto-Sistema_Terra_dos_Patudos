@@ -294,6 +294,7 @@ namespace CadastroBanco
             }
 
             ExibirDados();
+            calcularTotal();
         }
 
         private void btnFinalizarCompra_Click(object sender, EventArgs e)

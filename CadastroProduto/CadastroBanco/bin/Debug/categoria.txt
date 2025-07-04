@@ -16,5 +16,3 @@ Religiosos
 Kids
 Livros
 Extra
-TirarDaVendabolsa
-TesteComBackup

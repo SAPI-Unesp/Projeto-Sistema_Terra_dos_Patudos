@@ -47,114 +47,127 @@
             // txtDesc
             // 
             this.txtDesc.AllowDrop = true;
-            this.txtDesc.Location = new System.Drawing.Point(26, 134);
+            this.txtDesc.Location = new System.Drawing.Point(35, 165);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(4);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(253, 193);
+            this.txtDesc.Size = new System.Drawing.Size(336, 237);
             this.txtDesc.TabIndex = 7;
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(297, 304);
+            this.btnConfirmar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnConfirmar.Location = new System.Drawing.Point(121, 414);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmar.Size = new System.Drawing.Size(163, 47);
             this.btnConfirmar.TabIndex = 5;
             this.btnConfirmar.Text = "Adicionar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 13);
+            this.label1.Location = new System.Drawing.Point(35, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Categoria";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 118);
+            this.label2.Location = new System.Drawing.Point(35, 145);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Descrição";
             // 
             // numQnt
             // 
-            this.numQnt.Location = new System.Drawing.Point(29, 79);
+            this.numQnt.Location = new System.Drawing.Point(39, 97);
+            this.numQnt.Margin = new System.Windows.Forms.Padding(4);
             this.numQnt.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.numQnt.Name = "numQnt";
-            this.numQnt.Size = new System.Drawing.Size(37, 20);
+            this.numQnt.Size = new System.Drawing.Size(49, 22);
             this.numQnt.TabIndex = 10;
             // 
             // numPreco
             // 
             this.numPreco.DecimalPlaces = 2;
-            this.numPreco.Location = new System.Drawing.Point(161, 29);
+            this.numPreco.Location = new System.Drawing.Point(215, 36);
+            this.numPreco.Margin = new System.Windows.Forms.Padding(4);
             this.numPreco.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.numPreco.Name = "numPreco";
-            this.numPreco.Size = new System.Drawing.Size(120, 20);
+            this.numPreco.Size = new System.Drawing.Size(160, 22);
             this.numPreco.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 63);
+            this.label3.Location = new System.Drawing.Point(35, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 13);
+            this.label3.Size = new System.Drawing.Size(152, 16);
             this.label3.TabIndex = 12;
             this.label3.Text = "Quantidade em Estoque";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(158, 13);
+            this.label4.Location = new System.Drawing.Point(211, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 13;
             this.label4.Text = "Preço";
             // 
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(26, 29);
+            this.cbCategoria.Location = new System.Drawing.Point(35, 36);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbCategoria.Size = new System.Drawing.Size(160, 24);
             this.cbCategoria.TabIndex = 14;
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
             // txtCaderno
             // 
-            this.txtCaderno.Location = new System.Drawing.Point(161, 78);
+            this.txtCaderno.Location = new System.Drawing.Point(215, 96);
+            this.txtCaderno.Margin = new System.Windows.Forms.Padding(4);
             this.txtCaderno.Name = "txtCaderno";
             this.txtCaderno.ReadOnly = true;
-            this.txtCaderno.Size = new System.Drawing.Size(100, 20);
+            this.txtCaderno.Size = new System.Drawing.Size(132, 22);
             this.txtCaderno.TabIndex = 15;
             // 
             // txtCadernoaa
             // 
             this.txtCadernoaa.AutoSize = true;
-            this.txtCadernoaa.Location = new System.Drawing.Point(158, 63);
+            this.txtCadernoaa.Location = new System.Drawing.Point(211, 78);
+            this.txtCadernoaa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtCadernoaa.Name = "txtCadernoaa";
-            this.txtCadernoaa.Size = new System.Drawing.Size(97, 13);
+            this.txtCadernoaa.Size = new System.Drawing.Size(122, 16);
             this.txtCadernoaa.TabIndex = 16;
             this.txtCadernoaa.Text = "Pagina do caderno";
             // 
             // FormAdicionar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 339);
+            this.ClientSize = new System.Drawing.Size(405, 472);
             this.Controls.Add(this.txtCadernoaa);
             this.Controls.Add(this.txtCaderno);
             this.Controls.Add(this.cbCategoria);
@@ -167,6 +180,7 @@
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.btnConfirmar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdicionar";
             this.Text = "Adicionar";
             this.Load += new System.EventHandler(this.FormAdicionar_Load);
