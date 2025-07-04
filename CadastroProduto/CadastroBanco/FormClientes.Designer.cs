@@ -54,14 +54,12 @@
             this.Cliente,
             this.Telefone,
             this.Divida});
-            this.dataGridViewDados.Location = new System.Drawing.Point(16, 15);
-            this.dataGridViewDados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewDados.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewDados.MultiSelect = false;
             this.dataGridViewDados.Name = "dataGridViewDados";
             this.dataGridViewDados.ReadOnly = true;
-            this.dataGridViewDados.RowHeadersWidth = 51;
             this.dataGridViewDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDados.Size = new System.Drawing.Size(724, 522);
+            this.dataGridViewDados.Size = new System.Drawing.Size(543, 424);
             this.dataGridViewDados.TabIndex = 10;
             this.dataGridViewDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDados_CellContentClick);
             // 
@@ -69,7 +67,6 @@
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
@@ -77,7 +74,6 @@
             // 
             this.Cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Cliente.HeaderText = "Cliente";
-            this.Cliente.MinimumWidth = 6;
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
             // 
@@ -85,7 +81,6 @@
             // 
             this.Telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Telefone.HeaderText = "Telefone";
-            this.Telefone.MinimumWidth = 6;
             this.Telefone.Name = "Telefone";
             this.Telefone.ReadOnly = true;
             // 
@@ -93,19 +88,17 @@
             // 
             this.Divida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Divida.HeaderText = "Dívida";
-            this.Divida.MinimumWidth = 6;
             this.Divida.Name = "Divida";
             this.Divida.ReadOnly = true;
             // 
             // btnEditar
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.Location = new System.Drawing.Point(761, 13);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(573, 12);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(142, 61);
+            this.btnEditar.Size = new System.Drawing.Size(103, 47);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -116,10 +109,9 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::CadastroBanco.Properties.Resources.duvida;
-            this.pictureBox2.Location = new System.Drawing.Point(867, 512);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(650, 416);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(34, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
@@ -127,14 +119,13 @@
             // 
             // FormClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 551);
+            this.ClientSize = new System.Drawing.Size(688, 448);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridViewDados);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormClientes";
             this.Text = "Tabela de Clientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);

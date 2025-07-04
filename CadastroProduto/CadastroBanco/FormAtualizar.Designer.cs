@@ -45,97 +45,87 @@
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(41, 34);
-            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCategoria.Location = new System.Drawing.Point(31, 28);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(160, 24);
+            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cbCategoria.TabIndex = 23;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(217, 15);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(163, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
+            this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 22;
             this.label4.Text = "Preço";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 78);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(31, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 16);
+            this.label3.Size = new System.Drawing.Size(121, 13);
             this.label3.TabIndex = 21;
             this.label3.Text = "Quantidade em Estoque";
             // 
             // numPreco
             // 
             this.numPreco.DecimalPlaces = 2;
-            this.numPreco.Location = new System.Drawing.Point(221, 34);
-            this.numPreco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numPreco.Location = new System.Drawing.Point(166, 28);
             this.numPreco.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.numPreco.Name = "numPreco";
-            this.numPreco.Size = new System.Drawing.Size(160, 22);
+            this.numPreco.Size = new System.Drawing.Size(120, 20);
             this.numPreco.TabIndex = 20;
             // 
             // numQnt
             // 
-            this.numQnt.Location = new System.Drawing.Point(45, 97);
-            this.numQnt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numQnt.Location = new System.Drawing.Point(34, 79);
             this.numQnt.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.numQnt.Name = "numQnt";
-            this.numQnt.Size = new System.Drawing.Size(49, 22);
+            this.numQnt.Size = new System.Drawing.Size(37, 20);
             this.numQnt.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 144);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(31, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 16);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "Descrição";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(31, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Categoria";
             // 
             // txtDesc
             // 
             this.txtDesc.AllowDrop = true;
-            this.txtDesc.Location = new System.Drawing.Point(41, 164);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDesc.Location = new System.Drawing.Point(31, 133);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(336, 237);
+            this.txtDesc.Size = new System.Drawing.Size(253, 193);
             this.txtDesc.TabIndex = 16;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.Location = new System.Drawing.Point(123, 411);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(253)))), ((int)(((byte)(228)))));
+            this.btnSalvar.Location = new System.Drawing.Point(303, 266);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(163, 47);
+            this.btnSalvar.Size = new System.Drawing.Size(110, 60);
             this.btnSalvar.TabIndex = 24;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -143,9 +133,9 @@
             // 
             // FormAtualizar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 472);
+            this.ClientSize = new System.Drawing.Size(437, 343);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.label4);
@@ -156,9 +146,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDesc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormAtualizar";
-            this.Text = "Editar";
+            this.Text = "Atualizar";
             this.Load += new System.EventHandler(this.FormAtualizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPreco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQnt)).EndInit();

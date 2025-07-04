@@ -1386,7 +1386,6 @@ namespace CadastroBanco
         {
             Backup form = new Backup();
             form.ShowDialog();
-            ExibirDados();
         }
     }
 }

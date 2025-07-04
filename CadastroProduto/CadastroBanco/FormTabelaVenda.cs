@@ -53,68 +53,7 @@ namespace CadastroBanco
             ExibirPessoa();
             Pagamento();
             valorTotalDesconto();
-            removerDataPosPag();
             //ExibirDados();
-        }
-
-        private void removerDataPosPag()
-        {
-            try
-            {
-                if (!File.Exists(caminhoArquivoVendas))
-                {
-                    MessageBox.Show("Arquivo não encontrado.");
-                    return;
-                }
-
-                var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
-                bool alteracaoRealizada = false;
-
-                for (int i = 0; i < linhas.Count; i++)
-                {
-                    var dados = linhas[i].Split('*');
-                    if (dados.Length >= 11)
-                    {
-                        string pagamento = dados[10].Trim();
-
-                        if (pagamento.Equals("Realizado", StringComparison.OrdinalIgnoreCase))
-                        {
-                            int posPagamento = linhas[i].IndexOf(" - Pagamento");
-                            if (posPagamento >= 0)
-                            {
-                                // Encontra o próximo "(" após o " - Pagamento"
-                                int posParentese = linhas[i].IndexOf("(", posPagamento);
-
-                                if (posParentese > posPagamento)
-                                {
-                                    // Remove o trecho entre " - Pagamento" e "("
-                                    linhas[i] = linhas[i].Remove(posPagamento, posParentese - posPagamento);
-                                    alteracaoRealizada = true;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                if (alteracaoRealizada)
-                {
-                    File.WriteAllLines(caminhoArquivoVendas, linhas);
-                    //MessageBox.Show("Texto entre ' - Pagamento' e '(' removido das vendas realizadas.");
-                }
-                else
-                {
-                   // MessageBox.Show("Nenhuma venda realizada com o padrão especificado foi encontrada.");
-                }
-                ExibirDados();
-                Pagamento();
-                ExibirPessoa();
-                ExibirPessoa();
-                Pagamento();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
-            }
         }
 
         private int ObterProximoIdVendasDisponivel()
@@ -196,10 +135,7 @@ namespace CadastroBanco
                         string pagamento = dados[10].Trim();
                         // Adicionar os dados no DataGridView
                         dataGridViewDados.Rows.Add(id, idVenda, idLivro, categoria, descricao, qnt, preco, data, nome, telefone, pagamento);
-                        if (pagamento == "Devolvido")
-                            continue;
-                        else
-                            valorTotal += Convert.ToDecimal(preco);
+                        valorTotal += Convert.ToDecimal(preco);
                         foreach (var nomes in cbPessoas.Items)
                         {
                             if (nomes.Equals(nome))
@@ -1213,124 +1149,27 @@ namespace CadastroBanco
             {
                 GetSelectedRows("Pendente");
             }
-            //AtualizarArquivoComNovoStatus(mesesComboBox.Text);
-        }
-
-        private void AtualizarArquivoComNovoStatus(string novoStatus)
-        {
-            try
-            {
-                // Lê todas as linhas do arquivo
-                var linhas = File.ReadAllLines(caminhoArquivoVendas).ToList();
-                bool alteracaoRealizada = false;
-
-                foreach (DataGridViewRow row in dataGridViewDados.SelectedRows)
-                {
-                    string id = row.Cells[0].Value?.ToString();
-
-                    if (!string.IsNullOrEmpty(id))
-                    {
-                        // Encontra a linha correspondente no arquivo
-                        for (int i = 0; i < linhas.Count; i++)
-                        {
-                            var dados = linhas[i].Split('*');
-                            if (dados.Length >= 11 && dados[0].Trim() == id)
-                            {
-                                // Atualiza o status de pagamento (campo 10)
-                                dados[10] = novoStatus;
-                                linhas[i] = string.Join("*", dados);
-                                alteracaoRealizada = true;
-                                break;
-                            }
-                        }
-                    }
-                }
-
-                if (alteracaoRealizada)
-                {
-                    File.WriteAllLines(caminhoArquivoVendas, linhas);
-                    AddCliente();
-                    //MessageBox.Show("Status atualizado com sucesso no arquivo!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao atualizar arquivo: {ex.Message}");
-            }
         }
 
         void GetSelectedRows(string novoEstado)
         {
-            Int32 selectedRowCount = dataGridViewDados.Rows.GetRowCount(DataGridViewElementStates.Selected);
-            string input = InputBox.Show("forma de pagamento");
+            Int32 selectedRowCount =
+                dataGridViewDados.Rows.GetRowCount(DataGridViewElementStates.Selected);
 
+            string input = InputBox.Show("forma de pagamento");
             if (selectedRowCount > 0)
             {
-                try
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+                for (int i = 0; i < selectedRowCount; i++)
                 {
-                    // Lê os arquivos necessários
-                    var linhasVendas = File.ReadAllLines(caminhoArquivoVendas).ToList();
-                    var linhasClientes = File.ReadAllLines(caminhoArquivoCliente).ToList();
-                    bool alterou = false;
-
-                    for (int i = 0; i < selectedRowCount; i++)
-                    {
-                        DataGridViewRow row = dataGridViewDados.SelectedRows[i];
-
-                        // Atualiza a interface
-                        row.Cells[10].Value = novoEstado;
-                        row.Cells[4].Value = row.Cells[4].Value + input;
-
-                        // Obtém os dados da linha
-                        string idVenda = row.Cells[0].Value?.ToString();
-                        string nomeCliente = row.Cells[8].Value?.ToString();
-                        string telefoneCliente = row.Cells[9].Value?.ToString();
-
-                        // Atualiza arquivo de vendas
-                        for (int j = 0; j < linhasVendas.Count; j++)
-                        {
-                            var dados = linhasVendas[j].Split('*');
-                            if (dados.Length >= 11 && dados[0].Trim() == idVenda)
-                            {
-                                dados[10] = novoEstado; // Atualiza status
-                                dados[4] = dados[4] + input; // Adiciona forma de pagamento
-                                linhasVendas[j] = string.Join("*", dados);
-                                alterou = true;
-                                break;
-                            }
-                        }
-
-                        // Atualiza arquivo de clientes (se necessário)
-                        if (!string.IsNullOrEmpty(nomeCliente))
-                        {
-                            for (int k = 0; k < linhasClientes.Count; k++)
-                            {
-                                var dadosCliente = linhasClientes[k].Split('*');
-                                if (dadosCliente.Length >= 2 && dadosCliente[1].Trim() == nomeCliente)
-                                {
-                                    // Aqui você pode atualizar dados do cliente se necessário
-                                    // Exemplo: dadosCliente[4] = novoValor;
-                                    linhasClientes[k] = string.Join("*", dadosCliente);
-                                    alterou = true;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-
-                    // Salva as alterações nos arquivos
-                    if (alterou)
-                    {
-                        File.WriteAllLines(caminhoArquivoVendas, linhasVendas);
-                        File.WriteAllLines(caminhoArquivoCliente, linhasClientes);
-                        AddCliente(); // Atualiza os dados dos clientes
-                        //MessageBox.Show("Alterações salvas com sucesso nos arquivos!");
-                    }
+            
+                    dataGridViewDados.SelectedRows[i].Cells[10].Value = novoEstado;
+                    dataGridViewDados.SelectedRows[i].Cells[4].Value = dataGridViewDados.SelectedRows[i].Cells[4].Value + input;
                 }
-                catch (Exception ex)
-                {
-                    //MessageBox.Show($"Erro ao salvar alterações: {ex.Message}");
-                }
+
+                sb.Append("Total: " + selectedRowCount.ToString());
+               // MessageBox.Show(sb.ToString(), "Selected Rows");
             }
         }
 
@@ -1407,7 +1246,6 @@ namespace CadastroBanco
                 foreach (DataGridViewRow row in dataGridViewDados.Rows)
                 {
                     string BuscaDes = row.Cells[4].Value.ToString().Normalize();
-                    string BuscaDesId = row.Cells[2].Value.ToString().Normalize();
                     string BuscaNomalizada = removerAcentos(BuscaDes);
                     var dados = BuscaDes.Split(' ');
                     var buscaTexto = Busca.Split(' ');
@@ -1416,7 +1254,7 @@ namespace CadastroBanco
                     {
 
                         string teste = removerAcentos(a);
-                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()) || BuscaDesId.ToLower().Contains(teste.ToLower()))
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
                         {
 
                         }
@@ -1433,14 +1271,13 @@ namespace CadastroBanco
                     }
 
                     BuscaDes = row.Cells[4].Value.ToString().Normalize();
-                    BuscaDesId = row.Cells[2].Value.ToString().Normalize();
                     BuscaNomalizada = removerAcentos(BuscaDes);
                     canExibir = true;
                     foreach (var a in buscaTexto)
                     {
 
                         string teste = removerAcentos(a);
-                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()) || BuscaDesId.ToLower().Contains(teste.ToLower()))
+                        if (BuscaNomalizada.ToLower().Contains(teste.ToLower()))
                         {
 
                         }
